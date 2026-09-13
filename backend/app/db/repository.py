@@ -84,6 +84,7 @@ def row_to_job(row: JobRow) -> Job:
         last_seen_at=_aware(row.last_seen_at),
         is_active=row.is_active,
         match_score=row.match_score,
+        match_reasons=json.loads(row.match_reasons or "[]"),
         needs_enrichment=row.needs_enrichment,
         link_status=row.link_status or "",
         link_checked_at=_aware_opt(row.link_checked_at),
@@ -126,6 +127,7 @@ def job_to_values(job: Job) -> dict:
         "last_seen_at": job.last_seen_at,
         "is_active": job.is_active,
         "match_score": job.match_score,
+        "match_reasons": json.dumps(job.match_reasons),
         "needs_enrichment": job.needs_enrichment,
         "link_status": job.link_status,
         "link_checked_at": job.link_checked_at,
@@ -337,6 +339,25 @@ class JobRepository:
                 )
                 touched += len(chunk)
         return touched
+
+    def update_scored(self, scored: dict[tuple[str, str], tuple[float, list[str]]]) -> None:
+        """Write score + reasons. Grouped by identical (score, reasons) so a
+        corpus of thousands takes a few dozen statements, not one per row."""
+        if not scored:
+            return
+        buckets: dict[tuple[str, float, str], list[str]] = {}
+        for (source, job_id), (score, reasons) in scored.items():
+            key = (source, round(score, 2), json.dumps(reasons))
+            buckets.setdefault(key, []).append(job_id)
+
+        for (source, score, reasons_json), ids in buckets.items():
+            for start in range(0, len(ids), 500):
+                chunk = ids[start : start + 500]
+                self.s.execute(
+                    update(JobRow)
+                    .where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
+                    .values(match_score=score, match_reasons=reasons_json)
+                )
 
     def update_scores(self, scores: dict[tuple[str, str], float]) -> None:
         """Bulk-update match scores.

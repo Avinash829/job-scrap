@@ -210,7 +210,7 @@ class IngestPipeline:
         jobs, _ = repo.search(_all_active_filter())
         if not jobs:
             return 0
-        repo.update_scores(self.scorer.score_all(jobs))
+        repo.update_scored(self.scorer.score_all_explained(jobs))
         return len(jobs)
 
     @staticmethod

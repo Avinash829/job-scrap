@@ -34,10 +34,16 @@ export function useJobs(filters) {
 
 export function useStats() {
   const [stats, setStats] = useState(null);
+  const [nonce, setNonce] = useState(0);
+
   useEffect(() => {
     const ctrl = new AbortController();
-    api.stats(ctrl.signal).then(setStats).catch(() => {});
+    api
+      .stats(ctrl.signal)
+      .then(setStats)
+      .catch(() => {});
     return () => ctrl.abort();
-  }, []);
-  return stats;
+  }, [nonce]);
+
+  return { stats, reload: () => setNonce((n) => n + 1) };
 }

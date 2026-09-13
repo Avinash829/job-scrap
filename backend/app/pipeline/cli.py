@@ -288,6 +288,10 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--pages", type=int, default=3)
     p.add_argument("--apply", action="store_true")
 
+    p = sub.add_parser("yc", help="seed YC-backed companies that are hiring")
+    p.add_argument("--apply", action="store_true")
+    p.add_argument("--recent", action="store_true", help="2024-26 batches only")
+
     p = sub.add_parser("purge", help="delete old inactive rows")
     p.add_argument("--days", type=int, default=60)
 
@@ -316,6 +320,11 @@ def main(argv: list[str] | None = None) -> int:
         from app.pipeline.discover import discover
 
         asyncio.run(discover(args.platform, pages=args.pages, apply=args.apply))
+        return 0
+    if args.command == "yc":
+        from app.pipeline.yc import discover_yc
+
+        asyncio.run(discover_yc(apply=args.apply, recent_only=args.recent))
         return 0
     if args.command == "purge":
         return cmd_purge(args)

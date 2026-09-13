@@ -435,8 +435,12 @@ def normalize(raw: RawJob) -> Job:
         min_yoe, max_yoe = hint, None
         yoe_src = ExtractionSource.SOURCE_METADATA
 
+    # Employment type comes from the TITLE (or the source's own field), never
+    # from the description. Matching the body tagged Elastic's "Senior
+    # Software Engineer" as an internship because its description mentioned
+    # mentoring interns, and a Cloudflare audit role via "Internal".
     emp = raw.employment_type_hint
-    if emp is EmploymentType.UNKNOWN and _INTERN.search(text):
+    if emp is EmploymentType.UNKNOWN and _INTERN.search(raw.title):
         emp = EmploymentType.INTERNSHIP
 
     regions, region_src, region_conf = resolve_regions(raw)
@@ -468,7 +472,14 @@ def normalize(raw: RawJob) -> Job:
         tech_stack=extract_tech_stack(text, raw.tags),
         min_yoe=min_yoe,
         max_yoe=max_yoe,
-        is_new_grad=bool(_NEW_GRAD.search(text) or _INTERN.search(text)),
+        # Title first. The description is only trusted for phrases that
+        # unambiguously describe the CANDIDATE ("new graduate", "fresher"),
+        # never for a bare "intern" that may just be describing the team.
+        is_new_grad=bool(
+            _NEW_GRAD.search(raw.title)
+            or _INTERN.search(raw.title)
+            or _NEW_GRAD.search(raw.description or "")
+        ),
         grad_year=extract_grad_year(text),
         yoe_source=yoe_src,
         is_remote=detect_remote(raw.title, raw.location_raw, raw.tags),

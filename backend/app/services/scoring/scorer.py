@@ -14,15 +14,22 @@ from app.domain.entities import Job
 from app.domain.enums import Confidence, EmploymentType, HiringRegion
 
 # component -> max contribution. Reachability dominates because an
-# unreachable role is worth zero regardless of how good the match looks.
+# unreachable role is worth zero regardless of how good the match looks;
+# `stage` is second because an internship you can actually start while still
+# studying beats a full-time role you cannot take for six months.
 WEIGHTS = {
-    "reachability": 35.0,
-    "experience": 25.0,
-    "stack": 20.0,
-    "freshness": 12.0,
-    "role": 5.0,
-    "confidence": 3.0,
+    "reachability": 30.0,
+    "stage": 25.0,        # internship / new-grad fit
+    "stack": 22.0,        # overlap with the user's declared skills
+    "freshness": 10.0,
+    "startup": 8.0,       # YC / small funded team - hires interns readily
+    "role": 3.0,
+    "confidence": 2.0,
 }
+
+# Team sizes where an intern gets real ownership and a human reads the CV.
+SMALL_TEAM = 50
+MID_TEAM = 250
 
 
 @dataclass(slots=True)
@@ -38,6 +45,7 @@ class MatchScorer:
         self.strong = {s.lower() for s in (p.stack.get("strong") or [])}
         self.learning = {s.lower() for s in (p.stack.get("learning") or [])}
         self.seeking = set(p.profile.get("seeking") or [])
+        self.prefer = str(p.profile.get("prefer") or "internship")
         self.priority = list(p.location.get("priority") or [])
 
     def score(self, job: Job, now: datetime | None = None) -> ScoreBreakdown:
@@ -45,9 +53,10 @@ class MatchScorer:
         b = ScoreBreakdown()
 
         b.parts["reachability"] = self._reachability(job, b)
-        b.parts["experience"] = self._experience(job, b)
+        b.parts["stage"] = self._stage(job, b)
         b.parts["stack"] = self._stack(job, b)
         b.parts["freshness"] = self._freshness(job, now, b)
+        b.parts["startup"] = self._startup(job, b)
         b.parts["role"] = WEIGHTS["role"] if job.role_category.value != "other" else 0.0
         b.parts["confidence"] = (
             WEIGHTS["confidence"] if job.region_confidence is Confidence.HIGH else 0.0
@@ -55,6 +64,60 @@ class MatchScorer:
 
         b.total = round(sum(b.parts.values()), 2)
         return b
+
+    def _stage(self, job: Job, b: ScoreBreakdown) -> float:
+        """How well the role fits someone still six months from graduating.
+
+        An internship is the top of this scale on purpose: it is the thing
+        the user can actually start now. A full-time role with no early-career
+        signal scores low here even if the stack matches perfectly.
+        """
+        w = WEIGHTS["stage"]
+        preferred = self.prefer
+
+        if job.employment_type is EmploymentType.INTERNSHIP:
+            b.reasons.append("internship")
+            return w if preferred == "internship" else w * 0.85
+
+        # a 2027 class year is an exact match for this user
+        if job.grad_year == 2027:
+            b.reasons.append("class of 2027")
+            return w * 0.95
+        if job.grad_year and job.grad_year != 2027:
+            return w * 0.3
+
+        if job.is_new_grad:
+            b.reasons.append("new-grad friendly")
+            return w * 0.8
+        if job.min_yoe == 0:
+            b.reasons.append("0 years required")
+            return w * 0.6
+        if job.min_yoe is None:
+            return w * 0.25
+        return max(0.0, w * (1 - job.min_yoe / 3) * 0.5)
+
+    def _startup(self, job: Job, b: ScoreBreakdown) -> float:
+        """YC-backed and small teams hire interns far more readily.
+
+        Company metadata rides along in raw_payload from the connector, so
+        this needs no extra lookup.
+        """
+        w = WEIGHTS["startup"]
+        payload = job.raw_payload or {}
+        score = 0.0
+
+        if payload.get("yc_batch"):
+            b.reasons.append(f"YC {payload['yc_batch']}")
+            score += w * 0.6
+
+        team = payload.get("team_size")
+        if isinstance(team, int) and team > 0:
+            if team <= SMALL_TEAM:
+                b.reasons.append(f"small team ({team})")
+                score += w * 0.4
+            elif team <= MID_TEAM:
+                score += w * 0.2
+        return min(w, score)
 
     # ----------------------------------------------------------- components
 
@@ -100,20 +163,6 @@ class MatchScorer:
 
         return 0.0
 
-    def _experience(self, job: Job, b: ScoreBreakdown) -> float:
-        w = WEIGHTS["experience"]
-        if job.employment_type is EmploymentType.INTERNSHIP and "internship" in self.seeking:
-            b.reasons.append("internship")
-            return w
-        if job.is_new_grad:
-            b.reasons.append("new-grad friendly")
-            return w
-        if job.min_yoe == 0:
-            return w * 0.85
-        if job.min_yoe is None:
-            return w * 0.4
-        return max(0.0, w * (1 - job.min_yoe / 3))
-
     def _stack(self, job: Job, b: ScoreBreakdown) -> float:
         w = WEIGHTS["stack"]
         if not self.strong and not self.learning:
@@ -158,3 +207,13 @@ class MatchScorer:
         return {
             (j.source, j.source_job_id): self.score(j, now).total for j in jobs
         }
+
+    def score_all_explained(
+        self, jobs: list[Job]
+    ) -> dict[tuple[str, str], tuple[float, list[str]]]:
+        now = datetime.now(timezone.utc)
+        out = {}
+        for j in jobs:
+            b = self.score(j, now)
+            out[(j.source, j.source_job_id)] = (b.total, b.reasons[:5])
+        return out

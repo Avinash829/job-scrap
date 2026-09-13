@@ -106,6 +106,16 @@ export default function JobCard({ job }) {
         {job.work_auth_required === true && job.visa_sponsorship !== true && (
           <Pill className="bg-red-500/10 text-red-300 ring-red-500/30">Needs work auth</Pill>
         )}
+        {job.yc_batch && (
+          <Pill className="bg-orange-500/10 text-orange-300 ring-orange-500/30">
+            YC {job.yc_batch}
+          </Pill>
+        )}
+        {typeof job.team_size === "number" && job.team_size > 0 && job.team_size <= 200 && (
+          <Pill className="bg-zinc-800/80 text-zinc-400 ring-zinc-700">
+            {job.team_size} people
+          </Pill>
+        )}
         {job.grad_year && (
           <Pill className="bg-sky-500/10 text-sky-300 ring-sky-500/30">
             Class of {job.grad_year}
@@ -118,8 +128,14 @@ export default function JobCard({ job }) {
         ))}
       </div>
 
+      {job.match_reasons?.length > 0 && (
+        <p className="mt-2.5 text-[11px] text-emerald-400/70">
+          {job.match_reasons.join(" · ")}
+        </p>
+      )}
+
       {job.summary && (
-        <p className="mt-3 line-clamp-2 text-xs leading-relaxed text-zinc-500">{job.summary}</p>
+        <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-zinc-500">{job.summary}</p>
       )}
 
       <div className="mt-3 flex items-center justify-between text-[11px] text-zinc-600">

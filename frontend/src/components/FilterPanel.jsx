@@ -1,4 +1,4 @@
-/** Filter sidebar. Controlled - all state lives in App. */
+/** Filter sidebar. Fully controlled - all state lives in App. */
 
 const ROLES = [
   ["swe", "SWE / SDE"],
@@ -7,6 +7,12 @@ const ROLES = [
   ["fullstack", "Full stack"],
   ["ml", "AI / ML"],
   ["data", "Data"],
+];
+
+const EMPLOYMENT = [
+  ["internship", "Internship"],
+  ["full_time", "Full-time"],
+  ["unknown", "Unstated"],
 ];
 
 const YOE = [
@@ -21,6 +27,14 @@ const FRESHNESS = [
   [2, "2 days"],
   [7, "Week"],
   [null, "All"],
+];
+
+/** Your declared stack, from backend/config.yaml. Used for the skills filter. */
+const MY_STACK = [
+  "python", "javascript", "react", "next.js", "node.js", "express",
+  "fastapi", "mongodb", "mysql", "sql", "firebase", "tailwind",
+  "llm", "langchain", "langgraph", "ai agents", "rest", "socket.io",
+  "docker", "git", "power bi", "typescript",
 ];
 
 function Section({ title, children, hint }) {
@@ -52,7 +66,7 @@ function Toggle({ checked, onChange, label, hint }) {
   );
 }
 
-function ChipGroup({ options, selected, onToggle }) {
+function ChipGroup({ options, selected, onToggle, mono = false }) {
   return (
     <div className="flex flex-wrap gap-1.5">
       {options.map(([value, label]) => {
@@ -61,8 +75,11 @@ function ChipGroup({ options, selected, onToggle }) {
           <button
             key={value}
             type="button"
+            aria-pressed={active}
             onClick={() => onToggle(value)}
             className={`rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition ${
+              mono ? "font-mono text-[11px]" : ""
+            } ${
               active
                 ? "bg-emerald-500/15 text-emerald-300 ring-emerald-500/40"
                 : "bg-zinc-800/50 text-zinc-400 ring-zinc-800 hover:bg-zinc-800 hover:text-zinc-300"
@@ -83,6 +100,7 @@ function RadioRow({ options, value, onChange }) {
         <button
           key={label}
           type="button"
+          aria-pressed={value === val}
           onClick={() => onChange(val)}
           className={`rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition ${
             value === val
@@ -97,7 +115,13 @@ function RadioRow({ options, value, onChange }) {
   );
 }
 
-export default function FilterPanel({ filters, setFilters, sources = [], onReset }) {
+export default function FilterPanel({
+  filters,
+  setFilters,
+  sources = [],
+  onReset,
+  activeCount = 0,
+}) {
   const patch = (changes) => setFilters({ ...filters, ...changes, offset: 0 });
 
   const toggleIn = (key, value) => {
@@ -112,7 +136,14 @@ export default function FilterPanel({ filters, setFilters, sources = [], onReset
   return (
     <aside className="flex h-full flex-col overflow-y-auto border-r border-zinc-800 bg-zinc-900/20">
       <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-3">
-        <span className="text-sm font-semibold text-zinc-200">Filters</span>
+        <span className="text-sm font-semibold text-zinc-200">
+          Filters
+          {activeCount > 0 && (
+            <span className="ml-1.5 rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-medium text-emerald-300">
+              {activeCount}
+            </span>
+          )}
+        </span>
         <button
           type="button"
           onClick={onReset}
@@ -122,14 +153,29 @@ export default function FilterPanel({ filters, setFilters, sources = [], onReset
         </button>
       </div>
 
-      <Section title="Search">
+      <Section title="Search" hint="Matches role title or company name.">
         <input
           type="search"
           value={filters.q ?? ""}
           onChange={(e) => patch({ q: e.target.value })}
-          placeholder="Title or company…"
+          placeholder="e.g. frontend intern, react, Swiggy…"
           className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-zinc-600"
         />
+      </Section>
+
+      <Section title="Type" hint="You graduate June 2027, so internships rank highest.">
+        <ChipGroup
+          options={EMPLOYMENT}
+          selected={filters.employment_type ?? []}
+          onToggle={(v) => toggleIn("employment_type", v)}
+        />
+        <div className="mt-2">
+          <Toggle
+            checked={!!filters.new_grad_only}
+            onChange={(v) => patch({ new_grad_only: v })}
+            label="New grad / intern signal only"
+          />
+        </div>
       </Section>
 
       <Section
@@ -162,11 +208,6 @@ export default function FilterPanel({ filters, setFilters, sources = [], onReset
             label="Include unstated"
             hint="Most genuine new-grad reqs don't state years"
           />
-          <Toggle
-            checked={!!filters.new_grad_only}
-            onChange={(v) => patch({ new_grad_only: v })}
-            label="New grad / intern only"
-          />
         </div>
       </Section>
 
@@ -179,8 +220,20 @@ export default function FilterPanel({ filters, setFilters, sources = [], onReset
       </Section>
 
       <Section
+        title="My skills"
+        hint="Requires the posting to mention every skill you pick."
+      >
+        <ChipGroup
+          mono
+          options={MY_STACK.map((t) => [t, t])}
+          selected={filters.tech ?? []}
+          onToggle={(v) => toggleIn("tech", v)}
+        />
+      </Section>
+
+      <Section
         title="Posted within"
-        hint="Employer ATS boards only list open roles, so an older date there still means live. Stale aggregator listings are already filtered out server-side."
+        hint="Employer ATS boards only list open roles, so an older date there still means live. Stale aggregator listings are already filtered server-side."
       >
         <RadioRow
           options={FRESHNESS}

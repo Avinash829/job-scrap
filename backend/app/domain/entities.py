@@ -137,6 +137,7 @@ class Job(BaseModel):
     is_active: bool = True
 
     match_score: float = 0.0
+    match_reasons: list[str] = Field(default_factory=list)
     needs_enrichment: bool = True
     link_status: str = ""
     link_checked_at: datetime | None = None

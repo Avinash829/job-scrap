@@ -24,6 +24,7 @@ from typing import Iterable
 import httpx
 
 from app.connectors.base import Connector, FetchError
+from app.core import yc_index
 from app.core.companies import Company, companies_for
 from app.domain.entities import RawJob
 
@@ -115,6 +116,12 @@ class ATSConnector(Connector):
 
         if not jobs:
             return BoardResult(company, BoardStatus.EMPTY_BOARD, 200)
+
+        # Attach YC / team-size metadata when this slug is a known YC company.
+        if meta := yc_index.lookup(company.slug):
+            for job in jobs:
+                job.raw_payload.update(meta)
+
         return BoardResult(company, BoardStatus.OK, jobs, 200)
 
     async def fetch(self) -> Iterable[RawJob]:

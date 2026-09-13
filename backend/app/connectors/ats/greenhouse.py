@@ -17,6 +17,7 @@ board (no pagination). Fields that matter to us:
 from __future__ import annotations
 
 import html
+import re
 from datetime import datetime
 from typing import Iterable
 
@@ -28,6 +29,14 @@ from app.domain.entities import RawJob
 from app.domain.enums import EmploymentType, HiringRegion
 
 API = "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true"
+
+# Word-boundary matching is essential here: a substring check tagged
+# "Full Stack Engineer - Internal Audit" and "Software Engineer, Internal
+# Systems" as internships, because both contain "intern" inside "Internal".
+_INTERN_TITLE = re.compile(
+    r"\b(intern|interns|internship|co-?op|apprentice|trainee|summer\s+analyst)\b",
+    re.I,
+)
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -104,7 +113,7 @@ class Greenhouse(ATSConnector):
             title = item.get("title", "")
             emp = (
                 EmploymentType.INTERNSHIP
-                if any(k in title.lower() for k in ("intern", "co-op", "apprentice"))
+                if _INTERN_TITLE.search(title)
                 else EmploymentType.UNKNOWN
             )
 

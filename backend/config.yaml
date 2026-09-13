@@ -3,7 +3,13 @@
 profile:
   graduating: 2027-06
   based_in: IN
-  seeking: [internship, new_grad]
+
+  # Ordered by preference, and it drives scoring weight. You graduate in
+  # June 2027 and have ~6 months of study left, so an internship you can do
+  # alongside college is worth more to you right now than a full-time role
+  # you cannot start - even when the full-time role matches your stack better.
+  seeking: [internship, new_grad, full_time]
+  prefer: internship
 
 # --- Reachability: the hard gate ------------------------------------------
 # You can work remotely from India, or onsite within India. Nothing else.
@@ -60,6 +66,8 @@ experience:
     - '\b[2-9]\b(?=\s*$)'
 
 # --- Employment type ------------------------------------------------------
+# `prefer: internship` above boosts internships in scoring. This section is
+# the hard gate - what is allowed through at all.
 # Internships and full-time only. Freelance/contract/part-time gigs and
 # German "Werkstudent" working-student roles are not what you're after.
 employment:

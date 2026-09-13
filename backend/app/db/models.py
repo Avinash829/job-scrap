@@ -81,6 +81,8 @@ class JobRow(Base):
     is_active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
 
     match_score: Mapped[float] = mapped_column(Float, default=0.0, index=True)
+    # why it scored what it did - a score you can't interrogate is useless
+    match_reasons: Mapped[str] = mapped_column(Text, default="[]")
     needs_enrichment: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
     # apply-link health: 'alive' | 'dead' | 'unknown' | '' (unchecked)
     link_status: Mapped[str] = mapped_column(String(16), default="", index=True)
