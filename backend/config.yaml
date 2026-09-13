@@ -1,0 +1,172 @@
+# Your search profile. Nothing here is hardcoded in the pipeline.
+
+profile:
+  graduating: 2027-06
+  based_in: IN
+  seeking: [internship, new_grad]
+
+# --- Reachability: the hard gate ------------------------------------------
+# You can work remotely from India, or onsite within India. Nothing else.
+location:
+  require_reachable: true      # drop anything that isn't worldwide-remote or India
+  allowed_regions: [worldwide, india]
+  allow_unknown_region: true   # keep unresolved ones, but score them low
+                               # (set false once source coverage improves)
+  exclude_us_only_remote: true
+
+# --- Freshness -------------------------------------------------------------
+# A remote role collects hundreds of applications within 48h, so anything
+# older is effectively closed. Uses the real posting date, falling back to
+# when we first saw it.
+#
+# NOTE: HN's "Who is hiring" thread is monthly, so most of its posts are
+# already 3-30 days old. At 2 days you see almost nothing from HN - the
+# daily boards (RemoteOK, Himalayas, Arbeitnow) supply the fresh ones.
+freshness:
+  # Aggregators (Himalayas, RemoteOK, HN, Arbeitnow) keep dead listings
+  # around, so age is the only defence against applying to a closed role.
+  max_posting_age_days: 2
+
+  # Employer ATS boards are different in kind: Greenhouse/Lever/Ashby/
+  # SmartRecruiters return ONLY currently-open requisitions. A 30-day-old
+  # Greenhouse posting is still open and still accepting applications - it is
+  # not a ghost. Capping those at 2 days threw away 105 of 111 real Indian
+  # engineering roles that were all genuinely live.
+  # null = no age cap for ATS sources; disappearance from the board is the
+  # freshness signal instead (see last_seen_at / is_active).
+  ats_max_posting_age_days: null
+
+  # Some boards emit absurd dates (a SmartRecruiters row came back dated
+  # 2998 days ago). Treat anything older than this as "no date given".
+  max_plausible_age_days: 400
+
+# --- Experience gate -------------------------------------------------------
+experience:
+  max_min_yoe: 0
+  include_unknown_yoe: true
+  exclude_title_patterns:
+    - '\bsenior\b'
+    - '\bsr\.?\b'
+    - '\bstaff\b'
+    - '\bprincipal\b'
+    - '\blead\b'
+    - '\bmanager\b'
+    - '\bhead\s+of\b'
+    - '\bdirector\b'
+    - '\barchitect\b'
+    - '\bcto\b'
+    - '\bvp\b'
+    - '\b(ii|iii|iv)\b'
+    - '\b[2-9]\b(?=\s*$)'
+
+# --- Employment type ------------------------------------------------------
+# Internships and full-time only. Freelance/contract/part-time gigs and
+# German "Werkstudent" working-student roles are not what you're after.
+employment:
+  allowed: [internship, full_time, unknown]
+  exclude_title_patterns:
+    - '\bfreelance\b'
+    - '\bcontractor\b'
+    - '\bpart[\s-]?time\b'
+    - '\bwerkstudent\b'
+    - '\bworking\s+student\b'
+    - '\bpraktikum\b'
+    - '\bmaster\s+thesis\b'
+    - '\bthesis\b'
+    - '\bvolunteer\b'
+
+# --- Roles ----------------------------------------------------------------
+# Exactly the roles you named. DevOps/SRE deliberately left out this time -
+# add the two commented lines back if you want them again.
+roles:
+  include:
+    swe:        [software engineer, software developer, sde, swe, programmer,
+                 software engineering, application developer, product engineer]
+    frontend:   [frontend, front-end, front end, ui engineer, react developer,
+                 react.js, next.js developer, web developer]
+    backend:    [backend, back-end, back end, api engineer, server engineer,
+                 node.js developer, python developer]
+    fullstack:  [full stack, fullstack, full-stack, mern, mean stack]
+    ml:         [ai engineer, machine learning, ml engineer, deep learning,
+                 nlp engineer, llm engineer, genai, generative ai, ai developer,
+                 ai/ml, applied scientist, ai full stack, agent engineer]
+    data:       [data engineer, data scientist, analytics engineer, data analyst,
+                 bi developer, business intelligence]
+    # devops:   [devops, platform engineer, infrastructure engineer, cloud engineer]
+    # sre:      [sre, site reliability, reliability engineer]
+
+  # Titles that keyword-match but aren't the job you want.
+  exclude:
+    - sales engineer
+    - solutions engineer
+    - support engineer
+    - customer engineer
+    - service desk
+    - systemadministrator
+    - system administrator
+    - technical writer
+    - recruiter
+    - qa manual
+    - business analyst
+    - product tester
+    - reader-tester
+    - product manager
+    - project manager
+    - designer
+    - kommunikationsdesign
+    - robotics
+    - hardware engineer
+    - embedded
+    - firmware
+    - mechanical
+    - electrical
+    - accountant
+    - marketing
+    - copywriter
+    - writer
+    - teacher
+    - tutor
+
+  # A role must match the title, not just a tag. Tag-only matching classified
+  # "Product Tester for Books" as `data` and "IT-Systemadministrator" as `sre`.
+  match_titles_only: true
+
+# --- Your stack -----------------------------------------------------------
+stack:
+  strong:
+    - python
+    - javascript
+    - c
+    - sql
+    - react
+    - next.js
+    - tailwind
+    - node.js
+    - express
+    - fastapi
+    - rest
+    - socket.io
+    - llm
+    - langchain
+    - langgraph
+    - prompt engineering
+    - ai agents
+    - mongodb
+    - mysql
+    - firebase
+    - git
+    - docker
+    - postman
+    - power bi
+  learning:
+    - typescript
+    - postgres
+    - aws
+    - kubernetes
+    - redis
+    - graphql
+
+  # Require at least one stack overlap to stay in scope. Off by default
+  # because many postings list no detectable stack at all - but scoring
+  # already rewards overlap heavily.
+  require_match: false

@@ -1,0 +1,55 @@
+name: ingest
+
+on:
+  schedule:
+    # Tier 1 (remote-native boards) every 6h - cheap, ~10 API calls.
+    # GitHub cron fires late under load; that's fine for this workload.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      tier:
+        description: "Refresh tier"
+        required: false
+        default: "1"
+
+# NOTE: Actions disables scheduled workflows after 60 days of repo
+# inactivity. A commit every few weeks keeps this alive.
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Run ingest
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+        run: python -m app.pipeline.cli ingest --tier ${{ inputs.tier || '1' }} -v
+
+      - name: Retention
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli purge --days 60
+
+      - name: Health summary
+        if: always()
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli health

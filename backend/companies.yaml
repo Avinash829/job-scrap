@@ -1,0 +1,1170 @@
+greenhouse:
+  verified:
+  - slug: postman
+    tier: 1
+    note: Bengaluru HQ
+  - slug: groww
+    tier: 1
+    note: Bengaluru
+  - slug: slice
+    tier: 1
+    note: Bengaluru
+  - slug: turing
+    tier: 1
+    note: remote-first, hires India
+  - slug: stripe
+    tier: 1
+  - slug: figma
+    tier: 1
+  - slug: anthropic
+    tier: 1
+  - slug: databricks
+    tier: 1
+  - slug: gitlab
+    tier: 1
+    note: all-remote company
+  - slug: vercel
+    tier: 1
+  - slug: airtable
+    tier: 2
+  - slug: robinhood
+    tier: 2
+  - slug: coinbase
+    tier: 2
+  - slug: reddit
+    tier: 2
+  - slug: discord
+    tier: 2
+  - slug: duolingo
+    tier: 2
+  - slug: mongodb
+    tier: 2
+    note: large India presence
+  - slug: elastic
+    tier: 2
+    note: distributed-first
+  - slug: cloudflare
+    tier: 2
+  - slug: datadog
+    tier: 2
+  - slug: twilio
+    tier: 2
+  - slug: asana
+    tier: 2
+  - slug: monzo
+    tier: 3
+  - slug: porter
+    tier: 1
+    note: 7 jobs
+  - slug: 1stdibscom
+    tier: 2
+    note: 3 jobs
+  - slug: 2k
+    tier: 2
+    note: 120 jobs
+  - slug: 2kczech
+    tier: 2
+    note: 7 jobs
+  - slug: 2kmadrid
+    tier: 2
+    note: 13 jobs
+  - slug: 2u
+    tier: 2
+    note: 2 jobs
+  - slug: 31stunion
+    tier: 2
+    note: 6 jobs
+  - slug: 3cloud
+    tier: 2
+    note: 37 jobs
+  - slug: 5minlab
+    tier: 2
+    note: 2 jobs
+  - slug: 617mediagroup
+    tier: 2
+    note: 9 jobs
+  - slug: 6sense
+    tier: 2
+    note: 30 jobs
+  - slug: abarca
+    tier: 2
+    note: 4 jobs
+  - slug: abbyy
+    tier: 2
+    note: 11 jobs
+  - slug: abinbev
+    tier: 2
+    note: 68 jobs
+  - slug: abnormalsecurity
+    tier: 2
+    note: 67 jobs
+  - slug: accenturefederalservices
+    tier: 2
+    note: 663 jobs
+  - slug: accuweather
+    tier: 2
+    note: 31 jobs
+  - slug: acentria
+    tier: 2
+    note: 8 jobs
+  - slug: aclu
+    tier: 2
+    note: 20 jobs
+  - slug: acluinternships
+    tier: 2
+    note: 1 jobs
+  - slug: acommerce
+    tier: 2
+    note: 71 jobs
+  - slug: acornhealth
+    tier: 2
+    note: 126 jobs
+  - slug: acquia
+    tier: 2
+    note: 13 jobs
+  - slug: activate
+    tier: 2
+    note: 3 jobs
+  - slug: acumen
+    tier: 2
+    note: 2 jobs
+  - slug: ada18
+    tier: 2
+    note: 9 jobs
+  - slug: addepar1
+    tier: 2
+    note: 102 jobs
+  - slug: adicettherapeuticsinc
+    tier: 2
+    note: 4 jobs
+  - slug: advancedtechnologyservices
+    tier: 2
+    note: 95 jobs
+  - slug: adyen
+    tier: 2
+    note: 227 jobs
+  - slug: affinidi
+    tier: 2
+    note: 11 jobs
+  - slug: affinipay1
+    tier: 2
+    note: 29 jobs
+  - slug: affinitiv
+    tier: 2
+    note: 8 jobs
+  - slug: affirm
+    tier: 2
+    note: 207 jobs
+  - slug: epicgames
+    tier: 2
+    note: 154 jobs
+  - slug: epicgamesfrench
+    tier: 2
+    note: 18 jobs
+  - slug: episodesixlinkedin
+    tier: 2
+    note: 24 jobs
+  - slug: equalexperts
+    tier: 2
+    note: 15 jobs
+  - slug: equipmentsharecom
+    tier: 2
+    note: 1010 jobs
+  - slug: eqvilentjobs
+    tier: 2
+    note: 26 jobs
+  - slug: erasca
+    tier: 2
+    note: 9 jobs
+  - slug: ernesta
+    tier: 2
+    note: 44 jobs
+  - slug: escribers
+    tier: 2
+    note: 18 jobs
+  - slug: esri
+    tier: 2
+    note: 461 jobs
+  - slug: esw
+    tier: 2
+    note: 5 jobs
+  - slug: etchedai
+    tier: 2
+    note: 25 jobs
+  - slug: etelligentgroup
+    tier: 2
+    note: 5 jobs
+  - slug: ethoslife
+    tier: 2
+    note: 67 jobs
+  - slug: eucalyptus
+    tier: 2
+    note: 106 jobs
+  - slug: eventbriteinc
+    tier: 2
+    note: 1 jobs
+  - slug: everchron
+    tier: 2
+    note: 2 jobs
+  - slug: evergreennephrology
+    tier: 2
+    note: 10 jobs
+  - slug: everlane
+    tier: 2
+    note: 47 jobs
+  - slug: everlaw
+    tier: 2
+    note: 36 jobs
+  - slug: evgspecialtynetwork
+    tier: 2
+    note: 41 jobs
+  - slug: evolvevacationrental
+    tier: 2
+    note: 7 jobs
+  - slug: evydtech
+    tier: 2
+    note: 3 jobs
+  - slug: excella
+    tier: 2
+    note: 2 jobs
+  - slug: excelsportsmanagement
+    tier: 2
+    note: 23 jobs
+  - slug: exodus54
+    tier: 2
+    note: 1 jobs
+  - slug: exoduspoint
+    tier: 2
+    note: 2 jobs
+  - slug: extend
+    tier: 2
+    note: 17 jobs
+  - slug: extrahopnetworks
+    tier: 2
+    note: 18 jobs
+  - slug: ezcaterinc
+    tier: 2
+    note: 29 jobs
+  - slug: factorialenergy
+    tier: 2
+    note: 14 jobs
+  - slug: faire
+    tier: 2
+    note: 67 jobs
+  - slug: falconx
+    tier: 2
+    note: 19 jobs
+  - slug: fanduel
+    tier: 2
+    note: 90 jobs
+  - slug: fartherfinance
+    tier: 2
+    note: 37 jobs
+  - slug: fashionnova
+    tier: 2
+    note: 96 jobs
+  - slug: feinternational
+    tier: 2
+    note: 2 jobs
+  - slug: fender
+    tier: 2
+    note: 33 jobs
+  - slug: feverup
+    tier: 2
+    note: 611 jobs
+  - slug: fictiv
+    tier: 2
+    note: 92 jobs
+  - slug: figure
+    tier: 2
+    note: 10 jobs
+  - slug: figureai
+    tier: 2
+    note: 102 jobs
+  - slug: filecoinfoundation
+    tier: 2
+    note: 1 jobs
+  - slug: filson
+    tier: 2
+    note: 8 jobs
+  - slug: financialtechnologypartners
+    tier: 2
+    note: 24 jobs
+  - slug: financialtimes33
+    tier: 2
+    note: 41 jobs
+  - slug: fingerprint
+    tier: 2
+    note: 22 jobs
+  - slug: firaxis
+    tier: 2
+    note: 1 jobs
+  - slug: fireblocks
+    tier: 2
+    note: 75 jobs
+  - slug: firstprinciples
+    tier: 2
+    note: 6 jobs
+  - slug: fiveringsllc
+    tier: 2
+    note: 16 jobs
+  - slug: fivesky
+    tier: 2
+    note: 2 jobs
+  - slug: fivetran
+    tier: 2
+    note: 197 jobs
+  - slug: flagshippioneeringinc
+    tier: 2
+    note: 105 jobs
+  - slug: fleishmanhillard
+    tier: 2
+    note: 3 jobs
+  - slug: flex
+    tier: 2
+    note: 46 jobs
+  - slug: flexport
+    tier: 2
+    note: 179 jobs
+  - slug: smartbear
+    tier: 2
+    note: 22 jobs
+  - slug: smarterdx
+    tier: 2
+    note: 14 jobs
+  - slug: smartling
+    tier: 2
+    note: 7 jobs
+  - slug: smartlyio
+    tier: 2
+    note: 75 jobs
+  - slug: smartrent
+    tier: 2
+    note: 10 jobs
+  - slug: smartsheet
+    tier: 2
+    note: 92 jobs
+  - slug: smithrx
+    tier: 2
+    note: 36 jobs
+  - slug: snapmobileinc
+    tier: 2
+    note: 132 jobs
+  - slug: snorkelai
+    tier: 2
+    note: 39 jobs
+  - slug: socialfinance
+    tier: 2
+    note: 3 jobs
+  - slug: socialscienceresearchcouncil
+    tier: 2
+    note: 2 jobs
+  - slug: solarisbank
+    tier: 2
+    note: 26 jobs
+  - slug: soldejaneiro
+    tier: 2
+    note: 25 jobs
+  - slug: solidpower
+    tier: 2
+    note: 11 jobs
+  - slug: sollishealth
+    tier: 2
+    note: 35 jobs
+  - slug: solmentalhealth
+    tier: 2
+    note: 69 jobs
+  - slug: sonicwall
+    tier: 2
+    note: 42 jobs
+  - slug: sonyinteractiveentertainmentglobal
+    tier: 2
+    note: 185 jobs
+  - slug: sonymusiccareersfrance
+    tier: 2
+    note: 1 jobs
+  - slug: sonymusiccareerssweden
+    tier: 2
+    note: 1 jobs
+  - slug: sonypicturesanimation
+    tier: 2
+    note: 2 jobs
+  - slug: sonypicturesimageworks
+    tier: 2
+    note: 50 jobs
+  - slug: sothebys
+    tier: 2
+    note: 55 jobs
+  - slug: soundagriculture
+    tier: 2
+    note: 2 jobs
+  - slug: soundcloud71
+    tier: 2
+    note: 15 jobs
+  - slug: sourcegraph91
+    tier: 2
+    note: 8 jobs
+  - slug: southernpovertylawcenter
+    tier: 2
+    note: 20 jobs
+  - slug: sovrn
+    tier: 2
+    note: 4 jobs
+  - slug: spacex
+    tier: 2
+    note: 2405 jobs
+  - slug: sparetech
+    tier: 2
+    note: 3 jobs
+  - slug: sparkfund
+    tier: 2
+    note: 6 jobs
+  - slug: spauldingridge
+    tier: 2
+    note: 43 jobs
+  - slug: specialty1
+    tier: 2
+    note: 108 jobs
+  - slug: specterops
+    tier: 2
+    note: 2 jobs
+  - slug: spektrum
+    tier: 2
+    note: 181 jobs
+  - slug: devrev
+    tier: 1
+    note: 46 jobs
+  - slug: hackerrank
+    tier: 1
+    note: 29 jobs
+  - slug: observeai
+    tier: 1
+    note: 17 jobs
+  - slug: tcs
+    tier: 1
+    note: 105 jobs
+  - slug: thoughtworks
+    tier: 1
+    note: 35 jobs
+  candidates:
+  - 67streetdental
+  - adjacentservices
+  - ethicinvesting
+  - fairviewsmilesdentistry
+  - figment
+  - socialpoint
+  - solarcycle
+  - somethinelse
+  - digit
+lever:
+  verified:
+  - slug: cred
+    tier: 1
+    note: Bengaluru
+  - slug: meesho
+    tier: 1
+    note: Bengaluru
+  - slug: mindtickle
+    tier: 1
+    note: Pune
+  - slug: 2brains
+    tier: 2
+    note: 10 jobs
+  - slug: 360learning
+    tier: 2
+    note: 31 jobs
+  - slug: 90seconds
+    tier: 2
+    note: 7 jobs
+  - slug: ableserve
+    tier: 2
+    note: 58 jobs
+  - slug: acds
+    tier: 2
+    note: 15 jobs
+  - slug: achievers
+    tier: 2
+    note: 15 jobs
+  - slug: acord
+    tier: 2
+    note: 3 jobs
+  - slug: actian
+    tier: 2
+    note: 12 jobs
+  - slug: actionlife
+    tier: 2
+    note: 43 jobs
+  - slug: activecampaign
+    tier: 2
+    note: 12 jobs
+  - slug: additionwealth
+    tier: 2
+    note: 10 jobs
+  - slug: adhoclabs
+    tier: 2
+    note: 1 jobs
+  - slug: adidevelopments
+    tier: 2
+    note: 8 jobs
+  - slug: advancedagrilytics
+    tier: 2
+    note: 4 jobs
+  - slug: adventus
+    tier: 2
+    note: 4 jobs
+  - slug: adverum
+    tier: 2
+    note: 3 jobs
+  - slug: advocate
+    tier: 2
+    note: 4 jobs
+  - slug: ae-2
+    tier: 2
+    note: 27 jobs
+  - slug: aeratechnology
+    tier: 2
+    note: 13 jobs
+  - slug: aero
+    tier: 2
+    note: 9 jobs
+  - slug: aerostrat
+    tier: 2
+    note: 3 jobs
+  - slug: aethoshotels
+    tier: 2
+    note: 24 jobs
+  - slug: aeva
+    tier: 2
+    note: 43 jobs
+  - slug: agatesoftware
+    tier: 2
+    note: 2 jobs
+  - slug: agicap
+    tier: 2
+    note: 31 jobs
+  - slug: agile-defense
+    tier: 2
+    note: 101 jobs
+  - slug: agtonomy
+    tier: 2
+    note: 5 jobs
+  - slug: aicrete
+    tier: 2
+    note: 3 jobs
+  - slug: aifi
+    tier: 2
+    note: 2 jobs
+  - slug: airalo
+    tier: 2
+    note: 24 jobs
+  - slug: aircall
+    tier: 2
+    note: 77 jobs
+  - slug: airslate
+    tier: 2
+    note: 11 jobs
+  - slug: airtm
+    tier: 2
+    note: 2 jobs
+  - slug: aizon
+    tier: 2
+    note: 1 jobs
+  - slug: ajccanada
+    tier: 2
+    note: 20 jobs
+  - slug: akabrands
+    tier: 2
+    note: 7 jobs
+  - slug: alector
+    tier: 2
+    note: 4 jobs
+  - slug: aledade
+    tier: 2
+    note: 35 jobs
+  - slug: aleph
+    tier: 2
+    note: 95 jobs
+  - slug: alertus
+    tier: 2
+    note: 19 jobs
+  - slug: alice-bob
+    tier: 2
+    note: 27 jobs
+  - slug: alimentiv-2
+    tier: 2
+    note: 40 jobs
+  - slug: allears-vet
+    tier: 2
+    note: 6 jobs
+  - slug: allegiantair
+    tier: 2
+    note: 53 jobs
+  - slug: alltrails
+    tier: 2
+    note: 2 jobs
+  - slug: alluxio
+    tier: 2
+    note: 9 jobs
+  - slug: altarum
+    tier: 2
+    note: 9 jobs
+  - slug: seedify-fund
+    tier: 2
+    note: 2 jobs
+  - slug: seerinteractive
+    tier: 2
+    note: 11 jobs
+  - slug: sentibio
+    tier: 2
+    note: 1 jobs
+  - slug: sep
+    tier: 2
+    note: 6 jobs
+  - slug: seranbio
+    tier: 2
+    note: 23 jobs
+  - slug: serigraph
+    tier: 2
+    note: 11 jobs
+  - slug: serotonin
+    tier: 2
+    note: 3 jobs
+  - slug: servicerocket
+    tier: 2
+    note: 11 jobs
+  - slug: seven-starling
+    tier: 2
+    note: 17 jobs
+  - slug: sfgiants
+    tier: 2
+    note: 2 jobs
+  - slug: sfmoma
+    tier: 2
+    note: 6 jobs
+  - slug: shakudo
+    tier: 2
+    note: 12 jobs
+  - slug: shieldai
+    tier: 2
+    note: 473 jobs
+  - slug: shopback-2
+    tier: 2
+    note: 83 jobs
+  - slug: shyftlabs
+    tier: 1
+    note: 26 jobs
+  - slug: sierraclub
+    tier: 2
+    note: 6 jobs
+  - slug: sietefoods-2
+    tier: 2
+    note: 5 jobs
+  - slug: signinsolutions
+    tier: 2
+    note: 1 jobs
+  - slug: silverbackstrategies
+    tier: 2
+    note: 4 jobs
+  - slug: simpleventures
+    tier: 2
+    note: 3 jobs
+  - slug: siteground
+    tier: 2
+    note: 1 jobs
+  - slug: sitetracker
+    tier: 2
+    note: 13 jobs
+  - slug: skillerszone
+    tier: 2
+    note: 72 jobs
+  - slug: skio
+    tier: 2
+    note: 4 jobs
+  - slug: skipscooters
+    tier: 2
+    note: 6 jobs
+  - slug: skyboxlabs
+    tier: 2
+    note: 3 jobs
+  - slug: skydance
+    tier: 2
+    note: 28 jobs
+  - slug: skygrid
+    tier: 2
+    note: 5 jobs
+  - slug: skylineconstruction
+    tier: 2
+    note: 23 jobs
+  - slug: skywarditsolutions
+    tier: 2
+    note: 11 jobs
+  - slug: slate
+    tier: 2
+    note: 4 jobs
+  - slug: smarsh
+    tier: 2
+    note: 19 jobs
+  - slug: smiledigitalhealth
+    tier: 2
+    note: 12 jobs
+  - slug: snaplogic
+    tier: 2
+    note: 11 jobs
+  - slug: snappr
+    tier: 2
+    note: 21 jobs
+  - slug: sofarsounds
+    tier: 2
+    note: 8 jobs
+  - slug: softworld
+    tier: 2
+    note: 9 jobs
+  - slug: solestial
+    tier: 2
+    note: 11 jobs
+  - slug: solfl
+    tier: 2
+    note: 10 jobs
+  - slug: solidcore
+    tier: 2
+    note: 291 jobs
+  - slug: solopulseco
+    tier: 2
+    note: 13 jobs
+  - slug: solutiondesign
+    tier: 2
+    note: 2 jobs
+  - slug: solutuslegal
+    tier: 2
+    note: 26 jobs
+  - slug: sonarsource
+    tier: 2
+    note: 134 jobs
+  - slug: sonatype
+    tier: 2
+    note: 33 jobs
+  - slug: sonrai-security
+    tier: 2
+    note: 3 jobs
+  - slug: sophos
+    tier: 2
+    note: 115 jobs
+  - slug: soraschools
+    tier: 2
+    note: 2 jobs
+  - slug: source
+    tier: 2
+    note: 3 jobs
+  - slug: spawglass
+    tier: 2
+    note: 46 jobs
+  - slug: spear
+    tier: 2
+    note: 119 jobs
+  - slug: spiceai
+    tier: 2
+    note: 1 jobs
+  - slug: splend
+    tier: 2
+    note: 10 jobs
+  - slug: spmb
+    tier: 2
+    note: 7 jobs
+  - slug: spotify
+    tier: 2
+    note: 72 jobs
+  - slug: spreedly
+    tier: 2
+    note: 5 jobs
+  - slug: spreetail
+    tier: 2
+    note: 27 jobs
+  - slug: sprucestreetcomp
+    tier: 2
+    note: 4 jobs
+  - slug: sprymethods
+    tier: 2
+    note: 36 jobs
+  - slug: spyke-games
+    tier: 2
+    note: 10 jobs
+  - slug: standtogether
+    tier: 2
+    note: 79 jobs
+  - slug: startengine
+    tier: 2
+    note: 7 jobs
+  - slug: stoneridgesoftware
+    tier: 2
+    note: 8 jobs
+  - slug: storiogroup
+    tier: 2
+    note: 9 jobs
+  - slug: stradaeducation
+    tier: 2
+    note: 2 jobs
+  - slug: straighterline
+    tier: 2
+    note: 1 jobs
+  - slug: studypoint
+    tier: 2
+    note: 4 jobs
+  - slug: suger
+    tier: 2
+    note: 11 jobs
+  - slug: sundrivesolar
+    tier: 2
+    note: 1 jobs
+  - slug: sunrisefarms
+    tier: 2
+    note: 36 jobs
+  - slug: sunshinesachs
+    tier: 2
+    note: 20 jobs
+  - slug: sunsrce
+    tier: 2
+    note: 272 jobs
+  - slug: super
+    tier: 2
+    note: 2 jobs
+  - slug: superannotate
+    tier: 2
+    note: 5 jobs
+  - slug: superiorexecutiveandlegalrecruiting
+    tier: 2
+    note: 20 jobs
+  - slug: supermove
+    tier: 2
+    note: 2 jobs
+  - slug: superside
+    tier: 2
+    note: 18 jobs
+  - slug: supportkind
+    tier: 2
+    note: 2 jobs
+  - slug: swile
+    tier: 2
+    note: 29 jobs
+  - slug: fampay
+    tier: 1
+    note: 13 jobs
+  - slug: paytm
+    tier: 1
+    note: 211 jobs
+  - slug: porter
+    tier: 1
+    note: 26 jobs
+  - slug: zeta
+    tier: 1
+    note: 18 jobs
+  candidates:
+  - 15five
+  - 3eco
+  - 3pillarglobal
+  - accurate
+  - aicamp
+  - aigen
+  - aisafety
+  - aiwyn
+  - algorex
+  - alliance
+  - alveotechnologies
+  - sensefinance
+  - sesame
+  - shadow
+  - siepe
+  - signal
+  - silasg
+  - skello
+  - solutionsjournalism
+  - solvhealth
+  - speakeasyapi
+  - sta
+  - startuptap
+  - superpedestrian
+  - sure
+  - surfshark
+ashby:
+  verified:
+  - slug: atlan
+    tier: 1
+    note: India-founded, remote-first
+  - slug: navi
+    tier: 1
+    note: Bengaluru
+  - slug: openai
+    tier: 1
+  - slug: notion
+    tier: 2
+  - slug: supabase
+    tier: 1
+    note: fully remote worldwide
+  - slug: ramp
+    tier: 2
+    note: 145 jobs
+  - slug: linear
+    tier: 2
+    note: 30 jobs
+  - slug: clerk
+    tier: 2
+    note: 1 jobs
+  - slug: resend
+    tier: 2
+    note: 11 jobs
+  - slug: inngest
+    tier: 2
+    note: 1 jobs
+  - slug: browserbase
+    tier: 2
+    note: 6 jobs
+  - slug: fireworks
+    tier: 2
+    note: 74 jobs
+  - slug: baseten
+    tier: 2
+    note: 94 jobs
+  - slug: perplexity
+    tier: 2
+    note: 115 jobs
+  - slug: cursor
+    tier: 2
+    note: 127 jobs
+  - slug: sierra
+    tier: 2
+    note: 210 jobs
+  - slug: decagon
+    tier: 2
+    note: 140 jobs
+  - slug: harvey
+    tier: 2
+    note: 325 jobs
+  - slug: abridge
+    tier: 2
+    note: 40 jobs
+  - slug: openevidence
+    tier: 2
+    note: 8 jobs
+  - slug: bounce
+    tier: 1
+    note: 7 jobs
+  - slug: signoz
+    tier: 1
+    note: 16 jobs
+  candidates:
+  - scaler
+  - thoughtworks
+  - turing
+smartrecruiters:
+  verified:
+  - slug: swiggy
+    tier: 1
+    note: 74/75 roles in India
+  - slug: freshworks
+    tier: 1
+    note: Chennai HQ
+  - slug: unacademy
+    tier: 1
+    note: Bengaluru
+  - slug: canva
+    tier: 2
+    note: 262 jobs
+  - slug: wabtec
+    tier: 2
+    note: 600 jobs
+  - slug: cars24
+    tier: 1
+    note: 1 jobs
+  - slug: hackerrank
+    tier: 1
+    note: 27 jobs
+  - slug: interviewbit
+    tier: 1
+    note: 1 jobs
+  - slug: mindtickle
+    tier: 1
+    note: 11 jobs
+  - slug: newtonschool
+    tier: 1
+    note: 1 jobs
+  - slug: refyne
+    tier: 1
+    note: 10 jobs
+  - slug: turtlemint
+    tier: 1
+    note: 1 jobs
+  - slug: whatfix
+    tier: 1
+    note: 1 jobs
+  candidates:
+  - zomato
+  - paytm
+  - phonepe
+  - flipkart
+  - myntra
+  - meesho
+  - oyorooms
+  - byjus
+  - upgrad
+  - physicswallah
+  - visa
+  - bosch
+  - siemens
+  - ubisoft
+  - mcdonalds
+  - avery-dennison
+  - acko
+  - airtel
+  - apnahq
+  - ather
+  - atlan
+  - atlanhq
+  - bhartiairtel
+  - bigbasket
+  - billdesk
+  - blinkit
+  - bounce
+  - browserstack
+  - capillary
+  - capillarytech
+  - cashfree
+  - chargebee
+  - chargebeeinc
+  - cleartax
+  - clevertap
+  - codingninjas
+  - cred
+  - credavenue
+  - crediblemind
+  - crio
+  - cultfit
+  - curefit
+  - darwinbox
+  - delhivery
+  - devrev
+  - devtron
+  - digit
+  - dream11
+  - dreamsports
+  - dunzo
+  - easebuzz
+  - eightfoldai
+  - exotel
+  - fampay
+  - fimoney
+  - fractal
+  - fractalanalytics
+  - freshdesk
+  - freshsales
+  - geeksforgeeks
+  - globallogic
+  - grow
+  - groww
+  - gupshup
+  - hackerearth
+  - haptik
+  - harness
+  - hasura
+  - hasurahq
+  - hcltech
+  - hippovideo
+  - icertis
+  - indmoney
+  - infosys
+  - innovaccer
+  - instamojo
+  - insurancedekho
+  - jarapp
+  - jio
+  - jupiter
+  - jupitermoney
+  - juspay
+  - kaleyra
+  - khatabook
+  - knowlarity
+  - leadsquared
+  - lenskart
+  - licious
+  - mahindra
+  - masaischool
+  - mathco
+  - meeshotech
+  - mindtickleinc
+  - moengage
+  - mohalla
+  - mphasis
+  - mswipe
+  - navihq
+  - netcore
+  - nykaa
+  - observeai
+  - ola
+  - olacabs
+  - olaelectric
+  - onsurity
+  - opensecret
+  - oyo
+  - paykun
+  - paytmmoney
+  - persistent
+  - pinelabs
+  - plumhq
+  - policybazaar
+  - porter
+  - postmanlabs
+  - practo
+  - pristyncare
+  - publicissapient
+  - quantiphi
+  - rafay
+  - rapido
+  - razorpay
+  - razorpaysoftware
+  - reliancejio
+  - rupeek
+  - sapient
+  - scaler
+  - scalerecademy
+  - setu
+  - shadowfax
+  - sharechat
+  - shiprocket
+  - signoz
+  - simpl
+  - slicepay
+  - smallcase
+  - spinny
+  - springverify
+  - springworks
+  - sprinto
+  - stablemoney
+  - swiggyin
+  - tanla
+  - tatadigital
+  - tataelectronics
+  - tcs
+  - techmahindra
+  - thoughtworks
+  - tickertape
+  - tigeranalytics
+  - turing
+  - turingcom
+  - tvsmotor
+  - unacademyin
+  - uni
+  - urbanclap
+  - urbancompany
+  - vedantu
+  - wellfound
+  - wingify
+  - wipro
+  - yellowai
+  - yellowmessenger
+  - yubi
+  - yulu
+  - zepto
+  - zeptonow
+  - zerodha
+  - zeta
+  - zetaindia
+  - zohocorp
+  - zohorecruit
