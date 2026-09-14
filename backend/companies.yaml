@@ -2409,6 +2409,9 @@ ashby:
   - slug: zip
     tier: 2
     note: 124 jobs
+  - slug: marble
+    tier: 2
+    note: 8 jobs
   candidates:
   - scaler
   - thoughtworks
@@ -5027,3 +5030,9 @@ smartrecruiters:
   - zudowork
   - zuma
   - zymbly
+  - denta
+  - forge
+  - forgehq
+  - joinmarble
+  - marble
+  - provenmetal

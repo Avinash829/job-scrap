@@ -2592,7 +2592,7 @@
  "cardboard": {
   "team_size": 8,
   "yc_batch": "Winter 2026",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "Bengaluru, KA, India",
   "yc_name": "Cardboard",
   "yc_one_liner": "Agentic video editor"
  },
@@ -3933,6 +3933,13 @@
   "yc_name": "Dench.com",
   "yc_one_liner": "Workspace for your AI Agents, Build any Workflow."
  },
+ "denta": {
+  "team_size": 1,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Denta",
+  "yc_one_liner": "Dental Insurance"
+ },
  "deployparagon": {
   "team_size": 2,
   "yc_batch": "Winter 2025",
@@ -5005,7 +5012,7 @@
   "yc_one_liner": "AI-native AML compliance platform for fintechs & banks"
  },
  "flai": {
-  "team_size": 23,
+  "team_size": 35,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Flai",
@@ -5158,6 +5165,13 @@
   "yc_name": "Forage",
   "yc_one_liner": "Payments powering people"
  },
+ "forge": {
+  "team_size": 7,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Forge",
+  "yc_one_liner": "AI native freight forwarder and customs broker"
+ },
  "forge-automation": {
   "team_size": 21,
   "yc_batch": "Winter 2025",
@@ -5171,6 +5185,13 @@
   "yc_locations": "Toronto, ON, Canada",
   "yc_name": "Forge Automation",
   "yc_one_liner": "Software Enabled CNC Parts Supplier"
+ },
+ "forgehq": {
+  "team_size": 7,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Forge",
+  "yc_one_liner": "AI native freight forwarder and customs broker"
  },
  "formance": {
   "team_size": 33,
@@ -7097,6 +7118,13 @@
   "yc_name": "Forage",
   "yc_one_liner": "Payments powering people"
  },
+ "joinmarble": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Marble",
+  "yc_one_liner": "The autonomous back-of-house for restaurants."
+ },
  "joinnewton": {
   "team_size": 4,
   "yc_batch": "Winter 2024",
@@ -7121,7 +7149,7 @@
  "juicebox": {
   "team_size": 65,
   "yc_batch": "Summer 2022",
-  "yc_locations": "Los Angeles, CA, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Juicebox",
   "yc_one_liner": "AI-powered talent sourcing for recruiters"
  },
@@ -7221,14 +7249,14 @@
   "yc_batch": "Summer 2021",
   "yc_locations": "India",
   "yc_name": "Kalam Labs",
-  "yc_one_liner": "Near Space Flying Machines"
+  "yc_one_liner": "Autonomous Stratospheric UAVs"
  },
  "kalamlabs": {
   "team_size": 10,
   "yc_batch": "Summer 2021",
   "yc_locations": "India",
   "yc_name": "Kalam Labs",
-  "yc_one_liner": "Near Space Flying Machines"
+  "yc_one_liner": "Autonomous Stratospheric UAVs"
  },
  "kalinda": {
   "team_size": 2,
@@ -7476,7 +7504,7 @@
   "yc_one_liner": "Corporate card & spend management platform for Indian startups"
  },
  "kombo": {
-  "team_size": 20,
+  "team_size": 77,
   "yc_batch": "Summer 2022",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "Kombo",
@@ -7996,14 +8024,14 @@
  "luca-iq": {
   "team_size": 2,
   "yc_batch": "Summer 2026",
-  "yc_locations": "Boston, MA, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Luca IQ",
   "yc_one_liner": "API-first tax engine for CPA firms and developers"
  },
  "lucaiq": {
   "team_size": 2,
   "yc_batch": "Summer 2026",
-  "yc_locations": "Boston, MA, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Luca IQ",
   "yc_one_liner": "API-first tax engine for CPA firms and developers"
  },
@@ -8237,6 +8265,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "HERA",
   "yc_one_liner": "We make sure every factory in the world builds without mistakes."
+ },
+ "marble": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Marble",
+  "yc_one_liner": "The autonomous back-of-house for restaurants."
  },
  "margin": {
   "team_size": 10,
@@ -10961,6 +10996,13 @@
   "yc_name": "Proven Group",
   "yc_one_liner": "PROVEN is using AI, data and personalization to disrupt CPG"
  },
+ "provenmetal": {
+  "team_size": 4,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "ProvenMetal",
+  "yc_one_liner": "AI-native electronics manufacturing for the American industrial base"
+ },
  "provenskincare": {
   "team_size": 40,
   "yc_batch": "Winter 2018",
@@ -13545,24 +13587,10 @@
   "yc_one_liner": "Salesforce for Cloud marketplaces on AWS, Azure, GCP"
  },
  "sully": {
-  "team_size": 49,
+  "team_size": 44,
   "yc_batch": "Summer 2021",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Sully.ai",
-  "yc_one_liner": "Autonomous team of AI agents that runs the entire hospital operations"
- },
- "sully-ai": {
-  "team_size": 49,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Sully.ai",
-  "yc_one_liner": "Autonomous team of AI agents that runs the entire hospital operations"
- },
- "sullyai": {
-  "team_size": 49,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Sully.ai",
+  "yc_name": "Sully",
   "yc_one_liner": "Autonomous team of AI agents that runs the entire hospital operations"
  },
  "summitglobal": {
@@ -15127,7 +15155,7 @@
   "yc_one_liner": "Automated AI data integrations for roll-ups"
  },
  "useflai": {
-  "team_size": 23,
+  "team_size": 35,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Flai",
@@ -15306,7 +15334,7 @@
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vyra",
-  "yc_one_liner": "Autonomous video editing for non-editors. Instead of making users\u2026"
+  "yc_one_liner": "Autonomous video editing for non-editors."
  },
  "usul": {
   "team_size": 15,
@@ -15761,7 +15789,7 @@
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vyra",
-  "yc_one_liner": "Autonomous video editing for non-editors. Instead of making users\u2026"
+  "yc_one_liner": "Autonomous video editing for non-editors."
  },
  "wardstone": {
   "team_size": 8,
@@ -16123,7 +16151,7 @@
  "writesonic": {
   "team_size": 35,
   "yc_batch": "Summer 2021",
-  "yc_locations": "San Francisco, CA, USA; Remote",
+  "yc_locations": "New Delhi, DL, India; Remote",
   "yc_name": "Writesonic",
   "yc_one_liner": "Track & Boost Your Brand\u2019s Visibility in AI Search"
  },
