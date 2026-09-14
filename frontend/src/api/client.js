@@ -1,6 +1,9 @@
 /** Thin API client. Keeps query-string assembly in one place. */
 
-const BASE = import.meta.env.VITE_API_BASE ?? "";
+// Trailing slashes are stripped: "https://api.example.com/" + "/api/v1/jobs"
+// would otherwise request "//api/v1/jobs", which the API answers with a 404.
+// Pasting the URL with a trailing slash into Vercel is an easy mistake to make.
+const BASE = (import.meta.env.VITE_API_BASE ?? "").trim().replace(/\/+$/, "");
 
 function toQuery(params) {
   const qs = new URLSearchParams();

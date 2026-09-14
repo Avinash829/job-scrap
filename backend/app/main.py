@@ -21,6 +21,16 @@ log = logging.getLogger(__name__)
 health_router = APIRouter(tags=["meta"])
 
 
+@health_router.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
+def root() -> dict:
+    """Answer the bare URL instead of 404ing.
+
+    Render probes `HEAD /` when a deploy goes live, and a person opening the
+    API URL in a browser lands here too - both used to get a 404.
+    """
+    return {"service": "jobscrap-api", "docs": "/docs", "health": "/health", "jobs": "/api/v1/jobs"}
+
+
 @health_router.get("/health")
 def health() -> dict:
     """Liveness only - deliberately does not touch the database.
