@@ -7,7 +7,7 @@ timed out.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
 
@@ -23,6 +23,12 @@ class Company:
     tier: int = 2
     note: str | None = None
     verified: bool = True
+    # Platform-specific settings from companies.yaml: a Workday tenant needs
+    # its `wd` shard and career `site`, an Avature portal its `base` URL.
+    meta: dict = field(default_factory=dict, compare=False, hash=False)
+
+    def get(self, key: str, default=None):
+        return self.meta.get(key, default)
 
     @property
     def key(self) -> tuple[str, str]:
@@ -54,6 +60,11 @@ class CompanyRegistry:
                         platform=platform,
                         tier=int(entry.get("tier", 2)),
                         note=entry.get("note"),
+                        meta={
+                            k: v
+                            for k, v in entry.items()
+                            if k not in ("slug", "tier", "note")
+                        },
                     )
                 )
 
@@ -94,25 +105,37 @@ class CompanyRegistry:
         return changed
 
     def prune(self, missing: list[tuple[str, str]]) -> int:
-        """Drop slugs that returned a definitive 404."""
+        """Drop candidates that were tested and ruled out - and remember them.
+
+        Without the `rejected` memory, every discovery run re-added the same
+        ~2,300 YC names on all four platforms and re-tested ~9,000 slugs that
+        had already come back 404, making each run ~5 minutes of redundant
+        requests.
+        """
         removed = 0
         for platform, slug in missing:
-            block = self._data.get(platform) or {}
+            block = self._data.setdefault(platform, {})
             cands = block.get("candidates") or []
+            rejected = block.setdefault("rejected", [])
             if slug in cands:
                 cands.remove(slug)
                 removed += 1
+            if slug not in rejected:
+                rejected.append(slug)
+        for block in self._data.values():
+            if isinstance(block, dict) and block.get("rejected"):
+                block["rejected"] = sorted(set(block["rejected"]))
         return removed
 
     def add_discovered(self, platform: str, slugs: list[str]) -> int:
-        """Append newly discovered slugs as candidates."""
+        """Append newly discovered slugs as candidates, skipping known ones."""
         block = self._data.setdefault(platform, {})
         verified = {
             (e["slug"] if isinstance(e, dict) else e)
             for e in (block.get("verified") or [])
         }
         cands = block.setdefault("candidates", [])
-        existing = set(cands) | verified
+        existing = set(cands) | verified | set(block.get("rejected") or [])
         added = [s for s in slugs if s not in existing]
         cands.extend(sorted(added))
         return len(added)

@@ -105,7 +105,7 @@ class Lever(ATSConnector):
                     source_job_id=f"{company.slug}:{item['id']}",
                     url=item.get("hostedUrl") or item.get("applyUrl") or "",
                     title=item.get("text", ""),          # `text`, not `title`
-                    company=company.slug,
+                    company=company.get("name") or company.slug,
                     description=description,
                     location_raw=location or None,
                     tags=[t for t in (team, commitment, workplace) if t],

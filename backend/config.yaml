@@ -89,7 +89,15 @@ employment:
 roles:
   include:
     swe:        [software engineer, software developer, sde, swe, programmer,
-                 software engineering, application developer, product engineer]
+                 software engineering, application developer, product engineer,
+                 software development engineer, application engineer,
+                 applications engineer, application engineering,
+                 applications engineering, developer intern, engineering intern,
+                 technology intern, tech intern, it intern,
+                 software development intern, application development intern,
+                 software intern, web development intern, app development intern,
+                 research engineer intern,
+                 forward deployed engineer]
     frontend:   [frontend, front-end, front end, ui engineer, react developer,
                  react.js, next.js developer, web developer]
     backend:    [backend, back-end, back end, api engineer, server engineer,
@@ -97,9 +105,11 @@ roles:
     fullstack:  [full stack, fullstack, full-stack, mern, mean stack]
     ml:         [ai engineer, machine learning, ml engineer, deep learning,
                  nlp engineer, llm engineer, genai, generative ai, ai developer,
-                 ai/ml, applied scientist, ai full stack, agent engineer]
+                 ai/ml, ai ml, applied scientist, ai full stack, agent engineer,
+                 ai intern, artificial intelligence, ml intern]
     data:       [data engineer, data scientist, analytics engineer, data analyst,
-                 bi developer, business intelligence]
+                 bi developer, business intelligence, data science,
+                 data analytics, analytics intern, data intern]
     # devops:   [devops, platform engineer, infrastructure engineer, cloud engineer]
     # sre:      [sre, site reliability, reliability engineer]
 
@@ -130,6 +140,8 @@ roles:
     - electrical
     - accountant
     - marketing
+    - market development
+    - business development
     - copywriter
     - writer
     - teacher
@@ -138,6 +150,22 @@ roles:
   # A role must match the title, not just a tag. Tag-only matching classified
   # "Product Tester for Books" as `data` and "IT-Systemadministrator" as `sre`.
   match_titles_only: true
+
+# --- Search-based career sites -------------------------------------------
+# Google, Amazon, Workday and Avature can't return a whole board in one call,
+# so each is queried per term. Terms are kept few and broad on purpose: every
+# term multiplies requests, and the role/YoE filters above do the narrowing.
+search:
+  terms: [intern, internship, graduate, new grad, software engineer, developer]
+  # Where to look. Remote roles are picked up by the aggregators and by
+  # boards whose postings say "Remote"; these are the onsite markets.
+  locations: [India]
+  max_pages_per_term: 5
+
+  # Workday is queried per tenant, and there are ~1,400 India employers on
+  # it, so it gets a tighter budget: 3 terms x 2 pages x 20 rows per tenant.
+  workday_terms: [intern, graduate, software engineer]
+  workday_max_pages: 2
 
 # --- Your stack -----------------------------------------------------------
 stack:
@@ -178,3 +206,219 @@ stack:
   # because many postings list no detectable stack at all - but scoring
   # already rewards overlap heavily.
   require_match: false
+
+# --- Well-known employers --------------------------------------------------
+# MNCs and well-funded companies get the full "company" score component.
+# Matched on the normalized name ("Electronic Arts Inc. (EA)" -> "electronic
+# arts"), so write the plain name. YC companies are detected automatically.
+notable_companies:
+  # big tech / MNC
+  - Google
+  - Amazon
+  - Amazon Web Services
+  - Microsoft
+  - Apple
+  - Meta
+  - Netflix
+  - Nvidia
+  - Adobe
+  - Salesforce
+  - Oracle
+  - Intel
+  - AMD
+  - Qualcomm
+  - Cisco
+  - IBM
+  - SAP
+  - VMware
+  - Broadcom
+  - ServiceNow
+  - Workday
+  - Atlassian
+  - Uber
+  - LinkedIn
+  - Electronic Arts
+  - Ubisoft
+  - Samsung
+  - Texas Instruments
+  - Walmart
+  - Walmart Global Tech
+  - Target
+  - Visa
+  - Mastercard
+  - PayPal
+  - American Express
+  - JPMorgan Chase
+  - Goldman Sachs
+  - Morgan Stanley
+  - Deutsche Bank
+  - Barclays
+  - Wells Fargo
+  - Citi
+  - Intuit
+  - Autodesk
+  - Siemens
+  - Philips
+  - Thomson Reuters
+  - Expedia
+  - Booking.com
+  - Twilio
+  - Stripe
+  - Databricks
+  - Snowflake
+  - MongoDB
+  - Confluent
+  - Cloudflare
+  - Datadog
+  - Rubrik
+  - Nutanix
+  - Palo Alto Networks
+  - Zscaler
+  - CrowdStrike
+  - Okta
+  - HubSpot
+  - Zoom
+  - Dropbox
+  - Grammarly
+  - Canva
+  - Figma
+  - Notion
+  - OpenAI
+  - Anthropic
+  - DE Shaw
+  - Tower Research Capital
+  - Optiver
+  - Media.net
+  - Arcesium
+  # India product companies and funded startups
+  - Juspay
+  - Razorpay
+  - Flipkart
+  - PhonePe
+  - Paytm
+  - CRED
+  - Zepto
+  - Swiggy
+  - Zomato
+  - Eternal
+  - Meesho
+  - Groww
+  - Zerodha
+  - Postman
+  - BrowserStack
+  - Freshworks
+  - Zoho
+  - Chargebee
+  - InMobi
+  - Ola
+  - Dream11
+  - Sprinklr
+  - ShareChat
+  - Unacademy
+  - Urban Company
+  - Nykaa
+  - Lenskart
+  - Myntra
+  - Rapido
+  - Slice
+  - Jupiter
+  - Fi
+  - Atlan
+  - Hasura
+  - Sarvam AI
+  - Krutrim
+  - Uniphore
+  - Innovaccer
+  - Druva
+  - Whatfix
+  - Clevertap
+  - MoEngage
+  - LeadSquared
+  - Darwinbox
+  - Upstox
+  - Pine Labs
+  - Cars24
+  - Spinny
+  - Licious
+  - PharmEasy
+  - Games24x7
+  - MPL
+  - Blinkit
+  - Delhivery
+  - Ather Energy
+  # added with the 2026-09-14 coverage expansion
+  - Expedia Group
+  - Airbnb
+  - Coinbase
+  - Reddit
+  - Pinterest
+  - GitLab
+  - Instacart
+  - Samsara
+  - Toast
+  - UiPath
+  - Tekion
+  - Elastic
+  - Celonis
+  - Plaid
+  - Ramp
+  - Perplexity
+  - ElevenLabs
+  - Cerebras
+  - Scale AI
+  - Together AI
+  - Vercel
+  - Supabase
+  - PostHog
+  - Replit
+  - Zeta
+  - Hevo Data
+  - Mindtickle
+  - Zenoti
+  - Observe.AI
+  - Harness
+  - Kong
+  - Temporal
+  - Adyen
+  - Affirm
+  - Chime
+  - Gusto
+  - Monzo
+  - Wise
+  - Duolingo
+  - Discord
+  - DoorDash
+  - Robinhood
+  - Brex
+  - Cohere
+  - LangChain
+  - Pinecone
+  - Anyscale
+  - Deel
+  - Dream11 (Dream Sports)
+  - Motorola Solutions
+  - Medtronic
+  - Prudential
+  - S&P Global
+  - Yahoo
+  - Micron
+  - Marvell
+  - HPE
+  - Hewlett Packard Enterprise
+  - Analog Devices
+  - Applied Materials
+  - NXP
+  - Cadence
+  - Synopsys
+  - BlackRock
+  - Gartner
+  - Guidewire
+  - PTC
+  - Fiserv
+  - Equifax
+  - Broadridge
+  - ServiceTitan
+  - Sabre
+  - Harman
+  - Valeo
+  - Vishay

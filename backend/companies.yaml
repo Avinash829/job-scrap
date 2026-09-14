@@ -683,6 +683,110 @@ greenhouse:
   - slug: xendit
     tier: 2
     note: 30 jobs
+  - slug: airbnb
+    tier: 1
+    name: Airbnb
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: celonis
+    tier: 1
+    name: Celonis
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: chime
+    tier: 1
+    name: Chime
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: doordashindia
+    tier: 1
+    name: DoorDash India
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: dropbox
+    tier: 1
+    name: Dropbox
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: druva
+    tier: 1
+    name: Druva
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: grafanalabs
+    tier: 1
+    name: Grafana Labs
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: harnessinc
+    tier: 1
+    name: Harness
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: inmobi
+    tier: 1
+    name: InMobi
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: instacart
+    tier: 1
+    name: Instacart
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: linkedin
+    tier: 1
+    name: LinkedIn
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: okta
+    tier: 1
+    name: Okta
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: pinterest
+    tier: 1
+    name: Pinterest
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: rubrik
+    tier: 1
+    name: Rubrik
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: samsara
+    tier: 1
+    name: Samsara
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: toast
+    tier: 1
+    name: Toast
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: togetherai
+    tier: 1
+    name: Together AI
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: towerresearchcapital
+    tier: 1
+    name: Tower Research Capital
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: typeface
+    tier: 1
+    name: Typeface
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: zenoti
+    tier: 1
+    name: Zenoti
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: zscaler
+    tier: 1
+    name: Zscaler
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: brex
+    tier: 1
+    name: Brex
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: sofi
+    tier: 1
+    name: SoFi
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: razorpaysoftwareprivatelimited
+    name: Razorpay
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: arcesiumllc
+    name: Arcesium
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: grammarly
+    name: Grammarly
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
   candidates:
   - 67streetdental
   - adjacentservices
@@ -1211,6 +1315,18 @@ lever:
   - slug: zippi
     tier: 2
     note: 5 jobs
+  - slug: hevodata
+    tier: 1
+    name: Hevo Data
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: linkedin
+    tier: 1
+    name: LinkedIn
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: dreamsports
+    name: Dream11 (Dream Sports)
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
   candidates:
   - 15five
   - 3eco
@@ -2412,6 +2528,74 @@ ashby:
   - slug: marble
     tier: 2
     note: 8 jobs
+  - slug: anyscale
+    tier: 1
+    name: Anyscale
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: cerebras
+    tier: 1
+    name: Cerebras
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: confluent
+    tier: 1
+    name: Confluent
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: elevenlabs
+    tier: 1
+    name: ElevenLabs
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: kong
+    tier: 1
+    name: Kong
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: langchain
+    tier: 1
+    name: LangChain
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: pinecone
+    tier: 1
+    name: Pinecone
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: plaid
+    tier: 1
+    name: Plaid
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: sarvam
+    tier: 1
+    name: Sarvam AI
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: snowflake
+    tier: 1
+    name: Snowflake
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: synthesia
+    tier: 1
+    name: Synthesia
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: tekion
+    tier: 1
+    name: Tekion
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: temporal
+    tier: 1
+    name: Temporal
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: uipath
+    tier: 1
+    name: UiPath
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: cohere
+    tier: 1
+    name: Cohere
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: miro
+    tier: 1
+    name: Miro
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: deel
+    name: Deel
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
   candidates:
   - scaler
   - thoughtworks
@@ -2534,6 +2718,18 @@ smartrecruiters:
   - slug: yassir
     tier: 2
     note: 6 jobs
+  - slug: ixigo
+    tier: 1
+    name: ixigo
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: servicenow
+    tier: 1
+    name: ServiceNow
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: wise
+    tier: 1
+    name: Wise
+    note: well-paying tech employer (added 2026-09-14)
   candidates:
   - zomato
   - paytm
@@ -5036,3 +5232,3746 @@ smartrecruiters:
   - joinmarble
   - marble
   - provenmetal
+workday:
+  verified:
+  - slug: nvidia
+    tier: 1
+    wd: wd5
+    site: NVIDIAExternalCareerSite
+    name: NVIDIA
+  - slug: salesforce
+    tier: 1
+    wd: wd12
+    site: External_Career_Site
+    name: Salesforce
+  - slug: adobe
+    tier: 1
+    wd: wd5
+    site: external_experienced
+    name: Adobe
+  - slug: intel
+    tier: 1
+    wd: wd1
+    site: External
+    name: Intel
+  - slug: db
+    wd: wd3
+    site: dbwebsite
+    tier: 1
+    note: India 17, intern/grad 5
+    name: Deutsche Bank
+  - slug: russell
+    wd: wd5
+    site: russellinvestments
+    tier: 1
+    note: India 20, intern/grad 4
+  - slug: cw
+    wd: wd1
+    site: external
+    tier: 1
+    note: India 16, intern/grad 4
+  - slug: myhr
+    wd: wd3
+    site: planseegroup_career
+    tier: 1
+    note: India 20, intern/grad 3
+  - slug: pg
+    wd: wd5
+    site: '1000'
+    tier: 1
+    note: India 11, intern/grad 3
+    name: Procter & Gamble
+  - slug: mmc
+    wd: wd1
+    site: mmc
+    tier: 1
+    note: India 10, intern/grad 2
+  - slug: itron
+    wd: wd5
+    site: itron
+    tier: 1
+    note: India 9, intern/grad 2
+  - slug: cengage
+    wd: wd5
+    site: cengageindiacareers
+    tier: 1
+    note: India 5, intern/grad 2
+  - slug: hpe
+    wd: wd5
+    site: jobsathpe
+    tier: 1
+    note: India 3, intern/grad 2
+    name: Hewlett Packard Enterprise
+  - slug: hpe
+    wd: wd5
+    site: acjobsite
+    tier: 1
+    note: India 1, intern/grad 2
+    name: Hewlett Packard Enterprise
+  - slug: hpe
+    wd: wd5
+    site: wfmathpe
+    tier: 1
+    note: India 1, intern/grad 2
+    name: Hewlett Packard Enterprise
+  - slug: micron
+    wd: wd1
+    site: external
+    tier: 1
+    note: India 19, intern/grad 1
+    name: Micron
+  - slug: applyboard
+    wd: wd3
+    site: applyboardnh
+    tier: 1
+    note: India 18, intern/grad 1
+  - slug: dentsuaegis
+    wd: wd3
+    site: dan_global
+    tier: 1
+    note: India 17, intern/grad 1
+  - slug: heinz
+    wd: wd1
+    site: kraftheinz_careers
+    tier: 1
+    note: India 17, intern/grad 1
+  - slug: amgen
+    wd: wd1
+    site: careers
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: globalfoundries
+    wd: wd1
+    site: external
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: amlrightsource
+    wd: wd1
+    site: amlrightsource
+    tier: 1
+    note: India 15, intern/grad 1
+  - slug: baxter
+    wd: wd1
+    site: baxter
+    tier: 1
+    note: India 15, intern/grad 1
+  - slug: ameriprise
+    wd: wd5
+    site: ameriprise
+    tier: 1
+    note: India 13, intern/grad 1
+  - slug: ascensushr
+    wd: wd1
+    site: ascensuscareers
+    tier: 1
+    note: India 12, intern/grad 1
+  - slug: alcon
+    wd: wd5
+    site: careers_alcon
+    tier: 1
+    note: India 11, intern/grad 1
+  - slug: harman
+    wd: wd3
+    site: harman
+    tier: 1
+    note: India 11, intern/grad 1
+    name: Harman
+  - slug: slihrms
+    wd: wd3
+    site: careers
+    tier: 1
+    note: India 8, intern/grad 1
+  - slug: csagroup
+    wd: wd3
+    site: csagroup
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: fedex
+    wd: wd1
+    site: ftn_apac_external
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: gartner
+    wd: wd5
+    site: ext
+    tier: 1
+    note: India 6, intern/grad 1
+    name: Gartner
+  - slug: gehc
+    wd: wd5
+    site: gehc_externalsite
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: hl
+    wd: wd1
+    site: lateral
+    tier: 1
+    note: India 6, intern/grad 1
+    name: Houlihan Lokey
+  - slug: areteir
+    wd: wd1
+    site: arete-careers
+    tier: 1
+    note: India 4, intern/grad 1
+  - slug: djeholdings
+    wd: wd5
+    site: edelman-careers-e200
+    tier: 1
+    note: India 4, intern/grad 1
+  - slug: haier
+    wd: wd3
+    site: ge_appliances
+    tier: 1
+    note: India 2, intern/grad 1
+  - slug: jbtm
+    wd: wd108
+    site: jbt_marel_career_site
+    tier: 1
+    note: India 2, intern/grad 1
+    name: JBT Marel
+  - slug: nvidia
+    wd: wd5
+    site: nvidiaexternalcareersite
+    tier: 1
+    note: India 2, intern/grad 1
+  - slug: adient
+    wd: wd3
+    site: external
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: cdpq
+    wd: wd10
+    site: cdpq-recrutement-universitaire
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: cengage
+    wd: wd5
+    site: cengagenorthamericacareers
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: mywdhr
+    wd: wd1
+    site: saks_offfifth_careers
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: barrywehmiller
+    wd: wd1
+    site: bwcareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: blackbaud
+    wd: wd1
+    site: externalcareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: chevron
+    wd: wd5
+    site: jobs
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: collinsongroup
+    wd: wd103
+    site: the_collinson_group_external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: dexcom
+    wd: wd1
+    site: dexcom
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: diageo
+    wd: wd3
+    site: diageo_careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: dow
+    wd: wd1
+    site: externalcareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: eisneramper
+    wd: wd1
+    site: eisneramper_external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: empower
+    wd: wd12
+    site: empower
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: endo
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: fnz
+    wd: wd3
+    site: fnz_careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: guidewire
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 20, intern/grad 0
+    name: Guidewire
+  - slug: harriscomputer
+    wd: wd3
+    site: altera
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: ingrammicro
+    wd: wd5
+    site: ingrammicro
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: intel
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: invesco
+    wd: wd1
+    site: ivz
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: johnsonelectric
+    wd: wd3
+    site: career_je
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: lbg
+    wd: wd3
+    site: lloyds_technology_centre
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: maersk
+    wd: wd3
+    site: maersk_careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: mdlz
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: mufgub
+    wd: wd3
+    site: mufg-careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: nike
+    wd: wd1
+    site: nke
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: nvent
+    wd: wd5
+    site: nvent
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: pretiumenterpriseservices
+    wd: wd1
+    site: pretium-enterprise-services
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: proofpoint
+    wd: wd5
+    site: proofpointcareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: ptc
+    wd: wd1
+    site: ptc
+    tier: 2
+    note: India 20, intern/grad 0
+    name: PTC
+  - slug: servicetitan
+    wd: wd1
+    site: servicetitan
+    tier: 2
+    note: India 20, intern/grad 0
+    name: ServiceTitan
+  - slug: sglottery
+    wd: wd5
+    site: scientificgamesexternalcareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: svb
+    wd: wd5
+    site: firstcitizensindia
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: thales
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: zeissgroup
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: zillow
+    wd: wd5
+    site: zillow_group_external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: abglobal
+    wd: wd1
+    site: alliancebernsteincareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: aptiv
+    wd: wd5
+    site: aptiv_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: aresmgmt
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: astrazeneca
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: athene
+    wd: wd5
+    site: apollo_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: athene
+    wd: wd5
+    site: apollononpubliccareersite
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: bloomenergy
+    wd: wd1
+    site: bloomenergycareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: bpinternational
+    wd: wd3
+    site: bpcareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: browserstack
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: candescent
+    wd: wd501
+    site: hiring
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: cba
+    wd: wd3
+    site: commbank_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: cubic
+    wd: wd1
+    site: cubic_global_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: edwards
+    wd: wd5
+    site: edwardscareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: firstam
+    wd: wd1
+    site: faicareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: flextronics
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: hitachi
+    wd: wd1
+    site: hitachi
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: illumina
+    wd: wd1
+    site: illumina-careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: issgovernance
+    wd: wd1
+    site: isscareers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: kantar
+    wd: wd3
+    site: kantar
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: morningstar
+    wd: wd5
+    site: americas
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: priceline
+    wd: wd1
+    site: priceline
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: pvh
+    wd: wd1
+    site: pvh_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: riministreet
+    wd: wd1
+    site: riministreet
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: sabre
+    wd: wd1
+    site: sabrejobs
+    tier: 2
+    note: India 19, intern/grad 0
+    name: Sabre
+  - slug: slihrms
+    wd: wd3
+    site: linxon
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: solenis
+    wd: wd1
+    site: solenis
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: surbanajurong
+    wd: wd3
+    site: sj_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: airliquidehr
+    wd: wd3
+    site: airliquideexternalcareer
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: astrazeneca
+    wd: wd3
+    site: broadbean_external
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: athenahealth
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: blackrock
+    wd: wd1
+    site: blackrock_professional
+    tier: 2
+    note: India 18, intern/grad 0
+    name: BlackRock
+  - slug: cigna
+    wd: wd5
+    site: cignacareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: circles
+    wd: wd103
+    site: circles
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: columbiasportswearcompany
+    wd: wd5
+    site: columbia_career_site
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: columbiasportswearcompany
+    wd: wd5
+    site: csc_careers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: copart
+    wd: wd12
+    site: copart
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: crowdstrike
+    wd: wd5
+    site: crowdstrikecareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: equinix
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: finastra
+    wd: wd3
+    site: finc
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: hp
+    wd: wd5
+    site: externalcareersite
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: iff
+    wd: wd5
+    site: iff_careers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: internationalschools
+    wd: wd3
+    site: ispcareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: jci
+    wd: wd5
+    site: jci
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: lnw
+    wd: wd5
+    site: lightwonderexternalcareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: logitech
+    wd: wd5
+    site: logitech
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: mastercard
+    wd: wd1
+    site: corporatecareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: millerknoll
+    wd: wd1
+    site: millerknoll
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: mufgub
+    wd: wd3
+    site: mufg-earlycareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: ncr
+    wd: wd1
+    site: ext_apac
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: omnissa
+    wd: wd501
+    site: omnissa_external_career_site
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: owensminor
+    wd: wd1
+    site: omcareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: shell
+    wd: wd3
+    site: shellcareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: soti
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: ag
+    wd: wd3
+    site: airbus
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: alliancedata
+    wd: wd5
+    site: breadfinancial_india
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: arcticwolf
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: carrier
+    wd: wd5
+    site: jobs
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: electrolux
+    wd: wd3
+    site: electroluxcareersite
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: fedex
+    wd: wd1
+    site: fxe-meisa-external
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: globalhr
+    wd: wd5
+    site: rec_rtx_ext_gateway
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: jll
+    wd: wd1
+    site: jllcareers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: lighting
+    wd: wd3
+    site: jobs-and-careers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: lonza
+    wd: wd3
+    site: lonza_careers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: marvell
+    wd: wd1
+    site: marvellcareers
+    tier: 2
+    note: India 17, intern/grad 0
+    name: Marvell
+  - slug: mrisoftware
+    wd: wd501
+    site: external_careersite
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: ms
+    wd: wd5
+    site: private
+    tier: 2
+    note: India 17, intern/grad 0
+    name: Morgan Stanley
+  - slug: nasdaq
+    wd: wd1
+    site: global_external_site
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: ncratleos
+    wd: wd1
+    site: ext_apacatleos
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: pwc
+    wd: wd3
+    site: global_experienced_careers
+    tier: 2
+    note: India 17, intern/grad 0
+    name: PwC
+  - slug: pwc
+    wd: wd3
+    site: nonpublic_postings
+    tier: 2
+    note: India 17, intern/grad 0
+    name: PwC
+  - slug: sanofi
+    wd: wd3
+    site: sanoficareers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: semtech
+    wd: wd1
+    site: semtechcareers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: theaccessgroup
+    wd: wd103
+    site: access_group_external_careers
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: web
+    wd: wd1
+    site: externalcareersite
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: alegeus
+    wd: wd1
+    site: alegeus_external_careers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: alfalaval
+    wd: wd3
+    site: alfa_laval_jobs
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: aspentech
+    wd: wd5
+    site: aspentech
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: astreya
+    wd: wd5
+    site: life-at-astreya-opportunities
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: availity
+    wd: wd1
+    site: availity_careers_india
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: centific
+    wd: wd1
+    site: centific_global
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: citicclsa
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: db
+    wd: wd3
+    site: dwswebsite
+    tier: 2
+    note: India 16, intern/grad 0
+    name: Deutsche Bank
+  - slug: disney
+    wd: wd5
+    site: disneycareer
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: fox
+    wd: wd1
+    site: domestic
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: freudenberg
+    wd: wd3
+    site: freudenberg-group
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: ironmountain
+    wd: wd5
+    site: iron-mountain-jobs
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: ksb
+    wd: wd3
+    site: ksb_externalcareersite
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: maersk
+    wd: wd3
+    site: maersk_manual
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: magnitudesoftware
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: ms
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 16, intern/grad 0
+    name: Morgan Stanley
+  - slug: nttlimited
+    wd: wd3
+    site: ntt_careers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: pfizer
+    wd: wd1
+    site: pfizercareers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: plantemoran
+    wd: wd1
+    site: pmexternalcareers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: procore
+    wd: wd12
+    site: procore_external_careers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: pwc
+    wd: wd3
+    site: crm_experienced_careers_site
+    tier: 2
+    note: India 16, intern/grad 0
+    name: PwC
+  - slug: sulzer
+    wd: wd502
+    site: sulzerjobs
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: surbanajurong
+    wd: wd3
+    site: careersatsmec
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: amat
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 15, intern/grad 0
+    name: Applied Materials
+  - slug: analogdevices
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 15, intern/grad 0
+    name: Analog Devices
+  - slug: bdx
+    wd: wd1
+    site: external_career_site_india
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: cisco
+    wd: wd5
+    site: cisco_careers
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: dxctechnology
+    wd: wd1
+    site: dxcjobs
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: elevancehealth
+    wd: wd1
+    site: carelonglobal_in
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: enovis
+    wd: wd5
+    site: enovis
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: fico
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: flowserve
+    wd: wd1
+    site: applied
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: galderma
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: gsknch
+    wd: wd3
+    site: gskcareers
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: harriscomputer
+    wd: wd3
+    site: gbs
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: ig
+    wd: wd103
+    site: ext_ig
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: mksinst
+    wd: wd1
+    site: mkscareersemea
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: regeneron
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: revvity
+    wd: wd103
+    site: external
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: thermofisher
+    wd: wd5
+    site: thermofishercareers
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: workday
+    wd: wd5
+    site: workday
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: altera
+    wd: wd1
+    site: altera
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: autodesk
+    wd: wd1
+    site: ext
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: barclays
+    wd: wd3
+    site: external_career_site_barclays
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: billgosling
+    wd: wd5
+    site: global
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: bpinternational
+    wd: wd3
+    site: bpprivateexternalcareerssite
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: clarivate
+    wd: wd3
+    site: clarivate_careers
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: elanco
+    wd: wd5
+    site: external_career
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: equifax
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 14, intern/grad 0
+    name: Equifax
+  - slug: fiserv
+    wd: wd5
+    site: ext
+    tier: 2
+    note: India 14, intern/grad 0
+    name: Fiserv
+  - slug: guidehouse
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: rbs
+    wd: wd3
+    site: rbs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: relx
+    wd: wd3
+    site: elsevierjobs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: relx
+    wd: wd3
+    site: reedexhibitions
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: rsm
+    wd: wd1
+    site: rsmcareers
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: ryan
+    wd: wd1
+    site: ryancareers
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: seic
+    wd: wd1
+    site: sei_global_services
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: westernunion
+    wd: wd5
+    site: hiddenwujobs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: wiley
+    wd: wd1
+    site: wiley_careers
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: abbott
+    wd: wd5
+    site: abbottcareers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: aristocrat
+    wd: wd3
+    site: aristocratexternalcareerssite
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: armaninollp
+    wd: wd1
+    site: armanino_india
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: automationanywhere
+    wd: wd5
+    site: automationanywherejobs
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: avnet
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: cohesity
+    wd: wd5
+    site: cohesity_careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: dyson
+    wd: wd3
+    site: dyson_careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: ecolab
+    wd: wd1
+    site: ecolab_external
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: kbr
+    wd: wd5
+    site: kbr_careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: nextgen
+    wd: wd5
+    site: nextgen_careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: nxp
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 13, intern/grad 0
+    name: NXP
+  - slug: puma
+    wd: wd502
+    site: jobs_at_puma
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: ryan
+    wd: wd1
+    site: experienced-professionals
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: stryker
+    wd: wd1
+    site: strykercareers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: theapexgroup
+    wd: wd3
+    site: apexgroupcareers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: unilever
+    wd: wd3
+    site: unilever_experienced_professionals
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: cadence
+    wd: wd1
+    site: external_careers
+    tier: 2
+    note: India 12, intern/grad 0
+    name: Cadence
+  - slug: capitalone
+    wd: wd12
+    site: capital_one
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: convatec
+    wd: wd1
+    site: convatec
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: copeland
+    wd: wd5
+    site: copeland_external_careers_page
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: ffive
+    wd: wd5
+    site: f5jobs
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: flutterbe
+    wd: wd3
+    site: group_external
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: hysteryale
+    wd: wd1
+    site: hyster-yalecareers
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: leidos
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: myhrabc
+    wd: wd5
+    site: global
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: sartorius
+    wd: wd3
+    site: sartoriuscareers
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: saxobank
+    wd: wd3
+    site: careeratsaxobank
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: agilent
+    wd: wd5
+    site: agilent_careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: alation
+    wd: wd503
+    site: externalsite
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: aliaxis
+    wd: wd3
+    site: aliaxis_indiaashirvad1
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: allegion
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: bakerhughes
+    wd: wd5
+    site: bakerhughes
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: borgwarner
+    wd: wd5
+    site: borgwarner_careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: broadridge
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 11, intern/grad 0
+    name: Broadridge
+  - slug: cai
+    wd: wd5
+    site: computer_aid
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: calix
+    wd: wd1
+    site: externalinternational
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: clarioclinical
+    wd: wd1
+    site: clarioclinical_careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: essity
+    wd: wd3
+    site: job_opportunities
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: factset
+    wd: wd108
+    site: factsetcareers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: geaerospace
+    wd: wd5
+    site: ge_externalsite
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: halma
+    wd: wd3
+    site: halma
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: kimberlyclark
+    wd: wd1
+    site: global
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: kimberlyclark
+    wd: wd1
+    site: linkedin
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: kone
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: mavenir
+    wd: wd1
+    site: mavenir_careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: mimecast
+    wd: wd5
+    site: mimecast-careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: novartis
+    wd: wd3
+    site: novartis_careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: ntst
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: solera
+    wd: wd5
+    site: global_career_site
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: albemarle
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: axalta
+    wd: wd1
+    site: axalta
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: bf
+    wd: wd5
+    site: international
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: capita
+    wd: wd3
+    site: capitaglobal
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: cognex
+    wd: wd1
+    site: external_career_site
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: creditacceptance
+    wd: wd5
+    site: credit_acceptance
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: epicorsoftware
+    wd: wd5
+    site: epicorjobs
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: flexerasoftware
+    wd: wd1
+    site: flexerasoftware
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: fmc
+    wd: wd12
+    site: fmc
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: fmr
+    wd: wd1
+    site: fidelitycareers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: fronius
+    wd: wd3
+    site: job_board
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: hempel
+    wd: wd3
+    site: hempelcareers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: iqvia
+    wd: wd1
+    site: iqvia
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: path
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: philips
+    wd: wd3
+    site: jobs-and-careers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: quantiphi
+    wd: wd1
+    site: careers_at_quantiphi
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: roquette
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: ruderfinn
+    wd: wd5
+    site: ruderfinn
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: swarovski
+    wd: wd3
+    site: swarovski
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: tjx
+    wd: wd1
+    site: tjx_external
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: wexinc
+    wd: wd5
+    site: wexinc
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: circle
+    wd: wd1
+    site: circle
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: cmegroup
+    wd: wd1
+    site: cme_careers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: cochlear
+    wd: wd3
+    site: cochlear_careers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: corpay
+    wd: wd103
+    site: ext_001
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: curriculumassociates
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: danaher
+    wd: wd1
+    site: danaherjobs
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: dbs
+    wd: wd3
+    site: dbs_careers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: essity
+    wd: wd3
+    site: hms_job_opportunities
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: flsmidth
+    wd: wd3
+    site: fls_global
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: gevernova
+    wd: wd5
+    site: vernova_externalsite
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: ghr
+    wd: wd1
+    site: lateral-ba_continuum
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: hempel
+    wd: wd3
+    site: careersnolink
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: hp
+    wd: wd5
+    site: exteu-ac-careersite
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: icf
+    wd: wd5
+    site: icfexternal_career_site
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: kyndryl
+    wd: wd5
+    site: kyndrylprofessionalcareers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: mywdhr
+    wd: wd1
+    site: hudsonsbayindia_careers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: q2ebanking
+    wd: wd5
+    site: q2
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: rockwoolgroup
+    wd: wd3
+    site: rockwool
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: weir
+    wd: wd3
+    site: weir_external_careers
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: worldwide
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: abb
+    wd: wd3
+    site: external_career_page
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: accelya
+    wd: wd103
+    site: careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: aveva
+    wd: wd3
+    site: etap_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: aviagen
+    wd: wd1
+    site: aviagen-careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: bakertilly
+    wd: wd5
+    site: btcareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: cip
+    wd: wd103
+    site: cipfs_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: curtisswright
+    wd: wd1
+    site: cw_external_career_site
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: donaldson
+    wd: wd115
+    site: donaldsoncareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: fugro
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: generac
+    wd: wd5
+    site: externalcareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: gevernova
+    wd: wd5
+    site: only_confidential_executive_recruiting
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: gn
+    wd: wd3
+    site: gn-careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: gsk
+    wd: wd5
+    site: gskcareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: guardianlife
+    wd: wd5
+    site: guardian-life-careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: imerys
+    wd: wd3
+    site: imerys-careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: jas
+    wd: wd1
+    site: jascareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: jda
+    wd: wd5
+    site: jda_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: kimberlyclark
+    wd: wd1
+    site: equest
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: kiongroup
+    wd: wd3
+    site: kiongroup
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: labcorp
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: michelinhr
+    wd: wd3
+    site: michelin
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: movadogroup
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: nexperia
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: nttlimited
+    wd: wd3
+    site: internal_employees_not_on_workday
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: ohmium
+    wd: wd12
+    site: ohmium_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: pitneybowes
+    wd: wd1
+    site: pbcareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: polaris
+    wd: wd5
+    site: polarisjobs
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: rhe
+    wd: wd3
+    site: r1111
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: roche
+    wd: wd3
+    site: roche-ext
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: royalihc
+    wd: wd103
+    site: external_career
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: schreiberfoods
+    wd: wd115
+    site: schreiber_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: wf
+    wd: wd1
+    site: wellsfargojobs
+    tier: 2
+    note: India 8, intern/grad 0
+    name: Wells Fargo
+  - slug: wk
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: xpel
+    wd: wd5
+    site: xpel_careers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: accelleron
+    wd: wd3
+    site: accelleron
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: advanceauto
+    wd: wd5
+    site: advanceexternalcareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: aggreko
+    wd: wd3
+    site: aggreko_careers_1
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: aliaxis
+    wd: wd3
+    site: aliaxis
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: alsglobal
+    wd: wd103
+    site: external
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: ayvens
+    wd: wd3
+    site: ayvenscareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: bcone
+    wd: wd1
+    site: bristlecone
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: brookfield
+    wd: wd5
+    site: brookfield
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: calyx
+    wd: wd1
+    site: perceptive
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: chubbfiresecurity
+    wd: wd3
+    site: chubbfs
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: cpsi
+    wd: wd1
+    site: cpsi
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: crowe
+    wd: wd12
+    site: external_careers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: epiqsystems
+    wd: wd503
+    site: epiq_careers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: equiniti
+    wd: wd3
+    site: opportunities
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: esab
+    wd: wd5
+    site: esabcareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: generalmotors
+    wd: wd5
+    site: careers_gm
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: gn
+    wd: wd3
+    site: resoundcareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: hrhub
+    wd: wd3
+    site: euronext_career_page
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: jabil
+    wd: wd5
+    site: jabil_careers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: kyndryl
+    wd: wd5
+    site: kyndrylearlycareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: paypal
+    wd: wd1
+    site: jobs
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: propharmagroup
+    wd: wd1
+    site: ppgcareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: relx
+    wd: wd3
+    site: lexisnexislegal
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: shell
+    wd: wd3
+    site: proactive
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: tbc
+    wd: wd12
+    site: lyriccareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: zendesk
+    wd: wd1
+    site: zendesk
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: aptiagroup
+    wd: wd3
+    site: opportunities
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: ashland
+    wd: wd12
+    site: ashlandcareers1
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: bacardi
+    wd: wd3
+    site: jobs_bacardi
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: brenntag
+    wd: wd3
+    site: brenntag_jobs
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: cae
+    wd: wd3
+    site: career
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: clarivate
+    wd: wd3
+    site: jobs
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: communitybrands
+    wd: wd1
+    site: momentive_external_careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: dssmith
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: fortrea
+    wd: wd1
+    site: fortrea
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: georgfischer
+    wd: wd103
+    site: georgfischer_careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: greif
+    wd: wd5
+    site: greif
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: infobip
+    wd: wd3
+    site: infobipcareers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: mars
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: mckesson
+    wd: wd3
+    site: external_careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: nab
+    wd: wd3
+    site: nab_careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: regalrexnord
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: ringcentral
+    wd: wd1
+    site: ringcentral_careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: welocalize
+    wd: wd1
+    site: welocalize
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: abcfinancial
+    wd: wd5
+    site: abcfinancialservices
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: adtran
+    wd: wd3
+    site: adtran
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: allegromicro
+    wd: wd5
+    site: allegrocareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: amherstgroup
+    wd: wd1
+    site: amherst_holdings_careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: armacell
+    wd: wd3
+    site: career-armacell
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: ascendperformancematerials
+    wd: wd1
+    site: ascend
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: aveva
+    wd: wd3
+    site: aveva_careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: cgm
+    wd: wd3
+    site: cgm
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: ciena
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: cnx
+    wd: wd1
+    site: external_global
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: coke
+    wd: wd1
+    site: coca-cola-careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: csgi
+    wd: wd5
+    site: csgcareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: elemica
+    wd: wd501
+    site: elemica_careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: erm
+    wd: wd3
+    site: erm_earlycareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: flexerasoftware
+    wd: wd1
+    site: revenera
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: forcepoint
+    wd: wd1
+    site: engineering-external-careers1
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: gtt
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: guggenheiminvestment
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: hellmann
+    wd: wd103
+    site: hellmannexternaljobs
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: husqvarnagroup
+    wd: wd3
+    site: external_career_site
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: lseg
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 5, intern/grad 0
+    name: LSEG
+  - slug: redhat
+    wd: wd5
+    site: jobs
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: relx
+    wd: wd3
+    site: risksolutions
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: swa
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: tdwilliamson
+    wd: wd1
+    site: tdwcareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: weareeverise
+    wd: wd1
+    site: everisecareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: wilhelmsen
+    wd: wd3
+    site: wilhelmsen
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: woodward
+    wd: wd5
+    site: woodward
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: alteryx
+    wd: wd108
+    site: alteryxcareers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: att
+    wd: wd1
+    site: attgeneral
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: aveva
+    wd: wd3
+    site: rib_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: blackstone
+    wd: wd1
+    site: bx_external_site
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: boeing
+    wd: wd1
+    site: external_careers
+    tier: 2
+    note: India 4, intern/grad 0
+    name: Boeing
+  - slug: boeing
+    wd: wd1
+    site: external_subsidiary
+    tier: 2
+    note: India 4, intern/grad 0
+    name: Boeing
+  - slug: brevanhoward
+    wd: wd3
+    site: bh_externalcareers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: brinks
+    wd: wd5
+    site: brinkscareers_row
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: demegroup
+    wd: wd3
+    site: careers_external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: disa
+    wd: wd5
+    site: disa_external_career_site
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: dynata
+    wd: wd108
+    site: careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: evolent
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: forcepoint
+    wd: wd1
+    site: external-careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: frenckengroup
+    wd: wd103
+    site: external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: galderma
+    wd: wd3
+    site: broadbean_external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: genesys
+    wd: wd1
+    site: genesys
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: ghc
+    wd: wd1
+    site: kaplan_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: healthcare
+    wd: wd1
+    site: private
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: hmhw
+    wd: wd12
+    site: hmh_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: infios
+    wd: wd502
+    site: infios
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: jci
+    wd: wd5
+    site: jci_confidential
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: jj
+    wd: wd5
+    site: displacedemployees
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: lifung
+    wd: wd3
+    site: lifung
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: lytx
+    wd: wd1
+    site: lytx
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: maersk
+    wd: wd3
+    site: apmt_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: moog
+    wd: wd5
+    site: moog_external_career_site
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: newperkinelmer
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: novartis
+    wd: wd3
+    site: internal_careers_for_acquired_entities
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: rehlko
+    wd: wd12
+    site: reh
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: reputation
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: resmed
+    wd: wd3
+    site: resmed_external_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: roberthalf
+    wd: wd1
+    site: protivitiindia
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: rollsroyce
+    wd: wd3
+    site: professional
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: salesforce
+    wd: wd12
+    site: external_career_site
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: tieto
+    wd: wd3
+    site: tieto_careers_external_site
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: volarisgroup
+    wd: wd3
+    site: incadea
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: 4flow
+    wd: wd3
+    site: 4flow
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: accenture
+    wd: wd103
+    site: avanadecareers
+    tier: 2
+    note: India 3, intern/grad 0
+    name: Accenture
+  - slug: alkami
+    wd: wd12
+    site: alkami
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: alliance
+    wd: wd3
+    site: nissanjobs
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: alliance
+    wd: wd3
+    site: nissanprivateexternal
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: allstate
+    wd: wd5
+    site: allstate_careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: aptiagroup
+    wd: wd3
+    site: broadbean_external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: atsg
+    wd: wd108
+    site: xtiumcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: azelis
+    wd: wd3
+    site: azelis_careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: biibhr
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: bristolmyerssquibb
+    wd: wd5
+    site: bms
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: centricsoftware
+    wd: wd501
+    site: centric
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: corteva
+    wd: wd5
+    site: corteva
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: duckcreek
+    wd: wd1
+    site: duckcreek-linkedin
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: duckcreek
+    wd: wd1
+    site: duckcreekcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: enovix
+    wd: wd12
+    site: external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: entrust
+    wd: wd1
+    site: entrustcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: envista
+    wd: wd1
+    site: envistacareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: enzazaden
+    wd: wd103
+    site: enza-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: equinix
+    wd: wd1
+    site: applications_by_invitations
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: exos
+    wd: wd501
+    site: exoscareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: flender
+    wd: wd3
+    site: flender_global
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: flir
+    wd: wd1
+    site: flircareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: fractal
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: freseniusmedicalcare
+    wd: wd3
+    site: fme
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: gapinc
+    wd: wd1
+    site: gapinc
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: gn
+    wd: wd3
+    site: jabracareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: hl
+    wd: wd1
+    site: corporate
+    tier: 2
+    note: India 3, intern/grad 0
+    name: Houlihan Lokey
+  - slug: huntsman
+    wd: wd1
+    site: huntsman
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: ingredion
+    wd: wd1
+    site: ingredioncareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: kognitivinc
+    wd: wd1
+    site: kognitiv-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: lifung
+    wd: wd3
+    site: funggroup
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: littelfuse
+    wd: wd1
+    site: littelfuse-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: manh
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: mitel
+    wd: wd3
+    site: mitelcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: mitsubishichemicalgroup
+    wd: wd3
+    site: mccgroupcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: monotype
+    wd: wd1
+    site: monotype
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: msd
+    wd: wd5
+    site: searchjobs
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: newbalance
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: nutreco
+    wd: wd3
+    site: nutreco_external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: nutreco
+    wd: wd3
+    site: shv_internal_job_board
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: oshkoshcorporation
+    wd: wd5
+    site: oshkosh
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: rackspace
+    wd: wd1
+    site: external
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: reliaquest
+    wd: wd5
+    site: reliaquest_careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: sandvik
+    wd: wd3
+    site: coromant-jobs
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: selinc
+    wd: wd1
+    site: sel
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: skechers
+    wd: wd5
+    site: one-career-site
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: talentmanagementsolution
+    wd: wd3
+    site: jonassoftwareusa
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: weg
+    wd: wd501
+    site: careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: westlake
+    wd: wd1
+    site: westlake
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: zoll
+    wd: wd5
+    site: zollmedicalcorp
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: zoom
+    wd: wd5
+    site: zoom
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: airasia
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: albemarle
+    wd: wd5
+    site: ketjenexternal
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: alleima
+    wd: wd3
+    site: alleima-jobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: amgen
+    wd: wd1
+    site: agency
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ansira
+    wd: wd1
+    site: ansira_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: assurant
+    wd: wd1
+    site: assurant_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: averis
+    wd: wd3
+    site: rge
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: bb
+    wd: wd3
+    site: qnx
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: belkin
+    wd: wd5
+    site: belkin_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cabotcorp
+    wd: wd12
+    site: careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cbcrc
+    wd: wd3
+    site: cbc_radio-canada_jobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cerence
+    wd: wd5
+    site: cerence
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: clearwateranalytics
+    wd: wd1
+    site: clearwater_analytics_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cloudera
+    wd: wd5
+    site: external_career
+    tier: 2
+    note: India 2, intern/grad 0
+    name: Cloudera
+  - slug: corrohealth
+    wd: wd1
+    site: corrohealthindia
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cvgrp
+    wd: wd5
+    site: cvg
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dowjones
+    wd: wd1
+    site: news_corp_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dupont
+    wd: wd5
+    site: jobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: elekta
+    wd: wd3
+    site: elekta_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: erpa
+    wd: wd12
+    site: erpa
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: gatesfoundation
+    wd: wd1
+    site: gates
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: giorgiglobal
+    wd: wd3
+    site: canpack
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: globalhr
+    wd: wd5
+    site: private_posting_no_tmp
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: globusmedical
+    wd: wd5
+    site: gmed_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: hexcel
+    wd: wd5
+    site: hexcelcareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: liveramp
+    wd: wd5
+    site: liverampcareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mastercard
+    wd: wd1
+    site: contractorconversion
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: medable
+    wd: wd503
+    site: explore-career-opportunities
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: merative
+    wd: wd12
+    site: external_career_site
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: monolithicpower
+    wd: wd12
+    site: mps_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: myhana
+    wd: wd5
+    site: mauijim
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mymoose
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: nature
+    wd: wd108
+    site: externalcareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: pernodricard
+    wd: wd3
+    site: pernod-ricard
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: phcgroup
+    wd: wd3
+    site: ascensia_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: plugpower
+    wd: wd5
+    site: plug_power_inc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: premierresearch
+    wd: wd12
+    site: premierresearch
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: sandvik
+    wd: wd3
+    site: dormerpramet-jobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: sbdinc
+    wd: wd1
+    site: stanley_black_decker_career_site
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: sunlife
+    wd: wd3
+    site: experienced
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: sunlife
+    wd: wd3
+    site: experienced-jobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: suse
+    wd: wd3
+    site: jobsatsuse
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: westernunion
+    wd: wd5
+    site: westernunionjobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: yougov
+    wd: wd103
+    site: yougov_external_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: zoetis
+    wd: wd5
+    site: zoetis_intl
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: abbott
+    wd: wd5
+    site: agency
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: abglobal
+    wd: wd1
+    site: abcampuscareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: accuray
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: airproducts
+    wd: wd5
+    site: ap0001
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: altapm
+    wd: wd1
+    site: altacareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: altusgroup
+    wd: wd3
+    site: altusgroup
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ankura
+    wd: wd5
+    site: ankura
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: astrazeneca
+    wd: wd3
+    site: alexion
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: axis
+    wd: wd3
+    site: external_career_site
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bb
+    wd: wd3
+    site: blackberry
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bci
+    wd: wd10
+    site: bci_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: blackstone
+    wd: wd1
+    site: blackstone_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: brambles
+    wd: wd5
+    site: brambles_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: brinks
+    wd: wd5
+    site: brinkscareersus
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: broadcom
+    wd: wd1
+    site: external_career
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bydeluxe
+    wd: wd5
+    site: deluxe_external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cat
+    wd: wd5
+    site: caterpillarcareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cat
+    wd: wd5
+    site: solarturbines
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cgg
+    wd: wd103
+    site: viridiencareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: childrensplace
+    wd: wd1
+    site: tcp03
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: chrobinson
+    wd: wd5
+    site: chrobinson
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: deepwater
+    wd: wd1
+    site: globalexternalcareersite
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: digitalturbine
+    wd: wd501
+    site: digital_turbine_external_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: dowjones
+    wd: wd1
+    site: wsj_external_career
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: elliottgroup
+    wd: wd5
+    site: elliottcareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: encore
+    wd: wd1
+    site: externalnew
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: entegris
+    wd: wd1
+    site: entegriscareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: enzazaden
+    wd: wd103
+    site: vitalis-careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: equisoft
+    wd: wd10
+    site: external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: erm
+    wd: wd3
+    site: erm_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: erm
+    wd: wd3
+    site: erm_experiencedprofessionals
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: eset
+    wd: wd3
+    site: eset_external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ferring
+    wd: wd3
+    site: ferring
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: fis
+    wd: wd5
+    site: searchjobs
+    tier: 2
+    note: India 1, intern/grad 0
+    name: FIS
+  - slug: flexerasoftware
+    wd: wd1
+    site: prosperops
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: gadventures
+    wd: wd3
+    site: gadventures
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: gensler
+    wd: wd1
+    site: genslercareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: goto
+    wd: wd5
+    site: gotocareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hbfuller
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hbpublishing
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hpinc
+    wd: wd5
+    site: hpinc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: huhtamaki
+    wd: wd103
+    site: external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: innocap
+    wd: wd10
+    site: innocap-external-career-site
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: integralads
+    wd: wd1
+    site: iascareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: itw
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: jotun
+    wd: wd3
+    site: jotun_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: kardex
+    wd: wd103
+    site: kardex
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: kbi
+    wd: wd5
+    site: kontoor
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: litera
+    wd: wd12
+    site: litera_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: lnw
+    wd: wd5
+    site: sciplayexternalcareerssite
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: lowes
+    wd: wd5
+    site: lws_external_cs
+    tier: 2
+    note: India 1, intern/grad 0
+    name: Lowe's
+  - slug: luminegrp
+    wd: wd3
+    site: tomia
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: marvell
+    wd: wd1
+    site: marvellcareers2
+    tier: 2
+    note: India 1, intern/grad 0
+    name: Marvell
+  - slug: masco
+    wd: wd1
+    site: masco
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: metabo
+    wd: wd3
+    site: kokicareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ngs
+    wd: wd1
+    site: ngs_external_career_site
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: pae
+    wd: wd1
+    site: amentum_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: panduit
+    wd: wd1
+    site: international
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: phcgroup
+    wd: wd3
+    site: scimed_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: regalrexnord
+    wd: wd1
+    site: student_and_earlycareer
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: repligen
+    wd: wd108
+    site: repligen_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: resmed
+    wd: wd3
+    site: matrixcare_external_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: rgare
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: rohlig
+    wd: wd103
+    site: rohlig_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sabre
+    wd: wd1
+    site: confidential
+    tier: 2
+    note: India 1, intern/grad 0
+    name: Sabre
+  - slug: semrush
+    wd: wd5
+    site: semrushcareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: shakeshack
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: talentmanagementsolution
+    wd: wd3
+    site: vestaother
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: temenos
+    wd: wd103
+    site: temenoscareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: terex
+    wd: wd1
+    site: terexcareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: uniphore
+    wd: wd503
+    site: uniphore
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: wlt
+    wd: wd3
+    site: wl_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: woodmac
+    wd: wd3
+    site: woodmaccareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: worldvision
+    wd: wd1
+    site: worldvisioninternational
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: zoetis
+    wd: wd5
+    site: broadbean_external
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: vishay
+    wd: wd3
+    site: vishaycareers
+    tier: 1
+    note: India 12, intern/grad 10
+    name: Vishay
+  - slug: valeo
+    wd: wd3
+    site: valeo_jobs
+    tier: 1
+    note: India 6, intern/grad 5
+    name: Valeo
+  - slug: medtronic
+    wd: wd1
+    site: medtroniccareers
+    tier: 1
+    note: India 16, intern/grad 3
+    name: Medtronic
+  - slug: medtronic
+    wd: wd1
+    site: redeploymentmedtroniccareers
+    tier: 1
+    note: India 16, intern/grad 3
+    name: Medtronic
+  - slug: prudential
+    wd: wd3
+    site: prudential
+    tier: 1
+    note: India 19, intern/grad 2
+    name: Prudential
+  - slug: trumpf
+    wd: wd3
+    site: trumpf_students
+    tier: 1
+    note: India 3, intern/grad 2
+    name: TRUMPF
+  - slug: motorolasolutions
+    wd: wd5
+    site: careers
+    tier: 1
+    note: India 20, intern/grad 1
+    name: Motorola Solutions
+  - slug: spgi
+    wd: wd5
+    site: spgi_careers
+    tier: 1
+    note: India 9, intern/grad 1
+    name: S&P Global
+  - slug: speedcast
+    wd: wd1
+    site: speedcastcareers
+    tier: 1
+    note: India 3, intern/grad 1
+    name: Speedcast
+  - slug: lambweston
+    wd: wd1
+    site: lamb_external
+    tier: 1
+    note: India 1, intern/grad 1
+    name: Lamb Weston
+  - slug: parexel
+    wd: wd1
+    site: parexel_external_careers
+    tier: 1
+    note: India 1, intern/grad 1
+    name: Parexel
+  - slug: modmed
+    wd: wd501
+    site: modmed12
+    tier: 2
+    note: India 20, intern/grad 0
+    name: ModMed
+  - slug: sec
+    wd: wd3
+    site: samsung_careers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: sifive
+    wd: wd1
+    site: sifivecareers
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: thehartford
+    wd: wd5
+    site: careers_external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: vanguard
+    wd: wd5
+    site: vanguard_external
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: oaktree
+    wd: wd1
+    site: oaktree
+    tier: 2
+    note: India 19, intern/grad 0
+    name: Oaktree Capital
+  - slug: sandvik
+    wd: wd3
+    site: sandvik-jobs
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: silabs
+    wd: wd1
+    site: experiencedjobs
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: trintech
+    wd: wd501
+    site: trintech
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: usbank
+    wd: wd1
+    site: us_bank_careers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: visa
+    wd: wd5
+    site: visa
+    tier: 2
+    note: India 19, intern/grad 0
+    name: Visa
+  - slug: medline
+    wd: wd5
+    site: medline
+    tier: 2
+    note: India 18, intern/grad 0
+    name: Medline
+  - slug: mgpru
+    wd: wd3
+    site: mandgprudential
+    tier: 2
+    note: India 18, intern/grad 0
+    name: M&G
+  - slug: o9solutions
+    wd: wd5
+    site: o9solutionsexternal
+    tier: 2
+    note: India 18, intern/grad 0
+    name: o9 Solutions
+  - slug: sensata
+    wd: wd1
+    site: sensata-careers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: trimble
+    wd: wd1
+    site: trimblecareers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: valmet
+    wd: wd103
+    site: external
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: vanderlande
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: sandvik
+    wd: wd3
+    site: sandvik_internal_for_nonwd_employees
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: travelhrportal
+    wd: wd1
+    site: jobs
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: unisys
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: warnerbros
+    wd: wd5
+    site: global
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: nordsonhcm
+    wd: wd501
+    site: nordsoncareers
+    tier: 2
+    note: India 16, intern/grad 0
+    name: Nordson
+  - slug: piramalpharma
+    wd: wd102
+    site: piramal_external_careers
+    tier: 2
+    note: India 16, intern/grad 0
+    name: Piramal Pharma
+  - slug: silabs
+    wd: wd1
+    site: siliconlabscareers
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: simcorp
+    wd: wd3
+    site: simcorp_private
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: ssctech
+    wd: wd1
+    site: ssctechnologies
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: takraf
+    wd: wd103
+    site: takraf_external_careers
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: velsera
+    wd: wd103
+    site: velsera
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: veralto
+    wd: wd1
+    site: eskojobs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: ttc
+    wd: wd1
+    site: toro_external_careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: sailpoint
+    wd: wd1
+    site: sailpoint
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: taskus
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: transunion
+    wd: wd5
+    site: transunion
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: optiva
+    wd: wd3
+    site: qvantel_external_career_site
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: outsystems
+    wd: wd503
+    site: outsystems
+    tier: 2
+    note: India 11, intern/grad 0
+    name: OutSystems
+  - slug: relx
+    wd: wd3
+    site: relx
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: vareximaging
+    wd: wd103
+    site: external_career_site
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: phinia
+    wd: wd5
+    site: phinia_careers
+    tier: 2
+    note: India 10, intern/grad 0
+    name: PHINIA
+  - slug: pinnaclegroup
+    wd: wd1
+    site: pinnaclegroup
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: trafigura
+    wd: wd3
+    site: puma_energy_careers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: trellix
+    wd: wd1
+    site: enterprisecareers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: tsys
+    wd: wd1
+    site: tsys
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: veralto
+    wd: wd1
+    site: veraltocorporatejobs
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: veripark
+    wd: wd103
+    site: veripark
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: veralto
+    wd: wd1
+    site: videojetjobs
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: pentair
+    wd: wd5
+    site: pentair_careers
+    tier: 2
+    note: India 8, intern/grad 0
+    name: Pentair
+  - slug: synechron
+    wd: wd1
+    site: synechroncareers
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: veralto
+    wd: wd1
+    site: hachjobs
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: vwr
+    wd: wd1
+    site: avantorjobs
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: qualys
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: smithnephew
+    wd: wd5
+    site: external
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: spgi
+    wd: wd5
+    site: spgi_internal
+    tier: 2
+    note: India 7, intern/grad 0
+    name: S&P Global
+  - slug: target
+    wd: wd5
+    site: targetcareers
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: optiv
+    wd: wd5
+    site: optiv_careers
+    tier: 2
+    note: India 6, intern/grad 0
+    name: Optiv
+  - slug: sprinklr
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: synchronyfinancial
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: toppanmerrill
+    wd: wd5
+    site: toppan_merrill
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: trafigura
+    wd: wd3
+    site: trafiguracareersite
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: tysonfoods
+    wd: wd5
+    site: tyit
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: lummustechnology
+    wd: wd501
+    site: lummustechnology
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: spectris
+    wd: wd3
+    site: hbk_careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: syneoshealth
+    wd: wd12
+    site: syneos_health_external_site
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: transperfect
+    wd: wd5
+    site: transperfect
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: trekbikes
+    wd: wd1
+    site: trek
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: trendmicro
+    wd: wd3
+    site: external
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: trumpf
+    wd: wd3
+    site: trumpf_graduates_and_professionals
+    tier: 2
+    note: India 5, intern/grad 0
+    name: TRUMPF
+  - slug: tysonfoods
+    wd: wd5
+    site: tsn
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: keppel
+    wd: wd3
+    site: keppelcareers
+    tier: 2
+    note: India 4, intern/grad 0
+    name: Keppel
+  - slug: onemagnify
+    wd: wd5
+    site: onemagnify_careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: pinnacle
+    wd: wd1
+    site: pinnacle
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: simcorp
+    wd: wd3
+    site: simcorp_jobs
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: tollgroup
+    wd: wd5
+    site: tollgroup
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: viavisolutions
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: murex
+    wd: wd3
+    site: murexcareerpage1
+    tier: 2
+    note: India 3, intern/grad 0
+    name: Murex
+  - slug: sec
+    wd: wd3
+    site: samsung_jobs
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: snapchat
+    wd: wd1
+    site: snap
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: springernature
+    wd: wd3
+    site: springernaturecareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: topbloc
+    wd: wd5
+    site: topbloc_careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: vanderlande
+    wd: wd3
+    site: talexternalcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: verizon
+    wd: wd12
+    site: verizon-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: lsi
+    wd: wd3
+    site: arxada_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mobility
+    wd: wd503
+    site: mobility
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: onelinxens
+    wd: wd3
+    site: external_careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ouryahoo
+    wd: wd5
+    site: careers
+    tier: 2
+    note: India 2, intern/grad 0
+    name: Yahoo
+  - slug: r1rcm
+    wd: wd1
+    site: r1rcm
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: revantage
+    wd: wd1
+    site: revantage
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: spe
+    wd: wd1
+    site: sonypicturesentertainment
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: vantiva
+    wd: wd103
+    site: vantiva
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: veralto
+    wd: wd1
+    site: trojanjobs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: wasatchproperty
+    wd: wd1
+    site: marketstarcareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: pinebridge
+    wd: wd5
+    site: pinebridge_career_site
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: prysmiangroup
+    wd: wd3
+    site: careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: safeguardglobal
+    wd: wd3
+    site: external_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sandvik
+    wd: wd3
+    site: seco-jobs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: snapchat
+    wd: wd1
+    site: sourced
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: spectris
+    wd: wd3
+    site: pms_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sphera
+    wd: wd1
+    site: careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: syniverse
+    wd: wd1
+    site: syniversecareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: synnex
+    wd: wd5
+    site: tdsynnexcareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: telstra
+    wd: wd3
+    site: telstra_careers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: trumpf
+    wd: wd3
+    site: trumpf_apprenticeships
+    tier: 2
+    note: India 1, intern/grad 0
+    name: TRUMPF
+  - slug: vanguard
+    wd: wd5
+    site: contractors_restricted
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: visa
+    wd: wd5
+    site: visa_early_careers
+    tier: 2
+    note: India 1, intern/grad 0
+    name: Visa
+  - slug: paloaltonetworks
+    wd: wd5
+    site: panwexternalcareers
+    name: Palo Alto Networks
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
+  - slug: expedia
+    wd: wd108
+    site: search
+    name: Expedia Group
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
+  candidates: []
+avature:
+  verified:
+  - slug: ea
+    tier: 1
+    base: https://jobs.ea.com/en_US/careers
+    name: Electronic Arts
+  candidates: []
+oracle:
+  verified:
+  - slug: jpmc
+    tier: 1
+    host: jpmc.fa.oraclecloud.com
+    site: CX_1001
+    name: JPMorgan Chase
+  - slug: oracle
+    tier: 1
+    host: eeho.fa.us2.oraclecloud.com
+    site: CX_45001
+    name: Oracle
+eightfold:
+  verified:
+  - slug: netflix
+    host: explore.jobs.netflix.net
+    domain: netflix.com
+    name: Netflix
+    tier: 1
+    note: well-paying tech employer (added 2026-09-14)
+  candidates: []

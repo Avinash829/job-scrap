@@ -18,14 +18,16 @@ from app.domain.entities import Job
 
 # lower number wins when two records describe the same role
 SOURCE_PRIORITY = {
-    "greenhouse": 0,
-    "lever": 0,
-    "ashby": 0,
-    "workable": 0,
-    "workday": 1,
-    "hn_hiring": 2,
-    "remotive": 3,
-    "remoteok": 3,
+    # the employer's own system: direct apply link, fullest data
+    "greenhouse": 0, "lever": 0, "ashby": 0, "smartrecruiters": 0,
+    "workday": 0, "google": 0, "amazon": 0, "avature": 0, "juspay": 0, "oracle": 0,
+    "microsoft": 0, "apple": 0, "atlassian": 0, "goldman": 0, "ibm": 0, "eightfold": 0,
+    # cross-company searches: links go to the employer's posting on the platform
+    "workable": 1,
+    # curated feed that links back to the employer
+    "simplify": 2,
+    # aggregators
+    "himalayas": 3, "hn_hiring": 3, "remoteok": 3, "remotive": 3, "arbeitnow": 3,
 }
 _DEFAULT_PRIORITY = 5
 
@@ -57,6 +59,21 @@ def _priority(job: Job) -> int:
     return SOURCE_PRIORITY.get(job.source, _DEFAULT_PRIORITY)
 
 
+def _borrow_detail(keep: Job, dupe: Job) -> None:
+    """The employer copy keeps its apply link but may carry no text.
+
+    EA's career site lists titles and locations only; the same role on another board
+    has the full description, skills and a posting date. Fill the gaps
+    instead of throwing that away.
+    """
+    if not keep.description and dupe.description:
+        keep.description = dupe.description
+    if not keep.tech_stack and dupe.tech_stack:
+        keep.tech_stack = list(dupe.tech_stack)
+    if keep.posted_at is None and dupe.posted_at is not None:
+        keep.posted_at = dupe.posted_at
+
+
 def dedupe(jobs: list[Job]) -> tuple[list[Job], int]:
     """Collapse duplicates within a batch. Returns (kept, dropped_count)."""
     by_url: dict[str, Job] = {}
@@ -74,6 +91,7 @@ def dedupe(jobs: list[Job]) -> tuple[list[Job], int]:
 
         incumbent = by_url.get(curl) or by_key.get(ckey)
         if incumbent is not None:
+            _borrow_detail(incumbent, job)
             dropped += 1
             continue
 

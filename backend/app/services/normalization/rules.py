@@ -67,7 +67,10 @@ _SENIORITY_PATTERNS = [
 # a numeric suffix never outranks an explicit rank.
 _STRONG_SENIORITY = re.compile(
     r"\b(senior|sr\.?|staff|principal|lead|director|head\s+of|vp|cto|"
-    r"architect|distinguished|fellow|manager)\b",
+    r"architect|distinguished|fellow|manager|"
+    # banking titles: "Vice President - Data Science" slipped through as
+    # in-scope because only the abbreviation `vp` was listed
+    r"vice\s+president|avp|svp|evp|managing\s+director|executive\s+director)\b",
     re.I,
 )
 
@@ -406,13 +409,16 @@ def resolve_regions(
 
 _WS = re.compile(r"\s+")
 _COMPANY_NOISE = re.compile(
-    r"\b(inc|llc|ltd|limited|corp|corporation|gmbh|pvt|private|technologies|labs)\b\.?",
+    r"\b(inc|llc|ltd|limited|corp|corporation|gmbh|pvt|private|technologies|technology"
+    r"|labs|software|solutions|services|group|co|company|the|india)\b\.?",
     re.I,
 )
 
 
 def normalize_company(name: str) -> str:
-    n = _COMPANY_NOISE.sub("", name.lower())
+    # "Electronic Arts Inc. (EA)" and "Electronic Arts" are one employer;
+    # without this, dedupe keeps a job-board copy next to the employer's own posting.
+    n = _COMPANY_NOISE.sub("", re.sub(r"\([^)]*\)", " ", name.lower()))
     return _WS.sub(" ", re.sub(r"[^a-z0-9 ]", " ", n)).strip()
 
 
@@ -550,7 +556,16 @@ _BLOCKING_REGIONS = frozenset(
 
 # Sources that return ONLY open requisitions, so posting age says nothing
 # about whether the role is still available.
-ATS_SOURCES = frozenset({"greenhouse", "lever", "ashby", "smartrecruiters"})
+ATS_SOURCES = frozenset({
+    "greenhouse", "lever", "ashby", "smartrecruiters",
+    "workday", "google", "amazon", "avature", "juspay", "oracle",
+    "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
+    # cross-company searches over live postings only
+    "workable",
+    # Simplify maintains an `active` flag per listing, so its rows are
+    # open-until-closed too; the connector itself drops anything >90 days old.
+    "simplify",
+})
 
 _EMPLOYMENT_EXCLUDE = [
     re.compile(p, re.I)

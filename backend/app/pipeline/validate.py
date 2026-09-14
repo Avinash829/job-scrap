@@ -54,6 +54,16 @@ async def validate(apply: bool = False, include_verified: bool = False) -> dict:
                     promote[(cls.platform, r.company.slug)] = f"{len(r.jobs)} jobs"
             elif r.status is BoardStatus.NO_BOARD and not r.company.verified:
                 prune.append((cls.platform, r.company.slug))
+            elif (
+                r.status is BoardStatus.EMPTY_BOARD
+                and not r.company.verified
+                and cls.platform == "smartrecruiters"
+            ):
+                # SmartRecruiters answers 200 + empty for companies that don't
+                # exist at all, never 404, so an empty candidate there is
+                # indistinguishable from a wrong slug. Without this, ~2,500
+                # such names were re-tested on every discovery run forever.
+                prune.append((cls.platform, r.company.slug))
 
     t = Table(title="validation", header_style="bold")
     for col in ("platform", "ok", "empty", "no_board", "failed"):

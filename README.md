@@ -4,7 +4,7 @@ Remote-first job aggregator filtered for early-career software roles. Pulls from
 public job-board APIs on a schedule, normalizes everything into one schema,
 and ranks by whether *you* can actually take the role.
 
-The core idea: **don't scrape on click.** Ingest continuously in the background,
+The core idea: **don't scrape on click.** Scrape continuously in the background,
 then serve instant indexed queries. A click is a 17ms DB read, not a 4-minute crawl.
 
 ## Layout
@@ -25,7 +25,7 @@ backend/
     pipeline/     orchestrator + operator CLI
   scripts/        probe_gemini.py
 frontend/         React + Vite + Tailwind
-.github/workflows/ingest.yml    scheduled ingest (free on public repos)
+.github/workflows/scrape-jobs.yml    scheduled scraping (free on public repos)
 ```
 
 ## Setup
@@ -47,14 +47,15 @@ the browser, so `frontend/.env` is public by construction - never put a key ther
 ## Run
 
 ```bash
-# ingest (from backend/)
-python -m app.pipeline.cli ingest --tier 1
-python -m app.pipeline.cli ingest --tier 1 --no-enrich   # skip the LLM pass
+# scrape jobs (from backend/) - GitHub Actions runs this for you on a schedule
+python -m app.pipeline.cli scrape --tier 1
+python -m app.pipeline.cli scrape --tier 1 --no-enrich   # skip the LLM pass
 python -m app.pipeline.cli enrich                        # LLM pass only, no refetch
 python -m app.pipeline.cli show --limit 20 --reachable
 python -m app.pipeline.cli health
 python -m app.pipeline.cli rescore                       # recompute scores after changing config.yaml, no refetch
-python -m app.pipeline.cli purge --days 60
+python -m app.pipeline.cli reset --yes                   # empty the job table (the daily 00:00 IST run does this)
+python -m app.pipeline.cli import-companies --platform workday --apply   # add employers with India openings
 
 # api
 uvicorn app.main:app --reload        # docs at /docs
@@ -73,7 +74,7 @@ cd backend && python -m scripts.probe_gemini
 ## Sources
 
 **Tier 1 - employer ATS boards (the good data).** One connector per platform,
-driven by `backend/companies.yaml` (322 verified boards). Structured
+driven by `backend/companies.yaml` (~1,600 verified employers across all platforms). Structured
 locations, real posting dates, direct apply links.
 
 | Platform | Endpoint | Notes |
@@ -82,6 +83,30 @@ locations, real posting dates, direct apply links.
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json` | **Bare array**, title is `text` not `title`, `createdAt` in epoch **ms**, `country` + `workplaceType` structured |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` | `isRemote` boolean, `employmentType`, `secondaryLocations`. Tightest limiter - concurrency 5 |
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` | Best structured data: `location.country` ISO, `location.remote` bool, **`experienceLevel: entry_level`**. Title is `name`. Returns `200 + empty` for unknown slugs, never 404 |
+
+**Tier 1 - enterprise career sites.** Large employers' India internships
+almost never reach Greenhouse or Lever; they live on the employer's own
+system, which has to be *searched* per term rather than read whole. Terms and
+locations come from `config.yaml → search`.
+
+| Source | How it's read | Notes |
+|---|---|---|
+| Workday | `POST {tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` | Nvidia, Adobe, Salesforce, Intel and India-hiring tenants imported from a public dataset. `limit` caps at 20 — ask for more and you get an **empty** 200. Search is fuzzy: "India" also matches Indiana |
+| Google Careers | results page, `AF_initDataCallback` `ds:1` block | No JSON API; jobs are embedded JSON, parsed with a real decoder. Structured country codes and eligibility notes |
+| Amazon Jobs | `amazon.jobs/en/search.json` | `normalized_country_code[]=IND` works; `country[]` is silently ignored. Some campus roles are link-only (`isUnsearchable`) and can't be listed by anyone |
+| Avature (EA) | `{base}/SearchJobs/{term}` HTML | Structured spans for location, role id, worker type. The RSS feed ignores the search term |
+| Juspay | `juspay.io/careers` | Astro site; jobs are serialized island props |
+| Oracle HCM | `{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions` | JPMorgan Chase, Oracle. Public finder query with keyword + location |
+| Microsoft | `apply.careers.microsoft.com/api/pcsx/search` | Eightfold PCSX; 10 per page, structured `standardizedLocations` |
+| Apple | `jobs.apple.com/en-in/search` HTML | Data embedded as `__staticRouterHydrationData`; the JSON API needs CSRF and returns nothing |
+| Atlassian | `atlassian.com/endpoint/careers/listings` | Every open role in one array, full descriptions |
+| Goldman Sachs | `api-higher.gs.com/gateway/api/v1/graphql` | India filter; Associate/VP/MD ranks dropped at the source |
+| IBM | `www-api.ibm.com/search/api/v2` | Elasticsearch-style; country in `field_keyword_05`, type in `field_keyword_18` |
+| Eightfold | `{host}/api/apply/v2/jobs` | Netflix; add more under `eightfold:` in companies.yaml |
+
+**Tier 1 - curated feeds:** [SimplifyJobs](https://github.com/SimplifyJobs)
+Summer 2027 internships and new-grad lists — thousands of active roles with a
+maintained `active` flag. US-heavy: it adds global and remote reach, not India.
 
 **Tier 1 - remote-native aggregators:** Himalayas (honest `locationRestrictions`),
 RemoteOK (attribution required).
@@ -99,7 +124,23 @@ python -m app.pipeline.cli validate --apply
 
 `discover` reads the free Common Crawl CDX index for ATS URL patterns and
 extracts slugs. `validate` calls every candidate board and promotes the ones
-that answer with postings. A slug is pruned **only** on a definitive 404.
+that answer with postings. A slug is pruned **only** on a definitive 404, and
+pruned slugs are remembered under `rejected:` so later runs don't re-test them.
+
+`import-companies` starts from the company lists published by
+[Feashliaa/job-board-aggregator](https://github.com/Feashliaa/job-board-aggregator)
+(MIT) — ~12,900 Workday tenants and ~8,300 Greenhouse boards — and probes each
+**once** for real India openings. Only employers that have them are added;
+those with India internships go to tier 1. Scraping all of them daily would
+exceed the free tier and add nothing for an India-based search.
+
+### Daily fresh start
+
+At 00:00 IST the workflow empties the job table (`TRUNCATE`, which returns the
+space to Neon immediately) and runs a full scrape in the same job, so each day
+starts from only what is live today. The LLM extraction cache is kept: it's
+keyed by description content, so re-fetching an unchanged posting costs no
+Gemini call.
 
 ### The `[]` trap
 
@@ -119,11 +160,11 @@ fingerprinting, not auth, and `curl_cffi` handles it.
 ## Deploying
 
 Three pieces, each free, each with a different lifetime. The split matters:
-**ingestion cannot live on Render** because every free host suspends an idle
+**scraping cannot live on Render** because every free host suspends an idle
 service, and a suspended container runs no cron.
 
 ```
-GitHub Actions   ingest + enrich + discovery   (cron, always fires)
+GitHub Actions   scrape + enrich + discovery   (cron, always fires)
       │  writes
       ▼
 Neon Postgres    the corpus                    (persistent)
@@ -179,7 +220,7 @@ reads when a Root Directory is set. `CORS_ORIGIN_REGEX` needs no value: the
 code defaults it to `https://.*\.vercel\.app`, which covers preview deploys.
 
 Because Root Directory is `backend`, frontend-only pushes don't redeploy the
-API. The ingest bot's commits carry `[skip render]`, so coverage updates
+API. The scraper bot's commits carry `[skip render]`, so coverage updates
 don't either.
 
 The free plan sleeps after ~15 minutes idle, so the first request after a
@@ -196,7 +237,7 @@ quiet spell takes up to a minute. Nothing is lost - the API is read-only.
 Vite inlines `VITE_*` at **build** time, so changing this needs a redeploy,
 not just a restart. Push-to-deploy is on by default.
 
-### 4. GitHub Actions (the ingest)
+### 4. GitHub Actions (the scraper)
 
 Repo → Settings → Secrets and variables → Actions:
 
@@ -208,7 +249,7 @@ Repo → Settings → Secrets and variables → Actions:
 Optional variable: `GEMINI_MODEL` (defaults to `gemini-3.5-flash-lite`).
 
 Schedules: tier 1 every 6h, tier 2 (all 800+ boards) daily at 02:00 UTC.
-Run **Actions → ingest → Run workflow** with **discover ✓** to refresh the YC
+Run **Actions → Scrape jobs → Run workflow** with **discover ✓** to refresh the YC
 list and validate new boards.
 
 > **Why the workflow commits back to the repo:** `companies.yaml` and
@@ -237,7 +278,7 @@ curl https://<your-api>.onrender.com/ready    # actually queries Postgres
 | `VITE_API_BASE` | ✅ | — | — | ✅ |
 
 Nothing secret ever reaches the frontend: every `VITE_*` value ships to the
-browser, which is why the API keys live only where ingest runs.
+browser, which is why the API keys live only where the scraper runs.
 
 ## Design decisions worth knowing
 

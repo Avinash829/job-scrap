@@ -111,7 +111,7 @@ class Ashby(ATSConnector):
                     source_job_id=f"{company.slug}:{item['id']}",
                     url=item.get("applyUrl") or item.get("jobUrl") or "",
                     title=item.get("title", ""),
-                    company=company.slug,
+                    company=company.get("name") or company.slug,
                     description=item.get("descriptionPlain")
                     or item.get("descriptionHtml"),
                     location_raw=", ".join(x for x in [location, *secondary] if x) or None,

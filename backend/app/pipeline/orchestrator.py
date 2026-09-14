@@ -113,6 +113,13 @@ class IngestPipeline:
         # the very end. Committing per source makes a run resumable: whatever
         # finished stays finished, and a re-run only redoes the source that
         # failed.
+        # Normalize everything first, then de-duplicate ACROSS sources. The
+        # same role now arrives from several places - SimplifyJobs links to
+        # the employer's Workday or Greenhouse posting that we also fetch
+        # directly - and per-source dedupe stored it twice. dedupe() keeps the
+        # copy from the highest-priority source (the employer's own system).
+        normalized: list[tuple[ConnectorRun, list[Job]]] = []
+        all_jobs: list[Job] = []
         for raw_jobs, record in fetched:
             jobs: list[Job] = []
             for raw in raw_jobs:
@@ -121,11 +128,16 @@ class IngestPipeline:
                 except Exception as exc:  # noqa: BLE001
                     self._drop(result, f"normalize error: {type(exc).__name__}")
                     log.debug("normalize failed for %s: %s", raw.url, exc)
+            normalized.append((record, jobs))
+            all_jobs.extend(jobs)
 
-            kept, dupes = dedupe(jobs)
-            if dupes:
-                self._drop(result, "duplicate", dupes)
+        survivors, dupes = dedupe(all_jobs)
+        if dupes:
+            self._drop(result, "duplicate", dupes)
+        surviving_keys = {(j.source, j.source_job_id) for j in survivors}
 
+        for record, jobs in normalized:
+            kept = [j for j in jobs if (j.source, j.source_job_id) in surviving_keys]
             try:
                 with session_scope() as s:
                     repo = JobRepository(s)

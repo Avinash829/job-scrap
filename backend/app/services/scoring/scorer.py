@@ -6,6 +6,7 @@ interrogate is useless for deciding what to apply to.
 """
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
@@ -18,18 +19,42 @@ from app.domain.enums import Confidence, EmploymentType, HiringRegion
 # `stage` is second because an internship you can actually start while still
 # studying beats a full-time role you cannot take for six months.
 WEIGHTS = {
-    "reachability": 30.0,
+    "reachability": 28.0,
     "stage": 25.0,        # internship / new-grad fit
-    "stack": 22.0,        # overlap with the user's declared skills
-    "freshness": 10.0,
-    "startup": 8.0,       # YC / small funded team - hires interns readily
+    "stack": 18.0,        # overlap with the user's declared skills
+    "company": 15.0,      # known MNC / funded startup / YC, and a direct employer link
+    "freshness": 9.0,
     "role": 3.0,
     "confidence": 2.0,
 }
 
+# Where the posting was read. An employer's own system means a real, open
+# requisition with a direct apply link; a marketplace listing can be anyone.
+EMPLOYER_SOURCES = frozenset({
+    "greenhouse", "lever", "ashby", "smartrecruiters", "workday",
+    "google", "amazon", "avature", "juspay", "oracle",
+    "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
+})
+
 # Team sizes where an intern gets real ownership and a human reads the CV.
 SMALL_TEAM = 50
-MID_TEAM = 250
+
+
+_LEGAL_SUFFIX = re.compile(
+    r"\b(inc|llc|ltd|limited|corp|corporation|gmbh|pvt|private|plc|co|company|the|india)\b\.?"
+)
+
+
+def _brand_name(name: str) -> str:
+    """Company name for the notable-employer lookup.
+
+    Stricter than dedupe's normalize_company: that one also strips words like
+    "solutions" and "technologies", which would let "Confluent Solutions"
+    (a small agency) pass as Confluent. Only legal suffixes go here.
+    """
+    n = re.sub(r"\([^)]*\)", " ", name.lower().replace("&", " "))
+    n = _LEGAL_SUFFIX.sub(" ", n)
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9. ]", " ", n)).strip(" .")
 
 
 @dataclass(slots=True)
@@ -47,6 +72,7 @@ class MatchScorer:
         self.seeking = set(p.profile.get("seeking") or [])
         self.prefer = str(p.profile.get("prefer") or "internship")
         self.priority = list(p.location.get("priority") or [])
+        self.notable = {_brand_name(c) for c in p.notable_companies} - {""}
 
     def score(self, job: Job, now: datetime | None = None) -> ScoreBreakdown:
         now = now or datetime.now(timezone.utc)
@@ -56,7 +82,7 @@ class MatchScorer:
         b.parts["stage"] = self._stage(job, b)
         b.parts["stack"] = self._stack(job, b)
         b.parts["freshness"] = self._freshness(job, now, b)
-        b.parts["startup"] = self._startup(job, b)
+        b.parts["company"] = self._company(job, b)
         b.parts["role"] = WEIGHTS["role"] if job.role_category.value != "other" else 0.0
         b.parts["confidence"] = (
             WEIGHTS["confidence"] if job.region_confidence is Confidence.HIGH else 0.0
@@ -96,27 +122,35 @@ class MatchScorer:
             return w * 0.25
         return max(0.0, w * (1 - job.min_yoe / 3) * 0.5)
 
-    def _startup(self, job: Job, b: ScoreBreakdown) -> float:
-        """YC-backed and small teams hire interns far more readily.
+    def _company(self, job: Job, b: ScoreBreakdown) -> float:
+        """Who is hiring, and how trustworthy the listing is.
 
-        Company metadata rides along in raw_payload from the connector, so
-        this needs no extra lookup.
+        Without this, a stack-keyword-dense marketplace listing from an
+        unknown three-person firm outranked Google's and EA's India
+        internships, whose postings don't enumerate frameworks.
+
+          known MNC / well-funded company (config `notable_companies`)  full
+          YC-backed                                                     0.8, +0.2 small team
+          posted on the employer's own hiring system                    0.5
+          marketplace / aggregator listing                              0.15
+        Company metadata rides along in raw_payload, so no extra lookup.
         """
-        w = WEIGHTS["startup"]
+        w = WEIGHTS["company"]
         payload = job.raw_payload or {}
-        score = 0.0
+        name = _brand_name(job.company or "")
 
+        if name and name in self.notable:
+            b.reasons.append("well-known company")
+            return w
+
+        score = 0.5 * w if job.source in EMPLOYER_SOURCES else 0.15 * w
         if payload.get("yc_batch"):
             b.reasons.append(f"YC {payload['yc_batch']}")
-            score += w * 0.6
-
-        team = payload.get("team_size")
-        if isinstance(team, int) and team > 0:
-            if team <= SMALL_TEAM:
+            score = max(score, 0.8 * w)
+            team = payload.get("team_size")
+            if isinstance(team, int) and 0 < team <= SMALL_TEAM:
                 b.reasons.append(f"small team ({team})")
-                score += w * 0.4
-            elif team <= MID_TEAM:
-                score += w * 0.2
+                score += 0.2 * w
         return min(w, score)
 
     # ----------------------------------------------------------- components
@@ -171,7 +205,11 @@ class MatchScorer:
             return w * 0.5
         stack = {t.lower() for t in job.tech_stack}
         if not stack:
-            return w * 0.3
+            # Many employer postings name no tools at all (EA's site has no
+            # description; Google's are prose). Absence isn't a mismatch, so
+            # stay near neutral. Not keyed on the description itself: rescore
+            # loads rows without it, and scores must not shift between passes.
+            return w * 0.4
 
         strong_hits = stack & self.strong
         learn_hits = stack & self.learning

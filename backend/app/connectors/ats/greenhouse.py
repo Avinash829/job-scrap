@@ -79,6 +79,16 @@ def regions_from_location(text: str) -> list[HiringRegion]:
     return hits or [HiringRegion.UNKNOWN]
 
 
+
+_BOARD_SUFFIX = re.compile(r"\s*[-|:]?\s*(job\s*board|careers?|jobs)\s*$", re.I)
+
+
+def _clean_board_name(name: str | None) -> str | None:
+    """Greenhouse board titles are often "Rubrik Job Board" or "Acme Careers"."""
+    if not name:
+        return None
+    return _BOARD_SUFFIX.sub("", name).strip() or name
+
 class Greenhouse(ATSConnector):
     name = "greenhouse"
     platform = "greenhouse"
@@ -123,7 +133,7 @@ class Greenhouse(ATSConnector):
                     source_job_id=f"{company.slug}:{item['id']}",
                     url=item.get("absolute_url", ""),
                     title=title,
-                    company=item.get("company_name") or company.slug,
+                    company=company.get("name") or _clean_board_name(item.get("company_name")) or company.slug,
                     description=description,
                     location_raw=location or ", ".join(offices) or None,
                     tags=departments,

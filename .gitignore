@@ -25,3 +25,7 @@ dist/
 .vite/
 
 .DS_Store
+
+# company-probe checkpoints (resumable, regenerable)
+.import_cache/
+backend/.import_cache/

@@ -157,6 +157,17 @@ class SearchProfile:
         return self._data.get("profile", {})
 
     @property
+    def notable_companies(self) -> list[str]:
+        return [str(c) for c in (self._data.get("notable_companies") or [])]
+
+    @property
+    def search(self) -> dict:
+        return self._data.get(
+            "search",
+            {"terms": ["intern"], "locations": ["India"], "max_pages_per_term": 3},
+        )
+
+    @property
     def freshness(self) -> dict:
         return self._data.get("freshness", {"max_posting_age_days": 2})
 

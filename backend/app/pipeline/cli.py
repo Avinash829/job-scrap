@@ -88,7 +88,7 @@ async def cmd_ingest(args: argparse.Namespace) -> int:
         apply_filter=not args.no_filter,
         check_links=not args.no_link_check,
     )
-    console.print(f"[bold cyan]ingest[/] tier={args.tier or 'all'}")
+    console.print(f"[bold cyan]scraping[/] tier={args.tier or 'all'}")
     result = await pipeline.run(args.tier)
     if not result.runs:
         console.print(f"[yellow]no connectors registered for tier {args.tier}[/]")
@@ -280,7 +280,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser = add_parser  # every subcommand inherits -v
 
-    p = sub.add_parser("ingest", help="fetch, normalize, store, enrich, score")
+    # "scrape" is the name you'll see everywhere; "ingest" still works as an
+    # alias so older commands and workflow runs don't break.
+    p = sub.add_parser(
+        "scrape",
+        aliases=["ingest"],
+        help="scrape every source, filter to your profile, score, and save",
+    )
     p.add_argument("--tier", type=int, choices=[1, 2, 3])
     p.add_argument("--no-enrich", action="store_true", help="skip the LLM pass")
     p.add_argument("--no-filter", action="store_true", help="keep out-of-scope rows active")
@@ -296,6 +302,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("health", help="connector + corpus health")
 
+    p = sub.add_parser(
+        "reset",
+        help="empty the job table for a fresh daily start (keeps the LLM cache)",
+    )
+    p.add_argument("--yes", action="store_true", help="required - this deletes every job row")
+
     sub.add_parser(
         "rescore",
         help="recompute match scores and reasons for active jobs, no fetching",
@@ -309,6 +321,16 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--platform", default="greenhouse")
     p.add_argument("--pages", type=int, default=3)
     p.add_argument("--apply", action="store_true")
+
+    p = sub.add_parser(
+        "import-companies",
+        help="probe a public company dataset and add employers with India openings",
+    )
+    p.add_argument("--platform", required=True, choices=["workday", "greenhouse"])
+    p.add_argument("--apply", action="store_true", help="write companies.yaml")
+    p.add_argument("--limit", type=int, help="probe only the first N (for a quick test)")
+    p.add_argument("--retry-failed", action="store_true",
+                   help="re-probe boards that failed for a transient reason (timeout, 429, 5xx)")
 
     p = sub.add_parser("yc", help="seed YC-backed companies that are hiring")
     p.add_argument("--apply", action="store_true")
@@ -325,7 +347,7 @@ def main(argv: list[str] | None = None) -> int:
     _configure_logging(getattr(args, "verbose", False))
     init_db()
 
-    if args.command == "ingest":
+    if args.command in ("scrape", "ingest"):
         return asyncio.run(cmd_ingest(args))
     if args.command == "enrich":
         return asyncio.run(cmd_enrich(args))
@@ -333,6 +355,17 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_show(args)
     if args.command == "health":
         return cmd_health(args)
+    if args.command == "reset":
+        if not args.yes:
+            console.print("[red]refusing to reset without --yes[/] (this deletes every job row)")
+            return 2
+        with session_scope() as s:
+            out = JobRepository(s).reset_daily()
+        console.print(
+            f"reset: deleted [bold]{out['jobs_deleted']}[/] jobs · "
+            f"pruned {out['cache_pruned']} stale cache entries · {out['runs_pruned']} old run logs"
+        )
+        return 0
     if args.command == "rescore":
         from app.pipeline.orchestrator import IngestPipeline
 
@@ -349,6 +382,13 @@ def main(argv: list[str] | None = None) -> int:
         from app.pipeline.discover import discover
 
         asyncio.run(discover(args.platform, pages=args.pages, apply=args.apply))
+        return 0
+    if args.command == "import-companies":
+        from app.pipeline.import_companies import import_companies
+
+        asyncio.run(import_companies(
+            args.platform, apply=args.apply, limit=args.limit, retry_failed=args.retry_failed
+        ))
         return 0
     if args.command == "yc":
         from app.pipeline.yc import discover_yc

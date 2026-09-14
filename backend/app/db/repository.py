@@ -334,6 +334,41 @@ class JobRepository:
             )
         return len(stale)
 
+    def reset_daily(self, keep_cache_days: int = 30, keep_run_days: int = 7) -> dict:
+        """Empty the job corpus so every day starts from fresh data.
+
+        Deliberately NOT wiped:
+          * extraction_cache - keyed by description_hash, so tomorrow's run
+            re-fetching the same posting reuses the LLM result instead of
+            spending Gemini quota again. Entries older than keep_cache_days
+            are pruned so it can't grow without bound.
+          * recent connector_runs - the silent-zero health history; only the
+            last keep_run_days are kept.
+
+        On Postgres, TRUNCATE (not DELETE) returns the space to Neon's 0.5 GB
+        free-tier allowance immediately; DELETE only marks rows dead.
+        """
+        from sqlalchemy import delete, text
+
+        jobs = self.s.scalar(select(func.count()).select_from(JobRow)) or 0
+        if self.s.bind.dialect.name == "postgresql":
+            self.s.execute(text("TRUNCATE TABLE jobs RESTART IDENTITY"))
+        else:
+            self.s.execute(delete(JobRow))
+
+        now = datetime.now(timezone.utc)
+        cache = self.s.execute(
+            delete(ExtractionCacheRow).where(
+                ExtractionCacheRow.created_at < now - timedelta(days=keep_cache_days)
+            )
+        ).rowcount
+        runs = self.s.execute(
+            delete(ConnectorRunRow).where(
+                ConnectorRunRow.started_at < now - timedelta(days=keep_run_days)
+            )
+        ).rowcount
+        return {"jobs_deleted": jobs, "cache_pruned": cache or 0, "runs_pruned": runs or 0}
+
     def purge_older_than(self, days: int = 60) -> int:
         """Retention - free-tier storage is ~0.5GB, so inactive rows must go."""
         cutoff = datetime.now(timezone.utc) - timedelta(days=days)

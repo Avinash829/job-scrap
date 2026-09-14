@@ -1,11 +1,13 @@
-name: ingest
+name: Scrape jobs
 
 on:
   schedule:
-    # Tier 1 - India boards + top companies, every 6h.
+    # Tier 1 - India boards, top companies and career sites, every 6h.
     - cron: "0 */6 * * *"
-    # Tier 2 - all 800+ boards, once daily at 02:00 UTC (07:30 IST).
-    - cron: "0 2 * * *"
+    # Daily fresh start at 18:30 UTC = 00:00 IST: empty the database, then a
+    # full tier-2 scrape in the same run, so the site is only empty for the
+    # few minutes the scrape takes - at midnight.
+    - cron: "30 18 * * *"
   workflow_dispatch:
     inputs:
       tier:
@@ -16,12 +18,16 @@ on:
         description: "Also refresh YC list and validate new boards"
         type: boolean
         default: false
+      reset:
+        description: "Empty the database before ingesting"
+        type: boolean
+        default: false
 
 # NOTE: Actions disables scheduled workflows after 60 days of repo
 # inactivity. The commit step below counts as activity, so a successful
 # discovery run keeps this alive by itself.
 concurrency:
-  group: ingest
+  group: scrape-jobs
   cancel-in-progress: false
 
 permissions:
@@ -29,7 +35,7 @@ permissions:
   contents: write
 
 jobs:
-  ingest:
+  scrape:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     defaults:
@@ -76,8 +82,15 @@ jobs:
           git commit -m "chore: refresh ATS board coverage [skip ci] [skip render]"
           git push
 
-      # --- the actual ingest --------------------------------------------
-      - name: Run ingest
+      # --- daily fresh start ---------------------------------------------
+      - name: Reset database (daily run only)
+        if: github.event.schedule == '30 18 * * *' || inputs.reset
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli reset --yes
+
+      # --- scrape every source -------------------------------------------
+      - name: Scrape jobs
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
@@ -88,15 +101,10 @@ jobs:
           TIER="${{ inputs.tier }}"
           # the 02:00 cron does the full sweep, the 6-hourly one stays hot
           if [ -z "$TIER" ]; then
-            if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then TIER=2; else TIER=1; fi
+            if [ "${{ github.event.schedule }}" = "30 18 * * *" ]; then TIER=2; else TIER=1; fi
           fi
-          echo "ingesting tier $TIER"
-          python -m app.pipeline.cli ingest --tier "$TIER" -v
-
-      - name: Retention
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: python -m app.pipeline.cli purge --days 60
+          echo "scraping tier $TIER"
+          python -m app.pipeline.cli scrape --tier "$TIER" -v
 
       - name: Health summary
         if: always()

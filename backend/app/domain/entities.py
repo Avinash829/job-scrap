@@ -28,6 +28,9 @@ def _utcnow() -> datetime:
 # as absent rather than reporting an age nobody would believe.
 MAX_PLAUSIBLE_AGE_DAYS = 400
 
+# jobs.source_job_id is String(256)
+MAX_SOURCE_JOB_ID = 256
+
 
 class RawJob(BaseModel):
     """Connector output. Deliberately lenient - normalization happens later."""
@@ -59,6 +62,22 @@ class RawJob(BaseModel):
         if v is not None and v.tzinfo is None:
             return v.replace(tzinfo=timezone.utc)
         return v
+
+    @field_validator("source_job_id")
+    @classmethod
+    def _fit_id_column(cls, v: str) -> str:
+        """Keep ids within the DB column (varchar 256), deterministically.
+
+        Workday ids embed the URL path, and Motorola Solutions titles one role
+        with a 250-character skills list. One over-long id failed the insert
+        and rolled back all 14,689 Workday rows in that run. A stable hash
+        suffix keeps the id unique and identical across runs, so upserts and
+        staleness tracking still match.
+        """
+        if len(v) <= MAX_SOURCE_JOB_ID:
+            return v
+        digest = hashlib.sha1(v.encode("utf-8", "replace")).hexdigest()
+        return f"{v[: MAX_SOURCE_JOB_ID - 42]}~{digest}"
 
     @property
     def description_hash(self) -> str:
