@@ -149,18 +149,40 @@ Tables are created automatically on first run - there is no migration step.
 
 ### 2. Render (backend)
 
-**New → Blueprint** and point it at this repo; `render.yaml` configures
-everything except the two secrets. Set those in the dashboard:
+Configured in the dashboard, no config file. **New → Web Service**, connect
+this repo, then:
+
+| Setting | Value |
+|---|---|
+| Branch | `main` |
+| Region | **Ohio** (same AWS region as Neon us-east-2) |
+| Root Directory | `backend` |
+| Runtime | Python 3 |
+| Build Command | `pip install -r requirements.txt` |
+| Start Command | `uvicorn app.main:app --host 0.0.0.0 --port $PORT` |
+| Instance Type | Free |
+| Health Check Path (Advanced) | `/health` |
+| Auto-Deploy (Advanced) | On Commit |
+
+Environment variables:
 
 | Variable | Value |
 |---|---|
+| `PYTHON_VERSION` | `3.12.10` — Render's default for new services is 3.14 |
 | `DATABASE_URL` | the `+psycopg` string from step 1 |
 | `CORS_ORIGINS` | `https://<your-project>.vercel.app` (no trailing slash) |
 
-`autoDeploy: true` is set, so every push to the default branch redeploys.
+`.python-version` is also committed at the repo root and in `backend/`, but
+the env var takes precedence and removes any doubt about which file Render
+reads when a Root Directory is set. `CORS_ORIGIN_REGEX` needs no value: the
+code defaults it to `https://.*\.vercel\.app`, which covers preview deploys.
+
+Because Root Directory is `backend`, frontend-only pushes don't redeploy the
+API. The ingest bot's commits carry `[skip render]`, so coverage updates
+don't either.
 
 The free plan sleeps after ~15 minutes idle, so the first request after a
-quiet spell takes ~50s. Nothing is lost - the API is read-only.
+quiet spell takes up to a minute. Nothing is lost - the API is read-only.
 
 ### 3. Vercel (frontend)
 

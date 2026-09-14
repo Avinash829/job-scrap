@@ -259,9 +259,26 @@ def cmd_purge(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    ap = argparse.ArgumentParser(prog="jobscrap")
-    ap.add_argument("-v", "--verbose", action="store_true")
+    # -v is accepted both before and after the subcommand. argparse only
+    # binds a top-level flag BEFORE the subcommand, so `cli ingest -v` failed
+    # with "unrecognized arguments: -v" and broke every scheduled Actions run.
+    # The subparser copy uses SUPPRESS so it never overwrites a -v that was
+    # given in the top-level position with its own False default.
+    verbose = argparse.ArgumentParser(add_help=False)
+    verbose.add_argument(
+        "-v", "--verbose", action="store_true", default=argparse.SUPPRESS,
+        help="info-level logging",
+    )
+
+    ap = argparse.ArgumentParser(prog="jobscrap", parents=[verbose])
     sub = ap.add_subparsers(dest="command", required=True)
+
+    _add_parser = sub.add_parser
+
+    def add_parser(name, **kw):
+        return _add_parser(name, parents=[verbose], **kw)
+
+    sub.add_parser = add_parser  # every subcommand inherits -v
 
     p = sub.add_parser("ingest", help="fetch, normalize, store, enrich, score")
     p.add_argument("--tier", type=int, choices=[1, 2, 3])
@@ -300,7 +317,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    _configure_logging(args.verbose)
+    _configure_logging(getattr(args, "verbose", False))
     init_db()
 
     if args.command == "ingest":
