@@ -62,6 +62,13 @@ class Settings(BaseSettings):
         default="http://localhost:5173,http://127.0.0.1:5173",
         alias="CORS_ORIGINS",
     )
+    # Vercel gives every preview deploy its own random hostname, so an exact
+    # allow-list can never cover them. This regex does, without opening the
+    # API to the whole internet.
+    cors_origin_regex: str = Field(
+        default=r"https://.*\.vercel\.app",
+        alias="CORS_ORIGIN_REGEX",
+    )
 
     @staticmethod
     def _csv(value: str) -> list[str]:

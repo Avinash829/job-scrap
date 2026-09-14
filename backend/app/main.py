@@ -23,6 +23,11 @@ health_router = APIRouter(tags=["meta"])
 
 @health_router.get("/health")
 def health() -> dict:
+    """Liveness only - deliberately does not touch the database.
+
+    Render pings this constantly; waking a suspended Neon compute on every
+    ping would burn the free tier's compute hours for nothing.
+    """
     s = get_settings()
     return {
         "status": "ok",
@@ -30,6 +35,18 @@ def health() -> dict:
         "llm_keys": len(s.gemini_api_keys),
         "db": s.database_url.split("://", 1)[0],
     }
+
+
+@health_router.get("/ready")
+def ready() -> dict:
+    """Readiness - actually queries the DB. Use this to verify a deploy."""
+    from sqlalchemy import text
+
+    from app.db.session import get_engine
+
+    with get_engine().connect() as conn:
+        conn.execute(text("SELECT 1"))
+    return {"status": "ready"}
 
 
 @asynccontextmanager
@@ -52,6 +69,7 @@ def create_app() -> FastAPI:
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_origins,
+        allow_origin_regex=settings.cors_origin_regex or None,
         allow_credentials=False,
         allow_methods=["GET"],
         allow_headers=["*"],

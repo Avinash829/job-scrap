@@ -114,6 +114,108 @@ Adding a platform: subclass `ATSConnector`, implement `board_url()` and
 `impersonate = "chrome124"` if the endpoint 403s a plain client - that's TLS
 fingerprinting, not auth, and `curl_cffi` handles it.
 
+
+## Deploying
+
+Three pieces, each free, each with a different lifetime. The split matters:
+**ingestion cannot live on Render** because every free host suspends an idle
+service, and a suspended container runs no cron.
+
+```
+GitHub Actions   ingest + enrich + discovery   (cron, always fires)
+      │  writes
+      ▼
+Neon Postgres    the corpus                    (persistent)
+      ▲  reads
+      │
+Render           FastAPI, read-only            (sleeps when idle - fine)
+      ▲
+Vercel           React SPA                     (static, always on)
+```
+
+### 1. Neon Postgres
+
+Create a project at [neon.tech](https://neon.tech), then copy the **pooled**
+connection string and **change the driver prefix**:
+
+```
+Neon gives you:  postgresql://user:pass@ep-xxx-pooler.../db?sslmode=require
+you must use:    postgresql+psycopg://user:pass@ep-xxx-pooler.../db?sslmode=require
+                           ^^^^^^^^
+```
+Without `+psycopg`, SQLAlchemy tries psycopg2 and the deploy fails at startup.
+
+Tables are created automatically on first run - there is no migration step.
+
+### 2. Render (backend)
+
+**New → Blueprint** and point it at this repo; `render.yaml` configures
+everything except the two secrets. Set those in the dashboard:
+
+| Variable | Value |
+|---|---|
+| `DATABASE_URL` | the `+psycopg` string from step 1 |
+| `CORS_ORIGINS` | `https://<your-project>.vercel.app` (no trailing slash) |
+
+`autoDeploy: true` is set, so every push to the default branch redeploys.
+
+The free plan sleeps after ~15 minutes idle, so the first request after a
+quiet spell takes ~50s. Nothing is lost - the API is read-only.
+
+### 3. Vercel (frontend)
+
+**Add New → Project**, then:
+
+- **Root Directory:** `frontend`
+- **Environment Variable:** `VITE_API_BASE` = `https://<your-api>.onrender.com`
+  — add it to **Production *and* Preview**
+
+Vite inlines `VITE_*` at **build** time, so changing this needs a redeploy,
+not just a restart. Push-to-deploy is on by default.
+
+### 4. GitHub Actions (the ingest)
+
+Repo → Settings → Secrets and variables → Actions:
+
+| Secret | Value |
+|---|---|
+| `DATABASE_URL` | same `+psycopg` string |
+| `GEMINI_API_KEY_1` … `_3` | your keys |
+
+Optional variable: `GEMINI_MODEL` (defaults to `gemini-3.5-flash-lite`).
+
+Schedules: tier 1 every 6h, tier 2 (all 800+ boards) daily at 02:00 UTC.
+Run **Actions → ingest → Run workflow** with **discover ✓** to refresh the YC
+list and validate new boards.
+
+> **Why the workflow commits back to the repo:** `companies.yaml` and
+> `yc_index.json` *are* the product - 800+ verified boards. The Actions
+> runner filesystem is discarded after every run, so discovery results must
+> be committed or they vanish. That's what `permissions: contents: write`
+> and the "Commit discovered boards" step are for. It also keeps the
+> schedule alive, since Actions disables cron after 60 days of inactivity.
+
+### Verify a deploy
+
+```bash
+curl https://<your-api>.onrender.com/health   # liveness, no DB touch
+curl https://<your-api>.onrender.com/ready    # actually queries Postgres
+```
+
+### Env var reference
+
+| Variable | Local | Render | Actions | Vercel |
+|---|---|---|---|---|
+| `DATABASE_URL` | ✅ sqlite | ✅ neon | ✅ neon | — |
+| `GEMINI_API_KEY_1..3` | ✅ | — (API never calls Gemini) | ✅ | — |
+| `GEMINI_MODEL` | ✅ | — | optional | — |
+| `CORS_ORIGINS` | default | ✅ | — | — |
+| `CORS_ORIGIN_REGEX` | default | preset | — | — |
+| `VITE_API_BASE` | ✅ | — | — | ✅ |
+
+Nothing secret ever reaches the frontend: every `VITE_*` value ships to the
+browser, which is why the API keys live only where ingest runs.
+
 ## Design decisions worth knowing
 
 **`hiring_regions` is the point.** Most postings tagged "Remote" mean

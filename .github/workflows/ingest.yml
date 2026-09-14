@@ -2,26 +2,36 @@ name: ingest
 
 on:
   schedule:
-    # Tier 1 (remote-native boards) every 6h - cheap, ~10 API calls.
-    # GitHub cron fires late under load; that's fine for this workload.
+    # Tier 1 - India boards + top companies, every 6h.
     - cron: "0 */6 * * *"
+    # Tier 2 - all 800+ boards, once daily at 02:00 UTC (07:30 IST).
+    - cron: "0 2 * * *"
   workflow_dispatch:
     inputs:
       tier:
-        description: "Refresh tier"
+        description: "Refresh tier (1 = hot boards, 2 = everything)"
         required: false
-        default: "1"
+        default: "2"
+      discover:
+        description: "Also refresh YC list and validate new boards"
+        type: boolean
+        default: false
 
 # NOTE: Actions disables scheduled workflows after 60 days of repo
-# inactivity. A commit every few weeks keeps this alive.
+# inactivity. The commit step below counts as activity, so a successful
+# discovery run keeps this alive by itself.
 concurrency:
   group: ingest
   cancel-in-progress: false
 
+permissions:
+  # required so the discovery job can commit companies.yaml back
+  contents: write
+
 jobs:
   ingest:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     defaults:
       run:
         working-directory: backend
@@ -36,12 +46,52 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # --- coverage growth (opt-in; writes companies.yaml) ---------------
+      # companies.yaml and yc_index.json ARE the product: 800+ verified
+      # boards. The runner filesystem is thrown away, so anything discovered
+      # here must be committed back or it is lost on every run.
+      - name: Refresh YC companies
+        if: inputs.discover
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli yc --apply
+
+      - name: Validate candidate boards
+        if: inputs.discover
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli validate --apply
+
+      - name: Commit discovered boards
+        if: inputs.discover
+        working-directory: .
+        run: |
+          if git diff --quiet backend/companies.yaml backend/yc_index.json; then
+            echo "no coverage changes"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backend/companies.yaml backend/yc_index.json
+          git commit -m "chore: refresh ATS board coverage [skip ci] [skip render]"
+          git push
+
+      # --- the actual ingest --------------------------------------------
       - name: Run ingest
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
-        run: python -m app.pipeline.cli ingest --tier ${{ inputs.tier || '1' }} -v
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
+        run: |
+          TIER="${{ inputs.tier }}"
+          # the 02:00 cron does the full sweep, the 6-hourly one stays hot
+          if [ -z "$TIER" ]; then
+            if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then TIER=2; else TIER=1; fi
+          fi
+          echo "ingesting tier $TIER"
+          python -m app.pipeline.cli ingest --tier "$TIER" -v
 
       - name: Retention
         env:

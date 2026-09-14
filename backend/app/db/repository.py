@@ -9,8 +9,8 @@ import json
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
-from sqlalchemy import case, func, select, update
-from sqlalchemy.orm import Session
+from sqlalchemy import case, func, insert, select, update
+from sqlalchemy.orm import Session, defer
 
 from app.db.models import ConnectorRunRow, ExtractionCacheRow, JobRow
 from app.domain.entities import ConnectorRun, Extraction, Job
@@ -92,6 +92,54 @@ def row_to_job(row: JobRow) -> Job:
     )
 
 
+def _row_to_job_lean(row: JobRow) -> Job:
+    """row_to_job without touching the deferred `description` column.
+
+    Reading row.description on a deferred-with-raiseload column raises
+    instead of silently issuing a SELECT, so this never reads it at all.
+    """
+    return Job(
+        source=row.source,
+        source_job_id=row.source_job_id,
+        url=row.url,
+        description_hash=row.description_hash,
+        title=row.title,
+        title_normalized=row.title_normalized,
+        company=row.company,
+        company_normalized=row.company_normalized,
+        description=None,
+        location_raw=row.location_raw,
+        ats=row.ats,
+        role_category=RoleCategory(row.role_category),
+        employment_type=EmploymentType(row.employment_type),
+        tech_stack=json.loads(row.tech_stack or "[]"),
+        min_yoe=row.min_yoe,
+        max_yoe=row.max_yoe,
+        is_new_grad=row.is_new_grad,
+        grad_year=row.grad_year,
+        yoe_source=ExtractionSource(row.yoe_source),
+        is_remote=row.is_remote,
+        hiring_regions=[HiringRegion(r) for r in json.loads(row.hiring_regions or "[]")],
+        work_auth_required=row.work_auth_required,
+        visa_sponsorship=row.visa_sponsorship,
+        region_source=ExtractionSource(row.region_source),
+        region_confidence=Confidence(row.region_confidence),
+        salary_min=row.salary_min,
+        salary_max=row.salary_max,
+        salary_currency=row.salary_currency,
+        posted_at=_aware_opt(row.posted_at),
+        first_seen_at=_aware(row.first_seen_at),
+        last_seen_at=_aware(row.last_seen_at),
+        is_active=row.is_active,
+        match_score=row.match_score,
+        match_reasons=json.loads(row.match_reasons or "[]"),
+        needs_enrichment=row.needs_enrichment,
+        link_status=row.link_status or "",
+        link_checked_at=_aware_opt(row.link_checked_at),
+        raw_payload=json.loads(row.raw_payload or "{}"),
+    )
+
+
 def job_to_values(job: Job) -> dict:
     return {
         "source": job.source,
@@ -150,39 +198,70 @@ class JobRepository:
         if not jobs:
             return 0, 0
 
-        keys = {(j.source, j.source_job_id) for j in jobs}
-        sources = {j.source for j in jobs}
-
-        existing: dict[tuple[str, str], JobRow] = {
-            (r.source, r.source_job_id): r
-            for r in self.s.scalars(
-                select(JobRow).where(JobRow.source.in_(sources))
-            ).all()
-            if (r.source, r.source_job_id) in keys
-        }
+        # Three things here only matter against a REMOTE database, which is
+        # why they never showed up on local SQLite:
+        #
+        #  1. Fetch existing KEYS only. Loading full ORM rows pulled every
+        #     description over the network just to learn which ids exist.
+        #  2. Insert through Core `insert()` with a list of dicts, which
+        #     SQLAlchemy 2.0 batches into multi-row INSERTs ("insertmanyvalues",
+        #     1000 rows per statement). `bulk_save_objects` issued one INSERT
+        #     per row - 28k round trips to Neon, 30+ minutes, stuck mid-run.
+        #  3. Refresh last_seen_at for known rows in chunked UPDATEs rather
+        #     than dirtying and flushing each ORM object individually.
+        by_source: dict[str, list[Job]] = {}
+        for job in jobs:
+            by_source.setdefault(job.source, []).append(job)
 
         now = datetime.now(timezone.utc)
-        new_rows: list[JobRow] = []
+        new_values: list[dict] = []
+        seen_keys: dict[str, list[str]] = {}
+
+        for source, source_jobs in by_source.items():
+            wanted = {j.source_job_id for j in source_jobs}
+            existing: set[str] = set()
+            ids = list(wanted)
+            for start in range(0, len(ids), 1000):
+                chunk = ids[start : start + 1000]
+                existing.update(
+                    self.s.scalars(
+                        select(JobRow.source_job_id).where(
+                            JobRow.source == source,
+                            JobRow.source_job_id.in_(chunk),
+                        )
+                    ).all()
+                )
+
+            for job in source_jobs:
+                if job.source_job_id in existing:
+                    seen_keys.setdefault(source, []).append(job.source_job_id)
+                else:
+                    new_values.append(job_to_values(job))
+
+        if new_values:
+            # dedupe within the batch: a board can list one req twice, and a
+            # duplicate key would abort the whole multi-row statement
+            unique: dict[tuple[str, str], dict] = {}
+            for v in new_values:
+                unique[(v["source"], v["source_job_id"])] = v
+            self.s.execute(insert(JobRow), list(unique.values()))
+            inserted = len(unique)
+        else:
+            inserted = 0
+
         updated = 0
+        for source, ids in seen_keys.items():
+            for start in range(0, len(ids), 1000):
+                chunk = ids[start : start + 1000]
+                self.s.execute(
+                    update(JobRow)
+                    .where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
+                    .values(last_seen_at=now, is_active=True)
+                )
+                updated += len(chunk)
 
-        for job in jobs:
-            row = existing.get((job.source, job.source_job_id))
-            if row is None:
-                new_rows.append(JobRow(**job_to_values(job)))
-                continue
-            row.last_seen_at = now
-            row.is_active = True
-            # a re-run may have enriched fields the first pass lacked
-            if row.needs_enrichment and not job.needs_enrichment:
-                for k, v in job_to_values(job).items():
-                    if k not in ("first_seen_at", "id"):
-                        setattr(row, k, v)
-            updated += 1
-
-        if new_rows:
-            self.s.bulk_save_objects(new_rows)
         self.s.flush()
-        return len(new_rows), updated
+        return inserted, updated
 
     def apply_extractions(self, extractions: dict[str, Extraction]) -> int:
         """Fold LLM results into rows sharing that description_hash."""
@@ -235,17 +314,23 @@ class JobRepository:
         large share of listings are month-old ghosts.
         """
         cutoff = datetime.now(timezone.utc) - timedelta(days=grace_days)
-        rows = self.s.scalars(
-            select(JobRow).where(JobRow.source == source, JobRow.is_active.is_(True))
+        # three narrow columns, not whole rows - this runs once per source and
+        # full rows would drag every description across the network
+        rows = self.s.execute(
+            select(JobRow.id, JobRow.source_job_id, JobRow.last_seen_at).where(
+                JobRow.source == source, JobRow.is_active.is_(True)
+            )
         ).all()
         stale = [
             r.id
             for r in rows
             if r.source_job_id not in seen_ids and _aware(r.last_seen_at) < cutoff
         ]
-        if stale:
+        for start in range(0, len(stale), 1000):
             self.s.execute(
-                update(JobRow).where(JobRow.id.in_(stale)).values(is_active=False)
+                update(JobRow)
+                .where(JobRow.id.in_(stale[start : start + 1000]))
+                .values(is_active=False)
             )
         return len(stale)
 
@@ -260,6 +345,27 @@ class JobRepository:
         for row_id in rows:
             self.s.delete(self.s.get(JobRow, row_id))
         return len(rows)
+
+    def active_jobs_lean(self, batch_size: int = 2000):
+        """Every active job WITHOUT its description, streamed in batches.
+
+        For pipeline passes (filtering, scoring) that never read the
+        description. Over a remote DB the descriptions are most of the bytes.
+
+        `defer()` alone is not enough: row_to_job() touches row.description,
+        which would fire one lazy SELECT per row - an N+1 over the network,
+        far worse than just loading the column. So rows are converted by a
+        variant that never reads the deferred attribute.
+        """
+        stmt = (
+            select(JobRow)
+            .options(defer(JobRow.description, raiseload=True))
+            .where(JobRow.is_active.is_(True))
+            .order_by(JobRow.id)
+            .execution_options(yield_per=batch_size)
+        )
+        for row in self.s.scalars(stmt):
+            yield _row_to_job_lean(row)
 
     def needs_link_check(self, limit: int = 200, recheck_after_hours: int = 24) -> list[Job]:
         """In-scope rows whose apply link is unverified or stale.

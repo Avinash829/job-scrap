@@ -421,8 +421,47 @@ def normalize_title(title: str) -> str:
     return _WS.sub(" ", t).strip()
 
 
+def _normalize_out_of_scope(raw: RawJob) -> Job:
+    """Cheap path for titles the role gate will reject anyway.
+
+    Measured on a real run: 86% of ~33k postings are role `other` (sales,
+    recruiting, ops...). The full path runs ~80 skill regexes plus YoE, region,
+    work-auth and sponsorship scans over each description - several KB apiece.
+    None of that output is ever read for an `other` row: passes_filters()
+    rejects it on role before looking at anything else, and storage drops its
+    description. So only identity and title-derived fields are computed here.
+    """
+    return Job(
+        source=raw.source,
+        source_job_id=raw.source_job_id,
+        url=raw.url,
+        description_hash=raw.description_hash,
+        title=raw.title.strip(),
+        title_normalized=normalize_title(raw.title),
+        company=raw.company.strip(),
+        company_normalized=normalize_company(raw.company),
+        description=None,
+        location_raw=raw.location_raw,
+        ats=raw.raw_payload.get("ats"),
+        role_category=RoleCategory.OTHER,
+        employment_type=raw.employment_type_hint,
+        hiring_regions=[r for r in raw.hiring_regions_hint] or [HiringRegion.UNKNOWN],
+        posted_at=raw.posted_at,
+        first_seen_at=datetime.now(timezone.utc),
+        last_seen_at=datetime.now(timezone.utc),
+        needs_enrichment=False,
+        raw_payload=raw.raw_payload,
+    )
+
+
 def normalize(raw: RawJob) -> Job:
     """Rules-only pass. Flags needs_enrichment when the LLM could add something."""
+    # Classify first: it only reads the title, and it decides whether any of
+    # the expensive description scans below can possibly matter.
+    role = classify_role(raw.title, raw.tags)
+    if role is RoleCategory.OTHER:
+        return _normalize_out_of_scope(raw)
+
     text = f"{raw.title}\n{raw.description or ''}"
     min_yoe, max_yoe, yoe_src = extract_yoe(raw.title, raw.description)
 
@@ -467,7 +506,7 @@ def normalize(raw: RawJob) -> Job:
         description=raw.description,
         location_raw=raw.location_raw,
         ats=ats,
-        role_category=classify_role(raw.title, raw.tags),
+        role_category=role,
         employment_type=emp,
         tech_stack=extract_tech_stack(text, raw.tags),
         min_yoe=min_yoe,

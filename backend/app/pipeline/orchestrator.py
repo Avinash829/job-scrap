@@ -16,6 +16,7 @@ from app.core.config import get_settings
 from app.db.repository import JobRepository
 from app.db.session import session_scope
 from app.domain.entities import ConnectorRun, Extraction, Job
+from app.domain.enums import RoleCategory
 from app.services.dedupe.matcher import dedupe
 from app.services.enrichment.extractor import LLMExtractor
 from app.services.enrichment.provider import GeminiProvider, LLMUnavailable
@@ -24,6 +25,37 @@ from app.services.normalization.rules import normalize, passes_filters
 from app.services.scoring.scorer import MatchScorer
 
 log = logging.getLogger(__name__)
+
+# Keys in raw_payload the pipeline actually reads after storage. Everything
+# else a connector attached is dropped for out-of-scope rows.
+_PAYLOAD_KEEP = frozenset({"ats", "ats_slug", "yc_batch", "team_size", "yc_name"})
+
+
+def _slim_for_storage(job: Job) -> Job:
+    """Drop heavy fields from rows the title gate has already ruled out.
+
+    Measured on a real 28.6k-row run: 86% of rows are role `other`, and their
+    descriptions were 117 MB of a 138 MB total - never read by filtering,
+    scoring or enrichment (which skips `other`). Uploading them made a first
+    run against Neon take 30+ minutes from India and would steadily eat the
+    free tier's 0.5 GB storage cap.
+
+    The row itself is still stored, because dedupe and last_seen_at staleness
+    tracking need every posting's identity. description_hash is computed from
+    the ORIGINAL description upstream, so cache keys stay stable. If a role
+    category is added to config later, the next run re-fetches full text -
+    ATS boards return the complete posting every time.
+    """
+    if job.role_category is not RoleCategory.OTHER:
+        return job
+    return job.model_copy(
+        update={
+            "description": None,
+            "raw_payload": {
+                k: v for k, v in (job.raw_payload or {}).items() if k in _PAYLOAD_KEEP
+            },
+        }
+    )
 
 
 @dataclass
@@ -73,46 +105,65 @@ class IngestPipeline:
 
         fetched = await asyncio.gather(*(guarded(c) for c in connectors))
 
+        # One transaction PER CONNECTOR, not one for the whole run.
+        #
+        # The original single transaction held ~28k inserts open for 30+
+        # minutes against a remote database. A dropped connection at minute
+        # 29 would have rolled back everything, and nothing was visible until
+        # the very end. Committing per source makes a run resumable: whatever
+        # finished stays finished, and a re-run only redoes the source that
+        # failed.
+        for raw_jobs, record in fetched:
+            jobs: list[Job] = []
+            for raw in raw_jobs:
+                try:
+                    jobs.append(_slim_for_storage(normalize(raw)))
+                except Exception as exc:  # noqa: BLE001
+                    self._drop(result, f"normalize error: {type(exc).__name__}")
+                    log.debug("normalize failed for %s: %s", raw.url, exc)
+
+            kept, dupes = dedupe(jobs)
+            if dupes:
+                self._drop(result, "duplicate", dupes)
+
+            try:
+                with session_scope() as s:
+                    repo = JobRepository(s)
+                    new, updated = repo.upsert_many(kept)
+                    if kept:
+                        repo.mark_stale(record.connector, {j.source_job_id for j in kept})
+                    record.jobs_kept = len(kept)
+                    record.jobs_new = new
+                    repo.record_run(record)
+            except Exception as exc:  # noqa: BLE001 - one source's write must not sink the rest
+                record.ok = False
+                record.error = f"storage: {type(exc).__name__}: {str(exc)[:160]}"
+                log.error("storing %s failed: %s", record.connector, exc)
+                new = updated = 0
+
+            result.total_new += new
+            result.total_updated += updated
+            result.runs.append(record)
+            log.info("%s: committed %d new / %d refreshed", record.connector, new, updated)
+
+        # --- enrichment ---
+        if self.enrich:
+            with session_scope() as s:
+                await self._enrich(JobRepository(s), result)
+
+        # --- filtering (post-enrichment, so decisions use real data) ---
+        if self.apply_filter:
+            with session_scope() as s:
+                self._deactivate_out_of_scope(JobRepository(s), result)
+
+        # --- scoring (before link checks, so we verify best-first) ---
         with session_scope() as s:
-            repo = JobRepository(s)
+            result.scored = self._rescore(JobRepository(s))
 
-            for raw_jobs, record in fetched:
-                jobs: list[Job] = []
-                for raw in raw_jobs:
-                    try:
-                        jobs.append(normalize(raw))
-                    except Exception as exc:  # noqa: BLE001
-                        self._drop(result, f"normalize error: {type(exc).__name__}")
-                        log.debug("normalize failed for %s: %s", raw.url, exc)
-
-                kept, dupes = dedupe(jobs)
-                if dupes:
-                    self._drop(result, "duplicate", dupes)
-
-                new, updated = repo.upsert_many(kept)
-                record.jobs_kept = len(kept)
-                record.jobs_new = new
-                result.total_new += new
-                result.total_updated += updated
-
-                if kept:
-                    repo.mark_stale(record.connector, {j.source_job_id for j in kept})
-                repo.record_run(record)
-                result.runs.append(record)
-
-            # --- enrichment ---
-            if self.enrich:
-                await self._enrich(repo, result)
-
-            # --- filtering (post-enrichment, so decisions use real data) ---
-            if self.apply_filter:
-                self._deactivate_out_of_scope(repo, result)
-
-            # --- scoring (before link checks, so we verify best-first) ---
-            result.scored = self._rescore(repo)
-
-            # --- apply-link verification ---
-            if self.check_links:
+        # --- apply-link verification ---
+        if self.check_links:
+            with session_scope() as s:
+                repo = JobRepository(s)
                 await self._verify_links(repo, result)
                 result.scored = self._rescore(repo)
 
@@ -197,9 +248,8 @@ class IngestPipeline:
         Keeping them means loosening a filter later re-surfaces them without
         a re-crawl, and the drop reasons stay auditable.
         """
-        jobs, _ = repo.search(_all_active_filter())
         doomed: list[tuple[str, str]] = []
-        for job in jobs:
+        for job in repo.active_jobs_lean():
             keep, reason = passes_filters(job)
             if not keep:
                 self._drop(result, reason)
@@ -207,7 +257,7 @@ class IngestPipeline:
         repo.set_active_bulk(doomed, active=False)
 
     def _rescore(self, repo: JobRepository) -> int:
-        jobs, _ = repo.search(_all_active_filter())
+        jobs = list(repo.active_jobs_lean())
         if not jobs:
             return 0
         repo.update_scored(self.scorer.score_all_explained(jobs))

@@ -1,0 +1,65 @@
+# Render Blueprint. In Render: New -> Blueprint -> connect this repo.
+# Spec: https://render.com/docs/blueprint-spec
+#
+# The API is READ-ONLY by design. Ingestion runs in GitHub Actions, not here,
+# because every free host suspends an idle service and a suspended container
+# runs no cron. That split is what makes the whole thing free.
+services:
+  - type: web
+    name: jobscrap-api
+    runtime: python
+    plan: free
+    # Same region as the Neon project (aws us-east-2 = Ohio). Render defaults
+    # to Oregon, which would put a cross-country round trip on every query.
+    # If you recreate Neon in another region, change this to match.
+    region: ohio
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # Liveness only - it deliberately does not query the DB, so Render's
+    # pings don't keep waking a suspended Neon compute.
+    healthCheckPath: /health
+
+    # `autoDeploy` is deprecated; this is its replacement. `commit` redeploys
+    # on every push that passes the build filter below.
+    autoDeployTrigger: commit
+
+    # Only redeploy when API code actually changed. The ingest workflow
+    # commits companies.yaml / yc_index.json after discovery, and the API
+    # never reads either file (verified: importing app.main loads none of
+    # the pipeline modules), so those commits must not restart the service.
+    # Paths are relative to the REPO root, even though rootDir is backend/.
+    buildFilter:
+      paths:
+        - backend/app/**
+        - backend/requirements.txt
+      ignoredPaths:
+        - backend/app/connectors/**
+        - backend/app/pipeline/**
+        - backend/scripts/**
+        - backend/tests/**
+
+    envVars:
+      # Render's default Python is 3.14.x for services created after
+      # Feb 2026. Dependencies here are pinned and tested on 3.12, so pin it.
+      # Must be a fully qualified version.
+      - key: PYTHON_VERSION
+        value: "3.12.10"
+
+      # --- prompted once, during Blueprint creation (sync: false) --------
+      # Neon POOLED connection string with the +psycopg driver:
+      #   postgresql+psycopg://user:pass@ep-xxx-pooler.region.aws.neon.tech/db?sslmode=require
+      - key: DATABASE_URL
+        sync: false
+
+      # Your Vercel production URL, no trailing slash, e.g.
+      #   https://job-scrap.vercel.app
+      - key: CORS_ORIGINS
+        sync: false
+
+      # Covers Vercel's random per-preview hostnames.
+      - key: CORS_ORIGIN_REGEX
+        value: 'https://.*\.vercel\.app'
+
+      # No Gemini keys: the API never calls Gemini (enrichment runs in
+      # Actions), so /health reporting llm_keys: 0 here is correct.
