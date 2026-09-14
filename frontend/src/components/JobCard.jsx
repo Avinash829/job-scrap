@@ -26,12 +26,18 @@ function regionStyle(job) {
 
 /** Age of the POSTING, not of our sighting - the backend sends age_days. */
 function postedLabel(job) {
-  const iso = job.posted_at ?? job.first_seen_at;
-  const hours = (Date.now() - new Date(iso).getTime()) / 36e5;
+  if (!job.posted_at) return "posting date not given";
+  const hours = (Date.now() - new Date(job.posted_at).getTime()) / 36e5;
   if (hours < 1) return "posted just now";
   if (hours < 24) return `posted ${Math.floor(hours)}h ago`;
-  const days = job.age_days ?? Math.floor(hours / 24);
-  return days === 1 ? "posted yesterday" : `posted ${days}d ago`;
+  // The backend sends age_days = null for dates too old to be believable.
+  // Recomputing the raw number here is what showed "posted 3893d ago".
+  if (job.age_days == null) return "posted over a year ago";
+  const days = job.age_days;
+  if (days === 1) return "posted yesterday";
+  if (days < 60) return `posted ${days}d ago`;
+  if (days < 365) return `posted ${Math.floor(days / 30)} months ago`;
+  return "posted over a year ago";
 }
 
 function Pill({ children, className = "" }) {

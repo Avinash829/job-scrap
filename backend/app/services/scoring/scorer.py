@@ -184,17 +184,28 @@ class MatchScorer:
         return strong_part + learn_part
 
     def _freshness(self, job: Job, now: datetime, b: ScoreBreakdown) -> float:
-        """First 24h is the real edge - a hot remote req drowns after that."""
-        w = WEIGHTS["freshness"]
-        seen = job.first_seen_at
-        if seen.tzinfo is None:
-            seen = seen.replace(tzinfo=timezone.utc)
-        hours = max(0.0, (now - seen).total_seconds() / 3600)
+        """First 24h is the real edge - a hot remote req drowns after that.
 
+        Measured from the POSTING date, not from when we first saw the job.
+        Using first_seen_at labelled every card "posted today" on a fresh
+        database, including roles the employer posted 446 days earlier.
+        """
+        w = WEIGHTS["freshness"]
+        posted = job.posted_at
+        if posted is not None and posted.tzinfo is None:
+            posted = posted.replace(tzinfo=timezone.utc)
+
+        # No usable posting date (missing, or implausibly old): we can't claim
+        # freshness, so score it low-neutral and say nothing about it.
+        if posted is None or job.age_days is None:
+            return w * 0.3
+
+        hours = max(0.0, (now - posted).total_seconds() / 3600)
         if hours <= 24:
             b.reasons.append("posted today")
             return w
         if hours <= 72:
+            b.reasons.append("posted this week")
             return w * 0.7
         if hours <= 168:
             return w * 0.4

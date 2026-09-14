@@ -6,6 +6,9 @@ listing response doesn't ship megabytes of prose.
 """
 from __future__ import annotations
 
+import html
+import re
+
 from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, Field
@@ -20,6 +23,29 @@ from app.domain.enums import (
 )
 
 SUMMARY_CHARS = 320
+
+_TAG = re.compile(r"<[^>]+>")
+_MD_EMPHASIS = re.compile(r"\*{1,2}([^*]+)\*{1,2}")
+_WS = re.compile(r"\s+")
+
+
+def _plain_summary(description: str | None) -> str | None:
+    """Card preview text with markup removed.
+
+    Some boards hand back HTML even in their "plain" field (a Lever posting
+    arrived as <div><p><strong>...), and RemoteOK descriptions are HTML
+    with <br/> and markdown bold. React rightly escapes it, so it showed up
+    on cards as literal tags.
+    """
+    if not description:
+        return None
+    text = html.unescape(description)
+    text = _TAG.sub(" ", text)
+    text = _MD_EMPHASIS.sub(r"\1", text)
+    text = _WS.sub(" ", text).strip()
+    if not text:
+        return None
+    return (text[:SUMMARY_CHARS].rstrip() + "…") if len(text) > SUMMARY_CHARS else text
 
 
 class JobSummary(BaseModel):
@@ -60,7 +86,6 @@ class JobSummary(BaseModel):
 
     @classmethod
     def from_domain(cls, job: Job) -> JobSummary:
-        desc = (job.description or "").strip()
         return cls(
             source=job.source,
             source_job_id=job.source_job_id,
@@ -91,7 +116,7 @@ class JobSummary(BaseModel):
             first_seen_at=job.first_seen_at,
             age_days=job.age_days,
             link_status=job.link_status,
-            summary=(desc[:SUMMARY_CHARS] + "…") if len(desc) > SUMMARY_CHARS else desc or None,
+            summary=_plain_summary(job.description),
         )
 
 

@@ -53,6 +53,7 @@ python -m app.pipeline.cli ingest --tier 1 --no-enrich   # skip the LLM pass
 python -m app.pipeline.cli enrich                        # LLM pass only, no refetch
 python -m app.pipeline.cli show --limit 20 --reachable
 python -m app.pipeline.cli health
+python -m app.pipeline.cli rescore                       # recompute scores after changing config.yaml, no refetch
 python -m app.pipeline.cli purge --days 60
 
 # api

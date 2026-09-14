@@ -296,6 +296,11 @@ def build_parser() -> argparse.ArgumentParser:
 
     sub.add_parser("health", help="connector + corpus health")
 
+    sub.add_parser(
+        "rescore",
+        help="recompute match scores and reasons for active jobs, no fetching",
+    )
+
     p = sub.add_parser("validate", help="test candidate ATS slugs, update companies.yaml")
     p.add_argument("--apply", action="store_true", help="write companies.yaml")
     p.add_argument("--all", action="store_true", help="re-check verified slugs too")
@@ -328,6 +333,13 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_show(args)
     if args.command == "health":
         return cmd_health(args)
+    if args.command == "rescore":
+        from app.pipeline.orchestrator import IngestPipeline
+
+        with session_scope() as s:
+            n = IngestPipeline()._rescore(JobRepository(s))
+        console.print(f"rescored [bold]{n}[/] active jobs")
+        return 0
     if args.command == "validate":
         from app.pipeline.validate import validate
 
