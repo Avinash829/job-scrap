@@ -40,7 +40,10 @@ freshness:
   # engineering roles that were all genuinely live.
   # null = no age cap for ATS sources; disappearance from the board is the
   # freshness signal instead (see last_seen_at / is_active).
-  ats_max_posting_age_days: null
+  # Employer boards list only open reqs, but some keep "evergreen" posts up
+  # for years (a 2021 Trainee role, a 2022 Intern role). Past ~5 months an
+  # internship posting is either filled or a ghost.
+  ats_max_posting_age_days: 150
 
   # Some boards emit absurd dates (a SmartRecruiters row came back dated
   # 2998 days ago). Treat anything older than this as "no date given".
@@ -97,7 +100,9 @@ roles:
                  software development intern, application development intern,
                  software intern, web development intern, app development intern,
                  research engineer intern,
-                 forward deployed engineer]
+                 forward deployed engineer, software development, software trainee,
+                 developer trainee, trainee developer, fresher developer,
+                 technology analyst, software apprentice]
     frontend:   [frontend, front-end, front end, ui engineer, react developer,
                  react.js, next.js developer, web developer]
     backend:    [backend, back-end, back end, api engineer, server engineer,
@@ -140,6 +145,12 @@ roles:
     - electrical
     - accountant
     - marketing
+    - medical
+    - sourcing
+    - tech support
+    - helpdesk
+    - help desk
+    - gadget
     - market development
     - business development
     - copywriter
@@ -156,7 +167,8 @@ roles:
 # so each is queried per term. Terms are kept few and broad on purpose: every
 # term multiplies requests, and the role/YoE filters above do the narrowing.
 search:
-  terms: [intern, internship, graduate, new grad, software engineer, developer]
+  terms: [intern, internship, trainee, apprentice, graduate, new grad, campus, fresher,
+          software engineer, developer, data engineer, machine learning]
   # Where to look. Remote roles are picked up by the aggregators and by
   # boards whose postings say "Remote"; these are the onsite markets.
   locations: [India]
@@ -164,7 +176,7 @@ search:
 
   # Workday is queried per tenant, and there are ~1,400 India employers on
   # it, so it gets a tighter budget: 3 terms x 2 pages x 20 rows per tenant.
-  workday_terms: [intern, graduate, software engineer]
+  workday_terms: [intern, trainee, graduate, software engineer]
   workday_max_pages: 2
 
 # --- Your stack -----------------------------------------------------------

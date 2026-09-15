@@ -87,6 +87,7 @@ async def cmd_ingest(args: argparse.Namespace) -> int:
         enrich=not args.no_enrich,
         apply_filter=not args.no_filter,
         check_links=not args.no_link_check,
+        fresh=args.fresh,
     )
     console.print(f"[bold cyan]scraping[/] tier={args.tier or 'all'}")
     result = await pipeline.run(args.tier)
@@ -289,6 +290,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--tier", type=int, choices=[1, 2, 3])
     p.add_argument("--no-enrich", action="store_true", help="skip the LLM pass")
+    p.add_argument("--fresh", action="store_true",
+                   help="after saving, delete jobs this run didn't see (the daily fresh start)")
     p.add_argument("--no-filter", action="store_true", help="keep out-of-scope rows active")
     p.add_argument("--no-link-check", action="store_true", help="skip apply-link verification")
 
@@ -326,7 +329,8 @@ def build_parser() -> argparse.ArgumentParser:
         "import-companies",
         help="probe a public company dataset and add employers with India openings",
     )
-    p.add_argument("--platform", required=True, choices=["workday", "greenhouse"])
+    p.add_argument("--platform", required=True, choices=["workday", "greenhouse", "lever", "ashby",
+                            "freshteam", "keka", "gem", "recruitee", "workable", "rippling"])
     p.add_argument("--apply", action="store_true", help="write companies.yaml")
     p.add_argument("--limit", type=int, help="probe only the first N (for a quick test)")
     p.add_argument("--retry-failed", action="store_true",

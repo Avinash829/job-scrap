@@ -9,12 +9,16 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
+
+from sqlalchemy.exc import OperationalError
 
 from app.connectors import connectors_for_tier
 from app.core.config import get_settings
 from app.db.repository import JobRepository
-from app.db.session import session_scope
+from app.db.session import get_engine, session_scope
 from app.domain.entities import ConnectorRun, Extraction, Job
 from app.domain.enums import RoleCategory
 from app.services.dedupe.matcher import dedupe
@@ -26,37 +30,41 @@ from app.services.scoring.scorer import MatchScorer
 
 log = logging.getLogger(__name__)
 
-# Keys in raw_payload the pipeline actually reads after storage. Everything
-# else a connector attached is dropped for out-of-scope rows.
-_PAYLOAD_KEEP = frozenset({"ats", "ats_slug", "yc_batch", "team_size", "yc_name"})
+# Transient database failures worth retrying: a dropped TCP connection
+# ("server closed the connection unexpectedly") or a DNS blip
+# ("getaddrinfo failed"). A 43-minute run lost every source's writes to one
+# 30-second network drop, because each store was tried exactly once.
+_STORE_ATTEMPTS = 4
+_STORE_BACKOFF = (5, 20, 60)
 
 
-def _slim_for_storage(job: Job) -> Job:
-    """Drop heavy fields from rows the title gate has already ruled out.
+async def _store_with_retry(record: ConnectorRun, kept: list[Job]) -> tuple[int, int]:
+    """Upsert one source's rows in its own transaction, retrying on disconnects.
 
-    Measured on a real 28.6k-row run: 86% of rows are role `other`, and their
-    descriptions were 117 MB of a 138 MB total - never read by filtering,
-    scoring or enrichment (which skips `other`). Uploading them made a first
-    run against Neon take 30+ minutes from India and would steadily eat the
-    free tier's 0.5 GB storage cap.
-
-    The row itself is still stored, because dedupe and last_seen_at staleness
-    tracking need every posting's identity. description_hash is computed from
-    the ORIGINAL description upstream, so cache keys stay stable. If a role
-    category is added to config later, the next run re-fetches full text -
-    ATS boards return the complete posting every time.
+    Safe to retry: the transaction either committed or rolled back, and
+    upsert_many is keyed on (source, source_job_id), so a replay can't
+    duplicate rows.
     """
-    if job.role_category is not RoleCategory.OTHER:
-        return job
-    return job.model_copy(
-        update={
-            "description": None,
-            "raw_payload": {
-                k: v for k, v in (job.raw_payload or {}).items() if k in _PAYLOAD_KEEP
-            },
-        }
-    )
-
+    for attempt in range(_STORE_ATTEMPTS):
+        try:
+            with session_scope() as s:
+                repo = JobRepository(s)
+                new, updated = repo.upsert_many(kept)
+                if kept:
+                    repo.mark_stale(record.connector, {j.source_job_id for j in kept})
+                record.jobs_kept = len(kept)
+                record.jobs_new = new
+                repo.record_run(record)
+            return new, updated
+        except OperationalError as exc:
+            if attempt == _STORE_ATTEMPTS - 1:
+                raise
+            wait = _STORE_BACKOFF[min(attempt, len(_STORE_BACKOFF) - 1)]
+            log.warning("storing %s: database unreachable (%s), retrying in %ss",
+                        record.connector, str(exc).splitlines()[0][:80], wait)
+            get_engine().dispose()   # drop pooled connections that died with the network
+            await asyncio.sleep(wait)
+    return 0, 0
 
 @dataclass
 class PipelineResult:
@@ -71,6 +79,7 @@ class PipelineResult:
     llm_model: str | None = None
     llm_note: str | None = None
     scored: int = 0
+    removed_unseen: int = 0
 
     @property
     def total_found(self) -> int:
@@ -83,8 +92,10 @@ class IngestPipeline:
         enrich: bool = True,
         apply_filter: bool = True,
         check_links: bool = True,
+        fresh: bool = False,
     ) -> None:
         self.settings = get_settings()
+        self.fresh = fresh
         self.enrich = enrich
         self.apply_filter = apply_filter
         self.check_links = check_links
@@ -103,6 +114,8 @@ class IngestPipeline:
             async with sem:
                 return await conn.run()
 
+        started = time.monotonic()
+        run_started_at = datetime.now(timezone.utc)
         fetched = await asyncio.gather(*(guarded(c) for c in connectors))
 
         # One transaction PER CONNECTOR, not one for the whole run.
@@ -124,10 +137,21 @@ class IngestPipeline:
             jobs: list[Job] = []
             for raw in raw_jobs:
                 try:
-                    jobs.append(_slim_for_storage(normalize(raw)))
+                    job = normalize(raw)
                 except Exception as exc:  # noqa: BLE001
                     self._drop(result, f"normalize error: {type(exc).__name__}")
                     log.debug("normalize failed for %s: %s", raw.url, exc)
+                    continue
+                # Out-of-scope titles (sales, HR, ops... ~70% of everything
+                # fetched) are not stored at all. They were kept as slim rows
+                # for bookkeeping, but nothing reads them, and at ~135k
+                # fetched postings a day they would push Neon's free 0.5 GB
+                # and triple the write time. The title gate is deterministic,
+                # so tomorrow's run reaches the same verdict without them.
+                if job.role_category is RoleCategory.OTHER:
+                    self._drop(result, "role not in scope")
+                    continue
+                jobs.append(job)
             normalized.append((record, jobs))
             all_jobs.extend(jobs)
 
@@ -136,17 +160,11 @@ class IngestPipeline:
             self._drop(result, "duplicate", dupes)
         surviving_keys = {(j.source, j.source_job_id) for j in survivors}
 
+        log.info("fetch + normalize finished in %.0fs", time.monotonic() - started)
         for record, jobs in normalized:
             kept = [j for j in jobs if (j.source, j.source_job_id) in surviving_keys]
             try:
-                with session_scope() as s:
-                    repo = JobRepository(s)
-                    new, updated = repo.upsert_many(kept)
-                    if kept:
-                        repo.mark_stale(record.connector, {j.source_job_id for j in kept})
-                    record.jobs_kept = len(kept)
-                    record.jobs_new = new
-                    repo.record_run(record)
+                new, updated = await _store_with_retry(record, kept)
             except Exception as exc:  # noqa: BLE001 - one source's write must not sink the rest
                 record.ok = False
                 record.error = f"storage: {type(exc).__name__}: {str(exc)[:160]}"
@@ -157,6 +175,18 @@ class IngestPipeline:
             result.total_updated += updated
             result.runs.append(record)
             log.info("%s: committed %d new / %d refreshed", record.connector, new, updated)
+
+        # --- daily fresh start, without an empty site ---
+        # Deleting everything BEFORE a 30-minute scrape left the site empty
+        # for the whole scrape. Deleting what this run did NOT see, after it
+        # has stored today's data, ends in the same state with no gap.
+        # Sources whose fetch or storage failed are left alone, so one broken
+        # connector can't wipe its employers' jobs.
+        if self.fresh:
+            healthy = [r.connector for r in result.runs if r.ok]
+            with session_scope() as s:
+                result.removed_unseen = JobRepository(s).drop_unseen(since=run_started_at, sources=healthy)
+            log.info("fresh: removed %d jobs not seen in this run", result.removed_unseen)
 
         # --- enrichment ---
         if self.enrich:

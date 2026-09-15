@@ -787,6 +787,1515 @@ greenhouse:
     name: Grammarly
     tier: 1
     note: well-paying tech employer (added 2026-09-14)
+  - slug: bursonglobalcareers
+    tier: 1
+    note: India 22, intern/grad 3
+  - slug: cloudsek
+    tier: 1
+    note: India 11, intern/grad 3
+  - slug: mthreerecruitingportal
+    tier: 1
+    note: India 3, intern/grad 3
+  - slug: sigmoid
+    tier: 1
+    note: India 29, intern/grad 2
+  - slug: gravitonresearchcapital
+    tier: 1
+    note: India 15, intern/grad 2
+  - slug: headoutcareers
+    tier: 1
+    note: India 15, intern/grad 2
+  - slug: five9
+    tier: 1
+    note: India 37, intern/grad 1
+  - slug: glance
+    tier: 1
+    note: India 26, intern/grad 1
+  - slug: freshprints
+    tier: 1
+    note: India 24, intern/grad 1
+  - slug: 66degrees
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: project44
+    tier: 1
+    note: India 15, intern/grad 1
+  - slug: astspacemobile
+    tier: 1
+    note: India 14, intern/grad 1
+  - slug: karya
+    tier: 1
+    note: India 14, intern/grad 1
+  - slug: scopely
+    tier: 1
+    note: India 13, intern/grad 1
+  - slug: plume
+    tier: 1
+    note: India 12, intern/grad 1
+  - slug: headoutlinkedin
+    tier: 1
+    note: India 11, intern/grad 1
+  - slug: alphagrepsecurities
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: cannondesign
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: fourkites
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: nextiva
+    tier: 1
+    note: India 5, intern/grad 1
+  - slug: momentumfinancialservicesgroup
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: capco
+    tier: 2
+    note: India 164, intern/grad 0
+  - slug: wppmedia
+    tier: 2
+    note: India 91, intern/grad 0
+  - slug: purestorage
+    tier: 2
+    note: India 80, intern/grad 0
+  - slug: wpp
+    tier: 2
+    note: India 67, intern/grad 0
+  - slug: vmlenterprisesolutions
+    tier: 2
+    note: India 62, intern/grad 0
+  - slug: wundermanthompson
+    tier: 2
+    note: India 61, intern/grad 0
+  - slug: valtech
+    tier: 2
+    note: India 51, intern/grad 0
+  - slug: alphasense
+    tier: 2
+    note: India 49, intern/grad 0
+  - slug: payoneer
+    tier: 2
+    note: India 47, intern/grad 0
+  - slug: alphasenseindia
+    tier: 2
+    note: India 44, intern/grad 0
+  - slug: ensono
+    tier: 2
+    note: India 44, intern/grad 0
+  - slug: roku
+    tier: 2
+    note: India 43, intern/grad 0
+  - slug: coherehealth
+    tier: 2
+    note: India 41, intern/grad 0
+  - slug: coupang
+    tier: 2
+    note: India 40, intern/grad 0
+  - slug: point72
+    tier: 2
+    note: India 39, intern/grad 0
+  - slug: digitalocean98
+    tier: 2
+    note: India 38, intern/grad 0
+  - slug: zetaglobal
+    tier: 2
+    note: India 38, intern/grad 0
+  - slug: amtechsoftware
+    tier: 2
+    note: India 35, intern/grad 0
+  - slug: pubmatic
+    tier: 2
+    note: India 34, intern/grad 0
+  - slug: speechify
+    tier: 2
+    note: India 32, intern/grad 0
+  - slug: appian
+    tier: 2
+    note: India 30, intern/grad 0
+  - slug: onetrust
+    tier: 2
+    note: India 29, intern/grad 0
+  - slug: zinnov
+    tier: 2
+    note: India 29, intern/grad 0
+  - slug: anaplan
+    tier: 2
+    note: India 28, intern/grad 0
+  - slug: picoquantitativetrading
+    tier: 2
+    note: India 28, intern/grad 0
+  - slug: coupanginternal
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: openfx
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: azuritypharmaceuticalsindia
+    tier: 2
+    note: India 25, intern/grad 0
+  - slug: squarepointcapital
+    tier: 2
+    note: India 25, intern/grad 0
+  - slug: emergentlabsinc
+    tier: 2
+    note: India 24, intern/grad 0
+  - slug: gleanwork
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: konradgroup
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: oliverseapac
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: stage
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: tide
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: kaseya
+    tier: 2
+    note: India 22, intern/grad 0
+  - slug: mitsogoinc
+    tier: 2
+    note: India 22, intern/grad 0
+  - slug: arcanaanalytics
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: atomicwork
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: bitwarden
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: gersonlehrmangroup
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: graphcore
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: moniepoint
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: digicert
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: nice
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: gruve
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: netskope
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: truveta
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: zinnia
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: eclinicalsolutions
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: energyexemplarllc
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: orioninnovation
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: cognite
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: quince
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: winhomeinspection
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: avathon
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: globalhealthcareexchangeinc
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: kraftonindia
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: precisionmedicinegroup
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: tripactions
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: zind-erprogram
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: cialfo
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: commvault
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: enchargeai36
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: netradyne
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: particle41llc
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: roboyo
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: yipitdatajobs
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: zafinlabsamericasinc
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: zoominfo
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: ashfieldadvisory
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: asteralabs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: blackduck
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: ethernovia
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: guidepoint
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: mediabrands
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: neweratech
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: axicorpfinancialservicesptyltd
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: connectwise
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: diligentcorporation
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: phdata
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: redwoodsoftware
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: skildai-careers
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: vaynermedia
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: neuraflash
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: pfm
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: reltio
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: skillzinc
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: starrez
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: teachforall
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: truecaller
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: easyship
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: endorlabs
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: imc
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: inizio
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: landor
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: newrelic
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: pay2dc
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: roblox
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: sentinellabs
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: stockx
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: xometry
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: zocdoc
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: agoda
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: anchanto
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: blinkhealth
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: brandtechplus
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: jumio
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: khanacademy
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: konovo
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: litmos
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: showpad
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: syndigo
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: taboola
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: tracelinkinc
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: workato
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: yipitdata
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: clearviewhealthcarepartners
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: codeandtheory
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: crunchyroll
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: definitivehcindia
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: madisonlogicinc
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: sohohouseco
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: unispace
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: billtrust1
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: bluevineindia
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: britive
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: disco
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: jazzx-ai
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: komodohealth
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: putnamassociatesllc
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: sambanovasystems
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: studycontractors
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: thoughtworksreferral
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: wizinc
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: branchmetrics
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: chargepoint
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: couchbaseinc
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: enterpret
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: getwellnetwork
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: gomotive
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: modulrfinance
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: nebius
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: netbrain
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: orioninnovationnaukri
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: veeamsoftware
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: acurussolutions
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: aidashinc
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: airtrunk
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: appviewx
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: armada
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: artefact
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: bayasystems
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: commerceiq
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: conga
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: galaxydigitalservices
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: godaddy
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: hginsights
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: janes
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: legion
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: monks
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: phizenix
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: pingidentity
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: quberesearchandtechnologies
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: singlestore
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: sumologic
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: techholding
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: theeconomistgroup
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: twinhealth
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: worldquant
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: yugabyte
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: zuora
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: zyngacareers
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: atlasxhm
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: bitgo
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: cision
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: codalinc
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: envoyglobalinc
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: globalizationpartners
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: highmetric
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: innophaseiot
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: launchdarkly
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: meltplan
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: opswat
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: platformscience
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: precisionaq
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: researchpartnership
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: schrdinger
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: sezzle
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: southstarcareers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: startree
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: taketwo
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: telnyx54
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: tenstorrent
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: akko
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: appsflyer
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: aviatrix
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: blenheimchalcotindia
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: bloomreach
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: bottomlinetechnologies
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: cleoindia
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: coursera
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: crashplan
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: deepwatchindia
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: earnin
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: episodesix
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: eudia
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: formaaiinc
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: forwardnetworks
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: groupon
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: instead
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: kayzen
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: mixpanel
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: plootocareers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: poppulo
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: preciselyinternationaljobs
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: rhombuspower
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: spacexglobal
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: suki
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: supplyhouse
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: waymo
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: workatbackbase
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: xohealthinc
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: yext
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: acryldata
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: aiviq
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: armissecurity
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: blueconic
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: castaigroupinc
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: chainguard
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: clinchoice
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: convera
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: currenciesdirect
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: deepintent
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: definian
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: dialpad
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: dominodatalab
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: encora10
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: eositsolutions
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: etec
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: gatherai
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: globalli
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: goguardian
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: ivalua
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: jensenhughes
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: jumptrading
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: justanswer
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: karat
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: knowbe4
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: map
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: mariadbplc
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: metropolis
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: micoworks
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: miqdigital
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: neo4j
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: nexla
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: optiverus
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: prophecysimpledatalabs
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: recordedfuture
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: securly13
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: simpplr
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: sonymusicentertainment
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: starburst
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: talkdesk2
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: tamara
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: teads1
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: technologyadvice
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: theknotworldwide
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: toradex
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: vectranetworks
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: verantos
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: verifone
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: abacusinsights
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: aisquared
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: align
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: amplitude
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: anteriad
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: arkoselabs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: armorcode
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: atariinc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: atolls
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: augury
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: backblaze
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: bugcrowd
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: celigo
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cockroachlabs
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cresta
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dept
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: drivewealth
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dunnhumby
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: enboarder
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: eplusinc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: examplecorpsandbox
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: fastly
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: fusionworldwide
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: genea
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: globalenergyallianceforpeopleandplanetgeappllc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: harborglobal
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: homeward
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: iterativehealth
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: labelbox
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: liberis
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: lumimeds
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: lynxanalytics
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mhi
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: minio
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mintel
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mitratech
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: nitricity
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: northpointtechnology
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: numerix
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ocrolusinc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: olivai
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: referralsuseonly
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: rockstargames
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: salesloft
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: samainc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: storable
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: stratainformationgroup
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: studycareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: synerg
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: systemiq
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: thetradedesk
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: triplelift
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: verve
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: acutechgroupinc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: adjustjobs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: agilisys
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: aiven36
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ajboggs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: akqa
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: anydesk
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: aptportfolio
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: b12
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: biorasillc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: boomilp
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: brave
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bryantparkconsulting
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: buzzfeed
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: c3iot
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cambridgemobiletelematics
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: carrotfertility
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: catawiki
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: coefficient
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: contentstack
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: conviva
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: convoso
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: currentglobal
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: davinciderivatives
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: dotmatics
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ebanx
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: edgeconnex
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: epickids
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: eulerity
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: evolver
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: extenteam
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: fieldwire
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: formativgroup
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: fosphamarketing
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: genscript
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hightouch
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hootsuite
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hostanalytics
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: hubspotjobs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ibuglobal
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: impinjexternal
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: invgate
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: invisibletech
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: itd
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: just-global
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: leapwork
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: learneo
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: lighthouse
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: mastercontrol
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: merqube
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: newsweek
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: nothing
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: officehours
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: onarchipelago
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: opentable
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: orcasecurity
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ownwell
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: pistontechnologies
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: pointwild
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: quillbot
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: remotepeople
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sercante
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: shipbobinc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: simplisafe
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sonatus
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: spinnakersupport
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: stemhealthcare
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: striiminc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: venturatravel
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: vonage
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: vynamic
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: wallstreetprep
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: wongdoody
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: xometryeurope
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: yieldmo
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: 1456754456yhgbhfg
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: admios
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: agopportunistic
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: applytoaktos
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: aptoslabs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: baublebar
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: brainlabs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: brunswickgroup
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: buildkite-talent-community
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: businessolver
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: canonical
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: carvana
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: centriaautism
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: clearstreet
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: clever
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: code3
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: crisprecruit
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: d2l
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: d3
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: databento
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: datakindinc
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: decibelfoundation
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: developmentseed
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: dialership
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: diligentrobotics
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: doitintl
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: emplififr
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ensco
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: enveritas
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: feedzai
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: flywheeldigital
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: flyzipline
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: gr8tech
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: greenhouse
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: growe
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: growetalents
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: horizenlabstalentpool
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: hydritechemicalco
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: iftother
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: interbrand
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: k2spacecorporation
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: keensoftwarehouseas
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: knightdivisiontactical
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: launchpotato
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: lightforceorthodontics
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: linkedinlimitedpostings
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: litify
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: logos
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: luminishealth
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: lyft
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: memglobal
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: mindgym
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: neoris
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: nimbus
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: oceanx
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: operationscareers
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ordergroove
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: orderly
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: pacificlegalfoundation
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: pippintitle
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: platacard
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: platformsh
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: remotereferralboardinternaluseonly
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: remotewoman
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ruelala
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: sayari
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: selinicapital
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: signifyd95
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: soraunion
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: synacksrt
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: testlio
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: thefarmersdog
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: thinkofus
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: trinityparktalent
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: udemy
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: unanet
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: urpt
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: veocorporatecareers
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: verramobility
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: wayvia
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: woo
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ysoftcorporation
+    tier: 2
+    note: India 0, intern/grad 0
   candidates:
   - 67streetdental
   - adjacentservices
@@ -1327,6 +2836,480 @@ lever:
     name: Dream11 (Dream Sports)
     tier: 1
     note: well-paying tech employer (added 2026-09-14)
+  - slug: paytmpayments
+    tier: 1
+    note: India 936, intern/grad 8
+  - slug: mactores
+    tier: 1
+    note: India 30, intern/grad 8
+  - slug: weekdayworks
+    tier: 1
+    note: India 54, intern/grad 5
+  - slug: thinkahead
+    tier: 1
+    note: India 58, intern/grad 4
+  - slug: dozee
+    tier: 1
+    note: India 18, intern/grad 4
+  - slug: epifi
+    tier: 1
+    note: India 11, intern/grad 4
+  - slug: oneimpression
+    tier: 1
+    note: India 5, intern/grad 4
+  - slug: gohighlevel
+    tier: 1
+    note: India 68, intern/grad 2
+  - slug: omnidesigntech
+    tier: 1
+    note: India 38, intern/grad 2
+  - slug: drivetrain
+    tier: 1
+    note: India 22, intern/grad 2
+  - slug: dnb
+    tier: 1
+    note: India 20, intern/grad 1
+  - slug: acceldata
+    tier: 1
+    note: India 17, intern/grad 1
+  - slug: neuron7
+    tier: 1
+    note: India 13, intern/grad 1
+  - slug: safe
+    tier: 1
+    note: India 13, intern/grad 1
+  - slug: zeeco
+    tier: 1
+    note: India 10, intern/grad 1
+  - slug: portcast
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: resilinc
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: merklescience
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: brillio-2
+    tier: 2
+    note: India 129, intern/grad 0
+  - slug: beghouconsulting
+    tier: 2
+    note: India 47, intern/grad 0
+  - slug: extremenetworks
+    tier: 2
+    note: India 44, intern/grad 0
+  - slug: saviynt
+    tier: 2
+    note: India 32, intern/grad 0
+  - slug: portagepointpartners
+    tier: 2
+    note: India 31, intern/grad 0
+  - slug: veeva
+    tier: 2
+    note: India 31, intern/grad 0
+  - slug: getwingapp
+    tier: 2
+    note: India 28, intern/grad 0
+  - slug: bpmcpa
+    tier: 2
+    note: India 25, intern/grad 0
+  - slug: tsmg
+    tier: 2
+    note: India 25, intern/grad 0
+  - slug: ttecdigital
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: cargo-partner
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: levelai
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: nium
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: smart-working-solutions
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: lyrahealth
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: galepartners
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: jumpcloud
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: parallelwireless
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: endpointclinical
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: wmg
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: balbix
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: cprime
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: keyloop
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: protolabs
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: rapidai
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: rws
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: appzen
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: brevo
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: gushwork
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: pattern
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: uvcyber
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: zimperium
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: bazaarvoice
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: elfbeauty
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: fireworkhq
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: ion
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: megaport
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: pditechnologies
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: cagents
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: cyara
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: docsumo
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: kobie
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: z1tech
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: clovirtualfashion
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: cyderes
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: moonpay
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: uei
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: vendavo
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: zaimler
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: binance
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: brightedge
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: genesis
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: propelsoftware
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: cscgeneration-2
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: egen
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: findem
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: floqast
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: greenlight
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: kenko
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: outreach
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: reply
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: spinai
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: xsolla
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: alifsemi
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ampd-energy
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ashoka
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: azul
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: coatesgroup
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: coupa
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dexcarehealth
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: dlocal
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: entrata
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: everbridge
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: firemon
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: idmworks
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: idt
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: lalamove
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: modeln
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: payjoy
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: peoplegrove
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: perforce
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: popsockets
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: revefi
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: rfa-2
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: teikametrics
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: unlimit
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: yuno
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ajax
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bogaardgroup
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: brafton
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: caliza-financial-technologies
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cambiumnetworks
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cin7
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: confluera
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: crypto
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: deleteme
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: doxel
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: equativ
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: factor
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: h1
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: infstones
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: jmawireless
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: kpler
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: novaspace
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: omnidian
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: revinate
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: safran-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: swapcard
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: tala
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: turvo
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: usasurveyjob
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: xage-security
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: apolloagriculture
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: bloomon
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: cic
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: coinmarketcap
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: deepsky
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: distru
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: emilabs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: futureof-life
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: gate
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: hypebeast
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: jito
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: lindblad-expeditions
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: mangolanguage
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: marigoldhealth
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: massive-rocket
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: metabase
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: nibiru
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: octoenergy
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: padsplit
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: pioneer-services
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: prismic
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: roshalimaging
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: stockpile
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: theorycraftgames
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: toptal
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: trellis
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: vrchat
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: wra-ca
+    tier: 2
+    note: India 0, intern/grad 0
   candidates:
   - 15five
   - 3eco
@@ -2596,6 +4579,507 @@ ashby:
     name: Deel
     tier: 1
     note: well-paying tech employer (added 2026-09-14)
+  - slug: bureau
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: josys
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: composio
+    tier: 1
+    note: India 4, intern/grad 1
+  - slug: novo
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: shift
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: lilt-production
+    tier: 2
+    note: India 162, intern/grad 0
+  - slug: netgear
+    tier: 2
+    note: India 27, intern/grad 0
+  - slug: riveron
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: lumilens
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: g2
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: nightfall-ai
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: ema
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: opengov
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: coram-ai
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: handshake
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: span
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: jellyfishcareers
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: plane
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: airwallex
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: lyric
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: cube
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: pebl
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: ontic
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: hinge-health
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: junipersquare
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: lgads
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: nivoda
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: oneapp
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: telus-digital
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: cyberhaven
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: menlosecurity
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: siteminder
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: skyflow
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: almabase
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: altimate
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: amperos
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: ciroos
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: claritypay
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: coderabbit
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: dehazelabs
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: hirehangar
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: openobserve-careers
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: pear-vc
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: playpowerlabs
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: poshmark
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: tilthq
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: adaption
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: allica-bank
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: articul8
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: aspora
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: billups
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: cartesia
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: cognition
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: d-matrix
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: deliveroo
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: demandbase
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: hackerone
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: lambda
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: madecard
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: neuralconcept
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: percona
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: socure
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: chainalysis-careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: clarisights
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: commure
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: fourier
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: kognitos
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: loopio
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: neara
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: newform
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: obrio
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: oyster
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: passage
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: paxos
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: protegrity
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: rox-data-corp
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: spoton
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: terac
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: the-global-talent-co
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: vultr
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: astronomer
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: axelera
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: brightwheel
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bullpen-talent
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: clipbook
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: darkroom
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: deductive
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: delinea
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: docker
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: dualentry
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: duck-duck-go
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: fiddler-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: granica
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: gratia
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: iceye
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: inflectionio
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: kestra
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: livekit
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: maneuver-marketing
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: mapbox
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: meter
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: neon
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: nirvana
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ontologize
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: oscilar
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: panoptyc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: pod-network
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: pragmatike
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: realfast
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: singular
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: summation
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: symmetry
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: wispr-flow
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: worldly
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: zania
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: alan
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: anagram
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: andromeda
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ashgro
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: atroposhealth
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ava-labs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: axiombio
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: barkbus
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: centreforeffectivealtruism
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: coefficientgiving
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: dandy
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ethereum-foundation
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: everai
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: flipper
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: gradient
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: halter
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: hawkeyeinnovations
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: holywater
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: industrious
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: kyra
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: luxor
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: matter-labs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: mimica
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: molecule
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: moxie
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: nabla
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: nabucasa
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: omniscient
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: oplabs
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: plasma
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: polaranalytics
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: qed-ai
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: railway
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: rasa
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: reteam
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: rocketsciencegg
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: rwazi
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: scalemath
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: sigp
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: skelar
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: squads
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: swarmer
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: talentsafari
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: talkiatry
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: tellos
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: tempo-xyz
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: the-studio
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: tradeify
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: trust-wallet
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: whippy
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: whitecircle
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: windranger
+    tier: 2
+    note: India 0, intern/grad 0
   candidates:
   - scaler
   - thoughtworks
@@ -8966,6 +11450,12 @@ oracle:
     host: eeho.fa.us2.oraclecloud.com
     site: CX_45001
     name: Oracle
+  - slug: ti
+    tier: 1
+    host: edbz.fa.us2.oraclecloud.com
+    site: CX_1
+    name: Texas Instruments
+  candidates: []
 eightfold:
   verified:
   - slug: netflix
@@ -8974,4 +11464,1319 @@ eightfold:
     name: Netflix
     tier: 1
     note: well-paying tech employer (added 2026-09-14)
+  candidates: []
+freshteam:
+  verified:
+  - slug: leapfinance
+    tier: 1
+    note: India 45, intern/grad 10
+  - slug: psgsonscharities
+    tier: 1
+    note: India 68, intern/grad 9
+  - slug: anaxee
+    tier: 1
+    note: India 27, intern/grad 5
+  - slug: drinkprime
+    tier: 1
+    note: India 31, intern/grad 4
+  - slug: intugine
+    tier: 1
+    note: India 14, intern/grad 4
+  - slug: sarvm
+    tier: 1
+    note: India 5, intern/grad 4
+  - slug: ninjacart
+    tier: 1
+    note: India 23, intern/grad 3
+  - slug: oml
+    tier: 1
+    note: India 19, intern/grad 3
+  - slug: yogabars
+    tier: 1
+    note: India 17, intern/grad 2
+  - slug: cynlr
+    tier: 1
+    note: India 34, intern/grad 1
+  - slug: cashflo-talent
+    tier: 1
+    note: India 30, intern/grad 1
+  - slug: flick2know
+    tier: 1
+    note: India 19, intern/grad 1
+  - slug: zolve
+    tier: 1
+    note: India 19, intern/grad 1
+  - slug: cesltd
+    tier: 1
+    note: India 12, intern/grad 1
+  - slug: quicksell
+    tier: 1
+    note: India 9, intern/grad 1
+  - slug: qsstechnosoft
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: openinapp
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: getinz-people
+    tier: 2
+    note: India 50, intern/grad 0
+  - slug: hotelogix
+    tier: 2
+    note: India 44, intern/grad 0
+  - slug: remotestar-team
+    tier: 2
+    note: India 37, intern/grad 0
+  - slug: sailssoftware
+    tier: 2
+    note: India 25, intern/grad 0
+  - slug: nxtwave
+    tier: 2
+    note: India 22, intern/grad 0
+  - slug: affinity-talent
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: travclan
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: haptik
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: rategain-talent
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: payatu
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: cambridgetechnology
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: digitap
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: peppercontent-talent
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: locus
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: mobiosolutions
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: vgrowup
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: gonuclei
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: thebetterindia
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: corestack
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: vida
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: 10times
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: stackgenie
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: nessie
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: nxwave
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: paxcom
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: livelike-hris
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: owens
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: aurochs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: engagedly
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: neovasolutions-team
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: sunokitaab
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: akridata
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: astrekinnovations
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: garageplug
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: visit-talent
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: zuna
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: velocity
+    tier: 2
+    note: India 1, intern/grad 0
+gem:
+  verified:
+  - slug: cloudraft
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: hacktron
+    tier: 1
+    note: India 3, intern/grad 1
+  - slug: astreda
+    tier: 1
+    note: India 2, intern/grad 1
+  - slug: suppliercanada-com
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: coupa-software-inc-ats-1
+    tier: 2
+    note: India 141, intern/grad 0
+  - slug: practice-by-numbers
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: cloudanix-com
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: value-creed
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: daxko
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: synthio-labs
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: umbrella-incorporated
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: bolna
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: fireflies
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: modernloop-one
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: purespectrum
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: soket-ai
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: soundhound
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: protegeai
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: system-two-security
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: statsby-ai
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: index-exchange
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: partao
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: promptql
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: fulfil-io
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: littlebird
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: inkle-io
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: norderia-com
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: rctsglobal-com
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: scud-networks
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: 10xconstruction-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: achedin-in
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: buconsultants-co
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cloudtech
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: dexicon-recruiting
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: igniwa-com
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: marble-studio
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: oliv-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: samora-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: spotnana
+    tier: 2
+    note: India 1, intern/grad 0
+recruitee:
+  verified:
+  - slug: hudsonmanpower
+    tier: 1
+    note: India 30, intern/grad 3
+  - slug: lenskartcareers
+    tier: 1
+    note: India 77, intern/grad 2
+  - slug: transperfect
+    tier: 1
+    note: India 65, intern/grad 1
+  - slug: gustileder
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: cmcom
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: clanx
+    tier: 2
+    note: India 27, intern/grad 0
+  - slug: signode
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: techbizglobal
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: kcoverseaseducation
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: careersdeltacapita
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: fullcreative
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: jobsdeerns
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: framestore
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: gain
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: gainpro
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: tether
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: beinguser
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: deephealth
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: o2h
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: ozeol
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: dbfinancial
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mrmarinegroup
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: consultdss
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: globaljetluxembourg
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: nxfiltration
+    tier: 2
+    note: India 1, intern/grad 0
+workable:
+  verified:
+  - slug: 2070health
+    tier: 1
+    note: India 113, intern/grad 6
+  - slug: weekday-1
+    tier: 1
+    note: India 321, intern/grad 3
+  - slug: arena-investors-lp
+    tier: 1
+    note: India 14, intern/grad 3
+  - slug: lokal-app
+    tier: 1
+    note: India 61, intern/grad 2
+  - slug: origin-10x
+    tier: 1
+    note: India 30, intern/grad 2
+  - slug: cloudstuff
+    tier: 1
+    note: India 7, intern/grad 2
+  - slug: a2mac1
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: civica-uk-ltd-1
+    tier: 1
+    note: India 11, intern/grad 1
+  - slug: fundingsocieties
+    tier: 1
+    note: India 2, intern/grad 1
+  - slug: international-water-management-institute
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: capgemini-insurance
+    tier: 2
+    note: India 171, intern/grad 0
+  - slug: unisongroup
+    tier: 2
+    note: India 118, intern/grad 0
+  - slug: two95-international-inc-3
+    tier: 2
+    note: India 109, intern/grad 0
+  - slug: wati-dot-i-o
+    tier: 2
+    note: India 28, intern/grad 0
+  - slug: accellor
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: genusagencyai
+    tier: 2
+    note: India 23, intern/grad 0
+  - slug: kaufmanrossin
+    tier: 2
+    note: India 20, intern/grad 0
+  - slug: volga-partners
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: lrn-corporation
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: fioneer
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: ajaia
+    tier: 2
+    note: India 15, intern/grad 0
+  - slug: fuku
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: mercari-india
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: astrome-technologies
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: breachlock
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: laundryheap-2
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: blue-altair
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: careers-at-sleek
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: fortanix
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: shadow-light-studios
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: caxton
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: enermech
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: aion
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: bystadium
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: berryvirtual
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: osa
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: sogeclair
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: xenon7
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: allucent
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: gramian
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: mrsool-3
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: arbor-education-3
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: genetec-inc
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: innovationteam
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: serko-ltd
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: syntiant
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: cimmyt-1
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: flosum
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: hadley-designs
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: irth-solutions
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: modifi
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: 1global
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: acclaro
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: avomind
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: bushand-bush-law-group
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: fairmoney
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: horizontal-digital
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: ottimate
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: steer-group
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: agility
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: blackstone-eit-2
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: blankstate
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: enable-data
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: gotymex
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: intellectsoft
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: nutritionintl
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: pairedrecruiting
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: thesoul-publishing-1
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: zifo
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: aerones
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: awesomemotive
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: bassett-healthcare-network
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: beamng
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: blast
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cequens
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: chemin
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: fabulousco
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: soar-with-us
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: steer-health
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: twocircles
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: tyk-technologies
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: vinmar-international
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: visit
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: wavestrong
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: winning-assistants
+    tier: 2
+    note: India 1, intern/grad 0
+rippling:
+  verified:
+  - slug: desri-careers
+    tier: 1
+    note: India 14, intern/grad 2
+  - slug: rsa-security
+    tier: 1
+    note: India 9, intern/grad 1
+  - slug: vcheck
+    tier: 1
+    note: India 2, intern/grad 1
+  - slug: rippling
+    tier: 2
+    note: India 91, intern/grad 0
+  - slug: cbtsindia
+    tier: 2
+    note: India 41, intern/grad 0
+  - slug: apexanalytix-careers
+    tier: 2
+    note: India 22, intern/grad 0
+  - slug: bayrock-labs
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: commandlink
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: copado
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: dealeron
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: eternal
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: workspan-inc
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: netrio
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: radian-generation
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: sibros-technologies
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: cloud-synapps-inc
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: pythian
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: eridu-ai
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: swimlane
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: workstreet
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: better-cotton-careers
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: decisions
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: asite
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: azira-careers-page
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: epic-software
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: get-covered-insurance
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: mykaarma
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: perle
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: gfg-career-page
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: flexai
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: aeris-communications-inc
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: athos-commerce-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: fello-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: catalystcr-careers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: clearsultingcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: icp-globalcareers
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: agora
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: cdata-software
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: koreai-india-careers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: supplierio
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: voiantcareers
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: jointheauctusteam
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: accommodations-plus-international
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ampliwork-inc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: clubessential-holdings-cjb
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: duplocloud
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: dynamo-ai
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: blueridge
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: cbts
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: ip-house
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: kline-company-inc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: luma-financial-technologies
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: netwrix-corporation
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: nexcess
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: open-jobs
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: stem-inc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: talentneuroncareers
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: uniuni
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: clubessential
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: concord-technologies
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: conductor
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: manta-health
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: accelerant
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: domaine-careers
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: ugsolutions
+    tier: 2
+    note: India 0, intern/grad 0
+  - slug: the-pulitzer-center-on-crisis-reporting
+    tier: 2
+    note: India 0, intern/grad 0
+keka:
+  verified:
+  - slug: driverlogistics
+    tier: 1
+    note: India 21, intern/grad 8
+  - slug: kpgroup
+    tier: 1
+    note: India 793, intern/grad 6
+  - slug: webito
+    tier: 1
+    note: India 13, intern/grad 6
+  - slug: hsquare
+    tier: 1
+    note: India 17, intern/grad 5
+  - slug: ekacare
+    tier: 1
+    note: India 22, intern/grad 4
+  - slug: bookmytournow
+    tier: 1
+    note: India 11, intern/grad 4
+  - slug: dreamtime
+    tier: 1
+    note: India 77, intern/grad 3
+  - slug: vyaparapp
+    tier: 1
+    note: India 69, intern/grad 3
+  - slug: zippee
+    tier: 1
+    note: India 56, intern/grad 3
+  - slug: coditude
+    tier: 1
+    note: India 31, intern/grad 3
+  - slug: ketto
+    tier: 1
+    note: India 30, intern/grad 3
+  - slug: kidvento
+    tier: 1
+    note: India 22, intern/grad 3
+  - slug: signzy
+    tier: 1
+    note: India 22, intern/grad 3
+  - slug: amberstudent
+    tier: 1
+    note: India 15, intern/grad 3
+  - slug: gameberry
+    tier: 1
+    note: India 12, intern/grad 3
+  - slug: convegenius
+    tier: 1
+    note: India 55, intern/grad 2
+  - slug: getvisitapp
+    tier: 1
+    note: India 45, intern/grad 2
+  - slug: gamlaa
+    tier: 1
+    note: India 44, intern/grad 2
+  - slug: zebu
+    tier: 1
+    note: India 30, intern/grad 2
+  - slug: gokwik
+    tier: 1
+    note: India 24, intern/grad 2
+  - slug: aminu
+    tier: 1
+    note: India 23, intern/grad 2
+  - slug: mellowdesigns
+    tier: 1
+    note: India 18, intern/grad 2
+  - slug: spyneai
+    tier: 1
+    note: India 16, intern/grad 2
+  - slug: clickpost
+    tier: 1
+    note: India 13, intern/grad 2
+  - slug: dashtech
+    tier: 1
+    note: India 13, intern/grad 2
+  - slug: hasel
+    tier: 1
+    note: India 9, intern/grad 2
+  - slug: vajrorap
+    tier: 1
+    note: India 2, intern/grad 2
+  - slug: '100'
+    tier: 1
+    note: India 86, intern/grad 1
+  - slug: scimplify
+    tier: 1
+    note: India 58, intern/grad 1
+  - slug: softobiz
+    tier: 1
+    note: India 45, intern/grad 1
+  - slug: thenudge
+    tier: 1
+    note: India 41, intern/grad 1
+  - slug: savaglobal
+    tier: 1
+    note: India 39, intern/grad 1
+  - slug: cleanmax
+    tier: 1
+    note: India 37, intern/grad 1
+  - slug: blitznow
+    tier: 1
+    note: India 31, intern/grad 1
+  - slug: attentiveos
+    tier: 1
+    note: India 23, intern/grad 1
+  - slug: toddle
+    tier: 1
+    note: India 19, intern/grad 1
+  - slug: leptonsoftware
+    tier: 1
+    note: India 18, intern/grad 1
+  - slug: turno
+    tier: 1
+    note: India 17, intern/grad 1
+  - slug: beyondkey
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: petfully
+    tier: 1
+    note: India 16, intern/grad 1
+  - slug: botvfx
+    tier: 1
+    note: India 15, intern/grad 1
+  - slug: avidorganics
+    tier: 1
+    note: India 13, intern/grad 1
+  - slug: analyticsvidhya
+    tier: 1
+    note: India 9, intern/grad 1
+  - slug: nonstopio
+    tier: 1
+    note: India 9, intern/grad 1
+  - slug: lambdatest
+    tier: 1
+    note: India 8, intern/grad 1
+  - slug: grexa
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: nurix
+    tier: 1
+    note: India 7, intern/grad 1
+  - slug: balavikasa
+    tier: 1
+    note: India 6, intern/grad 1
+  - slug: tohands
+    tier: 1
+    note: India 5, intern/grad 1
+  - slug: americanchase
+    tier: 1
+    note: India 4, intern/grad 1
+  - slug: wedogood
+    tier: 1
+    note: India 4, intern/grad 1
+  - slug: grow
+    tier: 1
+    note: India 1, intern/grad 1
+  - slug: toprankers
+    tier: 2
+    note: India 102, intern/grad 0
+  - slug: cis
+    tier: 2
+    note: India 81, intern/grad 0
+  - slug: universaled
+    tier: 2
+    note: India 69, intern/grad 0
+  - slug: shaktipumps
+    tier: 2
+    note: India 55, intern/grad 0
+  - slug: crepdogcrew
+    tier: 2
+    note: India 47, intern/grad 0
+  - slug: skanai
+    tier: 2
+    note: India 43, intern/grad 0
+  - slug: aivarinnovations
+    tier: 2
+    note: India 40, intern/grad 0
+  - slug: hiveminds
+    tier: 2
+    note: India 38, intern/grad 0
+  - slug: winfosolutions
+    tier: 2
+    note: India 36, intern/grad 0
+  - slug: vinove
+    tier: 2
+    note: India 34, intern/grad 0
+  - slug: relanto
+    tier: 2
+    note: India 30, intern/grad 0
+  - slug: iteachschools
+    tier: 2
+    note: India 27, intern/grad 0
+  - slug: leadecservices
+    tier: 2
+    note: India 27, intern/grad 0
+  - slug: loop
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: softmason
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: tripjack
+    tier: 2
+    note: India 26, intern/grad 0
+  - slug: adit
+    tier: 2
+    note: India 24, intern/grad 0
+  - slug: leadership
+    tier: 2
+    note: India 24, intern/grad 0
+  - slug: teachmint
+    tier: 2
+    note: India 22, intern/grad 0
+  - slug: dayalgroup
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: satsure
+    tier: 2
+    note: India 21, intern/grad 0
+  - slug: justopulse
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: unboxrobotics
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: yashrajbio
+    tier: 2
+    note: India 19, intern/grad 0
+  - slug: databeat
+    tier: 2
+    note: India 18, intern/grad 0
+  - slug: lydesign
+    tier: 2
+    note: India 17, intern/grad 0
+  - slug: burlington
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: neuralgo
+    tier: 2
+    note: India 16, intern/grad 0
+  - slug: acaindia
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: blueflamelabs
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: squadrun
+    tier: 2
+    note: India 14, intern/grad 0
+  - slug: maxiq
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: wohlig
+    tier: 2
+    note: India 13, intern/grad 0
+  - slug: aurigait
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: jupiter
+    tier: 2
+    note: India 12, intern/grad 0
+  - slug: abcoffee
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: arthanergy
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: denken
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: pramana
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: techsolengineers
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: tradelab
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: wishlink
+    tier: 2
+    note: India 11, intern/grad 0
+  - slug: coozmoo
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: ginesysone
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: innocean
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: mittalgroup
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: oneture
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: tcglobal
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: vegapay
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: zono
+    tier: 2
+    note: India 10, intern/grad 0
+  - slug: babyorgano
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: breakinbrew
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: liminal
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: montycloud
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: mozilortech
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: perceptyne
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: shott
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: superplum
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: wildnet
+    tier: 2
+    note: India 9, intern/grad 0
+  - slug: factentry
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: valorem
+    tier: 2
+    note: India 8, intern/grad 0
+  - slug: afreespace
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: ahinternational
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: icreativeaktiv
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: surveysparrow
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: teaxpress
+    tier: 2
+    note: India 7, intern/grad 0
+  - slug: bimakavach
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: habuild
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: madhusgarage
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: perstorp
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: salescodeai
+    tier: 2
+    note: India 6, intern/grad 0
+  - slug: arisinfra
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: digit88
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: procedure
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: rostrumedu
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: shopflo
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: sohodragon
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: zuddl
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: zupersoft
+    tier: 2
+    note: India 5, intern/grad 0
+  - slug: anubhutiorganization
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: conservetrichy
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: infiniteuptime
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: neutrinos
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: procol
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: rootquotient
+    tier: 2
+    note: India 4, intern/grad 0
+  - slug: braves
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: caizin
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: entropik
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: enzigma
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: gurully
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: lera
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: sunflowerlab
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: trenser
+    tier: 2
+    note: India 3, intern/grad 0
+  - slug: awiros
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: buyogo
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: eccentric
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: learningcenter
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: mpl1
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: proshort
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: rigi
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: tandemloop
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: ucdc
+    tier: 2
+    note: India 2, intern/grad 0
+  - slug: aitmc
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: aubergine
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: comida
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: qed42
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: softlinkglobal
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: unidel
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: urbanpiper
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: woundtech
+    tier: 2
+    note: India 1, intern/grad 0
+  - slug: zeliot
+    tier: 2
+    note: India 1, intern/grad 0
+successfactors:
+  verified:
+  - slug: sap
+    tier: 1
+    base: https://jobs.sap.com
+    name: SAP
   candidates: []

@@ -415,6 +415,17 @@ _COMPANY_NOISE = re.compile(
 )
 
 
+def display_company(name: str) -> str:
+    """Readable label for slug-shaped names from ATS ids ("merkle-science" -> "Merkle Science").
+
+    Only all-lowercase names are touched; "eBay" or "IBM" stay as the board wrote them.
+    """
+    n = (name or "").strip()
+    if n and n == n.lower() and " " not in n:
+        return n.replace("-", " ").replace("_", " ").title()
+    return n
+
+
 def normalize_company(name: str) -> str:
     # "Electronic Arts Inc. (EA)" and "Electronic Arts" are one employer;
     # without this, dedupe keeps a job-board copy next to the employer's own posting.
@@ -444,7 +455,7 @@ def _normalize_out_of_scope(raw: RawJob) -> Job:
         description_hash=raw.description_hash,
         title=raw.title.strip(),
         title_normalized=normalize_title(raw.title),
-        company=raw.company.strip(),
+        company=display_company(raw.company),
         company_normalized=normalize_company(raw.company),
         description=None,
         location_raw=raw.location_raw,
@@ -507,7 +518,7 @@ def normalize(raw: RawJob) -> Job:
         description_hash=raw.description_hash,
         title=raw.title.strip(),
         title_normalized=normalize_title(raw.title),
-        company=raw.company.strip(),
+        company=display_company(raw.company),
         company_normalized=normalize_company(raw.company),
         description=raw.description,
         location_raw=raw.location_raw,
@@ -560,6 +571,7 @@ ATS_SOURCES = frozenset({
     "greenhouse", "lever", "ashby", "smartrecruiters",
     "workday", "google", "amazon", "avature", "juspay", "oracle",
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
+    "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka",
     # cross-company searches over live postings only
     "workable",
     # Simplify maintains an `active` flag per listing, so its rows are
@@ -590,11 +602,13 @@ def passes_filters(job: Job) -> tuple[bool, str]:
     fresh = CONFIG["freshness"]
     age_days = job.age_days
 
-    # An implausible date is a data error, not a stale job - ignore it rather
-    # than drop a live posting because its board reported 2998 days.
-    implausible = fresh.get("max_plausible_age_days")
-    if age_days is not None and implausible and age_days > implausible:
-        age_days = None
+    # job.age_days hides dates past the plausibility bound (a board once
+    # reported 2998 days). For the staleness gate the raw date matters: a
+    # "Trainee" posting from 2021 that a board still lists as open is an
+    # evergreen ghost req, not a data error, and must not pass as undated.
+    if job.posted_at is not None:
+        posted = job.posted_at if job.posted_at.tzinfo else job.posted_at.replace(tzinfo=timezone.utc)
+        age_days = max(0, (datetime.now(timezone.utc) - posted).days)
 
     if age_days is not None:
         max_age = (

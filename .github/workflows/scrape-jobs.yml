@@ -4,9 +4,9 @@ on:
   schedule:
     # Tier 1 - India boards, top companies and career sites, every 6h.
     - cron: "0 */6 * * *"
-    # Daily fresh start at 18:30 UTC = 00:00 IST: empty the database, then a
-    # full tier-2 scrape in the same run, so the site is only empty for the
-    # few minutes the scrape takes - at midnight.
+    # Daily fresh start at 18:30 UTC = 00:00 IST: a full tier-2 scrape, then
+    # every job that scrape did not see is deleted. Same result as emptying
+    # the database first, but the site never sits empty while it refills.
     - cron: "30 18 * * *"
   workflow_dispatch:
     inputs:
@@ -18,8 +18,12 @@ on:
         description: "Also refresh YC list and validate new boards"
         type: boolean
         default: false
+      fresh:
+        description: "After scraping, delete jobs this run didn't see"
+        type: boolean
+        default: false
       reset:
-        description: "Empty the database before ingesting"
+        description: "Empty the database completely before scraping (site is empty until it refills)"
         type: boolean
         default: false
 
@@ -37,7 +41,9 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # ~2,900 employer boards plus the big career sites; a full run is
+    # 20-35 min on GitHub's network. Headroom so a slow day isn't cut off.
+    timeout-minutes: 90
     defaults:
       run:
         working-directory: backend
@@ -82,9 +88,9 @@ jobs:
           git commit -m "chore: refresh ATS board coverage [skip ci] [skip render]"
           git push
 
-      # --- daily fresh start ---------------------------------------------
-      - name: Reset database (daily run only)
-        if: github.event.schedule == '30 18 * * *' || inputs.reset
+      # --- manual full wipe (opt-in only) -------------------------------
+      - name: Reset database
+        if: inputs.reset
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: python -m app.pipeline.cli reset --yes
@@ -99,12 +105,16 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
         run: |
           TIER="${{ inputs.tier }}"
-          # the 02:00 cron does the full sweep, the 6-hourly one stays hot
+          # the 00:00 IST cron does the full sweep, the 6-hourly one stays hot
           if [ -z "$TIER" ]; then
             if [ "${{ github.event.schedule }}" = "30 18 * * *" ]; then TIER=2; else TIER=1; fi
           fi
-          echo "scraping tier $TIER"
-          python -m app.pipeline.cli scrape --tier "$TIER" -v
+          FRESH=""
+          if [ "${{ github.event.schedule }}" = "30 18 * * *" ] || [ "${{ inputs.fresh }}" = "true" ]; then
+            FRESH="--fresh"
+          fi
+          echo "scraping tier $TIER $FRESH"
+          python -m app.pipeline.cli scrape --tier "$TIER" $FRESH -v
 
       - name: Health summary
         if: always()

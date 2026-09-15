@@ -56,6 +56,7 @@ python -m app.pipeline.cli health
 python -m app.pipeline.cli rescore                       # recompute scores after changing config.yaml, no refetch
 python -m app.pipeline.cli reset --yes                   # empty the job table (the daily 00:00 IST run does this)
 python -m app.pipeline.cli import-companies --platform workday --apply   # add employers with India openings
+# also: --platform greenhouse | lever | ashby (public dataset) and freshteam | keka | gem | recruitee | workable | rippling (Common Crawl)
 
 # api
 uvicorn app.main:app --reload        # docs at /docs
@@ -83,6 +84,12 @@ locations, real posting dates, direct apply links.
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json` | **Bare array**, title is `text` not `title`, `createdAt` in epoch **ms**, `country` + `workplaceType` structured |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` | `isRemote` boolean, `employmentType`, `secondaryLocations`. Tightest limiter - concurrency 5 |
 | SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings` | Best structured data: `location.country` ISO, `location.remote` bool, **`experienceLevel: entry_level`**. Title is `name`. Returns `200 + empty` for unknown slugs, never 404 |
+| Workable (per company) | `apply.workable.com/api/v1/widget/accounts/{slug}?details=true` | Whole board incl. descriptions; `locations[].countryCode`, `telecommuting` |
+| Freshteam | `{slug}.freshteam.com/hire/widgets/jobs.json` | Popular with Indian startups. Location lives on `branches[]` (`country_code` IN) |
+| Keka | `{slug}.keka.com/careers/api/embedjobs/default/active/{portal_id}` | Indian startups. Portal id is read from the careers page first; `experience` ("1-3 Years") feeds the YoE gate |
+| Recruitee | `{slug}.recruitee.com/api/offers/` | `employment_type_code`, `experience_code: entry_level` |
+| Gem | `api.gem.com/job_board/v0/{slug}/job_posts/` | Greenhouse-shaped; `location_type` remote/hybrid/onsite |
+| Rippling | `ats.rippling.com/api/v2/board/{slug}/jobs` | Paged; structured `countryCode` + `workplaceType` |
 
 **Tier 1 - enterprise career sites.** Large employers' India internships
 almost never reach Greenhouse or Lever; they live on the employer's own
@@ -96,13 +103,14 @@ locations come from `config.yaml → search`.
 | Amazon Jobs | `amazon.jobs/en/search.json` | `normalized_country_code[]=IND` works; `country[]` is silently ignored. Some campus roles are link-only (`isUnsearchable`) and can't be listed by anyone |
 | Avature (EA) | `{base}/SearchJobs/{term}` HTML | Structured spans for location, role id, worker type. The RSS feed ignores the search term |
 | Juspay | `juspay.io/careers` | Astro site; jobs are serialized island props |
-| Oracle HCM | `{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions` | JPMorgan Chase, Oracle. Public finder query with keyword + location |
+| Oracle HCM | `{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions` | JPMorgan Chase, Oracle, Texas Instruments. Public finder query with keyword + location |
 | Microsoft | `apply.careers.microsoft.com/api/pcsx/search` | Eightfold PCSX; 10 per page, structured `standardizedLocations` |
 | Apple | `jobs.apple.com/en-in/search` HTML | Data embedded as `__staticRouterHydrationData`; the JSON API needs CSRF and returns nothing |
 | Atlassian | `atlassian.com/endpoint/careers/listings` | Every open role in one array, full descriptions |
 | Goldman Sachs | `api-higher.gs.com/gateway/api/v1/graphql` | India filter; Associate/VP/MD ranks dropped at the source |
 | IBM | `www-api.ibm.com/search/api/v2` | Elasticsearch-style; country in `field_keyword_05`, type in `field_keyword_18` |
 | Eightfold | `{host}/api/apply/v2/jobs` | Netflix; add more under `eightfold:` in companies.yaml |
+| SuccessFactors | `{base}/search/?q=&locationsearch=` HTML | SAP; generic for SAP-hosted career sites (`successfactors:` in companies.yaml) |
 
 **Tier 1 - curated feeds:** [SimplifyJobs](https://github.com/SimplifyJobs)
 Summer 2027 internships and new-grad lists — thousands of active roles with a

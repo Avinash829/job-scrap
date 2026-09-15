@@ -39,6 +39,30 @@ PATTERNS: dict[str, tuple[str, re.Pattern[str]]] = {
         "jobs.ashbyhq.com/*",
         re.compile(r"jobs\.ashbyhq\.com/([A-Za-z0-9_-]{2,40})"),
     ),
+    "workable": (
+        "apply.workable.com/*",
+        re.compile(r"apply\.workable\.com/([A-Za-z0-9_-]{2,40})"),
+    ),
+    "freshteam": (
+        "*.freshteam.com/jobs*",
+        re.compile(r"([A-Za-z0-9-]{2,40})\.freshteam\.com"),
+    ),
+    "recruitee": (
+        "*.recruitee.com/*",
+        re.compile(r"([A-Za-z0-9-]{2,40})\.recruitee\.com"),
+    ),
+    "keka": (
+        "*.keka.com/careers*",
+        re.compile(r"([A-Za-z0-9-]{2,40})\.keka\.com"),
+    ),
+    "gem": (
+        "jobs.gem.com/*",
+        re.compile(r"jobs\.gem\.com/([A-Za-z0-9_-]{2,40})"),
+    ),
+    "rippling": (
+        "ats.rippling.com/*",
+        re.compile(r"ats\.rippling\.com/([A-Za-z0-9_-]{2,40})"),
+    ),
     "smartrecruiters": (
         "jobs.smartrecruiters.com/*",
         re.compile(r"jobs\.smartrecruiters\.com/([A-Za-z0-9_-]{2,40})"),

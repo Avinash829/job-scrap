@@ -7,7 +7,10 @@ from app.connectors.goldman import GoldmanSachs
 from app.connectors.ibm import IBMCareers
 from app.connectors.microsoft import MicrosoftCareers
 from app.connectors.arbeitnow import Arbeitnow
-from app.connectors.ats import Ashby, Greenhouse, Lever, SmartRecruiters
+from app.connectors.ats import (
+    Ashby, Freshteam, GemBoards, Greenhouse, Keka, Lever, Recruitee, RipplingBoards, SmartRecruiters,
+    WorkableBoards,
+)
 from app.connectors.avature import Avature
 from app.connectors.base import Connector
 from app.connectors.google import GoogleCareers
@@ -15,6 +18,7 @@ from app.connectors.juspay import Juspay
 from app.connectors.oracle_hcm import OracleHCM
 from app.connectors.search_base import SearchConnector
 from app.connectors.simplify import SimplifyJobs
+from app.connectors.successfactors import SuccessFactors
 from app.connectors.workable_search import WorkableSearch
 from app.connectors.workday import Workday
 from app.connectors.himalayas import Himalayas
@@ -29,6 +33,12 @@ ALL_CONNECTORS: list[type[Connector]] = [
     Lever,
     Ashby,
     SmartRecruiters,
+    WorkableBoards,
+    Freshteam,
+    Keka,
+    Recruitee,
+    GemBoards,
+    RipplingBoards,
     # Tier 1 - enterprise career sites that must be searched, not dumped.
     # These cover the MNCs (Google, Amazon, Microsoft, Apple, Nvidia, EA...) whose
     # India internships never appear on Greenhouse/Lever.
@@ -37,6 +47,7 @@ ALL_CONNECTORS: list[type[Connector]] = [
     AmazonJobs,
     Avature,
     OracleHCM,
+    SuccessFactors,
     Eightfold,
     MicrosoftCareers,
     AppleJobs,

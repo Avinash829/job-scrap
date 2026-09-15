@@ -60,7 +60,43 @@ class Probe:
     status: int | None = None
 
 
+# Platforms the public dataset doesn't cover: company slugs are harvested from
+# recent Common Crawl indexes instead (see pipeline/discover.py PATTERNS).
+CRAWL_PLATFORMS = ("freshteam", "keka", "gem", "recruitee", "workable", "rippling")
+CRAWL_INDEXES = 4
+
+
+async def _crawl_slugs(client: httpx.AsyncClient, platform: str) -> list[str]:
+    from app.pipeline.discover import NOT_A_SLUG, PATTERNS
+
+    url_pattern, slug_re = PATTERNS[platform]
+    try:
+        indexes = [c["cdx-api"] for c in (await client.get("https://index.commoncrawl.org/collinfo.json")).json()]
+    except (httpx.HTTPError, ValueError, KeyError):
+        return []
+    slugs: dict[str, None] = {}
+    for cdx in indexes[:CRAWL_INDEXES]:
+        for page in range(5):
+            try:
+                r = await client.get(cdx, params={"url": url_pattern, "output": "json", "page": page}, timeout=120)
+            except httpx.HTTPError:
+                break  # Common Crawl's index servers 502/timeout often; take what we have
+            if r.status_code != 200 or not r.text.strip():
+                break
+            for line in r.text.splitlines():
+                try:
+                    url = json.loads(line).get("url", "")
+                except json.JSONDecodeError:
+                    continue
+                if (m := slug_re.search(url)) and (slug := m.group(1).lower()) not in NOT_A_SLUG:
+                    slugs.setdefault(slug, None)
+        print(f"  {cdx.rsplit('/', 1)[-1]}: {len(slugs)} {platform} slugs so far", flush=True)
+    return list(slugs)
+
+
 async def _load_dataset(client: httpx.AsyncClient, platform: str) -> list[str]:
+    if platform in CRAWL_PLATFORMS:
+        return await _crawl_slugs(client, platform)
     r = await client.get(DATASET.format(platform=platform))
     r.raise_for_status()
     data = r.json()
@@ -146,8 +182,95 @@ async def _probe_greenhouse(client: httpx.AsyncClient, slug: str) -> Probe:
     return probe
 
 
-PROBES = {"workday": _probe_workday, "greenhouse": _probe_greenhouse}
-CONCURRENCY = {"workday": 12, "greenhouse": 40}
+def _tally(probe: Probe, title: str, location_text: str) -> None:
+    if _INDIA.search(location_text):
+        probe.india += 1
+        if _INTERN.search(title):
+            probe.intern_india += 1
+    elif _WORLDWIDE.search(location_text):
+        probe.worldwide += 1
+
+
+async def _probe_lever(client: httpx.AsyncClient, slug: str) -> Probe:
+    """Lever returns a bare array; `country` is ISO-2 and locations are free text."""
+    probe = Probe(slug, meta={"slug": slug})
+    try:
+        r = await client.get(f"https://api.lever.co/v0/postings/{slug}", params={"mode": "json"})
+        probe.status = r.status_code
+        jobs = r.json() if r.status_code == 200 else None
+    except (httpx.HTTPError, ValueError, json.JSONDecodeError):
+        return probe
+    if not isinstance(jobs, list):
+        return probe
+    probe.ok = True
+    for j in jobs:
+        cats = j.get("categories") or {}
+        locs = " ; ".join(str(x) for x in [cats.get("location"), *(cats.get("allLocations") or [])] if x)
+        if str(j.get("country") or "").upper() == "IN":
+            locs += " ; India"
+        _tally(probe, str(j.get("text") or ""), locs)
+    return probe
+
+
+async def _probe_ashby(client: httpx.AsyncClient, slug: str) -> Probe:
+    probe = Probe(slug, meta={"slug": slug})
+    try:
+        r = await client.get(f"https://api.ashbyhq.com/posting-api/job-board/{slug}")
+        probe.status = r.status_code
+        jobs = (r.json() or {}).get("jobs") if r.status_code == 200 else None
+    except (httpx.HTTPError, ValueError, json.JSONDecodeError, AttributeError):
+        return probe
+    if jobs is None:
+        return probe
+    probe.ok = True
+    for j in jobs:
+        addr = ((j.get("address") or {}).get("postalAddress") or {})
+        locs = " ; ".join(str(x) for x in [
+            j.get("location"), addr.get("addressCountry"),
+            *((s or {}).get("location") for s in (j.get("secondaryLocations") or [])),
+        ] if x)
+        _tally(probe, str(j.get("title") or ""), locs)
+    return probe
+
+
+def _probe_with_connector(platform: str):
+    """Probe a board by running the real connector on it.
+
+    Reusing the connector's own parser means the probe sees exactly what a
+    scrape would: its location handling, its India detection.
+    """
+    from app.connectors.ats import ATS_CONNECTORS
+    from app.core.companies import Company
+    from app.domain.enums import HiringRegion
+
+    cls = next(c for c in ATS_CONNECTORS if c.platform == platform)
+    connector = cls()
+
+    async def probe(client: httpx.AsyncClient, slug: str) -> Probe:
+        result = await connector.fetch_board(Company(slug, platform))
+        p = Probe(slug, meta={"slug": slug}, status=result.http_code)
+        p.ok = result.status.value in ("ok", "empty")
+        for job in result.jobs:
+            regions = job.hiring_regions_hint
+            if HiringRegion.INDIA in regions:
+                p.india += 1
+                p.intern_india += int(bool(_INTERN.search(job.title)))
+            elif HiringRegion.WORLDWIDE in regions:
+                p.worldwide += 1
+        return p
+
+    return probe
+
+
+PROBES = {
+    "workday": _probe_workday,
+    "greenhouse": _probe_greenhouse,
+    "lever": _probe_lever,
+    "ashby": _probe_ashby,
+    **{p: _probe_with_connector(p) for p in CRAWL_PLATFORMS},
+}
+CONCURRENCY = {"workday": 12, "greenhouse": 30, "lever": 20, "ashby": 10,
+               **{p: 8 for p in CRAWL_PLATFORMS}}
 DEAD_STATUS = frozenset({400, 401, 404, 410, 422})
 
 

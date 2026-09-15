@@ -369,6 +369,29 @@ class JobRepository:
         ).rowcount
         return {"jobs_deleted": jobs, "cache_pruned": cache or 0, "runs_pruned": runs or 0}
 
+    def drop_unseen(
+        self, since: datetime, sources: list[str], keep_cache_days: int = 30, keep_run_days: int = 7
+    ) -> int:
+        """Delete jobs from `sources` that the current run did not see.
+
+        Every row a run stores gets last_seen_at = now, so anything older than
+        the run's start was not on its board today: closed, or dropped as a
+        duplicate. Also prunes the LLM cache and run history like reset_daily.
+        """
+        from sqlalchemy import delete
+
+        if not sources:
+            return 0
+        removed = self.s.execute(
+            delete(JobRow).where(JobRow.source.in_(sources), JobRow.last_seen_at < since)
+        ).rowcount or 0
+        now = datetime.now(timezone.utc)
+        self.s.execute(delete(ExtractionCacheRow).where(
+            ExtractionCacheRow.created_at < now - timedelta(days=keep_cache_days)))
+        self.s.execute(delete(ConnectorRunRow).where(
+            ConnectorRunRow.started_at < now - timedelta(days=keep_run_days)))
+        return removed
+
     def purge_older_than(self, days: int = 60) -> int:
         """Retention - free-tier storage is ~0.5GB, so inactive rows must go."""
         cutoff = datetime.now(timezone.utc) - timedelta(days=days)
