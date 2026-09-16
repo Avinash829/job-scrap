@@ -9,7 +9,7 @@ from app.connectors.microsoft import MicrosoftCareers
 from app.connectors.arbeitnow import Arbeitnow
 from app.connectors.ats import (
     Ashby, Freshteam, GemBoards, Greenhouse, Keka, Lever, Recruitee, RipplingBoards, SmartRecruiters,
-    WorkableBoards,
+    WorkableBoards, ZohoRecruit,
 )
 from app.connectors.avature import Avature
 from app.connectors.base import Connector
@@ -19,9 +19,12 @@ from app.connectors.oracle_hcm import OracleHCM
 from app.connectors.search_base import SearchConnector
 from app.connectors.simplify import SimplifyJobs
 from app.connectors.successfactors import SuccessFactors
+from app.connectors.vc_consider import ConsiderBoards
+from app.connectors.vc_getro import GetroBoards
 from app.connectors.workable_search import WorkableSearch
 from app.connectors.workday import Workday
 from app.connectors.himalayas import Himalayas
+from app.connectors.instahyre import Instahyre
 from app.connectors.hn_hiring import HNWhoIsHiring
 from app.connectors.remoteok import RemoteOK
 from app.connectors.remotive import Remotive
@@ -36,6 +39,7 @@ ALL_CONNECTORS: list[type[Connector]] = [
     WorkableBoards,
     Freshteam,
     Keka,
+    ZohoRecruit,
     Recruitee,
     GemBoards,
     RipplingBoards,
@@ -58,6 +62,12 @@ ALL_CONNECTORS: list[type[Connector]] = [
     # Tier 1 - cross-company searches: one query covers every employer on the
     # platform.
     WorkableSearch,
+    # Tier 1 - VC portfolio job boards (Peak XV, Accel, Sequoia, Lightspeed,
+    # Blume...): every employer is venture-funded; links go to its own ATS.
+    ConsiderBoards,
+    GetroBoards,
+    # Tier 1 - curated Indian tech hiring with screened employers.
+    Instahyre,
     # Tier 1 - curated internship / new-grad feed across hundreds of employers.
     SimplifyJobs,
     # Tier 1 - remote-native aggregators that state region honestly.

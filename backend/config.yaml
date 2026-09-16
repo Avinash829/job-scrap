@@ -146,6 +146,7 @@ roles:
     - accountant
     - marketing
     - medical
+    - civil engineering
     - sourcing
     - tech support
     - helpdesk
@@ -434,3 +435,21 @@ notable_companies:
   - Harman
   - Valeo
   - Vishay
+  # quant / trading and VC-board regulars (2026-09-16)
+  - IMC Trading
+  - Optiver
+  - Tower Research Capital
+  - Arista Networks
+  - Atlys
+  - Kuku FM
+  - Pocket FM
+  - Interview Kickstart
+  - Zetwerk
+  - Ixigo
+  - DeHaat
+  - Fi
+  - SpotDraft
+  - Scapia
+  - BharatPe
+  - upGrad
+  - Sigmoid

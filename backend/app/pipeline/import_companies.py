@@ -62,7 +62,7 @@ class Probe:
 
 # Platforms the public dataset doesn't cover: company slugs are harvested from
 # recent Common Crawl indexes instead (see pipeline/discover.py PATTERNS).
-CRAWL_PLATFORMS = ("freshteam", "keka", "gem", "recruitee", "workable", "rippling")
+CRAWL_PLATFORMS = ("freshteam", "keka", "zoho_recruit", "gem", "recruitee", "workable", "rippling", "smartrecruiters")
 CRAWL_INDEXES = 4
 
 

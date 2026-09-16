@@ -34,7 +34,7 @@ EMPLOYER_SOURCES = frozenset({
     "greenhouse", "lever", "ashby", "smartrecruiters", "workday",
     "google", "amazon", "avature", "juspay", "oracle",
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
-    "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka",
+    "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka", "zoho_recruit",
 })
 
 # Team sizes where an intern gets real ownership and a human reads the CV.
@@ -145,6 +145,11 @@ class MatchScorer:
             return w
 
         score = 0.5 * w if job.source in EMPLOYER_SOURCES else 0.15 * w
+        # Listed on a VC firm's portfolio board (Peak XV, Accel, Sequoia...):
+        # a funded startup by construction.
+        if payload.get("vc"):
+            b.reasons.append(f"backed by {payload['vc']}")
+            score = max(score, 0.75 * w)
         if payload.get("yc_batch"):
             b.reasons.append(f"YC {payload['yc_batch']}")
             score = max(score, 0.8 * w)

@@ -10,6 +10,7 @@ from __future__ import annotations
 import abc
 import asyncio
 import logging
+import threading
 from datetime import datetime, timezone
 from typing import Any, Iterable
 
@@ -66,6 +67,9 @@ class Connector(abc.ABC):
     tier: int = 2
     impersonate: str | None = None
     rate_limit_delay: float = 0.0   # seconds between requests, be polite
+    keep_cookies: bool = False      # impersonate only: reuse one session + cookie jar
+    _cookie_session = None
+    _cookie_lock = threading.Lock()
 
     # One pooled client per connector, created lazily and reused for every
     # request. An earlier version opened a fresh AsyncClient per call, which
@@ -158,14 +162,23 @@ class Connector(abc.ABC):
         from curl_cffi import requests as cffi
 
         def _do():
-            r = cffi.request(
-                method,
-                url,
-                headers=headers,
-                timeout=timeout,
-                impersonate=self.impersonate,
-                **kw,
-            )
+            if self.keep_cookies:
+                # Some sites bind a CSRF token to a session cookie (Consider
+                # boards). curl_cffi sessions aren't thread-safe, so requests
+                # through the shared session are serialized by a lock.
+                with self._cookie_lock:
+                    if self._cookie_session is None:
+                        self._cookie_session = cffi.Session(impersonate=self.impersonate)
+                    r = self._cookie_session.request(method, url, headers=headers, timeout=timeout, **kw)
+            else:
+                r = cffi.request(
+                    method,
+                    url,
+                    headers=headers,
+                    timeout=timeout,
+                    impersonate=self.impersonate,
+                    **kw,
+                )
             if r.status_code >= 400:
                 raise FetchError(
                     f"{self.name}: {url} -> HTTP {r.status_code}", r.status_code

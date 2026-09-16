@@ -55,6 +55,10 @@ PATTERNS: dict[str, tuple[str, re.Pattern[str]]] = {
         "*.keka.com/careers*",
         re.compile(r"([A-Za-z0-9-]{2,40})\.keka\.com"),
     ),
+    "zoho_recruit": (
+        "*.zohorecruit.in/jobs*",
+        re.compile(r"([A-Za-z0-9-]{2,40}\.zohorecruit\.(?:in|com|eu))"),
+    ),
     "gem": (
         "jobs.gem.com/*",
         re.compile(r"jobs\.gem\.com/([A-Za-z0-9_-]{2,40})"),

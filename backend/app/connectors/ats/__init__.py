@@ -15,14 +15,15 @@ from app.connectors.ats.recruitee import Recruitee
 from app.connectors.ats.rippling import RipplingBoards
 from app.connectors.ats.smartrecruiters import SmartRecruiters
 from app.connectors.ats.workable import WorkableBoards
+from app.connectors.ats.zoho_recruit import ZohoRecruit
 
 ATS_CONNECTORS = [
     Greenhouse, Lever, Ashby, SmartRecruiters,
-    WorkableBoards, Freshteam, Keka, Recruitee, GemBoards, RipplingBoards,
+    WorkableBoards, Freshteam, Keka, ZohoRecruit, Recruitee, GemBoards, RipplingBoards,
 ]
 
 __all__ = [
     "ATSConnector", "BoardResult", "BoardStatus",
     "Greenhouse", "Lever", "Ashby", "SmartRecruiters", "WorkableBoards", "Freshteam",
-    "Keka", "Recruitee", "GemBoards", "RipplingBoards", "ATS_CONNECTORS",
+    "Keka", "ZohoRecruit", "Recruitee", "GemBoards", "RipplingBoards", "ATS_CONNECTORS",
 ]

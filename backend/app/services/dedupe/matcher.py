@@ -22,9 +22,9 @@ SOURCE_PRIORITY = {
     "greenhouse": 0, "lever": 0, "ashby": 0, "smartrecruiters": 0,
     "workday": 0, "google": 0, "amazon": 0, "avature": 0, "juspay": 0, "oracle": 0,
     "microsoft": 0, "apple": 0, "atlassian": 0, "goldman": 0, "ibm": 0, "eightfold": 0,
-    "workable_boards": 0, "freshteam": 0, "recruitee": 0, "gem": 0, "rippling": 0, "successfactors": 0, "keka": 0,
+    "workable_boards": 0, "freshteam": 0, "recruitee": 0, "gem": 0, "rippling": 0, "successfactors": 0, "keka": 0, "zoho_recruit": 0,
     # cross-company searches: links go to the employer's posting on the platform
-    "workable": 1,
+    "workable": 1, "vc_consider": 1, "vc_getro": 1, "instahyre": 1,
     # curated feed that links back to the employer
     "simplify": 2,
     # aggregators

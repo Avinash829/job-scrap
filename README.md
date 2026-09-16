@@ -112,6 +112,23 @@ locations come from `config.yaml → search`.
 | Eightfold | `{host}/api/apply/v2/jobs` | Netflix; add more under `eightfold:` in companies.yaml |
 | SuccessFactors | `{base}/search/?q=&locationsearch=` HTML | SAP; generic for SAP-hosted career sites (`successfactors:` in companies.yaml) |
 
+**Tier 1 - VC portfolio job boards.** Every employer on these is venture-funded,
+and links go to the company's own ATS posting. Hosts live in companies.yaml.
+
+| Platform | How it's read | Boards |
+|---|---|---|
+| Consider | `GET {host}/jobs` for the CSRF token + board id, then `POST {host}/api-boards/search-jobs` | Peak XV, Sequoia, Lightspeed, Bessemer, GV, Kleiner Perkins, First Round, Battery, Felicis, CRV, Initialized, USV, Costanoa |
+| Getro | network id from `__NEXT_DATA__`, then `POST api.getro.com/api/v2/collections/{id}/search/jobs` (needs `Accept: application/json`) | Accel, Blume, 3one4, Antler, General Catalyst, Insight, Khosla, Thrive, 8VC, Menlo, DCVC, Techstars and more |
+
+**Tier 1 - screened Indian tech hiring:** Instahyre's public job search
+(`/api/v1/job_search?years=0`), fresher-eligible and internship roles only.
+Mass-internship marketplaces (Unstop, Internshala) and LinkedIn are
+deliberately not used: too many unpaid or unverifiable listings.
+
+| Indian ATS | Endpoint | Notes |
+|---|---|---|
+| Zoho Recruit | `{company}.zohorecruit.in/jobs/Careers` | Jobs are embedded as JSON in `<input id="jobs">`; `Work_Experience`, `Job_Type`, `Date_Opened` |
+
 **Tier 1 - curated feeds:** [SimplifyJobs](https://github.com/SimplifyJobs)
 Summer 2027 internships and new-grad lists — thousands of active roles with a
 maintained `active` flag. US-heavy: it adds global and remote reach, not India.

@@ -330,7 +330,8 @@ def build_parser() -> argparse.ArgumentParser:
         help="probe a public company dataset and add employers with India openings",
     )
     p.add_argument("--platform", required=True, choices=["workday", "greenhouse", "lever", "ashby",
-                            "freshteam", "keka", "gem", "recruitee", "workable", "rippling"])
+                            "freshteam", "keka", "gem", "recruitee", "workable", "rippling",
+                            "smartrecruiters", "zoho_recruit"])
     p.add_argument("--apply", action="store_true", help="write companies.yaml")
     p.add_argument("--limit", type=int, help="probe only the first N (for a quick test)")
     p.add_argument("--retry-failed", action="store_true",
