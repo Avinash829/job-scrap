@@ -51,12 +51,12 @@ function Section({ title, children, hint }) {
 
 function Toggle({ checked, onChange, label, hint }) {
   return (
-    <label className="flex cursor-pointer items-start gap-2.5 py-1">
+    <label className="flex cursor-pointer items-start gap-2.5 py-1.5 md:py-1">
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="mt-0.5 h-3.5 w-3.5 shrink-0 cursor-pointer rounded border-zinc-700 bg-zinc-800 accent-emerald-500"
+        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-zinc-700 bg-zinc-800 accent-emerald-500 md:h-3.5 md:w-3.5"
       />
       <span className="text-sm leading-tight text-zinc-300">
         {label}
@@ -77,7 +77,7 @@ function ChipGroup({ options, selected, onToggle, mono = false }) {
             type="button"
             aria-pressed={active}
             onClick={() => onToggle(value)}
-            className={`rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition ${
+            className={`rounded-md px-2.5 py-1.5 text-xs font-medium ring-1 ring-inset transition md:px-2 md:py-1 ${
               mono ? "font-mono text-[11px]" : ""
             } ${
               active
@@ -102,7 +102,7 @@ function RadioRow({ options, value, onChange }) {
           type="button"
           aria-pressed={value === val}
           onClick={() => onChange(val)}
-          className={`rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition ${
+          className={`rounded-md px-2.5 py-1.5 text-xs font-medium ring-1 ring-inset transition md:px-2 md:py-1 ${
             value === val
               ? "bg-zinc-100 text-zinc-900 ring-zinc-100"
               : "bg-zinc-800/50 text-zinc-400 ring-zinc-800 hover:bg-zinc-800 hover:text-zinc-300"
@@ -120,6 +120,7 @@ export default function FilterPanel({
   setFilters,
   sources = [],
   onReset,
+  onClose = null,
   activeCount = 0,
 }) {
   const patch = (changes) => setFilters({ ...filters, ...changes, offset: 0 });
@@ -134,8 +135,16 @@ export default function FilterPanel({
   };
 
   return (
-    <aside className="flex h-full flex-col overflow-y-auto border-r border-zinc-800 bg-zinc-900/20">
-      <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-3">
+    <aside
+      className={`flex flex-col bg-zinc-900/20 ${
+        onClose ? "" : "h-full overflow-y-auto border-r border-zinc-800"
+      }`}
+    >
+      <div
+        className={`flex items-center justify-between border-b border-zinc-800 px-4 py-3 ${
+          onClose ? "sticky top-0 z-10 bg-zinc-950" : ""
+        }`}
+      >
         <span className="text-sm font-semibold text-zinc-200">
           Filters
           {activeCount > 0 && (
@@ -144,24 +153,41 @@ export default function FilterPanel({
             </span>
           )}
         </span>
-        <button
-          type="button"
-          onClick={onReset}
-          className="text-[11px] text-zinc-500 hover:text-zinc-300"
-        >
-          Reset
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            type="button"
+            onClick={onReset}
+            className="rounded-md px-2 py-1.5 text-xs text-zinc-400 hover:text-zinc-200 md:px-0 md:py-0 md:text-[11px] md:text-zinc-500"
+          >
+            Reset
+          </button>
+          {onClose && (
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close filters"
+              className="rounded-md p-2 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200"
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="h-4 w-4">
+                <path d="M4.3 4.3a1 1 0 0 1 1.4 0L10 8.6l4.3-4.3a1 1 0 1 1 1.4 1.4L11.4 10l4.3 4.3a1 1 0 0 1-1.4 1.4L10 11.4l-4.3 4.3a1 1 0 0 1-1.4-1.4L8.6 10 4.3 5.7a1 1 0 0 1 0-1.4Z" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
-      <Section title="Search" hint="Matches role title or company name.">
-        <input
-          type="search"
-          value={filters.q ?? ""}
-          onChange={(e) => patch({ q: e.target.value })}
-          placeholder="e.g. frontend intern, react, Swiggy…"
-          className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-zinc-600"
-        />
-      </Section>
+      {/* Phones already have search in the toolbar above the results. */}
+      {!onClose && (
+        <Section title="Search" hint="Matches role title or company name.">
+          <input
+            type="search"
+            value={filters.q ?? ""}
+            onChange={(e) => patch({ q: e.target.value })}
+            placeholder="e.g. frontend intern, react, Swiggy…"
+            className="w-full rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none focus:border-zinc-600"
+          />
+        </Section>
+      )}
 
       <Section title="Type" hint="You graduate June 2027, so internships rank highest.">
         <ChipGroup

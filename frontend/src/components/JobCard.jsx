@@ -67,30 +67,32 @@ export default function JobCard({ job }) {
   const unresolved = job.region_source === "none" || job.region_confidence === "low";
 
   return (
-    <article className="group rounded-lg border border-zinc-800 bg-zinc-900/40 p-4 transition hover:border-zinc-700 hover:bg-zinc-900/80">
-      <div className="flex items-start justify-between gap-3">
+    <article className="group rounded-lg border border-zinc-800 bg-zinc-900/40 p-3.5 transition hover:border-zinc-700 hover:bg-zinc-900/80 sm:p-4">
+      {/* Phones: title block on top, region + score as a row beneath it.
+          Wider screens: region + score sit in the top-right corner. */}
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
         <div className="min-w-0">
           <a
             href={job.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block truncate font-medium text-zinc-100 hover:text-white hover:underline"
+            className="line-clamp-2 break-words font-medium text-zinc-100 hover:text-white hover:underline sm:line-clamp-none sm:block sm:truncate"
             title={job.title}
           >
             {job.title}
           </a>
-          <div className="mt-0.5 flex items-center gap-2 text-sm text-zinc-400">
+          <div className="mt-0.5 flex min-w-0 flex-wrap items-center gap-x-2 text-sm text-zinc-400 sm:flex-nowrap">
             <span className="truncate">{job.company}</span>
             {job.location_raw && (
               <>
                 <span className="text-zinc-700">•</span>
-                <span className="truncate text-xs">{job.location_raw}</span>
+                <span className="min-w-0 truncate text-xs">{job.location_raw}</span>
               </>
             )}
           </div>
         </div>
 
-        <div className="flex shrink-0 flex-col items-end gap-1.5">
+        <div className="flex shrink-0 flex-row items-center gap-2 sm:flex-col sm:items-end sm:gap-1.5">
           <Pill className={regionStyle(job)}>
             {regionText}
             {unresolved && <span className="ml-1 opacity-60">?</span>}
@@ -144,8 +146,8 @@ export default function JobCard({ job }) {
         <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-zinc-500">{job.summary}</p>
       )}
 
-      <div className="mt-3 flex items-center justify-between text-[11px] text-zinc-600">
-        <span>
+      <div className="mt-3 flex items-center justify-between gap-3 text-[11px] text-zinc-600">
+        <span className="min-w-0">
           {job.ats ? `${job.company} · ${job.ats}` : job.source} · {postedLabel(job)}
           {job.link_status === "unknown" && (
             <span className="ml-1.5 text-amber-600/80" title="Apply link could not be verified">
@@ -153,11 +155,12 @@ export default function JobCard({ job }) {
             </span>
           )}
         </span>
+        {/* Always visible on touch screens - there is no hover to reveal it. */}
         <a
           href={job.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-zinc-400 opacity-0 transition group-hover:opacity-100 hover:text-zinc-200"
+          className="shrink-0 rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-medium text-zinc-200 ring-1 ring-inset ring-zinc-700 transition hover:text-white sm:bg-transparent sm:px-0 sm:py-0 sm:text-[11px] sm:text-zinc-400 sm:ring-0 [@media(hover:hover)]:sm:opacity-0 [@media(hover:hover)]:sm:group-hover:opacity-100"
         >
           Apply →
         </a>
