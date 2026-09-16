@@ -63,6 +63,8 @@ def _regions(restrictions: list | None) -> list[HiringRegion]:
 class Himalayas(Connector):
     name = "himalayas"
     tier = 1
+    # a recent-postings feed, not a complete list of open roles
+    full_listing = False
     rate_limit_delay = 0.4
 
     async def fetch(self) -> Iterable[RawJob]:

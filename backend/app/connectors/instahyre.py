@@ -34,8 +34,12 @@ class Instahyre(Connector):
     def __init__(self, tier: int | None = None) -> None:
         self._tier_filter = tier
 
+    # paged queries capped at MAX_PAGES and cut short by rate limits
+    full_listing = False
+
     async def fetch(self) -> Iterable[RawJob]:
         unique: dict[int, RawJob] = {}
+        self.covered_scopes = None
         for params in ({"years": 0}, {"years": 1}, {"job_type": 2}):
             for page in range(MAX_PAGES):
                 try:
@@ -46,7 +50,9 @@ class Instahyre(Connector):
                     )
                 except FetchError as exc:
                     if exc.status_code == 429:
-                        # rate-limited: keep what we have, pause, move to the next query
+                        # rate-limited: keep what we have, pause, move to the next query.
+                        # The run is now partial, so nothing is judged closed.
+                        self.covered_scopes = set()
                         await asyncio.sleep(20)
                         break
                     raise

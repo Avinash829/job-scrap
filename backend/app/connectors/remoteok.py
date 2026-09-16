@@ -43,6 +43,8 @@ def _regions(location: str | None) -> list[HiringRegion]:
 class RemoteOK(Connector):
     name = "remoteok"
     tier = 1
+    # a recent-postings feed, not a complete list of open roles
+    full_listing = False
 
     async def fetch(self) -> Iterable[RawJob]:
         payload = await self.get_json(API)

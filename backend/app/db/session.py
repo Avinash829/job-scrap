@@ -55,7 +55,40 @@ def get_sessionmaker() -> sessionmaker[Session]:
 
 
 def init_db() -> None:
-    Base.metadata.create_all(get_engine())
+    engine = get_engine()
+    Base.metadata.create_all(engine)
+    _migrate(engine)
+
+
+def _migrate(engine: Engine) -> None:
+    """Bring an existing jobs table to the current schema. Idempotent.
+
+    create_all() only creates missing tables, never columns. This adds the
+    lifecycle columns and, once, drops the description column together with
+    the filtered-out rows that were kept as inactive bookkeeping - then
+    compacts the table so Neon actually returns the space.
+    """
+    from sqlalchemy import inspect, text
+
+    cols = {c["name"] for c in inspect(engine).get_columns("jobs")}
+    compact = False
+    with engine.begin() as conn:
+        if "scope" not in cols:
+            conn.execute(text("ALTER TABLE jobs ADD COLUMN scope VARCHAR(200) NOT NULL DEFAULT ''"))
+        if "missed_runs" not in cols:
+            conn.execute(text("ALTER TABLE jobs ADD COLUMN missed_runs INTEGER NOT NULL DEFAULT 0"))
+        if "fingerprint" not in cols:
+            conn.execute(text("ALTER TABLE jobs ADD COLUMN fingerprint VARCHAR(40) NOT NULL DEFAULT ''"))
+        conn.execute(text("CREATE INDEX IF NOT EXISTS ix_jobs_source_scope ON jobs (source, scope)"))
+        if "description" in cols:
+            # every stored job must satisfy the filters; inactive rows never did
+            conn.execute(text("DELETE FROM jobs WHERE is_active = :f"), {"f": False})
+            conn.execute(text("ALTER TABLE jobs DROP COLUMN description"))
+            compact = True
+    if compact and engine.dialect.name == "postgresql":
+        with engine.connect().execution_options(isolation_level="AUTOCOMMIT") as conn:
+            conn.execute(text("VACUUM FULL jobs"))
+            conn.execute(text("VACUUM FULL extraction_cache"))
 
 
 @contextmanager

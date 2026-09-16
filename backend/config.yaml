@@ -102,7 +102,10 @@ roles:
                  research engineer intern,
                  forward deployed engineer, software development, software trainee,
                  developer trainee, trainee developer, fresher developer,
-                 technology analyst, software apprentice]
+                 technology analyst, software apprentice, founding engineer,
+                 member of technical staff, engineering trainee, app developer,
+                 mobile developer, react native, flutter developer, android developer,
+                 ios developer, sde intern, sde-1, sde 1, software engineer i]
     frontend:   [frontend, front-end, front end, ui engineer, react developer,
                  react.js, next.js developer, web developer]
     backend:    [backend, back-end, back end, api engineer, server engineer,
@@ -111,7 +114,8 @@ roles:
     ml:         [ai engineer, machine learning, ml engineer, deep learning,
                  nlp engineer, llm engineer, genai, generative ai, ai developer,
                  ai/ml, ai ml, applied scientist, ai full stack, agent engineer,
-                 ai intern, artificial intelligence, ml intern]
+                 ai intern, artificial intelligence, ml intern, computer vision,
+                 vision engineer, ai/ml engineer, ai research engineer]
     data:       [data engineer, data scientist, analytics engineer, data analyst,
                  bi developer, business intelligence, data science,
                  data analytics, analytics intern, data intern]

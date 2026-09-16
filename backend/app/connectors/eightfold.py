@@ -32,9 +32,12 @@ class Eightfold(Connector):
 
     async def fetch(self) -> Iterable[RawJob]:
         out: list[RawJob] = []
+        self.covered_scopes = set()
         for c in companies_for("eightfold", self._tier_filter):
+            scope = f"{self.name}:{c.slug}"
             try:
-                out.extend(await self._site(c))
+                out.extend(self.scoped(await self._site(c), scope))
+                self.covered_scopes.add(scope)
             except Exception as exc:  # noqa: BLE001 - one employer must not sink the source
                 log.warning("eightfold %s failed: %s", c.slug, exc)
         return out

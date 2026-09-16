@@ -60,12 +60,6 @@ function StatsBar({ stats }) {
         <span className="font-mono text-emerald-400">{stats.reachable_from_india}</span>{" "}
         reachable
       </span>
-      {stats.pending_enrichment > 0 && (
-        <span title="Rows where rules could not resolve region or experience">
-          <span className="font-mono text-amber-400">{stats.pending_enrichment}</span>{" "}
-          unenriched
-        </span>
-      )}
       {stale.length > 0 && (
         <span className="text-red-400" title={stale.map((c) => c.connector).join(", ")}>
           {stale.length} connector{stale.length > 1 ? "s" : ""} failing

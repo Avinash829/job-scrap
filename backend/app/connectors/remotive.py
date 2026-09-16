@@ -53,6 +53,8 @@ def _regions(raw: str | None) -> list[HiringRegion]:
 class Remotive(Connector):
     name = "remotive"
     tier = 3
+    # a recent-postings feed, not a complete list of open roles
+    full_listing = False
 
     async def fetch(self) -> Iterable[RawJob]:
         payload = await self.get_json(API)

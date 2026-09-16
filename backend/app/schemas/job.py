@@ -1,13 +1,10 @@
 """API request/response DTOs.
 
 Separate from domain entities on purpose: the wire format can stay stable
-while the internal model changes, and the description is trimmed here so a
-listing response doesn't ship megabytes of prose.
+while the internal model changes. Job descriptions are not stored, so there is
+no summary or description field.
 """
 from __future__ import annotations
-
-import html
-import re
 
 from datetime import datetime
 
@@ -21,32 +18,6 @@ from app.domain.enums import (
     HiringRegion,
     RoleCategory,
 )
-
-SUMMARY_CHARS = 320
-
-_TAG = re.compile(r"<[^>]+>")
-_MD_EMPHASIS = re.compile(r"\*{1,2}([^*]+)\*{1,2}")
-_WS = re.compile(r"\s+")
-
-
-def _plain_summary(description: str | None) -> str | None:
-    """Card preview text with markup removed.
-
-    Some boards hand back HTML even in their "plain" field (a Lever posting
-    arrived as <div><p><strong>...), and RemoteOK descriptions are HTML
-    with <br/> and markdown bold. React rightly escapes it, so it showed up
-    on cards as literal tags.
-    """
-    if not description:
-        return None
-    text = html.unescape(description)
-    text = _TAG.sub(" ", text)
-    text = _MD_EMPHASIS.sub(r"\1", text)
-    text = _WS.sub(" ", text).strip()
-    if not text:
-        return None
-    return (text[:SUMMARY_CHARS].rstrip() + "…") if len(text) > SUMMARY_CHARS else text
-
 
 class JobSummary(BaseModel):
     """List-view payload - deliberately light."""
@@ -82,7 +53,6 @@ class JobSummary(BaseModel):
     first_seen_at: datetime
     age_days: int | None = None
     link_status: str = ""
-    summary: str | None = None
 
     @classmethod
     def from_domain(cls, job: Job) -> JobSummary:
@@ -116,19 +86,11 @@ class JobSummary(BaseModel):
             first_seen_at=job.first_seen_at,
             age_days=job.age_days,
             link_status=job.link_status,
-            summary=_plain_summary(job.description),
         )
 
 
 class JobDetail(JobSummary):
-    """Detail view - full description."""
-
-    description: str | None = None
-
-    @classmethod
-    def from_domain(cls, job: Job) -> JobDetail:  # type: ignore[override]
-        base = JobSummary.from_domain(job).model_dump()
-        return cls(**base, description=job.description)
+    """Detail view - same fields as the listing (descriptions aren't stored)."""
 
 
 class JobPage(BaseModel):

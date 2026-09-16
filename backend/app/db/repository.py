@@ -1,16 +1,19 @@
 """Data access. All SQL lives here - services and routes never build queries.
 
-Bulk paths matter: a run touches ~1500 rows, so the upsert fetches existing
-keys in one query instead of issuing a SELECT per job.
+The jobs table holds only live postings that pass the filters. Writes are
+kept to what a free-tier database needs: new jobs are inserted, changed jobs
+updated, unchanged jobs not touched at all, and closed jobs deleted
+(see sync_source).
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
-from sqlalchemy import case, func, insert, select, update
-from sqlalchemy.orm import Session, defer
+from sqlalchemy import bindparam, delete, func, insert, select, update
+from sqlalchemy.orm import Session
 
 from app.db.models import ConnectorRunRow, ExtractionCacheRow, JobRow
 from app.domain.entities import ConnectorRun, Extraction, Job
@@ -56,7 +59,6 @@ def row_to_job(row: JobRow) -> Job:
         title_normalized=row.title_normalized,
         company=row.company,
         company_normalized=row.company_normalized,
-        description=row.description,
         location_raw=row.location_raw,
         ats=row.ats,
         role_category=RoleCategory(row.role_category),
@@ -92,54 +94,6 @@ def row_to_job(row: JobRow) -> Job:
     )
 
 
-def _row_to_job_lean(row: JobRow) -> Job:
-    """row_to_job without touching the deferred `description` column.
-
-    Reading row.description on a deferred-with-raiseload column raises
-    instead of silently issuing a SELECT, so this never reads it at all.
-    """
-    return Job(
-        source=row.source,
-        source_job_id=row.source_job_id,
-        url=row.url,
-        description_hash=row.description_hash,
-        title=row.title,
-        title_normalized=row.title_normalized,
-        company=row.company,
-        company_normalized=row.company_normalized,
-        description=None,
-        location_raw=row.location_raw,
-        ats=row.ats,
-        role_category=RoleCategory(row.role_category),
-        employment_type=EmploymentType(row.employment_type),
-        tech_stack=json.loads(row.tech_stack or "[]"),
-        min_yoe=row.min_yoe,
-        max_yoe=row.max_yoe,
-        is_new_grad=row.is_new_grad,
-        grad_year=row.grad_year,
-        yoe_source=ExtractionSource(row.yoe_source),
-        is_remote=row.is_remote,
-        hiring_regions=[HiringRegion(r) for r in json.loads(row.hiring_regions or "[]")],
-        work_auth_required=row.work_auth_required,
-        visa_sponsorship=row.visa_sponsorship,
-        region_source=ExtractionSource(row.region_source),
-        region_confidence=Confidence(row.region_confidence),
-        salary_min=row.salary_min,
-        salary_max=row.salary_max,
-        salary_currency=row.salary_currency,
-        posted_at=_aware_opt(row.posted_at),
-        first_seen_at=_aware(row.first_seen_at),
-        last_seen_at=_aware(row.last_seen_at),
-        is_active=row.is_active,
-        match_score=row.match_score,
-        match_reasons=json.loads(row.match_reasons or "[]"),
-        needs_enrichment=row.needs_enrichment,
-        link_status=row.link_status or "",
-        link_checked_at=_aware_opt(row.link_checked_at),
-        raw_payload=json.loads(row.raw_payload or "{}"),
-    )
-
-
 def job_to_values(job: Job) -> dict:
     return {
         "source": job.source,
@@ -150,7 +104,6 @@ def job_to_values(job: Job) -> dict:
         "title_normalized": job.title_normalized,
         "company": job.company,
         "company_normalized": job.company_normalized,
-        "description": job.description,
         "location_raw": job.location_raw,
         "ats": job.ats,
         "role_category": job.role_category.value,
@@ -179,8 +132,28 @@ def job_to_values(job: Job) -> dict:
         "needs_enrichment": job.needs_enrichment,
         "link_status": job.link_status,
         "link_checked_at": job.link_checked_at,
-        "raw_payload": json.dumps(job.raw_payload, default=str),
+        "raw_payload": json.dumps(_slim_payload(job.raw_payload), default=str, sort_keys=True),
+        "scope": str((job.raw_payload or {}).get("scope") or job.source),
+        "missed_runs": 0,
     }
+
+
+# The only raw_payload keys read after storage: the scorer's company signals
+# and the card's YC badge. Everything else a connector attached is dropped.
+_PAYLOAD_KEEP = frozenset({"yc_batch", "team_size", "vc", "funding_stage"})
+
+# Values that change without the job changing - excluded from the fingerprint
+# so an unchanged job is never rewritten.
+_VOLATILE = frozenset({"first_seen_at", "last_seen_at", "link_status", "link_checked_at", "missed_runs"})
+
+
+def _slim_payload(payload: dict | None) -> dict:
+    return {k: v for k, v in (payload or {}).items() if k in _PAYLOAD_KEEP and v not in (None, "", [])}
+
+
+def fingerprint(values: dict) -> str:
+    stable = {k: v for k, v in values.items() if k not in _VOLATILE}
+    return hashlib.sha1(json.dumps(stable, default=str, sort_keys=True).encode()).hexdigest()
 
 
 class JobRepository:
@@ -189,153 +162,100 @@ class JobRepository:
 
     # ------------------------------------------------------------------ writes
 
-    def upsert_many(self, jobs: list[Job]) -> tuple[int, int]:
-        """Insert new postings, refresh last_seen_at on known ones.
+    def sync_source(
+        self, source: str, jobs: list[Job], covered_scopes: set[str], full_listing: bool
+    ) -> tuple[int, int, int]:
+        """Make one source's stored jobs match this run. Returns (new, updated, deleted).
 
-        first_seen_at is never overwritten - it's our honest "date posted",
-        more trustworthy than what most sources report.
+        * new job                    -> INSERT
+        * known job, values changed  -> UPDATE; unchanged jobs are skipped, so
+                                        no write, no dead tuple, no compute
+        * stored job not in this run -> closed, but ONLY if its scope (board or
+                                        company) was fully checked this run.
+                                        Full listings delete on the first miss;
+                                        search-style sources on the second,
+                                        because a search can omit a live job once.
+        Rows stored before scopes existed (empty scope) are judged whenever the
+        source checked anything.
         """
-        if not jobs:
-            return 0, 0
-
-        # Three things here only matter against a REMOTE database, which is
-        # why they never showed up on local SQLite:
-        #
-        #  1. Fetch existing KEYS only. Loading full ORM rows pulled every
-        #     description over the network just to learn which ids exist.
-        #  2. Insert through Core `insert()` with a list of dicts, which
-        #     SQLAlchemy 2.0 batches into multi-row INSERTs ("insertmanyvalues",
-        #     1000 rows per statement). `bulk_save_objects` issued one INSERT
-        #     per row - 28k round trips to Neon, 30+ minutes, stuck mid-run.
-        #  3. Refresh last_seen_at for known rows in chunked UPDATEs rather
-        #     than dirtying and flushing each ORM object individually.
-        by_source: dict[str, list[Job]] = {}
-        for job in jobs:
-            by_source.setdefault(job.source, []).append(job)
-
         now = datetime.now(timezone.utc)
-        new_values: list[dict] = []
-        seen_keys: dict[str, list[str]] = {}
+        wanted: dict[str, dict] = {}
+        for job in jobs:
+            values = job_to_values(job)
+            values["fingerprint"] = fingerprint(values)
+            wanted[job.source_job_id] = values
 
-        for source, source_jobs in by_source.items():
-            wanted = {j.source_job_id for j in source_jobs}
-            existing: set[str] = set()
-            ids = list(wanted)
-            for start in range(0, len(ids), 1000):
-                chunk = ids[start : start + 1000]
-                existing.update(
-                    self.s.scalars(
-                        select(JobRow.source_job_id).where(
-                            JobRow.source == source,
-                            JobRow.source_job_id.in_(chunk),
-                        )
-                    ).all()
-                )
+        existing = {
+            r.source_job_id: r
+            for r in self.s.execute(
+                select(JobRow.id, JobRow.source_job_id, JobRow.fingerprint, JobRow.missed_runs, JobRow.scope)
+                .where(JobRow.source == source)
+            ).all()
+        }
 
-            for job in source_jobs:
-                if job.source_job_id in existing:
-                    seen_keys.setdefault(source, []).append(job.source_job_id)
-                else:
-                    new_values.append(job_to_values(job))
-
-        if new_values:
-            # dedupe within the batch: a board can list one req twice, and a
-            # duplicate key would abort the whole multi-row statement
-            unique: dict[tuple[str, str], dict] = {}
-            for v in new_values:
-                unique[(v["source"], v["source_job_id"])] = v
-            self.s.execute(insert(JobRow), list(unique.values()))
-            inserted = len(unique)
-        else:
-            inserted = 0
-
-        updated = 0
-        for source, ids in seen_keys.items():
-            for start in range(0, len(ids), 1000):
-                chunk = ids[start : start + 1000]
-                self.s.execute(
-                    update(JobRow)
-                    .where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
-                    .values(last_seen_at=now, is_active=True)
-                )
-                updated += len(chunk)
-
-        self.s.flush()
-        return inserted, updated
-
-    def apply_extractions(self, extractions: dict[str, Extraction]) -> int:
-        """Fold LLM results into rows sharing that description_hash."""
-        if not extractions:
-            return 0
-        rows = self.s.scalars(
-            select(JobRow).where(JobRow.description_hash.in_(list(extractions)))
-        ).all()
-        count = 0
-        for row in rows:
-            ex = extractions.get(row.description_hash)
-            if ex is None:
+        inserts = [v for sid, v in wanted.items() if sid not in existing]
+        updates: list[dict] = []
+        for sid, values in wanted.items():
+            row = existing.get(sid)
+            if row is None:
                 continue
-            merged = row_to_job(row).apply(ex)
-            for k, v in job_to_values(merged).items():
-                if k != "first_seen_at":
-                    setattr(row, k, v)
-            count += 1
-        self.s.flush()
-        return count
+            if row.fingerprint != values["fingerprint"] or row.missed_runs:
+                upd = {k: v for k, v in values.items() if k not in ("source", "source_job_id", "first_seen_at")}
+                upd["last_seen_at"] = now
+                upd["_id"] = row.id
+                updates.append(upd)
 
-    def pending_enrichment(self, limit: int = 500) -> list[Job]:
-        """Rows the rules couldn't resolve, prioritised by whether enriching
-        them could actually change the outcome.
+        delete_ids: list[int] = []
+        miss_ids: list[int] = []
+        if covered_scopes:
+            threshold = 1 if full_listing else 2
+            for sid, row in existing.items():
+                if sid in wanted or (row.scope and row.scope not in covered_scopes):
+                    continue
+                if row.missed_runs + 1 >= threshold:
+                    delete_ids.append(row.id)
+                else:
+                    miss_ids.append(row.id)
 
-        Spending LLM calls on an out-of-scope role is pure waste: a Senior
-        Account Executive stays out of scope however well its region resolves.
-        So skip `other` roles entirely, and put rows whose region is unresolved
-        first - those are the ones where extraction decides in-or-out.
-        """
-        unresolved_first = case(
-            (JobRow.hiring_regions.like('%"unknown"%'), 0), else_=1
-        )
-        rows = self.s.scalars(
-            select(JobRow)
-            .where(
-                JobRow.needs_enrichment.is_(True),
-                JobRow.is_active.is_(True),
-                JobRow.role_category != RoleCategory.OTHER.value,
+        if inserts:
+            self.s.execute(insert(JobRow), inserts)
+        if updates:
+            # Core-level executemany: one statement, many parameter sets.
+            # Bind names are prefixed because SQLAlchemy reserves bare column
+            # names for its own SET clause parameters.
+            table = JobRow.__table__
+            cols = [k for k in updates[0] if k != "_id"]
+            stmt = (
+                update(table)
+                .where(table.c.id == bindparam("b_id"))
+                .values({c: bindparam(f"b_{c}") for c in cols})
             )
-            .order_by(unresolved_first, JobRow.first_seen_at.desc())
-            .limit(limit)
-        ).all()
-        return [row_to_job(r) for r in rows]
-
-    def mark_stale(self, source: str, seen_ids: set[str], grace_days: int = 2) -> int:
-        """Deactivate postings that vanished from their board.
-
-        Knowing a role is STILL OPEN is the real edge over LinkedIn, where a
-        large share of listings are month-old ghosts.
-        """
-        cutoff = datetime.now(timezone.utc) - timedelta(days=grace_days)
-        # three narrow columns, not whole rows - this runs once per source and
-        # full rows would drag every description across the network
-        rows = self.s.execute(
-            select(JobRow.id, JobRow.source_job_id, JobRow.last_seen_at).where(
-                JobRow.source == source, JobRow.is_active.is_(True)
-            )
-        ).all()
-        stale = [
-            r.id
-            for r in rows
-            if r.source_job_id not in seen_ids and _aware(r.last_seen_at) < cutoff
-        ]
-        for start in range(0, len(stale), 1000):
+            conn = self.s.connection()
+            for start in range(0, len(updates), 500):
+                chunk = updates[start : start + 500]
+                conn.execute(stmt, [{f"b_{k}" if k != "_id" else "b_id": v for k, v in u.items()} for u in chunk])
+        for start in range(0, len(delete_ids), 1000):
+            self.s.execute(delete(JobRow).where(JobRow.id.in_(delete_ids[start : start + 1000])))
+        for start in range(0, len(miss_ids), 1000):
             self.s.execute(
                 update(JobRow)
-                .where(JobRow.id.in_(stale[start : start + 1000]))
-                .values(is_active=False)
+                .where(JobRow.id.in_(miss_ids[start : start + 1000]))
+                .values(missed_runs=JobRow.missed_runs + 1)
             )
-        return len(stale)
+        self.s.flush()
+        return len(inserts), len(updates), len(delete_ids)
+
+    def prune_housekeeping(self, keep_cache_days: int = 60, keep_run_days: int = 14) -> None:
+        """Bound the two side tables: the LLM cache and run-health history."""
+        now = datetime.now(timezone.utc)
+        self.s.execute(delete(ExtractionCacheRow).where(
+            ExtractionCacheRow.created_at < now - timedelta(days=keep_cache_days)))
+        self.s.execute(delete(ConnectorRunRow).where(
+            ConnectorRunRow.started_at < now - timedelta(days=keep_run_days)))
+
 
     def reset_daily(self, keep_cache_days: int = 30, keep_run_days: int = 7) -> dict:
-        """Empty the job corpus so every day starts from fresh data.
+        """Empty the job table (manual `reset --yes` only; runs no longer need it).
 
         Deliberately NOT wiped:
           * extraction_cache - keyed by description_hash, so tomorrow's run
@@ -348,7 +268,7 @@ class JobRepository:
         On Postgres, TRUNCATE (not DELETE) returns the space to Neon's 0.5 GB
         free-tier allowance immediately; DELETE only marks rows dead.
         """
-        from sqlalchemy import delete, text
+        from sqlalchemy import text
 
         jobs = self.s.scalar(select(func.count()).select_from(JobRow)) or 0
         if self.s.bind.dialect.name == "postgresql":
@@ -369,61 +289,11 @@ class JobRepository:
         ).rowcount
         return {"jobs_deleted": jobs, "cache_pruned": cache or 0, "runs_pruned": runs or 0}
 
-    def drop_unseen(
-        self, since: datetime, sources: list[str], keep_cache_days: int = 30, keep_run_days: int = 7
-    ) -> int:
-        """Delete jobs from `sources` that the current run did not see.
-
-        Every row a run stores gets last_seen_at = now, so anything older than
-        the run's start was not on its board today: closed, or dropped as a
-        duplicate. Also prunes the LLM cache and run history like reset_daily.
-        """
-        from sqlalchemy import delete
-
-        if not sources:
-            return 0
-        removed = self.s.execute(
-            delete(JobRow).where(JobRow.source.in_(sources), JobRow.last_seen_at < since)
-        ).rowcount or 0
-        now = datetime.now(timezone.utc)
-        self.s.execute(delete(ExtractionCacheRow).where(
-            ExtractionCacheRow.created_at < now - timedelta(days=keep_cache_days)))
-        self.s.execute(delete(ConnectorRunRow).where(
-            ConnectorRunRow.started_at < now - timedelta(days=keep_run_days)))
-        return removed
-
-    def purge_older_than(self, days: int = 60) -> int:
-        """Retention - free-tier storage is ~0.5GB, so inactive rows must go."""
-        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
-        rows = self.s.scalars(
-            select(JobRow.id).where(
-                JobRow.is_active.is_(False), JobRow.last_seen_at < cutoff
-            )
-        ).all()
-        for row_id in rows:
-            self.s.delete(self.s.get(JobRow, row_id))
-        return len(rows)
-
     def active_jobs_lean(self, batch_size: int = 2000):
-        """Every active job WITHOUT its description, streamed in batches.
-
-        For pipeline passes (filtering, scoring) that never read the
-        description. Over a remote DB the descriptions are most of the bytes.
-
-        `defer()` alone is not enough: row_to_job() touches row.description,
-        which would fire one lazy SELECT per row - an N+1 over the network,
-        far worse than just loading the column. So rows are converted by a
-        variant that never reads the deferred attribute.
-        """
-        stmt = (
-            select(JobRow)
-            .options(defer(JobRow.description, raiseload=True))
-            .where(JobRow.is_active.is_(True))
-            .order_by(JobRow.id)
-            .execution_options(yield_per=batch_size)
-        )
+        """Every stored job, streamed in batches (used by rescore)."""
+        stmt = select(JobRow).order_by(JobRow.id).execution_options(yield_per=batch_size)
         for row in self.s.scalars(stmt):
-            yield _row_to_job_lean(row)
+            yield row_to_job(row)
 
     def needs_link_check(self, limit: int = 200, recheck_after_hours: int = 24) -> list[Job]:
         """In-scope rows whose apply link is unverified or stale.
@@ -444,7 +314,7 @@ class JobRepository:
         return [row_to_job(r) for r in rows]
 
     def record_link_results(self, results: dict[str, str]) -> tuple[int, int]:
-        """Store link statuses; deactivate the dead ones.
+        """Store link statuses; delete jobs whose apply link is dead.
 
         UNKNOWN is recorded but never deactivates - a timeout or a 403 is not
         proof the job is gone, and acting on it would delete good listings.
@@ -464,45 +334,10 @@ class JobRepository:
             row.link_checked_at = now
             checked += 1
             if status == "dead":
-                row.is_active = False
+                self.s.delete(row)
                 dead += 1
         self.s.flush()
         return checked, dead
-
-    def update_active(self, source: str, job_id: str, active: bool) -> None:
-        self.s.execute(
-            update(JobRow)
-            .where(JobRow.source == source, JobRow.source_job_id == job_id)
-            .values(is_active=active)
-        )
-
-    def set_active_bulk(self, keys: list[tuple[str, str]], active: bool) -> int:
-        """Flip is_active for many rows in a handful of statements.
-
-        The per-row version issued one UPDATE per posting, which on a 18k-row
-        corpus meant ~18k round trips in the filtering stage alone.
-        """
-        if not keys:
-            return 0
-        by_source: dict[str, list[str]] = {}
-        for source, job_id in keys:
-            by_source.setdefault(source, []).append(job_id)
-
-        touched = 0
-        for source, ids in by_source.items():
-            # chunked to stay well under SQLite's variable limit
-            for start in range(0, len(ids), 500):
-                chunk = ids[start : start + 500]
-                self.s.execute(
-                    update(JobRow)
-                    .where(
-                        JobRow.source == source,
-                        JobRow.source_job_id.in_(chunk),
-                    )
-                    .values(is_active=active)
-                )
-                touched += len(chunk)
-        return touched
 
     def update_scored(self, scored: dict[tuple[str, str], tuple[float, list[str]]]) -> None:
         """Write score + reasons. Grouped by identical (score, reasons) so a
@@ -521,31 +356,6 @@ class JobRepository:
                     update(JobRow)
                     .where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
                     .values(match_score=score, match_reasons=reasons_json)
-                )
-
-    def update_scores(self, scores: dict[tuple[str, str], float]) -> None:
-        """Bulk-update match scores.
-
-        Grouped by score so identical values share one statement - scores are
-        rounded to 2dp, so a few hundred distinct values cover the corpus
-        instead of one UPDATE per row.
-        """
-        if not scores:
-            return
-        buckets: dict[tuple[str, float], list[str]] = {}
-        for (source, job_id), score in scores.items():
-            buckets.setdefault((source, round(score, 2)), []).append(job_id)
-
-        for (source, score), ids in buckets.items():
-            for start in range(0, len(ids), 500):
-                chunk = ids[start : start + 500]
-                self.s.execute(
-                    update(JobRow)
-                    .where(
-                        JobRow.source == source,
-                        JobRow.source_job_id.in_(chunk),
-                    )
-                    .values(match_score=score)
                 )
 
     # ------------------------------------------------------------------- reads

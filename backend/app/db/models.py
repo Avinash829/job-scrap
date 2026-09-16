@@ -34,6 +34,8 @@ class JobRow(Base):
         # the filtered listing the UI actually sends
         Index("ix_jobs_filter", "is_active", "role_category", "min_yoe"),
         Index("ix_jobs_hash", "description_hash"),
+        # closed-job cleanup reads one source's rows per scope
+        Index("ix_jobs_source_scope", "source", "scope"),
     )
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
@@ -48,7 +50,6 @@ class JobRow(Base):
     company: Mapped[str] = mapped_column(Text)
     company_normalized: Mapped[str] = mapped_column(Text, index=True)
 
-    description: Mapped[str | None] = mapped_column(Text, nullable=True)
     location_raw: Mapped[str | None] = mapped_column(Text, nullable=True)
     ats: Mapped[str | None] = mapped_column(String(32), nullable=True, index=True)
 
@@ -90,6 +91,19 @@ class JobRow(Base):
         DateTime(timezone=True), nullable=True
     )
     raw_payload: Mapped[str] = mapped_column(Text, default="{}")
+
+    # --- lifecycle ---------------------------------------------------------
+    # No description column: the text is read during a scrape to extract
+    # skills, experience and region, then discarded. It was ~60% of the table.
+    #
+    # scope: the board/company this row was fetched under ("greenhouse:stripe").
+    # A job is judged closed only when its scope was fully checked in a run.
+    scope: Mapped[str] = mapped_column(String(200), default="")
+    # consecutive runs a checked scope didn't list this job (search-style
+    # sources are deleted at 2, full listings at 1)
+    missed_runs: Mapped[int] = mapped_column(Integer, default=0)
+    # hash of the stored values - unchanged jobs are not rewritten each run
+    fingerprint: Mapped[str] = mapped_column(String(40), default="")
 
 
 class ExtractionCacheRow(Base):

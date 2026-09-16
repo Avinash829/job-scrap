@@ -18,7 +18,6 @@ Each portal is a companies.yaml `avature:` entry with a `base` URL.
 """
 from __future__ import annotations
 
-import asyncio
 import logging
 import re
 from typing import Iterable
@@ -45,24 +44,12 @@ class Avature(SearchConnector):
 
     async def fetch(self) -> Iterable[RawJob]:
         companies = companies_for("avature", self._tier_filter)
-        sem = asyncio.Semaphore(self.concurrency)
-
-        async def one(company: Company, term: str) -> list[RawJob]:
-            async with sem:
-                try:
-                    return await self.search_portal(company, term)
-                except Exception as exc:  # noqa: BLE001
-                    log.warning("avature %s %r failed: %s", company.slug, term, exc)
-                    return []
-
         # Avature search is keyword-only; location narrowing happens in the
-        # region filter, so terms aren't multiplied by locations here.
-        batches = await asyncio.gather(*(one(c, t) for c in companies for t in self.terms))
-        unique: dict[str, RawJob] = {}
-        for batch in batches:
-            for job in batch:
-                unique.setdefault(job.source_job_id, job)
-        return list(unique.values())
+        # region filter, so one location slot is enough per term.
+        self.locations = self.locations[:1]
+        return await self.fetch_per_company(
+            companies, lambda c, term, _loc: self.search_portal(c, term), lambda c: f"avature:{c.slug}"
+        )
 
     async def search(self, term: str, location: str) -> list[RawJob]:  # pragma: no cover
         raise NotImplementedError("Avature searches per portal; see fetch()")

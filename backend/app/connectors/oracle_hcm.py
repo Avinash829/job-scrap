@@ -16,7 +16,6 @@ Each employer is a companies.yaml `oracle:` entry with `host` and `site`.
 """
 from __future__ import annotations
 
-import asyncio
 import logging
 import re
 from datetime import datetime, timezone
@@ -40,24 +39,7 @@ class OracleHCM(SearchConnector):
 
     async def fetch(self) -> Iterable[RawJob]:
         companies = companies_for("oracle", self._tier_filter)
-        sem = asyncio.Semaphore(self.concurrency)
-
-        async def one(c: Company, term: str, location: str) -> list[RawJob]:
-            async with sem:
-                try:
-                    return await self.search_site(c, term, location)
-                except Exception as exc:  # noqa: BLE001
-                    log.warning("oracle %s %r failed: %s", c.slug, term, exc)
-                    return []
-
-        batches = await asyncio.gather(
-            *(one(c, t, l) for c in companies for t in self.terms for l in self.locations)
-        )
-        unique: dict[str, RawJob] = {}
-        for batch in batches:
-            for job in batch:
-                unique.setdefault(job.source_job_id, job)
-        return list(unique.values())
+        return await self.fetch_per_company(companies, self.search_site, lambda c: f"oracle:{c.slug}")
 
     async def search(self, term: str, location: str) -> list[RawJob]:  # pragma: no cover
         raise NotImplementedError("Oracle HCM searches per employer; see fetch()")

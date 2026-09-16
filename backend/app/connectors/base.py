@@ -68,6 +68,17 @@ class Connector(abc.ABC):
     impersonate: str | None = None
     rate_limit_delay: float = 0.0   # seconds between requests, be polite
     keep_cookies: bool = False      # impersonate only: reuse one session + cookie jar
+
+    # --- coverage, for deleting closed jobs safely --------------------------
+    # full_listing: one successful fetch returns EVERY open job in a scope
+    # (a Greenhouse board). Search-style sources (Workday, Google, aggregators
+    # with paging caps) can omit a live job on a given run, so their unseen
+    # jobs are only deleted after missing twice.
+    full_listing: bool = True
+    # Scopes this run fetched successfully, e.g. {"greenhouse:stripe"}. None
+    # means "the whole source, if the run succeeded". Per-company connectors
+    # set it so a timeout at one company never deletes that company's jobs.
+    covered_scopes: set[str] | None = None
     _cookie_session = None
     _cookie_lock = threading.Lock()
 
@@ -216,4 +227,20 @@ class Connector(abc.ABC):
         finally:
             rec.finished_at = datetime.now(timezone.utc)
             await self.aclose()
+
+        for job in jobs:
+            job.raw_payload.setdefault("scope", self.name)
+        covered = self.covered_scopes
+        if covered is None:
+            covered = {self.name} if rec.ok else set()
+        elif not rec.ok and rec.error and not rec.error.startswith("returned zero jobs"):
+            covered = set()  # fetch() raised: trust nothing it half-collected
+        rec.covered_scopes = sorted(covered)
+        rec.full_listing = self.full_listing
         return jobs, rec
+
+    def scoped(self, jobs: list[RawJob], scope: str) -> list[RawJob]:
+        """Tag jobs with the scope (company/board) they were fetched under."""
+        for job in jobs:
+            job.raw_payload["scope"] = scope
+        return jobs

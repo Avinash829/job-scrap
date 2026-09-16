@@ -127,6 +127,8 @@ def _split_header(text: str) -> tuple[str, str, str]:
 class HNWhoIsHiring(Connector):
     name = "hn_hiring"
     tier = 3
+    # a recent-postings feed, not a complete list of open roles
+    full_listing = False
     rate_limit_delay = 0.3
 
     async def _latest_story_id(self) -> tuple[str, int] | None:

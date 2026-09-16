@@ -50,11 +50,10 @@ the browser, so `frontend/.env` is public by construction - never put a key ther
 # scrape jobs (from backend/) - GitHub Actions runs this for you on a schedule
 python -m app.pipeline.cli scrape --tier 1
 python -m app.pipeline.cli scrape --tier 1 --no-enrich   # skip the LLM pass
-python -m app.pipeline.cli enrich                        # LLM pass only, no refetch
 python -m app.pipeline.cli show --limit 20 --reachable
 python -m app.pipeline.cli health
 python -m app.pipeline.cli rescore                       # recompute scores after changing config.yaml, no refetch
-python -m app.pipeline.cli reset --yes                   # empty the job table (the daily 00:00 IST run does this)
+python -m app.pipeline.cli reset --yes                   # empty the job table (manual only; closed jobs are removed automatically)
 python -m app.pipeline.cli import-companies --platform workday --apply   # add employers with India openings
 # also: --platform greenhouse | lever | ashby (public dataset) and freshteam | keka | gem | recruitee | workable | rippling (Common Crawl)
 
@@ -159,13 +158,54 @@ pruned slugs are remembered under `rejected:` so later runs don't re-test them.
 those with India internships go to tier 1. Scraping all of them daily would
 exceed the free tier and add nothing for an India-based search.
 
-### Daily fresh start
+### Startups' own careers pages
 
-At 00:00 IST the workflow empties the job table (`TRUNCATE`, which returns the
-space to Neon immediately) and runs a full scrape in the same job, so each day
-starts from only what is live today. The LLM extraction cache is kept: it's
-keyed by description content, so re-fetching an unchanged posting costs no
-Gemini call.
+```bash
+python -m app.pipeline.cli detect-careers --source yc --apply   # ~1,600 YC companies
+python -m app.pipeline.cli detect-careers --source vc --apply   # portfolio companies on the VC boards
+```
+
+Guessing a startup's board token from its name misses most of them, so this
+reads the company's website instead: the homepage, then up to three
+careers/jobs/join-us pages, pulling out links to any supported hiring system
+(Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Recruitee, Freshteam,
+Keka, Zoho Recruit, Rippling, Gem). Each board is probed with the real
+connector and kept only if it has India or worldwide openings, then saved to
+companies.yaml with the company's `website`. A site that links to many boards
+is a recruiting product showing customers, so those boards are named after
+themselves. The workflow re-runs both scans on the 1st of every month.
+
+YC startups that post only on ycombinator.com are read directly by the
+`yc_jobs` connector (1,500 hiring companies, fetched live each run).
+
+### Data lifecycle (built for the free tier)
+
+The database holds **only what the site shows**: live postings that pass every
+filter. At ~0.5 KB a row, a few thousand jobs fit in 5-15 MB of Neon's 0.5 GB.
+
+* **No descriptions stored.** They are read during the scrape, in memory, to
+  extract skills, experience and region (rules first, Gemini for what rules
+  can't resolve), then discarded. They used to be ~60% of the table.
+* **Only matching jobs stored.** A posting that fails a filter (role, experience,
+  region, age) is never written. Previously ~20k rejected rows sat in the table.
+* **Unchanged jobs aren't rewritten.** Each row carries a fingerprint of its
+  values; a run inserts new jobs, updates changed ones and skips the rest -
+  fewer writes, fewer dead rows, less database compute.
+* **Closed jobs are deleted as soon as a run proves it.** Every job has a
+  *scope* (`greenhouse:stripe`, `workday:nvidia:External`, `yc_jobs:posthog`).
+  A job missing from a run is deleted only if its scope was fetched
+  successfully in that run - a timeout at one company never touches its jobs,
+  and the 6-hourly run never judges tier-2 companies it didn't check. Sources
+  that return complete listings delete on the first miss; search-style sources
+  (Workday, Google, aggregators) on the second consecutive miss, since a search
+  can omit a live job once. Dead apply links are deleted too.
+* **No daily wipe.** The 00:00 IST run is simply the full scrape.
+
+Side tables are bounded: the LLM cache keeps 60 days (keyed by a description
+hash, so a posting seen daily costs one Gemini call), run-health history 14
+days. On first start the new code migrates an old database automatically:
+drops the description column, deletes filtered-out rows and compacts the
+table (`VACUUM FULL`).
 
 ### The `[]` trap
 

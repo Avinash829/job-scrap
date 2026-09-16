@@ -1,166 +1,101 @@
 /**
  * A single posting.
  *
- * Reachability is the most prominent signal, because a role you cannot legally
- * take is worth nothing however well it matches - so it gets colour and the
- * top-right slot rather than being buried in a metadata row.
+ * Deliberately minimal: what you need to decide whether to click Apply -
+ * role, company, location, internship or job, experience required, and how
+ * long ago it was posted. Descriptions aren't stored (the backend reads them
+ * during a scrape to extract skills and experience, then discards them).
  */
-
-const REGION_LABELS = {
-  worldwide: "Worldwide",
-  us: "US only",
-  canada: "Canada",
-  emea: "EMEA",
-  europe: "Europe",
-  apac: "APAC",
-  india: "India",
-  latam: "LATAM",
-  unknown: "Region unclear",
-};
-
-function regionStyle(job) {
-  if (job.reachable_from_india) return "bg-emerald-500/10 text-emerald-300 ring-emerald-500/30";
-  if (job.hiring_regions.includes("unknown")) return "bg-zinc-500/10 text-zinc-400 ring-zinc-500/30";
-  return "bg-amber-500/10 text-amber-300 ring-amber-500/30";
-}
 
 /** Age of the POSTING, not of our sighting - the backend sends age_days. */
 function postedLabel(job) {
-  if (!job.posted_at) return "posting date not given";
+  if (!job.posted_at) return "Posting date not given";
   const hours = (Date.now() - new Date(job.posted_at).getTime()) / 36e5;
-  if (hours < 1) return "posted just now";
-  if (hours < 24) return `posted ${Math.floor(hours)}h ago`;
+  if (hours < 1) return "Posted just now";
+  if (hours < 24) return `Posted ${Math.floor(hours)}h ago`;
   // The backend sends age_days = null for dates too old to be believable.
-  // Recomputing the raw number here is what showed "posted 3893d ago".
-  if (job.age_days == null) return "posted over a year ago";
+  if (job.age_days == null) return "Posted over a year ago";
   const days = job.age_days;
-  if (days === 1) return "posted yesterday";
-  if (days < 60) return `posted ${days}d ago`;
-  if (days < 365) return `posted ${Math.floor(days / 30)} months ago`;
-  return "posted over a year ago";
+  if (days === 1) return "Posted yesterday";
+  if (days < 60) return `Posted ${days} days ago`;
+  if (days < 365) return `Posted ${Math.floor(days / 30)} months ago`;
+  return "Posted over a year ago";
 }
 
 function Pill({ children, className = "" }) {
   return (
     <span
-      className={`inline-flex items-center rounded-md px-1.5 py-0.5 text-[11px] font-medium ring-1 ring-inset ${className}`}
+      className={`inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${className}`}
     >
       {children}
     </span>
   );
 }
 
+const TYPE_LABELS = {
+  internship: ["Internship", "bg-violet-500/10 text-violet-300 ring-violet-500/30"],
+  full_time: ["Full-time job", "bg-sky-500/10 text-sky-300 ring-sky-500/30"],
+  part_time: ["Part-time", "bg-zinc-500/10 text-zinc-300 ring-zinc-500/30"],
+  contract: ["Contract", "bg-zinc-500/10 text-zinc-300 ring-zinc-500/30"],
+  unknown: ["Job", "bg-sky-500/10 text-sky-300 ring-sky-500/30"],
+};
+
+function TypeBadge({ job }) {
+  const [label, style] = TYPE_LABELS[job.employment_type] ?? TYPE_LABELS.unknown;
+  return <Pill className={style}>{label}</Pill>;
+}
+
+/** Years of experience - the "can I apply?" signal. */
 function ExperienceBadge({ job }) {
-  if (job.employment_type === "internship")
-    return <Pill className="bg-violet-500/10 text-violet-300 ring-violet-500/30">Internship</Pill>;
-  if (job.is_new_grad)
-    return <Pill className="bg-sky-500/10 text-sky-300 ring-sky-500/30">New grad</Pill>;
-  if (job.min_yoe === 0)
-    return <Pill className="bg-sky-500/10 text-sky-300 ring-sky-500/30">0 yrs</Pill>;
-  if (job.min_yoe === null)
-    return <Pill className="bg-zinc-500/10 text-zinc-400 ring-zinc-500/30">yrs n/a</Pill>;
-  return <Pill className="bg-zinc-500/10 text-zinc-400 ring-zinc-500/30">{job.min_yoe}+ yrs</Pill>;
+  if (job.min_yoe === 0 || (job.min_yoe == null && job.is_new_grad))
+    return <Pill className="bg-emerald-500/10 text-emerald-300 ring-emerald-500/30">0 yrs · freshers ok</Pill>;
+  if (job.min_yoe == null)
+    return <Pill className="bg-zinc-500/10 text-zinc-400 ring-zinc-500/30">Experience not stated</Pill>;
+  const range = job.max_yoe && job.max_yoe > job.min_yoe ? `${job.min_yoe}-${job.max_yoe}` : `${job.min_yoe}+`;
+  return (
+    <Pill className="bg-amber-500/10 text-amber-300 ring-amber-500/30">
+      {range} yr{job.min_yoe === 1 && !job.max_yoe ? "" : "s"} experience
+    </Pill>
+  );
 }
 
 export default function JobCard({ job }) {
-  const regionText = job.hiring_regions.map((r) => REGION_LABELS[r] ?? r).join(" · ");
-  const unresolved = job.region_source === "none" || job.region_confidence === "low";
-
   return (
     <article className="group rounded-lg border border-zinc-800 bg-zinc-900/40 p-3.5 transition hover:border-zinc-700 hover:bg-zinc-900/80 sm:p-4">
-      {/* Phones: title block on top, region + score as a row beneath it.
-          Wider screens: region + score sit in the top-right corner. */}
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
-        <div className="min-w-0">
-          <a
-            href={job.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="line-clamp-2 break-words font-medium text-zinc-100 hover:text-white hover:underline sm:line-clamp-none sm:block sm:truncate"
-            title={job.title}
-          >
-            {job.title}
-          </a>
-          <div className="mt-0.5 flex min-w-0 flex-wrap items-center gap-x-2 text-sm text-zinc-400 sm:flex-nowrap">
-            <span className="truncate">{job.company}</span>
-            {job.location_raw && (
-              <>
-                <span className="text-zinc-700">•</span>
-                <span className="min-w-0 truncate text-xs">{job.location_raw}</span>
-              </>
-            )}
-          </div>
-        </div>
-
-        <div className="flex shrink-0 flex-row items-center gap-2 sm:flex-col sm:items-end sm:gap-1.5">
-          <Pill className={regionStyle(job)}>
-            {regionText}
-            {unresolved && <span className="ml-1 opacity-60">?</span>}
-          </Pill>
-          <span className="font-mono text-[11px] text-zinc-500">
-            {job.match_score.toFixed(0)}
-          </span>
-        </div>
+      <a
+        href={job.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="line-clamp-2 break-words font-medium text-zinc-100 hover:text-white hover:underline"
+        title={job.title}
+      >
+        {job.title}
+      </a>
+      <div className="mt-0.5 flex min-w-0 flex-wrap items-center gap-x-2 text-sm text-zinc-400">
+        <span className="truncate">{job.company}</span>
+        {job.location_raw && (
+          <>
+            <span className="text-zinc-700" aria-hidden="true">•</span>
+            <span className="min-w-0 truncate">{job.location_raw}</span>
+          </>
+        )}
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        <TypeBadge job={job} />
         <ExperienceBadge job={job} />
-        <Pill className="bg-zinc-800/80 text-zinc-300 ring-zinc-700">{job.role_category}</Pill>
-        {job.visa_sponsorship === true && (
-          <Pill className="bg-emerald-500/10 text-emerald-300 ring-emerald-500/30">
-            Sponsors visa
-          </Pill>
+        {job.is_remote && (
+          <Pill className="bg-zinc-800/80 text-zinc-300 ring-zinc-700">Remote</Pill>
         )}
-        {job.work_auth_required === true && job.visa_sponsorship !== true && (
-          <Pill className="bg-red-500/10 text-red-300 ring-red-500/30">Needs work auth</Pill>
-        )}
-        {job.yc_batch && (
-          <Pill className="bg-orange-500/10 text-orange-300 ring-orange-500/30">
-            YC {job.yc_batch}
-          </Pill>
-        )}
-        {typeof job.team_size === "number" && job.team_size > 0 && job.team_size <= 200 && (
-          <Pill className="bg-zinc-800/80 text-zinc-400 ring-zinc-700">
-            {job.team_size} people
-          </Pill>
-        )}
-        {job.grad_year && (
-          <Pill className="bg-sky-500/10 text-sky-300 ring-sky-500/30">
-            Class of {job.grad_year}
-          </Pill>
-        )}
-        {job.tech_stack.slice(0, 5).map((t) => (
-          <Pill key={t} className="bg-zinc-800/60 font-mono text-zinc-400 ring-zinc-800">
-            {t}
-          </Pill>
-        ))}
       </div>
 
-      {job.match_reasons?.length > 0 && (
-        <p className="mt-2.5 text-[11px] text-emerald-400/70">
-          {job.match_reasons.join(" · ")}
-        </p>
-      )}
-
-      {job.summary && (
-        <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-zinc-500">{job.summary}</p>
-      )}
-
-      <div className="mt-3 flex items-center justify-between gap-3 text-[11px] text-zinc-600">
-        <span className="min-w-0">
-          {job.ats ? `${job.company} · ${job.ats}` : job.source} · {postedLabel(job)}
-          {job.link_status === "unknown" && (
-            <span className="ml-1.5 text-amber-600/80" title="Apply link could not be verified">
-              · link unverified
-            </span>
-          )}
-        </span>
-        {/* Always visible on touch screens - there is no hover to reveal it. */}
+      <div className="mt-3 flex items-center justify-between gap-3">
+        <span className="min-w-0 text-xs text-zinc-500">{postedLabel(job)}</span>
         <a
           href={job.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="shrink-0 rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-medium text-zinc-200 ring-1 ring-inset ring-zinc-700 transition hover:text-white sm:bg-transparent sm:px-0 sm:py-0 sm:text-[11px] sm:text-zinc-400 sm:ring-0 [@media(hover:hover)]:sm:opacity-0 [@media(hover:hover)]:sm:group-hover:opacity-100"
+          className="shrink-0 rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-medium text-zinc-200 ring-1 ring-inset ring-zinc-700 transition hover:bg-zinc-700 hover:text-white"
         >
           Apply →
         </a>

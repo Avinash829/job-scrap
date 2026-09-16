@@ -20,7 +20,6 @@ ranking otherwise buries India roles below thousands of US postings.
 """
 from __future__ import annotations
 
-import asyncio
 import logging
 import re
 from typing import Iterable
@@ -54,24 +53,9 @@ class Workday(SearchConnector):
         companies = companies_for("workday", self._tier_filter)
         if not companies:
             return []
-        sem = asyncio.Semaphore(self.concurrency)
-
-        async def one(company: Company, term: str, location: str) -> list[RawJob]:
-            async with sem:
-                try:
-                    return await self.search_company(company, term, location)
-                except Exception as exc:  # noqa: BLE001
-                    log.warning("workday %s %r failed: %s", company.slug, term, exc)
-                    return []
-
-        batches = await asyncio.gather(
-            *(one(c, t, l) for c in companies for t in self.terms for l in self.locations)
+        return await self.fetch_per_company(
+            companies, self.search_company, lambda c: f"workday:{c.slug}:{c.get('site')}"
         )
-        unique: dict[str, RawJob] = {}
-        for batch in batches:
-            for job in batch:
-                unique.setdefault(job.source_job_id, job)
-        return list(unique.values())
 
     async def search(self, term: str, location: str) -> list[RawJob]:  # pragma: no cover
         raise NotImplementedError("Workday searches per company; see fetch()")

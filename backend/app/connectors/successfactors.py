@@ -11,7 +11,6 @@ Each site is a companies.yaml `successfactors:` entry with `base` and `name`.
 """
 from __future__ import annotations
 
-import asyncio
 import logging
 import re
 from datetime import datetime, timezone
@@ -46,25 +45,8 @@ class SuccessFactors(SearchConnector):
     rate_limit_delay = 0.3
 
     async def fetch(self) -> Iterable[RawJob]:
-        sem = asyncio.Semaphore(self.concurrency)
-
-        async def one(c: Company, term: str, location: str) -> list[RawJob]:
-            async with sem:
-                try:
-                    return await self.search_site(c, term, location)
-                except Exception as exc:  # noqa: BLE001 - one query must not sink the source
-                    log.warning("successfactors %s %r failed: %s", c.slug, term, exc)
-                    return []
-
         companies = companies_for("successfactors", self._tier_filter)
-        batches = await asyncio.gather(
-            *(one(c, t, l) for c in companies for t in self.terms for l in self.locations)
-        )
-        unique: dict[str, RawJob] = {}
-        for batch in batches:
-            for job in batch:
-                unique.setdefault(job.source_job_id, job)
-        return list(unique.values())
+        return await self.fetch_per_company(companies, self.search_site, lambda c: f"successfactors:{c.slug}")
 
     async def search(self, term: str, location: str) -> list[RawJob]:  # pragma: no cover
         raise NotImplementedError("SuccessFactors searches per employer; see fetch()")

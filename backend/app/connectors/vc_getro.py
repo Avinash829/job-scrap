@@ -45,10 +45,13 @@ class GetroBoards(Connector):
 
     async def fetch(self) -> Iterable[RawJob]:
         unique: dict[str, RawJob] = {}
+        self.covered_scopes = set()
         for board in companies_for("getro", self._tier_filter):
+            scope = f"{self.name}:{board.slug}"
             try:
-                for job in await self._board(board):
+                for job in self.scoped(await self._board(board), scope):
                     unique.setdefault(job.source_job_id, job)
+                self.covered_scopes.add(scope)
             except Exception as exc:  # noqa: BLE001 - one board must not sink the source
                 log.warning("getro %s failed: %s", board.slug, exc)
         return list(unique.values())

@@ -34,6 +34,8 @@ def _regions(location: str | None, remote: bool) -> list[HiringRegion]:
 class Arbeitnow(Connector):
     name = "arbeitnow"
     tier = 3
+    # a recent-postings feed, not a complete list of open roles
+    full_listing = False
     rate_limit_delay = 0.5
 
     async def fetch(self) -> Iterable[RawJob]:

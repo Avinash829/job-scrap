@@ -573,7 +573,7 @@ ATS_SOURCES = frozenset({
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
     "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka", "zoho_recruit",
     # cross-company searches over live postings only
-    "workable", "vc_getro", "vc_consider", "instahyre",
+    "workable", "vc_getro", "vc_consider", "instahyre", "yc_jobs",
     # Simplify maintains an `active` flag per listing, so its rows are
     # open-until-closed too; the connector itself drops anything >90 days old.
     "simplify",

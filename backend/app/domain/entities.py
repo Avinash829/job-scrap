@@ -246,6 +246,10 @@ class ConnectorRun(BaseModel):
     jobs_new: int = 0
     ok: bool = False
     error: str | None = None
+    # which scopes this run fully checked, and whether one check is enough
+    # to call an unseen job closed (see Connector.full_listing)
+    covered_scopes: list[str] = Field(default_factory=list)
+    full_listing: bool = True
 
     @property
     def duration_s(self) -> float | None:

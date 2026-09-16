@@ -2296,6 +2296,20 @@ greenhouse:
   - slug: ysoftcorporation
     tier: 2
     note: India 0, intern/grad 0
+  - slug: swiftskuinc
+    tier: 2
+    name: SwiftSku
+    website: https://swiftsku.com
+    note: yc careers page · India 6, intern 0
+  - slug: axiad
+    tier: 2
+    name: Axiad
+    note: found via a YC recruiting platform's site · India 3, intern 0
+  - slug: infosum
+    tier: 2
+    name: InfoSum
+    note: vc careers page · India 1, intern 0
+    website: vc-board:infosum
   candidates:
   - 67streetdental
   - adjacentservices
@@ -3314,6 +3328,34 @@ lever:
     tier: 1
     name: Pocket FM
     note: Indian startup (added 2026-09-16)
+  - slug: wahed.com
+    tier: 2
+    name: Wahed
+    note: found via a YC recruiting platform's site · India 7, intern 0
+  - slug: jobgether
+    tier: 1
+    name: Jobgether
+    note: vc careers page · India 371, intern 1
+  - slug: 100ms
+    tier: 1
+    name: 100ms
+    note: vc careers page · India 8, intern 1
+    website: vc-board:100ms
+  - slug: mythic-ai.com
+    tier: 2
+    name: Mythic
+    note: vc careers page · India 6, intern 0
+    website: vc-board:mythic
+  - slug: insiderone
+    tier: 2
+    name: Insider
+    note: vc careers page · India 2, intern 0
+    website: https://useinsider.com
+  - slug: incorta
+    tier: 2
+    name: Incorta
+    note: vc careers page · India 1, intern 0
+    website: https://incorta.com
   candidates:
   - 15five
   - 3eco
@@ -5096,6 +5138,127 @@ ashby:
     tier: 1
     name: Interview Kickstart
     note: Indian startup (added 2026-09-16)
+  - slug: litmus
+    tier: 2
+    name: Litmus
+    note: found via a YC recruiting platform's site · India 10, intern 0
+  - slug: withorbital
+    tier: 2
+    name: Withorbital
+    note: found via a YC recruiting platform's site · India 5, intern 0
+  - slug: noon-design
+    tier: 2
+    name: Noon Design
+    note: found via a YC recruiting platform's site · India 4, intern 0
+  - slug: ambient.ai
+    tier: 2
+    name: Ambient.ai
+    website: https://ambient.ai
+    note: yc careers page · India 3, intern 0
+  - slug: redis
+    tier: 2
+    name: Redis
+    note: found via a YC recruiting platform's site · India 3, intern 0
+  - slug: certa
+    tier: 1
+    name: Certa
+    note: vc careers page · India 6, intern 2
+    website: vc-board:certa
+  - slug: kandou-ai
+    tier: 2
+    name: Kandou
+    note: vc careers page · India 20, intern 0
+    website: https://kandou.com
+  - slug: airbound
+    tier: 2
+    name: Airbound
+    note: vc careers page · India 15, intern 0
+    website: https://airbound.co
+  - slug: clickhouse
+    tier: 2
+    name: ClickHouse
+    note: vc careers page · India 9, intern 0
+    website: https://clickhouse.com
+  - slug: certifyos
+    tier: 2
+    name: CertifyOS
+    note: vc careers page · India 8, intern 0
+    website: vc-board:certifyos
+  - slug: redesign%20health
+    tier: 2
+    name: Redesign Health
+    note: vc careers page · India 8, intern 0
+    website: vc-board:redesign health
+  - slug: glomo
+    tier: 2
+    name: Glomo
+    note: vc careers page · India 7, intern 0
+    website: vc-board:glomo
+  - slug: wisdom-ai
+    tier: 2
+    name: WisdomAI
+    note: vc careers page · India 7, intern 0
+    website: vc-board:wisdomai
+  - slug: freehand
+    tier: 2
+    name: Freehand
+    note: vc careers page · India 4, intern 0
+    website: https://freehand.ai
+  - slug: gainsight
+    tier: 2
+    name: Gainsight
+    note: vc careers page · India 4, intern 0
+    website: vc-board:gainsight
+  - slug: blitzy
+    tier: 2
+    name: Blitzy
+    note: vc careers page · India 3, intern 0
+    website: https://blitzy.com
+  - slug: wonderful
+    tier: 2
+    name: Wonderful
+    note: vc careers page · India 2, intern 0
+    website: https://wonderful.ai
+  - slug: applied
+    tier: 2
+    name: Applied Intuition
+    note: vc careers page · India 2, intern 0
+    website: https://appliedintuition.com
+  - slug: hyde
+    tier: 2
+    name: Hyde
+    note: vc careers page · India 2, intern 0
+    website: vc-board:hyde
+  - slug: mistral.ai
+    tier: 2
+    name: Mistral AI
+    note: vc careers page · India 1, intern 0
+    website: https://mistral.ai
+  - slug: revenuebase-inc
+    tier: 2
+    name: RevenueBase
+    note: vc careers page · India 1, intern 0
+    website: https://revenuebase.ai
+  - slug: gritt
+    tier: 2
+    name: Gritt Robotics
+    note: vc careers page · India 1, intern 0
+    website: https://gritt.ai
+  - slug: smallest
+    tier: 2
+    name: Smallest.ai
+    note: vc careers page · India 1, intern 0
+    website: vc-board:smallest.ai
+  - slug: fal-ai
+    tier: 2
+    name: Fal
+    note: vc careers page · India 0, intern 0
+    website: https://fal.ai
+  - slug: truelinkfinancial
+    tier: 2
+    name: True Link
+    note: vc careers page · India 0, intern 0
+    website: https://truelinkfinancial.com
   candidates:
   - scaler
   - thoughtworks
@@ -5641,6 +5804,16 @@ smartrecruiters:
     tier: 1
     name: NoBroker
     note: Indian startup (added 2026-09-16)
+  - slug: vegrow
+    tier: 1
+    name: VEGROW
+    note: vc careers page · India 9, intern 1
+    website: https://vegrow.in
+  - slug: sensetalentlabsinc
+    tier: 2
+    name: Sense Talent Labs
+    note: vc careers page · India 2, intern 0
+    website: https://sensehq.com
   candidates:
   - zomato
   - paytm
@@ -12080,6 +12253,31 @@ freshteam:
     tier: 1
     name: Drivetrain
     note: Indian startup (added 2026-09-16)
+  - slug: log9materials-talent
+    tier: 1
+    name: Log 9 Materials
+    note: vc careers page · India 21, intern 1
+    website: https://log9materials.com
+  - slug: xflowpay
+    tier: 2
+    name: XFlow
+    note: vc careers page · India 12, intern 0
+    website: https://xflowpay.com
+  - slug: myglamm
+    tier: 2
+    name: The Good Glamm Group
+    note: vc careers page · India 4, intern 0
+    website: https://goodglamm.com
+  - slug: mesh
+    tier: 2
+    name: Mesh
+    note: vc careers page · India 2, intern 0
+    website: https://mesh.ai
+  - slug: flynote
+    tier: 2
+    name: Flynote
+    note: vc careers page · India 1, intern 0
+    website: https://flynote.com
   candidates: []
 gem:
   verified:
@@ -12539,6 +12737,51 @@ workable:
   - slug: winning-assistants
     tier: 2
     note: India 1, intern/grad 0
+  - slug: writesonic
+    tier: 2
+    name: Writesonic
+    website: https://writesonic.com/
+    note: yc careers page · India 8, intern 0
+  - slug: fe-fundinfo
+    tier: 2
+    name: Fe Fundinfo
+    note: found via a YC recruiting platform's site · India 3, intern 0
+  - slug: exponent-energy
+    tier: 1
+    name: Exponent Energy
+    note: vc careers page · India 48, intern 3
+    website: https://exponent.energy
+  - slug: apna
+    tier: 1
+    name: apna
+    note: vc careers page · India 131, intern 2
+    website: https://apna.co
+  - slug: unifize
+    tier: 2
+    name: Unifize
+    note: vc careers page · India 7, intern 0
+    website: vc-board:unifize
+  - slug: mitti-labs
+    tier: 2
+    name: Mitti Labs
+    note: vc careers page · India 4, intern 0
+    website: https://mittilabs.earth
+  - slug: portainer
+    tier: 2
+    name: Portainer.io
+    note: vc careers page · India 2, intern 0
+    website: https://portainer.io
+  - slug: seeq
+    tier: 2
+    name: Seeq
+    note: vc careers page · India 1, intern 0
+    website: vc-board:seeq
+  - slug: lakeside-software
+    tier: 2
+    name: Lakeside Software
+    note: vc careers page · India 1, intern 0
+    website: vc-board:lakeside software
+  candidates: []
 rippling:
   verified:
   - slug: desri-careers
@@ -12739,6 +12982,12 @@ rippling:
   - slug: the-pulitzer-center-on-crisis-reporting
     tier: 2
     note: India 0, intern/grad 0
+  - slug: ayr-careers
+    tier: 2
+    name: Ayr Energy
+    note: vc careers page · India 11, intern 0
+    website: vc-board:ayr energy
+  candidates: []
 keka:
   verified:
   - slug: driverlogistics
@@ -13234,6 +13483,44 @@ keka:
     tier: 1
     name: Kuku FM
     note: Indian startup (added 2026-09-16)
+  - slug: cloudsufi
+    tier: 2
+    name: Cloudsufi
+    note: found via a YC recruiting platform's site · India 15, intern 0
+  - slug: lifesight
+    tier: 2
+    name: Lifesight
+    note: found via a YC recruiting platform's site · India 11, intern 0
+  - slug: bolt
+    tier: 1
+    name: Bolt
+    note: vc careers page · India 12, intern 1
+    website: https://bolt.earth
+  - slug: onsitego
+    tier: 2
+    name: Onsitego
+    note: vc careers page · India 23, intern 0
+    website: vc-board:onsitego
+  - slug: rozana
+    tier: 2
+    name: Rozana
+    note: vc careers page · India 8, intern 0
+    website: vc-board:rozana
+  - slug: zluri
+    tier: 2
+    name: Zluri
+    note: vc careers page · India 3, intern 0
+    website: https://zluri.com
+  - slug: ottimate
+    tier: 2
+    name: Ottimate
+    note: vc careers page · India 2, intern 0
+    website: https://ottimate.com
+  - slug: atirobotics
+    tier: 2
+    name: Ati Motors
+    note: vc careers page · India 1, intern 0
+    website: vc-board:ati motors
   candidates: []
 successfactors:
   verified:
@@ -13474,3 +13761,53 @@ zoho_recruit:
   - slug: seemahospital.zohorecruit.in
     tier: 2
     note: India 1, intern/grad 0
+  - slug: stutzen.zohorecruit.com
+    tier: 1
+    name: Stutzen
+    note: found via a YC recruiting platform's site · India 36, intern 1
+  - slug: swiftsku.zohorecruit.in
+    tier: 2
+    name: SwiftSku
+    website: https://swiftsku.com
+    note: yc careers page · India 7, intern 0
+  - slug: novabenefits.zohorecruit.in
+    tier: 1
+    name: Nova Benefits
+    note: vc careers page · India 13, intern 3
+    website: https://novabenefits.com
+  - slug: drinkprime.zohorecruit.in
+    tier: 1
+    name: DrinkPrime
+    note: vc careers page · India 12, intern 1
+    website: https://drinkprime.in
+  - slug: eplane.zohorecruit.in
+    tier: 2
+    name: The Eplane Company
+    note: vc careers page · India 82, intern 0
+    website: vc-board:the eplane company
+  - slug: indiagold.zohorecruit.in
+    tier: 2
+    name: indiagold
+    note: vc careers page · India 24, intern 0
+    website: vc-board:indiagold
+  - slug: telradsol.zohorecruit.in
+    tier: 2
+    name: Teleradiology Solutions
+    note: vc careers page · India 23, intern 0
+    website: https://telradsol.com
+  - slug: armoryshield.zohorecruit.in
+    tier: 2
+    name: Armory
+    note: vc careers page · India 12, intern 0
+    website: vc-board:armory
+  - slug: axiamatic.zohorecruit.in
+    tier: 2
+    name: Axiamatic
+    note: vc careers page · India 3, intern 0
+    website: https://axiamatic.com
+  - slug: incoresemi.zohorecruit.com
+    tier: 2
+    name: InCore Semiconductors
+    note: vc careers page · India 2, intern 0
+    website: https://incoresemi.com
+  candidates: []

@@ -137,6 +137,15 @@ class ATSConnector(Connector):
 
         self.board_results = list(await asyncio.gather(*(guarded(c) for c in companies)))
 
+        # A board that answered (with jobs or genuinely empty) was fully read;
+        # its unseen jobs are closed. A failed or missing board proves nothing.
+        self.covered_scopes = set()
+        for r in self.board_results:
+            scope = f"{self.name}:{r.company.slug}"
+            self.scoped(r.jobs, scope)
+            if r.status in (BoardStatus.OK, BoardStatus.EMPTY_BOARD):
+                self.covered_scopes.add(scope)
+
         ok = sum(1 for r in self.board_results if r.status is BoardStatus.OK)
         empty = sum(1 for r in self.board_results if r.status is BoardStatus.EMPTY_BOARD)
         missing = sum(1 for r in self.board_results if r.status is BoardStatus.NO_BOARD)

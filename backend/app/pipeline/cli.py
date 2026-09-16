@@ -64,8 +64,9 @@ def _print_result(result: PipelineResult) -> None:
     console.print(
         f"\nfetched [bold]{result.total_found}[/] | "
         f"new [bold green]{result.total_new}[/] | "
-        f"refreshed [bold]{result.total_updated}[/] | "
-        f"scored [bold]{result.scored}[/]"
+        f"changed [bold]{result.total_updated}[/] | "
+        f"closed [bold]{result.total_closed}[/] | "
+        f"stored [bold]{result.scored}[/] matching jobs"
     )
     if result.enriched:
         model = result.llm_model or "cache"
@@ -87,7 +88,6 @@ async def cmd_ingest(args: argparse.Namespace) -> int:
         enrich=not args.no_enrich,
         apply_filter=not args.no_filter,
         check_links=not args.no_link_check,
-        fresh=args.fresh,
     )
     console.print(f"[bold cyan]scraping[/] tier={args.tier or 'all'}")
     result = await pipeline.run(args.tier)
@@ -95,53 +95,6 @@ async def cmd_ingest(args: argparse.Namespace) -> int:
         console.print(f"[yellow]no connectors registered for tier {args.tier}[/]")
         return 1
     _print_result(result)
-    return 0
-
-
-async def cmd_enrich(args: argparse.Namespace) -> int:
-    """LLM pass only - useful after adding keys, with no re-fetching."""
-    from app.core.config import get_settings
-    from app.services.enrichment.extractor import LLMExtractor
-    from app.services.enrichment.provider import GeminiProvider, LLMUnavailable
-
-    settings = get_settings()
-    if not settings.llm_enabled:
-        console.print("[red]no GEMINI_API_KEYS in .env[/]")
-        return 1
-
-    with session_scope() as s:
-        repo = JobRepository(s)
-        pending = repo.pending_enrichment(limit=args.limit)
-        if not pending:
-            console.print("[green]nothing pending enrichment[/]")
-            return 0
-
-        cached = repo.cached_extractions([j.description_hash for j in pending])
-        applied = repo.apply_extractions(cached) if cached else 0
-        pending = [j for j in pending if j.description_hash not in cached]
-        console.print(f"{len(cached)} from cache, {len(pending)} need the LLM")
-
-        if pending:
-            provider = GeminiProvider()
-            extractor = LLMExtractor(provider)
-            by_hash = {j.description_hash: j for j in pending}
-            try:
-                fresh = await extractor.extract(list(by_hash.values()))
-            except LLMUnavailable as exc:
-                console.print(f"[red]LLM unavailable: {exc}[/]")
-                return 1
-            if fresh:
-                model = provider.active_model or settings.gemini_model
-                repo.store_extractions(fresh, model)
-                applied += repo.apply_extractions(fresh)
-                console.print(
-                    f"model={model} calls={provider.call_count} "
-                    f"extracted={len(fresh)}"
-                )
-            for st in provider.pool.stats():
-                console.print(f"  [dim]{st['key']}  ok={st['ok']} fail={st['fail']}[/]")
-
-        console.print(f"\n[bold green]{applied}[/] rows enriched")
     return 0
 
 
@@ -249,13 +202,6 @@ def cmd_health(_: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_purge(args: argparse.Namespace) -> int:
-    with session_scope() as s:
-        removed = JobRepository(s).purge_older_than(args.days)
-    console.print(f"purged [bold]{removed}[/] inactive rows older than {args.days}d")
-    return 0
-
-
 # ----------------------------------------------------------------------- main
 
 
@@ -290,13 +236,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--tier", type=int, choices=[1, 2, 3])
     p.add_argument("--no-enrich", action="store_true", help="skip the LLM pass")
-    p.add_argument("--fresh", action="store_true",
-                   help="after saving, delete jobs this run didn't see (the daily fresh start)")
     p.add_argument("--no-filter", action="store_true", help="keep out-of-scope rows active")
     p.add_argument("--no-link-check", action="store_true", help="skip apply-link verification")
-
-    p = sub.add_parser("enrich", help="LLM pass over pending rows, no fetching")
-    p.add_argument("--limit", type=int, default=300)
 
     p = sub.add_parser("show", help="print top matches")
     p.add_argument("--limit", type=int, default=20)
@@ -307,7 +248,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = sub.add_parser(
         "reset",
-        help="empty the job table for a fresh daily start (keeps the LLM cache)",
+        help="empty the job table completely (manual only; closed jobs are removed automatically)",
     )
     p.add_argument("--yes", action="store_true", help="required - this deletes every job row")
 
@@ -337,12 +278,20 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--retry-failed", action="store_true",
                    help="re-probe boards that failed for a transient reason (timeout, 429, 5xx)")
 
+    p = sub.add_parser(
+        "detect-careers",
+        help="read startups' own careers pages, find their hiring system, add boards with India openings",
+    )
+    p.add_argument("--source", default="yc", choices=["yc", "yc-hiring", "vc"],
+                   help="yc = YC companies hiring now + all Indian YC companies; "
+                        "vc = portfolio companies on the VC job boards")
+    p.add_argument("--apply", action="store_true", help="write companies.yaml")
+    p.add_argument("--limit", type=int, help="scan only the first N companies")
+
     p = sub.add_parser("yc", help="seed YC-backed companies that are hiring")
     p.add_argument("--apply", action="store_true")
     p.add_argument("--recent", action="store_true", help="2024-26 batches only")
 
-    p = sub.add_parser("purge", help="delete old inactive rows")
-    p.add_argument("--days", type=int, default=60)
 
     return ap
 
@@ -354,8 +303,6 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command in ("scrape", "ingest"):
         return asyncio.run(cmd_ingest(args))
-    if args.command == "enrich":
-        return asyncio.run(cmd_enrich(args))
     if args.command == "show":
         return cmd_show(args)
     if args.command == "health":
@@ -388,6 +335,11 @@ def main(argv: list[str] | None = None) -> int:
 
         asyncio.run(discover(args.platform, pages=args.pages, apply=args.apply))
         return 0
+    if args.command == "detect-careers":
+        from app.pipeline.careers_detect import detect_careers
+
+        asyncio.run(detect_careers(args.source, apply=args.apply, limit=args.limit))
+        return 0
     if args.command == "import-companies":
         from app.pipeline.import_companies import import_companies
 
@@ -400,8 +352,6 @@ def main(argv: list[str] | None = None) -> int:
 
         asyncio.run(discover_yc(apply=args.apply, recent_only=args.recent))
         return 0
-    if args.command == "purge":
-        return cmd_purge(args)
     return 1
 
 

@@ -23,6 +23,7 @@ from app.connectors.vc_consider import ConsiderBoards
 from app.connectors.vc_getro import GetroBoards
 from app.connectors.workable_search import WorkableSearch
 from app.connectors.workday import Workday
+from app.connectors.yc_jobs import YCJobs
 from app.connectors.himalayas import Himalayas
 from app.connectors.instahyre import Instahyre
 from app.connectors.hn_hiring import HNWhoIsHiring
@@ -66,6 +67,8 @@ ALL_CONNECTORS: list[type[Connector]] = [
     # Blume...): every employer is venture-funded; links go to its own ATS.
     ConsiderBoards,
     GetroBoards,
+    # Tier 1 - YC startups' own posts on ycombinator.com (many post nowhere else).
+    YCJobs,
     # Tier 1 - curated Indian tech hiring with screened employers.
     Instahyre,
     # Tier 1 - curated internship / new-grad feed across hundreds of employers.
