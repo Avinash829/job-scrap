@@ -64,6 +64,9 @@ class ATSConnector(Connector):
 
     # ------------------------------------------------------------- subclass API
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"{self.name}:{c.slug}" for c in companies_for(self.platform)} or None
+
     @abc.abstractmethod
     def board_url(self, slug: str) -> str:
         """Endpoint for one company's board."""

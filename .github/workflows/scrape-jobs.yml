@@ -117,6 +117,28 @@ jobs:
           echo "scraping tier $TIER"
           python -m app.pipeline.cli scrape --tier "$TIER" -v
 
+      # --- publish the list the frontend loads ---------------------------
+      # Vercel serves frontend/public/jobs.json from its CDN, so the site
+      # renders instantly and works while Render's free tier is asleep.
+      - name: Export job snapshot
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python -m app.pipeline.cli export --out ../frontend/public/jobs.json
+
+      - name: Commit job snapshot
+        working-directory: .
+        run: |
+          if git diff --quiet frontend/public/jobs.json; then
+            echo "snapshot unchanged"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/jobs.json
+          git commit -m "chore: publish job snapshot [skip ci] [skip render]"
+          git pull --rebase --autostash origin main
+          git push
+
       - name: Health summary
         if: always()
         env:

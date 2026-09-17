@@ -42,6 +42,9 @@ class Avature(SearchConnector):
     concurrency = 3
     rate_limit_delay = 0.4
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"avature:{c.slug}" for c in companies_for("avature")} or None
+
     async def fetch(self) -> Iterable[RawJob]:
         companies = companies_for("avature", self._tier_filter)
         # Avature search is keyword-only; location narrowing happens in the

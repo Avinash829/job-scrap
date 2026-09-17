@@ -53,6 +53,8 @@ python -m app.pipeline.cli scrape --tier 1 --no-enrich   # skip the LLM pass
 python -m app.pipeline.cli show --limit 20 --reachable
 python -m app.pipeline.cli health
 python -m app.pipeline.cli rescore                       # recompute scores after changing config.yaml, no refetch
+python -m app.pipeline.cli export                        # publish frontend/public/jobs.json (the site loads this)
+python -m pytest tests -q                                # rules, scoring and storage-lifecycle tests
 python -m app.pipeline.cli reset --yes                   # empty the job table (manual only; closed jobs are removed automatically)
 python -m app.pipeline.cli import-companies --platform workday --apply   # add employers with India openings
 # also: --platform greenhouse | lever | ashby (public dataset) and freshteam | keka | gem | recruitee | workable | rippling (Common Crawl)
@@ -178,6 +180,38 @@ themselves. The workflow re-runs both scans on the 1st of every month.
 YC startups that post only on ycombinator.com are read directly by the
 `yc_jobs` connector (1,500 hiring companies, fetched live each run).
 
+### Eligibility gates
+
+A posting you cannot apply to is worse than none: it costs attention and
+pushes a real match down the list. Beyond role, experience and region, a job
+is dropped when it
+
+* **demands a PhD or Master's** with no bachelor's path ("Software Engineering
+  PhD Intern"; "BS/MS" is fine, and so is "Bachelor's or Master's"),
+* **requires US eligibility** ("enrolled at a US university", "US citizens
+  only", "authorized to work in the United States") and isn't an India role,
+* **names eligible batches that exclude yours** ("2025 & 2026 batch only",
+  read from `profile.graduating` in config.yaml), or
+* **states that it is unpaid.**
+
+Stated pay is extracted while the description is in memory - monthly stipends
+(`₹25,000/month`), annual CTC (`12 LPA`, `₹8-12 LPA`) and dollar figures - and
+kept as a label on the card, only when it appears near a pay word so "25,000
+users" can't be mistaken for a stipend. Each gate is switchable under
+`experience:` in config.yaml, and all of them are covered by tests.
+
+### The site loads a static snapshot
+
+Every scrape writes `frontend/public/jobs.json` (~100 kB gzipped for ~1,300
+jobs) and commits it, so Vercel serves the list from its CDN: the page renders
+immediately, filters and sorts in the browser, and works while Render's free
+tier is asleep - which used to mean waiting up to a minute for the first
+visit. The API stays available and is the automatic fallback when the snapshot
+is missing (for example in `npm run dev` before the first export).
+
+Saved jobs, applied jobs and "new since your last visit" live in the
+browser's localStorage: no login, no server, nothing to pay for.
+
 ### Data lifecycle (built for the free tier)
 
 The database holds **only what the site shows**: live postings that pass every
@@ -206,6 +240,18 @@ hash, so a posting seen daily costs one Gemini call), run-health history 14
 days. On first start the new code migrates an old database automatically:
 drops the description column, deletes filtered-out rows and compacts the
 table (`VACUUM FULL`).
+
+### Tests
+
+```bash
+cd backend && python -m pytest tests -q
+```
+
+No network and no real database - SQLite in a temp dir. They cover the parts
+where a quiet mistake hides good jobs: role classification, the experience and
+eligibility gates, pay parsing, scoring order, and the storage lifecycle
+(insert / skip-unchanged / delete-when-closed / never-delete-on-a-failed-run).
+GitHub runs them on every push that touches `backend/`.
 
 ### The `[]` trap
 

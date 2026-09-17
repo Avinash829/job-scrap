@@ -44,6 +44,9 @@ class SuccessFactors(SearchConnector):
     concurrency = 3
     rate_limit_delay = 0.3
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"successfactors:{c.slug}" for c in companies_for("successfactors")} or None
+
     async def fetch(self) -> Iterable[RawJob]:
         companies = companies_for("successfactors", self._tier_filter)
         return await self.fetch_per_company(companies, self.search_site, lambda c: f"successfactors:{c.slug}")

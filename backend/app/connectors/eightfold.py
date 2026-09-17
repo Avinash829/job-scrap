@@ -30,6 +30,9 @@ class Eightfold(Connector):
     def __init__(self, tier: int | None = None) -> None:
         self._tier_filter = tier
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"eightfold:{c.slug}" for c in companies_for("eightfold")} or None
+
     async def fetch(self) -> Iterable[RawJob]:
         out: list[RawJob] = []
         self.covered_scopes = set()

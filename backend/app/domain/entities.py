@@ -249,6 +249,7 @@ class ConnectorRun(BaseModel):
     # which scopes this run fully checked, and whether one check is enough
     # to call an unseen job closed (see Connector.full_listing)
     covered_scopes: list[str] = Field(default_factory=list)
+    known_scopes: list[str] | None = None
     full_listing: bool = True
 
     @property

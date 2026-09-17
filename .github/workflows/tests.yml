@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - ".github/workflows/tests.yml"
+  pull_request:
+    paths:
+      - "backend/**"
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - run: pip install -r requirements.txt pytest
+      # No network and no real database: the suite runs against SQLite in a
+      # temp dir, so a failure here is a real regression in the rules,
+      # scoring or storage lifecycle.
+      - run: python -m pytest tests -q

@@ -28,7 +28,15 @@ CONFIG = {
     "location": _PROFILE.location,
     "employment": _PROFILE.employment,
     "freshness": _PROFILE.freshness,
+    "profile": _PROFILE.profile,
 }
+
+# Aggregators and staffing agencies, by normalized name (see config.yaml).
+_EXCLUDED_COMPANIES = frozenset(
+    normalized for normalized in (
+        re.sub(r"[^a-z0-9 ]", " ", str(c).lower()).strip() for c in _PROFILE.exclude_companies
+    ) if normalized
+)
 
 # ----------------------------------------------------------------- experience
 
@@ -54,9 +62,61 @@ _NEW_GRAD = re.compile(
 _INTERN = re.compile(
     r"\b(intern|internship|co-?op|summer\s+20\d\d|trainee|apprentice)\b", re.I
 )
-_GRAD_YEAR = re.compile(
-    r"\b(?:class\s+of|graduating\s+(?:in\s+)?(?:by\s+)?)\s*(20\d\d)\b", re.I
+# Graduation-year phrasings, including the Indian "2027 batch" form. All
+# matches are collected: "2026/2027 batch" and "class of 2026 or 2027" mean
+# both years are eligible.
+_GRAD_YEARS = re.compile(
+    r"(?:\b(?:class\s+of|graduat(?:ing|e|ion)(?:\s+(?:in|by|year))?|passing\s+out(?:\s+in)?|"
+    r"batch\s+of)\s*[:\s]*((?:20\d\d)(?:\s*(?:,|/|-|–|or|and|to)\s*20\d\d)*)"
+    r"|\b((?:20\d\d)(?:\s*(?:,|/|-|–|or|and|to)\s*20\d\d)*)\s*(?:batch|passouts?|pass\s*outs?|graduates?)\b)",
+    re.I,
 )
+_YEAR = re.compile(r"20\d\d")
+
+# A PhD or Master's stated as the requirement, with no bachelor's alternative,
+# is not applicable to a B.Tech student. Google lists "Software Engineering
+# PhD Intern" - an internship in name only.
+_ADVANCED_DEGREE = re.compile(
+    r"\b(ph\.?\s?d|doctoral|doctorate|post[\s-]?doc\w*)\b"
+    r"|\b(?:m\.?s\.?|m\.?tech|m\.?e\.?|master(?:'?s)?)\s+(?:degree\s+)?"
+    r"(?:is\s+)?(?:required|mandatory|must|only)\b"
+    r"|\b(?:currently\s+)?(?:pursuing|enrolled\s+in)\s+(?:an?\s+)?"
+    r"(?:m\.?s\.?|m\.?tech|master(?:'?s)?|ph\.?\s?d|doctoral)\b",
+    re.I,
+)
+# ... unless a bachelor's degree is explicitly acceptable ("BS/MS", "Bachelor's
+# or Master's", "B.Tech/M.Tech"), which most enterprise postings say.
+_BACHELOR_OK = re.compile(
+    r"\b(bachelor(?:'?s)?|b\.?\s?tech|b\.?\s?e\.?\b|b\.?\s?s\.?c?\b|bs\b|undergraduate|"
+    r"under[\s-]?grad|final[\s-]?year|pre[\s-]?final)\b",
+    re.I,
+)
+
+# Eligibility fenced to the US: a campus programme for US-enrolled students,
+# or a role that requires US work authorization outright.
+_US_ONLY_ELIGIBILITY = re.compile(
+    r"(enrolled\s+(?:in|at)\s+(?:an?\s+)?(?:accredited\s+)?(?:us|u\.s\.|american)\s+"
+    r"(?:university|college|institution)"
+    r"|(?:us|u\.s\.)\s+citizen(?:ship)?\s*(?:is\s*)?(?:required|only)"
+    r"|must\s+be\s+(?:a\s+)?(?:us|u\.s\.)\s+citizen"
+    r"|(?:authorized|authorised|eligible)\s+to\s+work\s+in\s+the\s+(?:us|u\.s\.|united\s+states)"
+    r"\s*(?:without\s+sponsorship)?"
+    r"|work\s+authorization\s+in\s+the\s+(?:us|united\s+states))",
+    re.I,
+)
+
+# Pay. Indian postings state a monthly stipend ("₹25,000/month", "Rs 20000 per
+# month") or an annual CTC in lakhs ("12 LPA", "₹12,00,000 per annum"); global
+# ones state a monthly or annual figure in dollars.
+_MONEY = r"(?:₹|rs\.?|inr|usd|\$)\s*([\d][\d,.]{2,12})"
+_PAY_MONTHLY = re.compile(_MONEY + r"\s*(?:-|–|to)?\s*(?:(?:₹|rs\.?|inr|usd|\$)?\s*([\d][\d,.]{2,12}))?"
+                          r"\s*(?:/|per\s+|a\s+)?\s*(?:month|mo\b|pm\b|monthly)", re.I)
+_PAY_LPA = re.compile(r"([\d]{1,3}(?:\.\d{1,2})?)\s*(?:-|–|to)?\s*([\d]{1,3}(?:\.\d{1,2})?)?\s*"
+                      r"(?:lpa|lakhs?\s*(?:per\s+annum|p\.?a\.?)?|l\.?p\.?a)", re.I)
+_PAY_ANNUAL = re.compile(_MONEY + r"\s*(?:-|–|to)?\s*(?:(?:₹|rs\.?|inr|usd|\$)?\s*([\d][\d,.]{2,12}))?"
+                         r"\s*(?:/|per\s+|a\s+)?\s*(?:year|annum|yr\b|pa\b|annually)", re.I)
+_STIPEND_NEAR = re.compile(r"stipend|salary|compensation|ctc|pay\b", re.I)
+_UNPAID = re.compile(r"\b(unpaid|no\s+stipend|without\s+stipend|stipend\s*[:\-]?\s*(?:none|nil|0|unpaid))\b", re.I)
 
 _SENIORITY_PATTERNS = [
     re.compile(p, re.I) for p in CONFIG["experience"]["exclude_title_patterns"]
@@ -134,9 +194,85 @@ def extract_yoe(
     return None, None, ExtractionSource.NONE
 
 
-def extract_grad_year(text: str) -> int | None:
-    m = _GRAD_YEAR.search(text)
-    return int(m.group(1)) if m else None
+def extract_grad_years(text: str) -> list[int]:
+    """Every graduation year the posting names, e.g. [2026, 2027].
+
+    Plausibility bound: a posting can only mean years near the present, and
+    stray years ("founded 2012", "2020 batch of funding") must not become an
+    eligibility rule.
+    """
+    now = datetime.now(timezone.utc).year
+    years: list[int] = []
+    for m in _GRAD_YEARS.finditer(text or ""):
+        for raw in _YEAR.findall(m.group(1) or m.group(2) or ""):
+            year = int(raw)
+            if now - 1 <= year <= now + 6 and year not in years:
+                years.append(year)
+    return years
+
+
+def needs_advanced_degree(title: str, description: str | None) -> bool:
+    """PhD/Master's demanded with no bachelor's path - not applicable to a B.Tech."""
+    if _ADVANCED_DEGREE.search(title):
+        return True
+    text = description or ""
+    if not text:
+        return False
+    for m in _ADVANCED_DEGREE.finditer(text):
+        window = text[max(0, m.start() - 160) : m.end() + 160]
+        if not _BACHELOR_OK.search(window):
+            return True
+    return False
+
+
+def requires_us_eligibility(text: str) -> bool:
+    return bool(_US_ONLY_ELIGIBILITY.search(text or ""))
+
+
+def _to_number(raw: str) -> int | None:
+    """"25,000" -> 25000, "12,00,000" -> 1200000, "8.5" -> 8 (lakh handled by caller)."""
+    cleaned = raw.replace(",", "").rstrip(".")
+    try:
+        return int(float(cleaned))
+    except ValueError:
+        return None
+
+
+def extract_pay(text: str | None) -> tuple[int | None, int | None, str | None, str | None]:
+    """Return (min, max, currency, human label) for a stated stipend or salary.
+
+    Only read near a pay word, so "25,000 users" or "raised $5M" can't be
+    mistaken for compensation. Monthly and annual figures are both kept as
+    stated; the label is what the card shows.
+    """
+    if not text:
+        return None, None, None, None
+    for pattern, period in ((_PAY_MONTHLY, "month"), (_PAY_LPA, "lpa"), (_PAY_ANNUAL, "year")):
+        for m in pattern.finditer(text):
+            window = text[max(0, m.start() - 120) : m.end() + 40]
+            if not _STIPEND_NEAR.search(window):
+                continue
+            lo_raw, hi_raw = m.group(1), m.group(2)
+            if period == "lpa":
+                lo = _to_number(lo_raw)
+                hi = _to_number(hi_raw) if hi_raw else None
+                if lo is None or not (1 <= lo <= 200):
+                    continue
+                label = f"₹{lo_raw}{'-' + hi_raw if hi_raw else ''} LPA"
+                return lo * 100000, (hi * 100000 if hi else None), "INR", label
+            lo, hi = _to_number(lo_raw), (_to_number(hi_raw) if hi_raw else None)
+            if lo is None or lo < 1000:
+                continue
+            dollars = bool(re.search(r"(usd|\$)", m.group(0), re.I))
+            unit = "$" if dollars else "₹"
+            per = "month" if period == "month" else "year"
+            label = f"{unit}{lo_raw}{'-' + hi_raw if hi_raw else ''}/{per}"
+            return lo, hi, ("USD" if dollars else "INR"), label
+    return None, None, None, None
+
+
+def is_unpaid(text: str | None) -> bool:
+    return bool(_UNPAID.search(text or ""))
 
 
 # ---------------------------------------------------------------------- roles
@@ -511,6 +647,20 @@ def normalize(raw: RawJob) -> Job:
         regions == [HiringRegion.UNKNOWN] or min_yoe is None or work_auth is None
     )
 
+    grad_years = extract_grad_years(text)
+    pay_min, pay_max, pay_currency, pay_label = extract_pay(raw.description)
+    payload = dict(raw.raw_payload or {})
+    if pay_label:
+        payload["pay"] = pay_label
+    if grad_years:
+        payload["grad_years"] = grad_years
+    if needs_advanced_degree(raw.title, raw.description):
+        payload["advanced_degree"] = True
+    if requires_us_eligibility(text):
+        payload["us_eligibility"] = True
+    if is_unpaid(raw.description):
+        payload["unpaid"] = True
+
     return Job(
         source=raw.source,
         source_job_id=raw.source_job_id,
@@ -536,7 +686,7 @@ def normalize(raw: RawJob) -> Job:
             or _INTERN.search(raw.title)
             or _NEW_GRAD.search(raw.description or "")
         ),
-        grad_year=extract_grad_year(text),
+        grad_year=(grad_years[0] if grad_years else None),
         yoe_source=yoe_src,
         is_remote=detect_remote(raw.title, raw.location_raw, raw.tags),
         hiring_regions=regions,
@@ -544,11 +694,14 @@ def normalize(raw: RawJob) -> Job:
         visa_sponsorship=sponsors,
         region_source=region_src,
         region_confidence=region_conf,
+        salary_min=pay_min,
+        salary_max=pay_max,
+        salary_currency=pay_currency,
         posted_at=raw.posted_at,
         first_seen_at=datetime.now(timezone.utc),
         last_seen_at=datetime.now(timezone.utc),
         needs_enrichment=needs_llm,
-        raw_payload=raw.raw_payload,
+        raw_payload=payload,
     )
 
 
@@ -597,6 +750,30 @@ def passes_filters(job: Job) -> tuple[bool, str]:
 
     if job.role_category is RoleCategory.OTHER:
         return False, "role not in scope"
+
+    # --- eligibility -------------------------------------------------------
+    # A posting you cannot apply to is worse than no posting: it costs
+    # attention and hides something real further down the list.
+    if job.company_normalized in _EXCLUDED_COMPANIES:
+        return False, "aggregator / staffing agency"
+
+    payload = job.raw_payload or {}
+    if exp.get("exclude_advanced_degree", True) and payload.get("advanced_degree"):
+        return False, "requires PhD / Master's"
+    if exp.get("exclude_us_eligibility", True) and payload.get("us_eligibility") \
+            and HiringRegion.INDIA not in job.hiring_regions:
+        return False, "requires US work eligibility"
+    if exp.get("exclude_unpaid", True) and payload.get("unpaid"):
+        return False, "unpaid"
+
+    years = payload.get("grad_years") or []
+    graduating = CONFIG["profile"].get("graduating")
+    my_year = int(str(graduating)[:4]) if graduating else None
+    # A posting that names eligible batches and doesn't name yours is closed
+    # to you ("2025 & 2026 batch only"). Naming your year is fine, and naming
+    # none - the common case - says nothing either way.
+    if my_year and years and my_year not in years:
+        return False, f"class of {'/'.join(str(y) for y in years[:2])} only"
 
     # --- freshness ---------------------------------------------------------
     fresh = CONFIG["freshness"]

@@ -37,6 +37,9 @@ class OracleHCM(SearchConnector):
     tier = 1
     concurrency = 4
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"oracle:{c.slug}" for c in companies_for("oracle")} or None
+
     async def fetch(self) -> Iterable[RawJob]:
         companies = companies_for("oracle", self._tier_filter)
         return await self.fetch_per_company(companies, self.search_site, lambda c: f"oracle:{c.slug}")

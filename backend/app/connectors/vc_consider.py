@@ -51,6 +51,9 @@ class ConsiderBoards(Connector):
     def __init__(self, tier: int | None = None) -> None:
         self._tier_filter = tier
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"vc_consider:{b.slug}" for b in companies_for("consider")} or None
+
     async def fetch(self) -> Iterable[RawJob]:
         unique: dict[str, RawJob] = {}
         self.covered_scopes = set()

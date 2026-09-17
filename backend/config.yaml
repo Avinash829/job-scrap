@@ -51,6 +51,11 @@ freshness:
 
 # --- Experience gate -------------------------------------------------------
 experience:
+  # Eligibility gates. A posting you cannot apply to is worse than none: it
+  # costs attention and pushes a real match further down the list.
+  exclude_advanced_degree: true   # PhD / Master's demanded, no bachelor's path
+  exclude_us_eligibility: true    # "must be enrolled at a US university", "US citizens only"
+  exclude_unpaid: true            # explicitly unpaid internships
   max_min_yoe: 0
   include_unknown_yoe: true
   exclude_title_patterns:
@@ -223,6 +228,27 @@ stack:
   # because many postings list no detectable stack at all - but scoring
   # already rewards overlap heavily.
   require_match: false
+
+# --- Companies to never show -----------------------------------------------
+# Job aggregators and staffing agencies that republish other companies' roles.
+# Their listings are second-hand: the apply link is a middleman, the role may
+# already be filled, and the same job usually appears again from the employer.
+# Matched on the normalized name, so this holds even when such a company turns
+# up on a VC portfolio board or gets re-added by a coverage import.
+exclude_companies:
+  - jobgether
+  - randstad
+  - adecco
+  - manpower
+  - teamlease
+  - quess corp
+  - randstad digital
+  - collabera
+  - hays
+  - michael page
+  - robert half
+  - talentpro
+  - staffing
 
 # --- Well-known employers --------------------------------------------------
 # MNCs and well-funded companies get the full "company" score component.

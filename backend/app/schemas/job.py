@@ -49,6 +49,8 @@ class JobSummary(BaseModel):
     match_reasons: list[str] = Field(default_factory=list)
     yc_batch: str | None = None
     team_size: int | None = None
+    # stated stipend or salary, as written ("₹25,000/month", "₹12-15 LPA")
+    pay: str | None = None
     posted_at: datetime | None
     first_seen_at: datetime
     age_days: int | None = None
@@ -82,6 +84,7 @@ class JobSummary(BaseModel):
             match_reasons=job.match_reasons,
             yc_batch=(job.raw_payload or {}).get("yc_batch") or None,
             team_size=(job.raw_payload or {}).get("team_size"),
+            pay=(job.raw_payload or {}).get("pay") or None,
             posted_at=job.posted_at,
             first_seen_at=job.first_seen_at,
             age_days=job.age_days,

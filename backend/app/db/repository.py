@@ -140,7 +140,7 @@ def job_to_values(job: Job) -> dict:
 
 # The only raw_payload keys read after storage: the scorer's company signals
 # and the card's YC badge. Everything else a connector attached is dropped.
-_PAYLOAD_KEEP = frozenset({"yc_batch", "team_size", "vc", "funding_stage"})
+_PAYLOAD_KEEP = frozenset({"yc_batch", "team_size", "vc", "funding_stage", "pay"})
 
 # Values that change without the job changing - excluded from the fingerprint
 # so an unchanged job is never rewritten.
@@ -163,7 +163,12 @@ class JobRepository:
     # ------------------------------------------------------------------ writes
 
     def sync_source(
-        self, source: str, jobs: list[Job], covered_scopes: set[str], full_listing: bool
+        self,
+        source: str,
+        jobs: list[Job],
+        covered_scopes: set[str],
+        full_listing: bool,
+        known_scopes: set[str] | None = None,
     ) -> tuple[int, int, int]:
         """Make one source's stored jobs match this run. Returns (new, updated, deleted).
 
@@ -176,7 +181,10 @@ class JobRepository:
                                         search-style sources on the second,
                                         because a search can omit a live job once.
         Rows stored before scopes existed (empty scope) are judged whenever the
-        source checked anything.
+        source checked anything. Rows whose board is no longer in
+        companies.yaml (`known_scopes`) are deleted immediately: nothing will
+        ever check them again, so they would otherwise stay forever - which is
+        how a removed aggregator board kept showing jobs.
         """
         now = datetime.now(timezone.utc)
         wanted: dict[str, dict] = {}
@@ -207,10 +215,19 @@ class JobRepository:
 
         delete_ids: list[int] = []
         miss_ids: list[int] = []
+        retired = set()
+        if known_scopes:
+            retired = {
+                row.id for sid, row in existing.items()
+                if sid not in wanted and row.scope and row.scope not in known_scopes
+            }
+            delete_ids.extend(retired)
         if covered_scopes:
             threshold = 1 if full_listing else 2
             for sid, row in existing.items():
-                if sid in wanted or (row.scope and row.scope not in covered_scopes):
+                if sid in wanted or row.id in retired:
+                    continue
+                if row.scope and row.scope not in covered_scopes:
                     continue
                 if row.missed_runs + 1 >= threshold:
                     delete_ids.append(row.id)

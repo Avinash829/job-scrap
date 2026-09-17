@@ -157,6 +157,10 @@ class SearchProfile:
         return self._data.get("profile", {})
 
     @property
+    def exclude_companies(self) -> list[str]:
+        return [str(c) for c in (self._data.get("exclude_companies") or [])]
+
+    @property
     def notable_companies(self) -> list[str]:
         return [str(c) for c in (self._data.get("notable_companies") or [])]
 

@@ -60,7 +60,11 @@ async def _sync_with_retry(record: ConnectorRun, jobs: list[Job]) -> tuple[int, 
             with session_scope() as s:
                 repo = JobRepository(s)
                 new, updated, deleted = repo.sync_source(
-                    record.connector, jobs, set(record.covered_scopes), record.full_listing
+                    record.connector,
+                    jobs,
+                    set(record.covered_scopes),
+                    record.full_listing,
+                    set(record.known_scopes) if record.known_scopes else None,
                 )
                 record.jobs_kept = len(jobs)
                 record.jobs_new = new

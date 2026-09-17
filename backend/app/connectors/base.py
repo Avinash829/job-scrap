@@ -79,8 +79,18 @@ class Connector(abc.ABC):
     # means "the whole source, if the run succeeded". Per-company connectors
     # set it so a timeout at one company never deletes that company's jobs.
     covered_scopes: set[str] | None = None
+
     _cookie_session = None
     _cookie_lock = threading.Lock()
+
+    def known_scopes(self) -> set[str] | None:
+        """Every scope this source could fetch, across all tiers.
+
+        Stored jobs whose scope is not in here belong to a board that was
+        removed from companies.yaml; nothing will ever check them again, so
+        they are deleted rather than left to rot. None = not company-based.
+        """
+        return None
 
     # One pooled client per connector, created lazily and reused for every
     # request. An earlier version opened a fresh AsyncClient per call, which
@@ -236,6 +246,8 @@ class Connector(abc.ABC):
         elif not rec.ok and rec.error and not rec.error.startswith("returned zero jobs"):
             covered = set()  # fetch() raised: trust nothing it half-collected
         rec.covered_scopes = sorted(covered)
+        known = self.known_scopes()
+        rec.known_scopes = sorted(known) if known else None
         rec.full_listing = self.full_listing
         return jobs, rec
 

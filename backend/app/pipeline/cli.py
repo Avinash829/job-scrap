@@ -252,7 +252,13 @@ def build_parser() -> argparse.ArgumentParser:
     )
     p.add_argument("--yes", action="store_true", help="required - this deletes every job row")
 
-    sub.add_parser(
+    p = sub.add_parser(
+        "export",
+        help="write the job list as a static JSON file for the frontend to load directly",
+    )
+    p.add_argument("--out", default="../frontend/public/jobs.json")
+
+    p = sub.add_parser(
         "rescore",
         help="recompute match scores and reasons for active jobs, no fetching",
     )
@@ -316,6 +322,15 @@ def main(argv: list[str] | None = None) -> int:
         console.print(
             f"reset: deleted [bold]{out['jobs_deleted']}[/] jobs · "
             f"pruned {out['cache_pruned']} stale cache entries · {out['runs_pruned']} old run logs"
+        )
+        return 0
+    if args.command == "export":
+        from app.pipeline.export import export_snapshot
+
+        out = export_snapshot(args.out)
+        console.print(
+            f"wrote [bold]{out['jobs']}[/] jobs ([bold]{out['internships']}[/] internships) "
+            f"to {out['path']} · {out['kb']} kB"
         )
         return 0
     if args.command == "rescore":

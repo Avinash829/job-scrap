@@ -57,6 +57,9 @@ class Workday(SearchConnector):
             companies, self.search_company, lambda c: f"workday:{c.slug}:{c.get('site')}"
         )
 
+    def known_scopes(self) -> set[str] | None:
+        return {f"workday:{c.slug}:{c.get('site')}" for c in companies_for("workday")} or None
+
     async def search(self, term: str, location: str) -> list[RawJob]:  # pragma: no cover
         raise NotImplementedError("Workday searches per company; see fetch()")
 
