@@ -2310,6 +2310,32 @@ greenhouse:
     name: InfoSum
     note: vc careers page · India 1, intern 0
     website: vc-board:infosum
+  - slug: patronusaiinc
+    tier: 2
+    name: Patronus AI
+    note: vc careers page · India 1, intern 0
+    website: https://patronus.ai
+  - slug: narvar
+    tier: 2
+    name: Narvar
+    note: vc careers page · India 1, intern 0
+    website: https://narvar.com
+  - slug: transmitsecurity
+    tier: 2
+    name: Transmit Security
+    note: vc careers page · India 1, intern 0
+    website: vc-board:transmit security
+  - slug: appdirect
+    tier: 2
+    name: AppDirect
+    note: vc careers page · India 1, intern 0
+    website: vc-board:appdirect
+  - slug: newton
+    tier: 2
+    note: 2 jobs
+  - slug: limrun
+    tier: 2
+    note: 4 jobs
   candidates:
   - 67streetdental
   - adjacentservices
@@ -2322,16 +2348,2282 @@ greenhouse:
   - digit
   - apollo
   - bloom
-  - bolster
   - gather
   - helium
   - latent
   - magic
-  - newton
   - picnicai
   - pulley
   - shepherd
   - spade
+  rejected:
+  - 10x
+  - 10x-science
+  - 10xdental
+  - 10xscience
+  - 1stcollab
+  - '222'
+  - 83-sciences
+  - 83sciences
+  - 9-mothers-corporation
+  - 99minutos
+  - 9mothers
+  - a0
+  - a0-dev
+  - a0dev
+  - abacum
+  - abundant
+  - accend
+  - accord
+  - acely
+  - activeloop
+  - adam
+  - adaptional
+  - adaptyv
+  - adaptyvbio
+  - adentris
+  - adialante
+  - adyn
+  - aemon
+  - afriex
+  - afriexapp
+  - afterquery
+  - agap
+  - agape
+  - agave
+  - agentmail
+  - agentphone
+  - agilemd
+  - aglide
+  - ai-coach
+  - aios
+  - aiosmedical
+  - aiprise
+  - aircaps
+  - airgoods
+  - airhart-aeronautics
+  - airhartaero
+  - airhartaeronautics
+  - airmyne
+  - airweave
+  - aivideo
+  - aivideo-com
+  - aivideocom
+  - aktoria
+  - aktoria-robotics
+  - aktoriarobotics
+  - akute-health
+  - akutehealth
+  - alaan
+  - alder
+  - alemhealth
+  - aleph
+  - alex
+  - alex-com
+  - alexcodes
+  - algotest
+  - algouniversity
+  - alguna
+  - alinea
+  - alinea-invest
+  - alkali
+  - allia
+  - allia-health
+  - alliahealth
+  - allus
+  - allus-ai
+  - allusai
+  - almond
+  - almond-2
+  - alpha-vantage
+  - alphavantage
+  - ambient
+  - ambient-ai
+  - ambientai
+  - amboras
+  - ambral
+  - anara
+  - andco
+  - andromeda-surgical
+  - andromedasurgical
+  - andson-biotech
+  - andsonbiotech
+  - andy-ai
+  - andyai
+  - anglera
+  - anima
+  - animahealth
+  - ankr
+  - ankr-health
+  - ankrhealth
+  - answerthis
+  - anthrogen
+  - antigen
+  - apero-health
+  - aperohealth
+  - apolink
+  - apollo-3
+  - apollo-io
+  - apollofirst
+  - apollographql
+  - apprentice-health
+  - apprenticehealth
+  - aptdeco
+  - apten
+  - aqua
+  - aquashield
+  - aquashieldai
+  - aragorn
+  - aragorn-ai
+  - aragornai
+  - aravolta
+  - archform
+  - archilabs
+  - archon
+  - ardent
+  - arini
+  - arketa
+  - arlo-industries
+  - arlo1
+  - arloindustries
+  - arnata
+  - arpari
+  - arq
+  - arqfinance
+  - artie
+  - artifact
+  - artifact-2
+  - artisan
+  - artos
+  - artosai
+  - arva
+  - arva-ai
+  - arvaai
+  - arzana
+  - asendia
+  - asendia-ai
+  - asendiaai
+  - aseon-labs
+  - aseonlabs
+  - asha
+  - asha-health
+  - ashahealth
+  - ashby
+  - ashbyhq
+  - aside
+  - asim
+  - asimov
+  - askclara
+  - askkyber
+  - askonestop
+  - aspect
+  - aspect-inc
+  - aspire
+  - aspireapp
+  - assembly
+  - assembly-com
+  - assembly-hoa
+  - assemblyhoa
+  - astraea
+  - astro-mechanica
+  - astroforge
+  - astromecha
+  - astromechanica
+  - athelas
+  - athenahq
+  - atlas
+  - atlas-3
+  - atlascard
+  - atlog
+  - atob
+  - atomic
+  - atomic-industries
+  - atomicindustries
+  - atomicvest
+  - atopile
+  - attack
+  - attack-capital
+  - attackcapital
+  - attimet
+  - attune
+  - attunehq
+  - auctor
+  - aurelian
+  - aurorin-cad
+  - aurorincad
+  - authzed
+  - automat
+  - autonomous-technologies-group
+  - autonomoustechnologiesgroup
+  - autositu
+  - autostep
+  - autumn
+  - avallon
+  - avallon-ai
+  - avallonai
+  - avent
+  - aventindustrial
+  - aviaryai
+  - aviator
+  - avoca
+  - avora
+  - axel-travel
+  - axeltravel
+  - axle-health
+  - axlehealth
+  - axross
+  - axross-pte-ltd
+  - axrosspteltd
+  - azalea-robotics-corporation
+  - azalearobotics
+  - azalearoboticscorporation
+  - b12-labs
+  - b12labs
+  - balance
+  - banner
+  - baraka
+  - be-go
+  - beacons
+  - becomeautonomous
+  - beglaubigt
+  - beglaubigtde
+  - bego
+  - belozfi
+  - belvo
+  - bemlo
+  - benepass
+  - berry
+  - berryai
+  - besimple
+  - besimple-ai
+  - besimpleai
+  - betterbasket
+  - betterhalf
+  - beyond-reach-labs
+  - beyondreachlabs
+  - bik
+  - bild
+  - bild-ai
+  - bildai
+  - binks
+  - biodock
+  - biorender
+  - biostack-platforms
+  - biostackplatforms
+  - blacksmith
+  - bland
+  - bland-ai
+  - blandai
+  - blaze
+  - blaze-2
+  - blee
+  - blink
+  - blink-new
+  - blissway
+  - bloom-4
+  - bloom-institute-of-technology
+  - bloominstituteoftechnology
+  - bloomtech
+  - bloomy
+  - bloomylearning
+  - blue-onion
+  - bluecargo
+  - bluehill-payments
+  - bluehillpayments
+  - bluejay
+  - bluelight
+  - blueonion
+  - boldvoice
+  - bolna
+  - bolna-ai
+  - bolnaai
+  - bolster
+  - bolsterbuilt
+  - bond
+  - bondapp
+  - book
+  - booko
+  - bookoapp
+  - bootloop
+  - borong
+  - bot-md
+  - botbuilt
+  - botmd
+  - boundary
+  - boundaryml
+  - bountiful
+  - brainbase-labs
+  - brainbaselabs
+  - branch8
+  - bree
+  - bretton
+  - bretton-ai
+  - brettonai
+  - brickanta
+  - brickwise
+  - brickwiseai
+  - brighterway
+  - broccoli
+  - broccoli-ai
+  - broccoliai
+  - browser-use
+  - browseruse
+  - brumby
+  - brumbyformerlygrazemate
+  - bucket
+  - bucket-robotics
+  - bucketrobotics
+  - buildbuddy
+  - buildtrayd
+  - buildwithstar
+  - bunkerhill-health
+  - bunkerhillhealth
+  - bunting-labs
+  - buntinglabs
+  - buoyant
+  - buoyant-aero
+  - buoyantaero
+  - businessonbot
+  - bymason
+  - cair-health
+  - cairhealth
+  - callab
+  - callab-ai
+  - callabai
+  - calltree
+  - camber
+  - camber-2
+  - cambio
+  - cambio-2
+  - cambly
+  - campfire
+  - campfire-2
+  - canary-technologies
+  - canarytechnologies
+  - candid-health
+  - candidhealth
+  - candle
+  - candor
+  - candor-security
+  - canix
+  - capi-money
+  - capimoney
+  - capitol
+  - capitol-ai
+  - capitolai
+  - capix
+  - captivateiq
+  - capy
+  - cardboard
+  - cardinal
+  - cardinal-gray
+  - cardinalgray
+  - careforce
+  - careswift
+  - cargo
+  - carma
+  - cartage
+  - casca
+  - cascade-space
+  - cascadespace
+  - cascading
+  - casco
+  - cashfree
+  - cashfree-payments
+  - cashfreepayments
+  - castle
+  - castle-2
+  - catchback-cards
+  - catchbackcards
+  - cedana
+  - cekura
+  - cekura-ai
+  - celltype
+  - centralize
+  - cerrion
+  - cerulion
+  - channel3
+  - characterquilt
+  - charge-robotics
+  - chargerobotics
+  - chariot
+  - chariot-2
+  - chasi
+  - chestnut
+  - chestnutmortgage
+  - chima
+  - cinder
+  - cinder-2
+  - circle-medical
+  - circleback
+  - circlemedical
+  - circuithub
+  - ciro
+  - cityfurnish
+  - clad
+  - claim-health
+  - claimhealth
+  - claimsorted
+  - clara-2
+  - clarion
+  - clarionhealth
+  - classdojo
+  - clearest-health
+  - clearesthealth
+  - clearly-ai
+  - clearlyai
+  - clickpe
+  - clicks-health
+  - clickshealth
+  - clinikally
+  - clipboard
+  - clipboardworks
+  - closure
+  - closure-intel
+  - cloudcruise
+  - cloudglue
+  - cmux
+  - coach
+  - coba
+  - code-four
+  - codeant
+  - codeant-ai
+  - codeantai
+  - codefour
+  - coderhouse
+  - codes-health
+  - codeshealth
+  - codingal
+  - cofactr
+  - cogram
+  - coinrule
+  - cointracker
+  - collectly
+  - collectpure
+  - collectwise
+  - coloop
+  - comena
+  - community-phone-company
+  - communityphone
+  - communityphonecompany
+  - complete
+  - complir
+  - complydo
+  - compose
+  - compose-ai
+  - composeai
+  - concourse
+  - conductor
+  - conductor-quantum
+  - conductorquantum
+  - conduit
+  - conduit-ai
+  - confident-ai
+  - confidentai
+  - confido
+  - confidotech
+  - consus
+  - conta-simples
+  - contasimples
+  - contrario
+  - conus
+  - conus-med
+  - conveo
+  - converge
+  - conviction
+  - convictiontrade
+  - coperniq
+  - copperlane
+  - copycat-ai
+  - copycatai
+  - corgea
+  - corgi
+  - corgi-insurance
+  - corgiinsurance
+  - coris
+  - cosine
+  - cotera
+  - coulomb
+  - coulomb-ai
+  - coulombai
+  - coval
+  - covera
+  - covera-agents
+  - coverage-cat
+  - coveragecat
+  - cozmo-ai
+  - cozmoai
+  - cpgscout
+  - craftwork
+  - craniometrix
+  - creativemode
+  - credal
+  - credal-ai
+  - credalai
+  - crew
+  - crustdata
+  - ctgt
+  - cua
+  - cubic
+  - culdesac
+  - cumulus-labs
+  - cumuluslabs
+  - curacel
+  - curri
+  - cyble
+  - cytera-cellworks
+  - d-id
+  - dabba
+  - daft
+  - dalus
+  - darsel
+  - dart
+  - dartai
+  - darwin
+  - darwinrobotics
+  - data-driven-bioscience
+  - datadrivenbioscience
+  - datafold
+  - dataland
+  - dataleap
+  - datrics
+  - david-ai
+  - davidai
+  - decoda-health
+  - decodahealth
+  - dedalus-labs
+  - dedaluslabs
+  - deel
+  - deep24
+  - deepawareairoboticscenterofsiliconvalley
+  - deepgram
+  - deepgrove
+  - deepnight
+  - deepnote
+  - deepreach
+  - deepreach-inc
+  - deepreachinc
+  - deeptrace
+  - delfino
+  - delfino-ai
+  - delfinoai
+  - dench
+  - dench-com
+  - denchcom
+  - denta
+  - deployparagon
+  - did
+  - diffuse
+  - diffuse-bio
+  - diffusebio
+  - digi
+  - digibuild
+  - digipals
+  - digitech
+  - dili
+  - diligencesquared
+  - diligencesquared-inc
+  - dill
+  - dime
+  - dime-2
+  - dimehealth
+  - dimely
+  - diode
+  - diode-computers-inc
+  - diodecomputersinc
+  - directshifts
+  - discovered-materials
+  - discoveredmaterials
+  - ditto
+  - dittowords
+  - docura-health
+  - docurahealth
+  - dodo
+  - domu
+  - domu-technology-inc
+  - domutechnologyinc
+  - doola
+  - doppler
+  - dots-2
+  - double
+  - doublehq
+  - dover
+  - draft-the-record
+  - drafttherecord
+  - draftwise
+  - dreamcraft
+  - dreamcraft-entertainment-inc
+  - dreamcraftentertainmentinc
+  - drillbit
+  - drip-capital
+  - dripcapital
+  - drymerge
+  - duckie
+  - duffel
+  - dynamo
+  - dynamo-ai
+  - dynamoai
+  - dyneti
+  - dyneti-technologies
+  - dynetitechnologies
+  - eden
+  - eden-2
+  - eden-robotics
+  - edenmed
+  - edenrobotics
+  - edexia
+  - edgerun
+  - educato
+  - effigov
+  - ego
+  - egoai
+  - ehl
+  - eight-sleep
+  - eightsleep
+  - ekho
+  - elayne
+  - electric-air-2
+  - electricair
+  - elevate
+  - elevate-2
+  - elevateformerlybloom
+  - elevatepay
+  - ellipsis
+  - ello
+  - eloquent-ai
+  - eloquentai
+  - elyos
+  - elyos-ai
+  - elyosai
+  - elyra
+  - elyrasystems
+  - ember
+  - embercopilot
+  - emerge-career
+  - emergecareer
+  - emergent
+  - encord
+  - enerjazz
+  - enhanced-radar
+  - enhancedradar
+  - enode
+  - entangl
+  - epinoma
+  - epsilon3
+  - epsilon3-inc
+  - ergo
+  - escape
+  - etleap
+  - eval
+  - event-horizon-labs
+  - eventhorizonlabs
+  - eventual
+  - every
+  - exonic
+  - explorex
+  - eze
+  - ezeit
+  - f2
+  - fampay
+  - farcast
+  - fathom
+  - feather
+  - feather-2
+  - featherhq
+  - fenrock
+  - fenrock-ai
+  - fenrockai
+  - fernstone
+  - fieldguide
+  - fifth-door
+  - fifthdoor
+  - finch
+  - finku
+  - finn
+  - finni-health
+  - finnihealth
+  - finny
+  - finny-ai
+  - finnyai
+  - finosu
+  - finta
+  - finto
+  - finto-de
+  - firebender
+  - firecrawl
+  - first
+  - firstbase
+  - firstbase-io
+  - firstbaseio
+  - firstdelivery
+  - firstwork
+  - flagright
+  - flai
+  - flair-labs
+  - flairlabs
+  - fleek
+  - fleetline
+  - fleetworks
+  - flexdesk
+  - flick
+  - flint
+  - flint-2
+  - flintk12
+  - flock-safety
+  - flockjay
+  - flocksafety
+  - floot
+  - flowscope
+  - flowtel
+  - flutterflow
+  - fondo
+  - forage
+  - forage-2
+  - forge
+  - forge-automation
+  - forgeautomation
+  - forgehq
+  - formance
+  - fort
+  - fortuna-health
+  - fortunahealth
+  - foundation-industries
+  - foundationindustries
+  - fractional
+  - freebuff
+  - fresco
+  - fresco-ai
+  - freshpaint
+  - freya
+  - freyavoice
+  - function-of-beauty
+  - functionofbeauty
+  - furtherai
+  - fuse-ai
+  - fuseai
+  - garage
+  - garage-2
+  - gather-2
+  - gauge
+  - gauss
+  - gecko-robotics
+  - geckorobotics
+  - gemnote
+  - general-proximity
+  - generalastro
+  - generalastronautics
+  - getagency
+  - getaleph
+  - getasap
+  - getauctor
+  - getavora
+  - getbalance
+  - getbaraka
+  - getbenepass
+  - getbinks
+  - getbiostack
+  - getbluejay
+  - getburnt
+  - getcargo
+  - getcoach
+  - getcrux
+  - getdailyagape
+  - getfinn
+  - gethomebase
+  - getjust
+  - getlago
+  - getmagic
+  - getmatter
+  - getnao
+  - getoxygen
+  - getpennant
+  - getpesto
+  - getprescience
+  - getprospa
+  - getprosper
+  - getrevamp
+  - getroe
+  - getsafepay
+  - getsocratix
+  - getsolum
+  - getsphere
+  - getstrada
+  - getstructured
+  - getthera
+  - getunbound
+  - getzep
+  - getzuma
+  - giga
+  - gimo
+  - givechariot
+  - giveffect
+  - glass
+  - glass-health
+  - glasshealth
+  - glen
+  - glimpse
+  - glimpse-2
+  - gloglo
+  - go
+  - go1
+  - goat-group
+  - goclicks
+  - godela
+  - godiligent
+  - gofinto
+  - gogograndparent
+  - gojabu
+  - gojiberry
+  - gojiberry-ai
+  - gojiberryai
+  - goldbelly
+  - golinks
+  - goodfin
+  - gooseworks
+  - goradar
+  - gosameday
+  - gosats
+  - gotlanded
+  - gotrebol
+  - govdash
+  - goveagle
+  - governgpt
+  - great-question
+  - greatquestion
+  - greenboard
+  - gridware
+  - gromo
+  - groundcontrol
+  - growthbook
+  - gru
+  - guac
+  - guardian-rf
+  - guardianrf
+  - gym-class
+  - gymclass
+  - hadrius
+  - halluminate
+  - hamming
+  - hamming-ai
+  - hammingai
+  - hammr
+  - handle
+  - handoff
+  - hapi
+  - haplotype-labs
+  - haplotypelabs
+  - happl
+  - happyrobot
+  - harper
+  - harperinsure
+  - haven-2
+  - havenservicing
+  - haystack
+  - healia
+  - healiahealth
+  - health-harbor
+  - healthharbor
+  - healthtech-1
+  - healthtech1
+  - hedge
+  - hedgespecialty
+  - helios
+  - helloaviary
+  - helloaxel
+  - helloconduit
+  - hellocozmo
+  - hellolunajoy
+  - hellometer
+  - helloverify
+  - hemut
+  - hera
+  - hera-video
+  - heron
+  - herondata
+  - hestus
+  - hestus-inc
+  - hestusinc
+  - hey-telo
+  - heycharge
+  - heylua
+  - heymalama
+  - heypocket
+  - heytelo
+  - hioperator
+  - hirenimble
+  - hireroger
+  - hitpay
+  - hitpayapp
+  - hockeystack
+  - hokali
+  - homebase
+  - homli
+  - hotplate
+  - housewarming
+  - hub
+  - hubble
+  - hud
+  - humaans
+  - human-archive
+  - human-interest
+  - humanarchive
+  - humanlayer
+  - humwork
+  - huscarl
+  - hylight
+  - hype
+  - hyperbound
+  - hyperbrowser
+  - hypercubic
+  - hyperspell
+  - hypotenuse
+  - hypotenuse-ai
+  - hypotenuseai
+  - icepanel
+  - idler
+  - ignition-benefits
+  - ignitionbenefits
+  - imagine-ai
+  - imagineai
+  - imperfect
+  - imprezia
+  - imt-care
+  - imtcare
+  - in-unison
+  - inaccord
+  - inbuild
+  - indemni
+  - inden
+  - inevent
+  - infer
+  - infinia
+  - infiniaweb
+  - infinite
+  - infinity
+  - infinityapp
+  - infisical
+  - influxdata
+  - infracost
+  - inito
+  - inkeep
+  - inlet
+  - inlet-2
+  - inletai
+  - innate
+  - inscribe
+  - inspectify
+  - instrumentl
+  - intelligence-factory
+  - intelligencefactory
+  - intelline
+  - interfaze
+  - interfere
+  - intryc
+  - invert
+  - invertbio
+  - investwithaqua
+  - invopop
+  - iomete
+  - ironclad
+  - ironcladapp
+  - ironledger
+  - ironledger-ai
+  - ironledgerai
+  - isono-health
+  - isonohealth
+  - item
+  - itsrever
+  - jabu
+  - jarmin
+  - jeevy-fabrication
+  - jeevyfabrication
+  - jetlenses
+  - jiga
+  - jinba
+  - jitx
+  - joinattain
+  - joincandidhealth
+  - joincarma
+  - joinergo
+  - joinfleek
+  - joinforage
+  - joinmarble
+  - joinnewton
+  - joinreframeapp
+  - joinspine
+  - joy
+  - juicebox
+  - julius
+  - junction
+  - juno-chat
+  - junocompanion
+  - just-appraised
+  - justai
+  - justappraised
+  - juxta
+  - juzibot
+  - kabilah
+  - kaipod-learning
+  - kaipodlearning
+  - kaizen
+  - kaizenautomation
+  - kalam-labs
+  - kalamlabs
+  - kalinda
+  - kalpa-labs
+  - kalpalabs
+  - kapa
+  - kapa-ai
+  - kapaai
+  - karat-financial
+  - karatfinancial
+  - karumi
+  - kastle
+  - kelai
+  - kelaitech
+  - keye
+  - kilvin
+  - kingdom
+  - kingdomsuperculture
+  - kino
+  - kino-ai
+  - kinoai
+  - kinro
+  - kinter
+  - kivo-health
+  - kivohealth
+  - klaimee
+  - klavis
+  - klavis-ai
+  - klavisai
+  - knowtex
+  - kobalt-labs
+  - kobaltlabs
+  - kodex
+  - kodexglobal
+  - kodo
+  - kombo
+  - kontigo
+  - korrai
+  - koyal
+  - kugelaudio
+  - kuli
+  - kyber
+  - lab0
+  - lago
+  - lamar-health
+  - lamarhealth
+  - lambda-robotics
+  - lambdarobotics
+  - laminar
+  - laminar-com
+  - lance
+  - landed
+  - landed-2
+  - landeed
+  - lanesurf
+  - langdock
+  - latenthealth
+  - laurence
+  - layers
+  - layerup
+  - laylo
+  - leadbay
+  - leaping-ai
+  - leapingai
+  - ledger-investing
+  - ledgerinvesting
+  - leena
+  - leena-ai
+  - leenaai
+  - leeroo
+  - legion-health
+  - legionhealth
+  - legora
+  - lemma
+  - lemonlime
+  - letter
+  - letter-ai
+  - letterai
+  - lfcarry
+  - lightberry
+  - lightdash
+  - lighthouz
+  - lighthouz-ai
+  - lighthouzai
+  - lightly
+  - lightsprint
+  - lim
+  - lineleap
+  - lingo
+  - lingodev
+  - lingodotdev
+  - liquid-compute
+  - liquidcompute
+  - litellm
+  - liveflow
+  - living-carbon
+  - livingcarbon
+  - lnkd
+  - locata
+  - locatahealth
+  - locke
+  - loopfour
+  - lootrush
+  - lua-global-inc
+  - luaglobalinc
+  - luca-iq
+  - lucaiq
+  - lucid
+  - lucis
+  - lugg
+  - lumari
+  - luminai
+  - luminal
+  - lumius
+  - lumius-imaging
+  - lunajoy-health
+  - lunajoyhealth
+  - luthor
+  - macadamia
+  - macadamialabs
+  - mach9
+  - madethis
+  - mage-legal
+  - magelegal
+  - magic-patterns
+  - magicpatterns
+  - magnetic
+  - magnetictax
+  - mailtime
+  - maintouch
+  - malama-health
+  - malamahealth
+  - mangodesk
+  - manicule
+  - manufact
+  - manufacturingintelligence
+  - marble
+  - margin
+  - maritime-fusion
+  - maritimefusion
+  - mashgin
+  - mason
+  - material-depot
+  - materialdepot
+  - matter
+  - maven-bio
+  - mavenbio
+  - may-mobility
+  - maywood
+  - maywoodai
+  - mbodi
+  - mbodi-ai
+  - mbodiai
+  - mdalgorithms
+  - mdalgorithms-inc
+  - mdalgorithmsinc
+  - mdhub
+  - measured
+  - medme-health
+  - medmehealth
+  - mednet
+  - medplum
+  - meetalder
+  - mem0
+  - mentra
+  - mercura
+  - merlin-ai
+  - merlinai
+  - meru-health
+  - mesh-2
+  - mesmer
+  - metal
+  - metalware
+  - method-financial
+  - methodfi
+  - methodfinancial
+  - meticulate
+  - meticulous
+  - metorial
+  - metriport
+  - middesk
+  - middleware
+  - mindfi
+  - mindfort
+  - mineflow
+  - minicor
+  - minimum
+  - mino-games
+  - minogames
+  - minomonsters
+  - mintlify
+  - miso
+  - miso-labs
+  - misolabs
+  - misprint
+  - mixrank
+  - mochacare
+  - moda
+  - moda-2
+  - model-ml
+  - modelml
+  - modern-health
+  - modern-treasury
+  - modernloop
+  - moderntreasury
+  - monumint
+  - moonset-health
+  - moonsethealth
+  - moonvalley
+  - moritz
+  - moritzlegal
+  - morph
+  - morphle-labs
+  - morphlelabs
+  - morphllm
+  - morpho
+  - morphoai
+  - mosaic
+  - mosaic-2
+  - moss
+  - motion
+  - mspilot
+  - multiplier
+  - multiply-labs
+  - multiplylabs
+  - mutiny
+  - mutinyhq
+  - muzz
+  - mytos
+  - myunowallet
+  - naive
+  - nango
+  - nanonets
+  - nao-labs
+  - naolabs
+  - narrative
+  - nash
+  - nautilus
+  - nave
+  - navier
+  - navier-ai
+  - nectar
+  - nectarclimate
+  - neodocs
+  - nessie
+  - nessielabs
+  - nest-genomics
+  - nestgenomics
+  - nestor
+  - nestorup
+  - netomi
+  - neuromorphic
+  - new-story
+  - newscatcher
+  - newscatcherapi
+  - newstory
+  - newstoryhomes
+  - nextera-robotics-didgeai
+  - nexterarobotics
+  - nexteraroboticsdidgeai
+  - nimble
+  - nine-fives
+  - ninefives
+  - nira-energy
+  - nitrode
+  - nixo
+  - no-logo
+  - nologo
+  - nomic
+  - nomic-bio
+  - nomicbio
+  - noora-health
+  - noorahealth
+  - noso
+  - noso-labs
+  - nosolabs
+  - notabene
+  - nourish
+  - nova-credit
+  - novaflow
+  - novig
+  - novoflow
+  - nowadays
+  - nox-metals
+  - noxmetals
+  - nozomio
+  - nsave
+  - numen
+  - numeral
+  - numero
+  - ocular-ai
+  - ocularai
+  - odys-aviation
+  - odysaviation
+  - offdeal
+  - offstream
+  - ohm
+  - ohm-2
+  - okteto
+  - olympian-motors
+  - olympianmotors
+  - omnistrate
+  - ondeck-ai
+  - ondeckai
+  - one-robot
+  - onechronos
+  - onefin
+  - oneleet
+  - onelocal
+  - onerobot
+  - oneschema
+  - onesignal
+  - onestop
+  - onlook
+  - ooak-data
+  - ooakdata
+  - opalite-health
+  - opalitehealth
+  - open
+  - openbenchmarks
+  - opencall
+  - openmart
+  - openunit
+  - openworklabs
+  - optifye
+  - optifye-ai
+  - optifyeai
+  - opusense
+  - opusense-ai
+  - opusenseai
+  - orange-slice
+  - orangeslice
+  - orangewood
+  - orangewood-labs
+  - orangewoodlabs
+  - orbio
+  - orbio-earth
+  - orbioearth
+  - orbital-operations
+  - orbitalops
+  - orca-aerospace
+  - orcaaerospace
+  - orchid
+  - origin
+  - origin-bio
+  - os3
+  - os3robotics
+  - osium
+  - osium-ai
+  - osiumai
+  - outerport
+  - output
+  - outputbio
+  - outputbiosciences
+  - outset
+  - overlap
+  - overview
+  - oxus
+  - oxus-ai
+  - oxygen
+  - paasa
+  - paces
+  - padlet
+  - pair-ai
+  - pair-team
+  - pairai
+  - palettehq
+  - panels
+  - pangea
+  - pangea-app
+  - pangeaapp
+  - pango
+  - pangolin
+  - paradedb
+  - paradigmai
+  - paragon
+  - paragon-ai
+  - paragonai
+  - parallel-bio
+  - parallelbio
+  - parameter
+  - parametric
+  - parasma
+  - parsewise
+  - partcl
+  - pasito
+  - pave
+  - pave-2
+  - pax
+  - pax-historia
+  - pax-markets
+  - paxai
+  - paxhistoria
+  - paxmarkets
+  - payflow
+  - payna
+  - peakflo
+  - pelagohealth
+  - pennant
+  - people
+  - people-ai
+  - peopleai
+  - peppr-ai
+  - pepprai
+  - per-diem
+  - perdiem
+  - perfectbit
+  - perfectbit-inc
+  - perfectbitinc
+  - permitflow
+  - permitportal
+  - permitportalapp
+  - perseus-defense
+  - perseusdefense
+  - pesto
+  - petrarch
+  - pgdog
+  - phoenix
+  - phonely
+  - photonium
+  - photoniumoptics
+  - picnic
+  - pier
+  - pier-finance
+  - piinpoint
+  - pillar
+  - pillar-2
+  - pine-park-health
+  - pineparkhealth
+  - piramidal
+  - pirislabs
+  - pirouette-pharma
+  - pirouettepharma
+  - pirros
+  - pivot-robotics
+  - pivotrobotics
+  - players-lounge
+  - playerslounge
+  - plexe
+  - ploy
+  - pno
+  - pnoe
+  - pocket
+  - pocketsuite
+  - podium
+  - poh
+  - pointhound
+  - pointone
+  - poka-labs
+  - pokalabs
+  - polotab
+  - poly
+  - polymath
+  - polymath-robotics
+  - polymathlabs
+  - polymathrobotics
+  - pop-meals
+  - popl
+  - popmeals
+  - posh
+  - poshenergy
+  - postal
+  - posthog
+  - posturehealth-inc
+  - powder
+  - powderfi
+  - prelim
+  - prembly
+  - premblyformerlyidentitypass
+  - prequel
+  - prescience-inc
+  - prescienceinc
+  - presti
+  - presti-ai
+  - prestiai
+  - primevault
+  - primitive
+  - probably-genetic
+  - probablygenetic
+  - proception
+  - proception-inc
+  - proceptioninc
+  - procindex
+  - prodigaltech
+  - prohost
+  - prohostai
+  - proliferate
+  - promise
+  - promise-pay
+  - promptarmor
+  - promptingcompany
+  - promptless
+  - proof-of-human
+  - proofofhuman
+  - propelauth
+  - prosights
+  - prosper
+  - protex
+  - protex-ai
+  - protexai
+  - proven-group
+  - provengroup
+  - provenmetal
+  - provenskincare
+  - provision
+  - prox
+  - proximitty
+  - pulse-3
+  - pump
+  - pump-co
+  - pumpco
+  - pure
+  - pylon
+  - pylon-2
+  - qfex
+  - quadrant
+  - quadrant-health
+  - quadranthealth
+  - qualgent
+  - quartzy
+  - questdb
+  - quickchat
+  - quickchat-ai
+  - quickchatai
+  - quicknode
+  - quill
+  - quill-bills
+  - quillbills
+  - quindar
+  - raindrop
+  - rally
+  - rallyuxr
+  - ralo
+  - ramain
+  - ramani
+  - rappi
+  - rational
+  - raycaster
+  - razorpay
+  - re2
+  - reach
+  - reacher
+  - reacherapp
+  - reachpower
+  - readily
+  - ready
+  - reality-defender
+  - realitydefender
+  - reason-machines
+  - reasonmachines
+  - rebill
+  - rebolt
+  - recall-ai
+  - recallai
+  - recurrency
+  - redbird
+  - reditus
+  - reditus-space
+  - reditusspace
+  - reducto
+  - refactor
+  - reforged-labs
+  - reforgedlabs
+  - reform
+  - reformhq
+  - reframe
+  - regbase
+  - relace
+  - relari
+  - relativity-space
+  - relativityspace
+  - relling
+  - remihq
+  - rentflow
+  - renthop
+  - replicas
+  - replit
+  - replo
+  - reprompt
+  - repromptai
+  - rescale
+  - rescript
+  - resident-boost
+  - respan
+  - resquared
+  - retailready
+  - retailreadyai
+  - retell-ai
+  - retellai
+  - retool
+  - retrofix
+  - rev-genomics
+  - revamp
+  - revenuecat
+  - rever
+  - revgenomics
+  - revion
+  - revise-robotics
+  - reviserobotics
+  - reviving-mind
+  - revivingmind
+  - revnu
+  - revyl
+  - rex
+  - rex-inc
+  - rhem
+  - rhem-labs
+  - rhemlabs
+  - rhizome-ai
+  - rhizomeai
+  - ridecell
+  - rimward
+  - rinse
+  - riot
+  - rippling
+  - rivet
+  - rivia
+  - rivia-ai
+  - riviaai
+  - roame
+  - robby
+  - roboflow
+  - roboticscenter
+  - rocketsdr
+  - roe
+  - roforco
+  - roger
+  - roger-2
+  - rollstack
+  - rollstack-2
+  - rootly
+  - rose-rocket
+  - roserocket
+  - routable
+  - rove
+  - rovi
+  - rovi-health
+  - rovihealth
+  - rubbrband
+  - rudus
+  - ruffnauts
+  - rulebase
+  - rulebricks
+  - ruma-care
+  - rumacare
+  - runa
+  - runahr
+  - runanywhere
+  - runautomat
+  - runconverge
+  - runcopycat
+  - rungroundcontrol
+  - runparagon
+  - runpulse
+  - runtime
+  - runtm
+  - runtrellis
+  - runway
+  - rutter
+  - ryvn
+  - safebeat
+  - safebutler
+  - safepay
+  - safetykit
+  - safetywing
+  - salarybox
+  - salespatriot
+  - salient
+  - salus
+  - sameday
+  - sammy-labs
+  - sammylabs
+  - sant
+  - sante
+  - santehq
+  - saphira
+  - saphira-ai
+  - saphiraai
+  - sapling
+  - sapling-ai
+  - saplingai
+  - saturn
+  - saturnos
+  - sava
+  - savahq
+  - scalar-field
+  - scalarfield
+  - scale
+  - scale-ai
+  - scispot
+  - scispot-io
+  - scott-ai
+  - scottai
+  - scout
+  - scout-4
+  - scoutforschools
+  - screenpipe
+  - seal
+  - seal-2
+  - seam
+  - seeing-systems
+  - seeingsystems
+  - semble
+  - sembleai
+  - sendblue
+  - senso
+  - serif-health
+  - serifhealth
+  - serve-ai
+  - serveai
+  - serveaiglobal
+  - servo7
+  - sf-tensor
+  - sftensor
+  - shadeform
+  - shape-shapescale
+  - shapescale
+  - shapeshapescale
+  - shasta
+  - shasta-health
+  - shastahealth
+  - shepherdinsurance
+  - shiboleth
+  - shimmer
+  - shipbob
+  - shopgarage
+  - short-story
+  - shortloop
+  - shortstory
+  - shortstorybox
+  - shuttle-central
+  - shuttlecentral
+  - sid
+  - sieve
+  - sievedata
+  - sift
+  - sigmaos
+  - signadot
+  - signoz
+  - silimate
+  - silkchart
+  - silurian
+  - sim
+  - simantic
+  - simbie
+  - simbie-ai
+  - simbieai
+  - simcare
+  - simple-ai
+  - simpleai
+  - simplyinsured
+  - siphox-health
+  - siphoxhealth
+  - sira
+  - sirdab
+  - sitefire
+  - sixtyfour
+  - skypher
+  - skyvern
+  - skyways
+  - slash
+  - slope
+  - slopepay
+  - smartcuts
+  - smooth
+  - snapmagic
+  - snappr
+  - socratix-ai
+  - socratixai
+  - soff
+  - sola
+  - sola-solutions
+  - solidroad
+  - solo
+  - solosuit
+  - solum-health
+  - solumhealth
+  - solva
+  - solvatechnology
+  - solve-intelligence
+  - solveintelligence
+  - sonatoria
+  - sonia
+  - soniahealth
+  - soraban
+  - sorce
+  - soren
+  - soria
+  - soriaanalytics
+  - sorting-robotics
+  - sortingrobotics
+  - soundboks
+  - sourcebot
+  - sourcify
+  - spaceium-inc
+  - spaceiuminc
+  - spark
+  - sparkhq
+  - sparkles
+  - speak
+  - speedy-labs
+  - speedylabs
+  - spellbrush
+  - spenmo
+  - sphere
+  - spine
+  - splash-inc
+  - splash9
+  - splashinc
+  - spot-health
+  - spotdx
+  - spothealth
+  - spott
+  - spruceid
+  - spur
+  - spurtest
+  - squid
+  - stable
+  - stacksync
+  - stackup
+  - stagewise
+  - standard
+  - standard-ai
+  - standardai
+  - standout
+  - star
+  - stardex
+  - stardrift
+  - startraven
+  - steinmetz
+  - steinmetzmotors
+  - stepful
+  - stilta
+  - stoke-space
+  - stokespace
+  - storyboarder
+  - storylane
+  - strac
+  - strada
+  - streak
+  - stream
+  - streamable
+  - streamline-systems
+  - streamlinesystems
+  - strive-math
+  - strivemath
+  - strong-compute
+  - strongcompute
+  - structured-ai
+  - structuredai
+  - subimage
+  - subsets
+  - substrate
+  - subvocal
+  - suger
+  - sully
+  - summitglobal
+  - superkalam
+  - supertokens
+  - surface-labs
+  - surfacelabs
+  - svix
+  - swadesh
+  - sweep
+  - sweetspot
+  - swif
+  - swif-ai
+  - swifai
+  - swiftsku
+  - sygaldry
+  - sygaldry-technologies
+  - sygaldrytechnologies
+  - synapse-semiconductor
+  - synapsesemi
+  - synapsesemiconductor
+  - sync
+  - sync-2
+  - syncly
+  - synthetic-society
+  - syntheticfi
+  - syntheticsociety
+  - synthio-labs
+  - synthiolabs
+  - syntra
+  - tab
+  - tabula
+  - taiga
+  - taigabilling
+  - tailor
+  - taiv
+  - taktile
+  - tamarind
+  - tamarind-bio
+  - tamarindbio
+  - tandem
+  - tandem-2
+  - tandemspace
+  - tank-payments
+  - tankpayments
+  - taskade
+  - tasklet
+  - tasklet-2
+  - tavus
+  - taxgpt
+  - teamout
+  - tekton-dynamics
+  - tektondynamics
+  - telli
+  - telm
+  - telmai
+  - tempo-2
+  - tennr
+  - terminal
+  - terra-api
+  - terraapi
+  - terrakotta
+  - terranox
+  - terranox-ai
+  - terranoxai
+  - tesora
+  - testrigor
+  - text
+  - text-ai
+  - text-blaze
+  - textai
+  - textblaze
+  - the-forecasting-company
+  - the-hog
+  - the-juggernaut
+  - the-prompting-company
+  - the-subvocal-company
+  - thedailyscout
+  - theforecastingcompany
+  - thehog
+  - thehomli
+  - thejuggernaut
+  - themednet
+  - theorem
+  - theorem-2
+  - thepromptingcompany
+  - thera
+  - therentflow
+  - theseus
+  - thesubvocalcompany
+  - third-chair
+  - thirdchair
+  - thirdlayer
+  - throxy
+  - thunder-compute
+  - thundercompute
+  - thunkable
+  - tilt
+  - tilt-fka-delphia
+  - tiltfkadelphia
+  - tint
+  - titan
+  - tivara
+  - toothy
+  - toothy-ai
+  - toothyai
+  - topkey
+  - topline-pro
+  - toplinepro
+  - topship
+  - torus
+  - totalis
+  - tovala
+  - traceroot
+  - traceroot-ai
+  - tracerootai
+  - tractian
+  - transastra
+  - transastra-corporation
+  - transastracorporation
+  - trata
+  - trayd
+  - trbol
+  - treblo
+  - trebol
+  - trelium
+  - trellis-ai
+  - trellisai
+  - triomics
+  - trm-labs
+  - trmlabs
+  - truebiz
+  - trueclaim
+  - truewind
+  - truss
+  - trusspayments
+  - truthsystems
+  - tryardent
+  - tryasimov
+  - tryastraea
+  - trybree
+  - trycandle
+  - trycardinal
+  - trycardinal-ai
+  - trychannel3
+  - trycoast
+  - tryfinch
+  - tryglen
+  - tryglimpse
+  - tryhelium
+  - trykarat
+  - trymeasured
+  - trynarrative
+  - trynearby
+  - tryperdiem
+  - tryriot
+  - tryrobby
+  - trysalient
+  - tryscott
+  - trysmartcuts
+  - tryterra
+  - trytrata
+  - trytrueclaim
+  - trytruewind
+  - tryvela
+  - tsenta
+  - tuesday-labs
+  - tuesdaylabs
+  - turing-college
+  - turing-labs-inc
+  - turingcollege
+  - turinglabsinc
+  - turingsaas
+  - turion-space
+  - turionspace
+  - twenty
+  - two-dots
+  - twodots
+  - type
+  - typewise
+  - ubicloud
+  - ultra
+  - unbound
+  - unison
+  - uno-wallet
+  - unowallet
+  - unsiloed
+  - unsiloed-ai
+  - unsiloedai
+  - unsloth
+  - unsloth-ai
+  - unslothai
+  - unusual
+  - up
+  - upcodes
+  - upequity
+  - uplane
+  - upsolve
+  - upsolve-ai
+  - upsolveai
+  - useagave
+  - useandco
+  - useautumn
+  - usebluehill
+  - usebluelight
+  - usecaribou
+  - usecentralize
+  - usedill
+  - usedots
+  - useelevate
+  - useflai
+  - usehaven
+  - usehaystack
+  - usehelios
+  - uselayerup
+  - uselemma
+  - usemargin
+  - usemesh
+  - usemotion
+  - usenaive
+  - usenash
+  - useocular
+  - useoffstream
+  - usepanels
+  - useparagon
+  - usepeppr
+  - usepostal
+  - useprox
+  - usepylon
+  - usesalus
+  - usesimple
+  - usesoren
+  - usestable
+  - usethirdchair
+  - usetorus
+  - usevyra
+  - usul
+  - vahan
+  - vanta
+  - vapi
+  - variance
+  - variant
+  - varos
+  - vector
+  - vector-legal
+  - vectorlegal
+  - vectorshift
+  - vela
+  - velt
+  - vena-vitals
+  - venavitals
+  - vendah
+  - vendora
+  - vendra
+  - ventura
+  - venu-ai
+  - venu3d
+  - venuai
+  - vera-health
+  - verahealth
+  - verge-genomics
+  - vergegenomics
+  - vergesense
+  - veritus
+  - verne-robotics
+  - vernerobotics
+  - vernius
+  - vernius-systems-inc
+  - verniussystemsinc
+  - versable
+  - versableai
+  - versemedical
+  - verto
+  - vertofx
+  - veryfi
+  - veryfi-inc
+  - veryfiinc
+  - vesence
+  - vetcove
+  - videogen
+  - vinci-games
+  - vincigames
+  - vitable-health
+  - vitablehealth
+  - vitalize
+  - voiceops
+  - voiceos
+  - voize
+  - volantio
+  - volaren
+  - volaren-inc
+  - volareninc
+  - volta-labs-inc
+  - voltair
+  - voltairlabs
+  - voltalabs
+  - voltalabsinc
+  - voltic
+  - volticshipping
+  - vooma
+  - vori
+  - vorticity
+  - vouch
+  - voygr
+  - vulcan
+  - vulcan-technologies
+  - vulcantechnologies
+  - vyra
+  - waddle-labs
+  - waddlelabs
+  - wardstone
+  - warpbuild
+  - wasmer
+  - wavelength
+  - wayco
+  - waydev
+  - wayline
+  - weave-3
+  - weave-robotics
+  - weaveos
+  - weaverobotics
+  - wedge
+  - weekday
+  - weekend
+  - weekend-fmr-volley
+  - weekendfmrvolley
+  - weflywright
+  - wefunder
+  - whatnot
+  - wifi-dabba-inc
+  - wifidabbainc
+  - wild-card
+  - wildcard
+  - willow
+  - willowvoice
+  - windmill
+  - with-andy
+  - withaccend
+  - withbanner
+  - withchima
+  - withclad
+  - withdavid
+  - withflex
+  - withflint
+  - withgauge
+  - within
+  - withjoy
+  - withnixo
+  - withsurface
+  - withterminal
+  - women-who-code
+  - womenwhocode
+  - wordware
+  - workers
+  - workers-io
+  - workersio
+  - woz
+  - wozcode
+  - wright-electric
+  - wrightelectric
+  - writesonic
+  - x1
+  - xpay
+  - xpaycheckout
+  - y-combinator
+  - yarn
+  - yarn-2
+  - yassir
+  - ycombinator
+  - yhangry
+  - yn
+  - yondu
+  - you-shift
+  - youshift
+  - yummy-future
+  - yummyfuture
+  - zalos
+  - zapier
+  - zarna
+  - zarnaai
+  - zaymo
+  - zeit-ai
+  - zeitai
+  - zen
+  - zensors
+  - zensors-inc
+  - zentail
+  - zenysis
+  - zep-ai
+  - zepai
+  - zettascale-computing
+  - zettascalecomputing
+  - ziffyhomes
+  - ziina
+  - zip
+  - ziphq
+  - zippi
+  - zscc
+  - zuddl
+  - zudo
+  - zudowork
+  - zuma
+  - zymbly
 lever:
   verified:
   - slug: cred
@@ -3352,9 +5644,31 @@ lever:
     name: Incorta
     note: vc careers page · India 1, intern 0
     website: https://incorta.com
+  - slug: jobgether
+    tier: 1
+    name: Jobgether
+    note: vc careers page · India 295, intern 1
+  - slug: matillion
+    tier: 2
+    name: Matillion
+    note: vc careers page · India 3, intern 0
+    website: https://matillion.com
+  - slug: luxurypresence
+    tier: 2
+    name: Luxury Presence
+    note: vc careers page · India 1, intern 0
+    website: https://luxurypresence.com
+  - slug: solutionsjournalism
+    tier: 2
+    note: 1 jobs
+  - slug: sure
+    tier: 2
+    note: 1 jobs
+  - slug: culdesac
+    tier: 2
+    note: 2 jobs
   candidates:
   - 15five
-  - 3eco
   - 3pillarglobal
   - accurate
   - aicamp
@@ -3371,17 +5685,14 @@ lever:
   - signal
   - silasg
   - skello
-  - solutionsjournalism
   - solvhealth
   - speakeasyapi
   - sta
   - startuptap
   - superpedestrian
-  - sure
   - surfshark
   - asendia
   - beam
-  - conduit
   - conviction
   - curri
   - duffel
@@ -3395,6 +5706,2314 @@ lever:
   - strongcompute
   - tractian
   - vergesense
+  rejected:
+  - 10x
+  - 10x-science
+  - 10xdental
+  - 10xscience
+  - 1stcollab
+  - '222'
+  - 3eco
+  - 83-sciences
+  - 83sciences
+  - 9-mothers-corporation
+  - 99minutos
+  - 9mothers
+  - a0
+  - a0-dev
+  - a0dev
+  - abacum
+  - abundant
+  - accend
+  - accord
+  - acely
+  - activeloop
+  - adam
+  - adaptional
+  - adaptyv
+  - adaptyvbio
+  - adentris
+  - adialante
+  - adyn
+  - aemon
+  - afriex
+  - afriexapp
+  - afterquery
+  - agap
+  - agape
+  - agave
+  - agency
+  - agentmail
+  - agentphone
+  - agilemd
+  - aglide
+  - ai-coach
+  - aios
+  - aiosmedical
+  - aiprise
+  - aircaps
+  - airgoods
+  - airhart-aeronautics
+  - airhartaero
+  - airhartaeronautics
+  - airmyne
+  - airweave
+  - aivideo
+  - aivideo-com
+  - aivideocom
+  - aktoria
+  - aktoria-robotics
+  - aktoriarobotics
+  - akute-health
+  - akutehealth
+  - alaan
+  - albedo
+  - alder
+  - alemhealth
+  - alex
+  - alex-com
+  - alexcodes
+  - algolia
+  - algotest
+  - algouniversity
+  - alguna
+  - alinea
+  - alinea-invest
+  - alkali
+  - allia
+  - allia-health
+  - alliahealth
+  - allus
+  - allus-ai
+  - allusai
+  - almond
+  - almond-2
+  - alpaca
+  - alpha-vantage
+  - alphavantage
+  - ambient
+  - ambient-ai
+  - ambientai
+  - amboras
+  - ambral
+  - anara
+  - andco
+  - andromeda-surgical
+  - andromedasurgical
+  - andson-biotech
+  - andsonbiotech
+  - andy-ai
+  - andyai
+  - anglera
+  - anima
+  - animahealth
+  - ankr
+  - ankr-health
+  - ankrhealth
+  - answerthis
+  - anthrogen
+  - antigen
+  - aon3d
+  - apero-health
+  - aperohealth
+  - apolink
+  - apollo
+  - apollo-3
+  - apollo-io
+  - apollofirst
+  - apollographql
+  - apolloio
+  - apprentice-health
+  - apprenticehealth
+  - aptdeco
+  - apten
+  - aqua
+  - aquashield
+  - aquashieldai
+  - aragorn
+  - aragorn-ai
+  - aragornai
+  - aravolta
+  - archform
+  - archilabs
+  - archon
+  - ardent
+  - arini
+  - arketa
+  - arlo-industries
+  - arlo1
+  - arloindustries
+  - arnata
+  - arpari
+  - arq
+  - arqfinance
+  - artie
+  - artifact
+  - artifact-2
+  - artisan
+  - artos
+  - artosai
+  - arva
+  - arva-ai
+  - arvaai
+  - arzana
+  - asendia-ai
+  - asendiaai
+  - aseon-labs
+  - aseonlabs
+  - asha
+  - asha-health
+  - ashahealth
+  - ashby
+  - ashbyhq
+  - aside
+  - asim
+  - asimov
+  - askclara
+  - askkyber
+  - askonestop
+  - aspect
+  - aspect-inc
+  - aspire
+  - aspireapp
+  - assembly
+  - assembly-com
+  - assembly-hoa
+  - assemblyai
+  - assemblyhoa
+  - astraea
+  - astranis
+  - astro-mechanica
+  - astroforge
+  - astromecha
+  - astromechanica
+  - athelas
+  - athenahq
+  - atlas
+  - atlas-3
+  - atlascard
+  - atlog
+  - atob
+  - atomic
+  - atomic-industries
+  - atomicindustries
+  - atomicvest
+  - atopile
+  - attack
+  - attack-capital
+  - attackcapital
+  - attain
+  - attimet
+  - attune
+  - attunehq
+  - auctor
+  - aurelian
+  - aurorin-cad
+  - aurorincad
+  - authzed
+  - automat
+  - autonomous-technologies-group
+  - autonomoustechnologiesgroup
+  - autositu
+  - autostep
+  - autumn
+  - avallon
+  - avallon-ai
+  - avallonai
+  - avent
+  - aventindustrial
+  - aviaryai
+  - aviator
+  - avoca
+  - avora
+  - axel-travel
+  - axeltravel
+  - axiom
+  - axle
+  - axle-health
+  - axlehealth
+  - axross
+  - axross-pte-ltd
+  - axrosspteltd
+  - azalea-robotics-corporation
+  - azalearobotics
+  - azalearoboticscorporation
+  - b12-labs
+  - b12labs
+  - balance
+  - banner
+  - baraka
+  - be-go
+  - beacons
+  - becomeautonomous
+  - beglaubigt
+  - beglaubigtde
+  - bego
+  - belozfi
+  - belvo
+  - bemlo
+  - benepass
+  - berry
+  - berryai
+  - besimple
+  - besimple-ai
+  - besimpleai
+  - betterbasket
+  - betterhalf
+  - beyond-reach-labs
+  - beyondreachlabs
+  - bik
+  - bild
+  - bild-ai
+  - bildai
+  - binks
+  - biodock
+  - biostack-platforms
+  - biostackplatforms
+  - bitmovin
+  - blacksmith
+  - bland
+  - bland-ai
+  - blandai
+  - blaze
+  - blaze-2
+  - blee
+  - blink
+  - blink-new
+  - blissway
+  - bloom-4
+  - bloom-institute-of-technology
+  - bloominstituteoftechnology
+  - bloomtech
+  - bloomy
+  - bloomylearning
+  - blue-onion
+  - bluecargo
+  - bluehill-payments
+  - bluehillpayments
+  - bluejay
+  - bluelight
+  - blueonion
+  - boldvoice
+  - bolna
+  - bolna-ai
+  - bolnaai
+  - bolsterbuilt
+  - bond
+  - bondapp
+  - book
+  - booko
+  - bookoapp
+  - bootloop
+  - borong
+  - bot-md
+  - botbuilt
+  - botmd
+  - boundary
+  - boundaryml
+  - bountiful
+  - brainbase-labs
+  - brainbaselabs
+  - branch8
+  - bree
+  - bretton
+  - bretton-ai
+  - brettonai
+  - brickanta
+  - brickwise
+  - brickwiseai
+  - brighterway
+  - broccoli
+  - broccoli-ai
+  - broccoliai
+  - browser-use
+  - browseruse
+  - brumby
+  - brumbyformerlygrazemate
+  - bucket
+  - bucket-robotics
+  - bucketrobotics
+  - buildbuddy
+  - buildtrayd
+  - buildwithstar
+  - bunkerhill-health
+  - bunkerhillhealth
+  - bunting-labs
+  - buntinglabs
+  - buoyant
+  - buoyant-aero
+  - buoyantaero
+  - burnt
+  - businessonbot
+  - bymason
+  - cair-health
+  - cairhealth
+  - callab
+  - callab-ai
+  - callabai
+  - calltree
+  - camber
+  - camber-2
+  - cambio
+  - cambio-2
+  - cambly
+  - campfire
+  - campfire-2
+  - canary-technologies
+  - candid-health
+  - candidhealth
+  - candle
+  - candor
+  - candor-security
+  - canix
+  - capi-money
+  - capimoney
+  - capitol
+  - capitol-ai
+  - capitolai
+  - capix
+  - capy
+  - carbonchain
+  - cardboard
+  - cardinal
+  - cardinal-gray
+  - cardinalgray
+  - careforce
+  - careswift
+  - cargo
+  - caribou
+  - carma
+  - cartage
+  - casca
+  - cascade-space
+  - cascadespace
+  - cascading
+  - casco
+  - cashfree
+  - cashfree-payments
+  - cashfreepayments
+  - castle
+  - castle-2
+  - catchback-cards
+  - catchbackcards
+  - cedana
+  - cekura
+  - cekura-ai
+  - celltype
+  - centralize
+  - cerrion
+  - cerulion
+  - channel3
+  - characterquilt
+  - charge-robotics
+  - chargerobotics
+  - chariot
+  - chariot-2
+  - chasi
+  - checkr
+  - chestnut
+  - chestnutmortgage
+  - chima
+  - cinder
+  - cinder-2
+  - circle-medical
+  - circleback
+  - circlemedical
+  - circuithub
+  - ciro
+  - cityfurnish
+  - clad
+  - claim-health
+  - claimhealth
+  - claimsorted
+  - clara
+  - clara-2
+  - clarion
+  - clarionhealth
+  - classdojo
+  - clearest-health
+  - clearesthealth
+  - clearly-ai
+  - clearlyai
+  - clickpe
+  - clicks-health
+  - clickshealth
+  - clinikally
+  - clipboard
+  - clipboardworks
+  - closure
+  - closure-intel
+  - cloudcruise
+  - cloudglue
+  - cmux
+  - coach
+  - coast
+  - coba
+  - code-four
+  - codeant
+  - codeant-ai
+  - codeantai
+  - codefour
+  - coderhouse
+  - codes-health
+  - codeshealth
+  - codingal
+  - cofactr
+  - cogram
+  - coinrule
+  - cointracker
+  - collectly
+  - collectpure
+  - collectwise
+  - coloop
+  - comena
+  - community-phone-company
+  - communityphone
+  - communityphonecompany
+  - complete
+  - complir
+  - complydo
+  - compose
+  - compose-ai
+  - composeai
+  - concourse
+  - conductor
+  - conductor-quantum
+  - conductorquantum
+  - conduit
+  - conduit-ai
+  - confident-ai
+  - confidentai
+  - confido
+  - confidotech
+  - consus
+  - conta-simples
+  - contasimples
+  - contrario
+  - conus
+  - conus-med
+  - conveo
+  - converge
+  - convictiontrade
+  - coperniq
+  - copperlane
+  - copycat-ai
+  - copycatai
+  - corgea
+  - corgi
+  - corgi-insurance
+  - corgiinsurance
+  - coris
+  - cosine
+  - cotera
+  - coulomb
+  - coulomb-ai
+  - coulombai
+  - coval
+  - covera
+  - covera-agents
+  - coverage-cat
+  - coveragecat
+  - cozmo-ai
+  - cozmoai
+  - cpgscout
+  - craftwork
+  - craniometrix
+  - creativemode
+  - credal
+  - credal-ai
+  - credalai
+  - crew
+  - crustdata
+  - ctgt
+  - cua
+  - cubic
+  - cumulus-labs
+  - cumuluslabs
+  - curacel
+  - cyble
+  - cytera-cellworks
+  - d-id
+  - dabba
+  - daft
+  - dalus
+  - darsel
+  - dart
+  - dartai
+  - darwin
+  - darwinrobotics
+  - data-driven-bioscience
+  - datadrivenbioscience
+  - datafold
+  - dataland
+  - dataleap
+  - datrics
+  - david-ai
+  - davidai
+  - decoda-health
+  - decodahealth
+  - dedalus-labs
+  - dedaluslabs
+  - deel
+  - deep24
+  - deepawareairoboticscenterofsiliconvalley
+  - deepgram
+  - deepgrove
+  - deepnight
+  - deepnote
+  - deepreach
+  - deepreach-inc
+  - deepreachinc
+  - deeptrace
+  - delfino
+  - delfino-ai
+  - delfinoai
+  - dench
+  - dench-com
+  - denchcom
+  - denta
+  - deployparagon
+  - did
+  - diffuse
+  - diffuse-bio
+  - diffusebio
+  - digi
+  - digibuild
+  - digipals
+  - digitech
+  - dili
+  - diligencesquared
+  - diligencesquared-inc
+  - diligent
+  - dill
+  - dime
+  - dime-2
+  - dimehealth
+  - dimely
+  - diode
+  - diode-computers-inc
+  - diodecomputersinc
+  - directshifts
+  - discovered-materials
+  - discoveredmaterials
+  - dispatch
+  - ditto
+  - dittowords
+  - docura-health
+  - docurahealth
+  - dodo
+  - domu
+  - domu-technology-inc
+  - domutechnologyinc
+  - doppler
+  - dots
+  - dots-2
+  - double
+  - doublehq
+  - dover
+  - draft-the-record
+  - drafttherecord
+  - draftwise
+  - dreamcraft
+  - dreamcraft-entertainment-inc
+  - dreamcraftentertainmentinc
+  - drillbit
+  - drip-capital
+  - dripcapital
+  - drymerge
+  - duckie
+  - dynamo
+  - dynamo-ai
+  - dynamoai
+  - dyneti
+  - dyneti-technologies
+  - dynetitechnologies
+  - eden
+  - eden-2
+  - eden-robotics
+  - edenmed
+  - edenrobotics
+  - edexia
+  - edgerun
+  - educato
+  - effigov
+  - ego
+  - egoai
+  - ehl
+  - eight-sleep
+  - eightsleep
+  - ekho
+  - elayne
+  - electric-air-2
+  - electricair
+  - elevate
+  - elevate-2
+  - elevateformerlybloom
+  - elevatepay
+  - ellipsis
+  - ello
+  - eloquent-ai
+  - eloquentai
+  - elyos
+  - elyos-ai
+  - elyosai
+  - elyra
+  - elyrasystems
+  - ember
+  - embercopilot
+  - emerge-career
+  - emergecareer
+  - emergent
+  - encord
+  - enerjazz
+  - enhanced-radar
+  - enhancedradar
+  - enode
+  - entangl
+  - epinoma
+  - epsilon3-inc
+  - ergo
+  - escape
+  - etleap
+  - eval
+  - event-horizon-labs
+  - eventhorizonlabs
+  - eventual
+  - every
+  - exonic
+  - explorex
+  - eze
+  - ezeit
+  - f2
+  - faire
+  - farcast
+  - fathom
+  - feather
+  - feather-2
+  - featherhq
+  - fenrock
+  - fenrock-ai
+  - fenrockai
+  - fernstone
+  - fieldguide
+  - fifth-door
+  - fifthdoor
+  - finku
+  - finni-health
+  - finnihealth
+  - finny
+  - finny-ai
+  - finnyai
+  - finosu
+  - finta
+  - finto
+  - finto-de
+  - firebender
+  - firecrawl
+  - first
+  - firstbase
+  - firstbase-io
+  - firstbaseio
+  - firstdelivery
+  - firstwork
+  - flagright
+  - flai
+  - flair-labs
+  - flairlabs
+  - fleek
+  - fleetline
+  - fleetworks
+  - flex
+  - flexdesk
+  - flexport
+  - flick
+  - flint
+  - flint-2
+  - flintk12
+  - flock-safety
+  - flockjay
+  - flocksafety
+  - floot
+  - flowscope
+  - flowtel
+  - flutterflow
+  - fondo
+  - forage
+  - forage-2
+  - forge
+  - forge-automation
+  - forgeautomation
+  - forgehq
+  - formance
+  - fort
+  - fortuna-health
+  - fortunahealth
+  - foundation-industries
+  - foundationindustries
+  - fractional
+  - freebuff
+  - fresco
+  - fresco-ai
+  - freshpaint
+  - freya
+  - freyavoice
+  - function-of-beauty
+  - functionofbeauty
+  - furtherai
+  - fuse-ai
+  - fuseai
+  - garage
+  - garage-2
+  - gather
+  - gather-2
+  - gauge
+  - gauss
+  - gecko-robotics
+  - geckorobotics
+  - gemnote
+  - general-proximity
+  - generalastro
+  - generalastronautics
+  - generalproximity
+  - getagency
+  - getaleph
+  - getasap
+  - getauctor
+  - getavora
+  - getbalance
+  - getbaraka
+  - getbenepass
+  - getbinks
+  - getbiostack
+  - getbluejay
+  - getburnt
+  - getcargo
+  - getcoach
+  - getcrux
+  - getdailyagape
+  - getfinn
+  - gethomebase
+  - getjust
+  - getlago
+  - getmagic
+  - getmatter
+  - getnao
+  - getoxygen
+  - getpennant
+  - getpesto
+  - getprescience
+  - getprospa
+  - getprosper
+  - getrevamp
+  - getroe
+  - getsafepay
+  - getsocratix
+  - getsolum
+  - getsphere
+  - getstrada
+  - getstructured
+  - getthera
+  - getunbound
+  - getzep
+  - giga
+  - gigs
+  - gimo
+  - givecampus
+  - givechariot
+  - giveffect
+  - glass
+  - glass-health
+  - glasshealth
+  - glen
+  - glimpse
+  - glimpse-2
+  - gloglo
+  - go
+  - go1
+  - goat-group
+  - goatgroup
+  - goclicks
+  - godela
+  - godiligent
+  - gofinto
+  - gogograndparent
+  - gojabu
+  - gojiberry
+  - gojiberry-ai
+  - gojiberryai
+  - goldbelly
+  - golinks
+  - goodfin
+  - gooseworks
+  - goradar
+  - gosameday
+  - gosats
+  - gotlanded
+  - gotrebol
+  - govdash
+  - goveagle
+  - governgpt
+  - great-question
+  - greatquestion
+  - greenboard
+  - gromo
+  - groundcontrol
+  - growthbook
+  - gru
+  - guac
+  - guardian-rf
+  - guardianrf
+  - gusto
+  - gym-class
+  - gymclass
+  - hackerrank
+  - hadrius
+  - halluminate
+  - hamming
+  - hamming-ai
+  - hammingai
+  - hammr
+  - handle
+  - hapi
+  - haplotype-labs
+  - haplotypelabs
+  - happl
+  - happyrobot
+  - harper
+  - harperinsure
+  - haven
+  - haven-2
+  - havenservicing
+  - haystack
+  - healia
+  - healiahealth
+  - health-harbor
+  - healthharbor
+  - healthtech-1
+  - healthtech1
+  - hedge
+  - hedgespecialty
+  - helios
+  - helium
+  - helloaviary
+  - helloaxel
+  - helloconduit
+  - hellocozmo
+  - hellolunajoy
+  - hellometer
+  - helloverify
+  - hemut
+  - hera
+  - hera-video
+  - heron
+  - herondata
+  - hestus
+  - hestus-inc
+  - hestusinc
+  - hey-telo
+  - heycharge
+  - heylua
+  - heymalama
+  - heypocket
+  - heytelo
+  - hioperator
+  - hirenimble
+  - hireroger
+  - hitpay
+  - hitpayapp
+  - hockeystack
+  - hokali
+  - homebase
+  - homli
+  - hotplate
+  - housewarming
+  - hub
+  - hubble
+  - hud
+  - human-archive
+  - human-interest
+  - humanarchive
+  - humaninterest
+  - humanlayer
+  - humwork
+  - huscarl
+  - hylight
+  - hype
+  - hyperbound
+  - hyperbrowser
+  - hypercubic
+  - hyperspell
+  - hypotenuse
+  - hypotenuse-ai
+  - hypotenuseai
+  - icarus
+  - icepanel
+  - idler
+  - ignition-benefits
+  - ignitionbenefits
+  - imagine-ai
+  - imagineai
+  - imperfect
+  - imprezia
+  - imt
+  - imt-care
+  - imtcare
+  - in-unison
+  - inaccord
+  - inbuild
+  - indemni
+  - inden
+  - inevent
+  - infer
+  - infinia
+  - infiniaweb
+  - infinite
+  - infinity
+  - infinityapp
+  - infisical
+  - influxdata
+  - infracost
+  - inito
+  - inkeep
+  - inlet
+  - inlet-2
+  - inletai
+  - innate
+  - inscribe
+  - inspectify
+  - instawork
+  - instrumentl
+  - intelligence-factory
+  - intelligencefactory
+  - intelline
+  - interfaze
+  - interfere
+  - intryc
+  - invert
+  - invertbio
+  - investwithaqua
+  - invopop
+  - iomete
+  - ironclad
+  - ironcladapp
+  - ironledger
+  - ironledger-ai
+  - ironledgerai
+  - isono-health
+  - isonohealth
+  - item
+  - itsrever
+  - jabu
+  - jarmin
+  - jeevy-fabrication
+  - jeevyfabrication
+  - jetlenses
+  - jiga
+  - jinba
+  - jitx
+  - joinattain
+  - joincandidhealth
+  - joincarma
+  - joinergo
+  - joinfleek
+  - joinforage
+  - joinmarble
+  - joinnewton
+  - joinreframeapp
+  - joinspine
+  - joy
+  - juicebox
+  - julius
+  - junction
+  - juno
+  - juno-chat
+  - junocompanion
+  - just-appraised
+  - justai
+  - justappraised
+  - juxta
+  - juzibot
+  - kabilah
+  - kaipod-learning
+  - kaipodlearning
+  - kaizen
+  - kaizenautomation
+  - kalam-labs
+  - kalamlabs
+  - kalinda
+  - kalpa-labs
+  - kalpalabs
+  - kalshi
+  - kapa
+  - kapa-ai
+  - kapaai
+  - karat-financial
+  - karatfinancial
+  - karumi
+  - kastle
+  - kelai
+  - kelaitech
+  - keye
+  - kilvin
+  - kingdom
+  - kingdomsuperculture
+  - kino
+  - kino-ai
+  - kinoai
+  - kinro
+  - kivo-health
+  - kivohealth
+  - klaimee
+  - klavis
+  - klavis-ai
+  - klavisai
+  - knowtex
+  - kobalt-labs
+  - kobaltlabs
+  - kodex
+  - kodexglobal
+  - kodo
+  - kombo
+  - kontigo
+  - korrai
+  - koyal
+  - kugelaudio
+  - kuli
+  - kyber
+  - lab0
+  - lago
+  - lamar-health
+  - lamarhealth
+  - lambda-robotics
+  - lambdarobotics
+  - laminar
+  - laminar-com
+  - lance
+  - landed
+  - landed-2
+  - landeed
+  - lanesurf
+  - langdock
+  - latent
+  - latenthealth
+  - lattice
+  - laurence
+  - layers
+  - layerup
+  - laylo
+  - leadbay
+  - leaping-ai
+  - leapingai
+  - ledger-investing
+  - ledgerinvesting
+  - leena
+  - leena-ai
+  - leenaai
+  - leeroo
+  - legalist
+  - legion-health
+  - legionhealth
+  - legora
+  - lemma
+  - lemonlime
+  - letter
+  - letter-ai
+  - letterai
+  - lfcarry
+  - lightberry
+  - lightdash
+  - lighthouz
+  - lighthouz-ai
+  - lighthouzai
+  - lightly
+  - lightsprint
+  - lim
+  - limrun
+  - lineleap
+  - lingo
+  - lingodev
+  - lingodotdev
+  - liquid-compute
+  - liquidcompute
+  - litellm
+  - liveflow
+  - living-carbon
+  - lnkd
+  - lob
+  - locata
+  - locatahealth
+  - locke
+  - loopfour
+  - lootrush
+  - lua-global-inc
+  - luaglobalinc
+  - luca-iq
+  - lucaiq
+  - lucid
+  - lucis
+  - lugg
+  - lumari
+  - luminai
+  - luminal
+  - lumius
+  - lumius-imaging
+  - lunajoy-health
+  - lunajoyhealth
+  - luthor
+  - macadamia
+  - macadamialabs
+  - mach9
+  - madethis
+  - mage-legal
+  - magelegal
+  - magic
+  - magic-patterns
+  - magicpatterns
+  - magnetic
+  - magnetictax
+  - mailtime
+  - maintouch
+  - malama-health
+  - malamahealth
+  - mangodesk
+  - manicule
+  - manufact
+  - manufacturingintelligence
+  - marble
+  - margin
+  - maritime-fusion
+  - maritimefusion
+  - mason
+  - material-depot
+  - materialdepot
+  - matter
+  - maven-bio
+  - mavenbio
+  - may-mobility
+  - maymobility
+  - maywood
+  - maywoodai
+  - mbodi
+  - mbodi-ai
+  - mbodiai
+  - mdalgorithms
+  - mdalgorithms-inc
+  - mdalgorithmsinc
+  - mdhub
+  - measured
+  - medme-health
+  - medmehealth
+  - mednet
+  - medplum
+  - meetalder
+  - mem0
+  - mentra
+  - mercura
+  - merlin-ai
+  - merlinai
+  - meru-health
+  - meruhealth
+  - mesh
+  - mesh-2
+  - mesmer
+  - metal
+  - metalware
+  - method-financial
+  - methodfi
+  - methodfinancial
+  - meticulate
+  - meticulous
+  - metorial
+  - metriport
+  - middesk
+  - middleware
+  - mindfi
+  - mindfort
+  - mineflow
+  - minicor
+  - minimum
+  - mino-games
+  - minogames
+  - minomonsters
+  - mintlify
+  - miso
+  - miso-labs
+  - misolabs
+  - misprint
+  - mixrank
+  - mochacare
+  - moda
+  - moda-2
+  - model-ml
+  - modelml
+  - modern-health
+  - modern-treasury
+  - modernhealth
+  - modernloop
+  - moderntreasury
+  - momentic
+  - monumint
+  - moonset-health
+  - moonsethealth
+  - moonvalley
+  - moritz
+  - moritzlegal
+  - morph
+  - morphle-labs
+  - morphlelabs
+  - morphllm
+  - morpho
+  - morphoai
+  - mosaic
+  - moss
+  - motion
+  - mspilot
+  - multiplier
+  - multiply-labs
+  - mutiny
+  - mutinyhq
+  - muzz
+  - myunowallet
+  - nabis
+  - naive
+  - nanonets
+  - nao-labs
+  - naolabs
+  - narrative
+  - nash
+  - nautilus
+  - nave
+  - navier
+  - navier-ai
+  - navierai
+  - nectar
+  - nectarclimate
+  - neodocs
+  - nessie
+  - nessielabs
+  - nest-genomics
+  - nestgenomics
+  - nestor
+  - nestorup
+  - neuromorphic
+  - new-story
+  - newscatcher
+  - newscatcherapi
+  - newstory
+  - newstoryhomes
+  - nextera-robotics-didgeai
+  - nexterarobotics
+  - nexteraroboticsdidgeai
+  - nimble
+  - nine-fives
+  - ninefives
+  - nira-energy
+  - niraenergy
+  - nitrode
+  - nixo
+  - no-logo
+  - nologo
+  - nomic
+  - nomic-bio
+  - nomicbio
+  - noora-health
+  - noorahealth
+  - noso
+  - noso-labs
+  - nosolabs
+  - notabene
+  - nourish
+  - nova-credit
+  - novacredit
+  - novaflow
+  - novig
+  - novoflow
+  - nowadays
+  - nox-metals
+  - noxmetals
+  - nozomio
+  - nsave
+  - numen
+  - numeral
+  - numero
+  - ocular-ai
+  - ocularai
+  - odeko
+  - odys-aviation
+  - odysaviation
+  - offdeal
+  - offstream
+  - ohm
+  - ohm-2
+  - okteto
+  - olympian-motors
+  - olympianmotors
+  - omnistrate
+  - ondeck-ai
+  - ondeckai
+  - one-robot
+  - onechronos
+  - onefin
+  - oneleet
+  - onelocal
+  - onerobot
+  - oneschema
+  - onesignal
+  - onestop
+  - onlook
+  - ooak-data
+  - ooakdata
+  - opalite-health
+  - opalitehealth
+  - open
+  - openbenchmarks
+  - opencall
+  - openmart
+  - openunit
+  - openwork
+  - openworklabs
+  - ophelia
+  - optifye
+  - optifye-ai
+  - optifyeai
+  - opusense
+  - opusense-ai
+  - opusenseai
+  - orange-slice
+  - orangeslice
+  - orangewood
+  - orangewood-labs
+  - orangewoodlabs
+  - orbio
+  - orbio-earth
+  - orbioearth
+  - orbital-operations
+  - orbitaloperations
+  - orbitalops
+  - orca-aerospace
+  - orcaaerospace
+  - orchid
+  - origin
+  - origin-bio
+  - os3
+  - os3robotics
+  - osium
+  - osium-ai
+  - osiumai
+  - osmosis
+  - outerport
+  - output
+  - outputbio
+  - outputbiosciences
+  - outset
+  - overlap
+  - overview
+  - oxus
+  - oxus-ai
+  - oxygen
+  - paasa
+  - paces
+  - padlet
+  - pair-ai
+  - pair-team
+  - pairai
+  - pairteam
+  - palettehq
+  - panels
+  - pangea
+  - pangea-app
+  - pangeaapp
+  - pango
+  - pangolin
+  - paradedb
+  - paradigm
+  - paradigmai
+  - paragon
+  - paragon-ai
+  - paragonai
+  - parallel
+  - parallel-bio
+  - parallelbio
+  - parameter
+  - parametric
+  - parasma
+  - parsewise
+  - partcl
+  - pasito
+  - pave
+  - pave-2
+  - pax
+  - pax-historia
+  - pax-markets
+  - paxai
+  - paxhistoria
+  - paxmarkets
+  - payflow
+  - payna
+  - peakflo
+  - pelago
+  - pelagohealth
+  - pennant
+  - people
+  - peopleai
+  - peppr-ai
+  - pepprai
+  - per-diem
+  - perdiem
+  - perfectbit
+  - perfectbit-inc
+  - perfectbitinc
+  - permitflow
+  - permitportal
+  - permitportalapp
+  - perseus-defense
+  - perseusdefense
+  - pesto
+  - petrarch
+  - pgdog
+  - phoenix
+  - phonely
+  - photonium
+  - photoniumoptics
+  - picnic
+  - picnicai
+  - pier
+  - pier-finance
+  - piinpoint
+  - pillar-2
+  - pine-park-health
+  - pineparkhealth
+  - piramidal
+  - pirislabs
+  - pirouette-pharma
+  - pirouettepharma
+  - pirros
+  - pivot-robotics
+  - pivotrobotics
+  - players-lounge
+  - playerslounge
+  - plexe
+  - ploy
+  - pno
+  - pnoe
+  - pocket
+  - pocketsuite
+  - podium
+  - poh
+  - pointhound
+  - pointone
+  - poka-labs
+  - pokalabs
+  - polotab
+  - poly
+  - polymath
+  - polymath-robotics
+  - polymathlabs
+  - polymathrobotics
+  - pop-meals
+  - popl
+  - popmeals
+  - posh
+  - poshenergy
+  - postal
+  - posthog
+  - postscript
+  - posturehealth-inc
+  - powder
+  - powderfi
+  - prembly
+  - premblyformerlyidentitypass
+  - prequel
+  - prescience-inc
+  - prescienceinc
+  - presti
+  - presti-ai
+  - prestiai
+  - primevault
+  - primitive
+  - probably-genetic
+  - probablygenetic
+  - proception
+  - proception-inc
+  - proceptioninc
+  - procindex
+  - prodigal
+  - prodigaltech
+  - prohost
+  - prohostai
+  - proliferate
+  - prolific
+  - promise
+  - promise-pay
+  - promptarmor
+  - promptingcompany
+  - promptless
+  - proof-of-human
+  - proofofhuman
+  - propelauth
+  - prosights
+  - prospa
+  - protex
+  - protex-ai
+  - protexai
+  - proven-group
+  - provengroup
+  - provenmetal
+  - provenskincare
+  - provision
+  - prox
+  - proximitty
+  - pulley
+  - pulse
+  - pulse-3
+  - pump
+  - pump-co
+  - pumpco
+  - pure
+  - pylon
+  - pylon-2
+  - qfex
+  - quadrant
+  - quadrant-health
+  - quadranthealth
+  - qualgent
+  - questdb
+  - quickchat
+  - quickchat-ai
+  - quickchatai
+  - quicknode
+  - quill
+  - quill-bills
+  - quillbills
+  - quindar
+  - qventus
+  - radar
+  - raindrop
+  - rally
+  - rallyuxr
+  - ralo
+  - ramain
+  - ramani
+  - rappi
+  - rational
+  - raven
+  - raycaster
+  - razorpay
+  - re2
+  - reach
+  - reacher
+  - reacherapp
+  - readily
+  - ready
+  - reality-defender
+  - realitydefender
+  - reason-machines
+  - reasonmachines
+  - rebill
+  - rebolt
+  - recall
+  - recall-ai
+  - recallai
+  - recidiviz
+  - redbird
+  - reditus
+  - reditus-space
+  - reditusspace
+  - reducto
+  - refactor
+  - reflex
+  - reforged-labs
+  - reforgedlabs
+  - reform
+  - reformhq
+  - reframe
+  - regbase
+  - relace
+  - relari
+  - relativity-space
+  - relativityspace
+  - relling
+  - remi
+  - remihq
+  - rentflow
+  - renthop
+  - replicas
+  - replit
+  - replo
+  - reprompt
+  - repromptai
+  - rescale
+  - rescript
+  - resident-boost
+  - respan
+  - resquared
+  - retailready
+  - retailreadyai
+  - retell-ai
+  - retellai
+  - retool
+  - retrofix
+  - rev-genomics
+  - revamp
+  - revenuecat
+  - rever
+  - revgenomics
+  - revion
+  - revise-robotics
+  - reviserobotics
+  - reviving-mind
+  - revivingmind
+  - revnu
+  - revyl
+  - rex
+  - rex-inc
+  - rhem
+  - rhem-labs
+  - rhemlabs
+  - rhizome-ai
+  - rhizomeai
+  - ridecell
+  - rimward
+  - rinse
+  - riot
+  - rippling
+  - rivet
+  - rivia
+  - rivia-ai
+  - riviaai
+  - roame
+  - robby
+  - roboflow
+  - roboticscenter
+  - rocketsdr
+  - roe
+  - roforco
+  - roger
+  - roger-2
+  - rollstack
+  - rollstack-2
+  - rootly
+  - rose-rocket
+  - roserocket
+  - routable
+  - rove
+  - rovi
+  - rovi-health
+  - rovihealth
+  - rubbrband
+  - rudus
+  - ruffnauts
+  - rulebase
+  - rulebricks
+  - ruma-care
+  - rumacare
+  - runa
+  - runahr
+  - runanywhere
+  - runautomat
+  - runconverge
+  - runcopycat
+  - rungroundcontrol
+  - runparagon
+  - runpulse
+  - runtime
+  - runtm
+  - runtrellis
+  - runway
+  - rutter
+  - ryvn
+  - safebeat
+  - safebutler
+  - safepay
+  - safetykit
+  - safetywing
+  - salarybox
+  - salespatriot
+  - salient
+  - salus
+  - sameday
+  - sammy-labs
+  - sammylabs
+  - sant
+  - sante
+  - santehq
+  - saphira
+  - saphira-ai
+  - saphiraai
+  - sapling-ai
+  - saplingai
+  - saturn
+  - saturnos
+  - sava
+  - savahq
+  - scalar-field
+  - scalarfield
+  - scale
+  - scale-ai
+  - scaleai
+  - scispot
+  - scispot-io
+  - scott-ai
+  - scottai
+  - scout
+  - scout-4
+  - scoutforschools
+  - screenpipe
+  - seal
+  - seal-2
+  - seam
+  - seeing-systems
+  - seeingsystems
+  - sembleai
+  - sendbird
+  - sendblue
+  - senso
+  - serif-health
+  - serifhealth
+  - serve-ai
+  - serveai
+  - serveaiglobal
+  - servo7
+  - sf-tensor
+  - sftensor
+  - shadeform
+  - shape-shapescale
+  - shapescale
+  - shapeshapescale
+  - shasta
+  - shasta-health
+  - shastahealth
+  - shepherd
+  - shepherdinsurance
+  - shiboleth
+  - shimmer
+  - shipbob
+  - shopgarage
+  - short-story
+  - shortloop
+  - shortstory
+  - shortstorybox
+  - shuttle-central
+  - shuttlecentral
+  - sid
+  - sieve
+  - sievedata
+  - sift
+  - sigmaos
+  - signadot
+  - signoz
+  - silimate
+  - silkchart
+  - silurian
+  - sim
+  - simantic
+  - simbie
+  - simbie-ai
+  - simbieai
+  - simcare
+  - simple-ai
+  - simpleai
+  - simplyinsured
+  - siphox-health
+  - siphoxhealth
+  - sira
+  - sirdab
+  - sitefire
+  - sixtyfour
+  - skypher
+  - skyvern
+  - slash
+  - slope
+  - slopepay
+  - smooth
+  - snapmagic
+  - socratix-ai
+  - socratixai
+  - soff
+  - sola
+  - sola-solutions
+  - solidroad
+  - solo
+  - solosuit
+  - solum-health
+  - solumhealth
+  - solva
+  - solvatechnology
+  - solve-intelligence
+  - solveintelligence
+  - sonatoria
+  - sonia
+  - soniahealth
+  - soraban
+  - sorce
+  - soren
+  - soria
+  - soriaanalytics
+  - sorting-robotics
+  - sortingrobotics
+  - soundboks
+  - sourcebot
+  - sourcify
+  - spaceium
+  - spaceium-inc
+  - spaceiuminc
+  - spade
+  - spark
+  - sparkhq
+  - sparkles
+  - speak
+  - speedy-labs
+  - speedylabs
+  - spellbrush
+  - spenmo
+  - sphere
+  - spine
+  - splash-inc
+  - splash9
+  - splashinc
+  - spot-health
+  - spotdx
+  - spothealth
+  - spott
+  - spruceid
+  - spur
+  - spurtest
+  - squid
+  - stable
+  - stacksync
+  - stackup
+  - stagewise
+  - standard
+  - standard-ai
+  - standardai
+  - standout
+  - star
+  - stardex
+  - stardrift
+  - startraven
+  - steinmetz
+  - steinmetzmotors
+  - stepful
+  - stilta
+  - stoke-space
+  - stokespace
+  - storyboarder
+  - storylane
+  - strac
+  - strada
+  - streak
+  - stream
+  - streamable
+  - streamline-systems
+  - streamlinesystems
+  - stripe
+  - strive-math
+  - strivemath
+  - strong-compute
+  - structured-ai
+  - structuredai
+  - subimage
+  - subsets
+  - substrate
+  - subvocal
+  - sully
+  - summitglobal
+  - superkalam
+  - superset
+  - supertokens
+  - surface-labs
+  - surfacelabs
+  - svix
+  - swadesh
+  - swayable
+  - sweep
+  - sweetspot
+  - swif
+  - swif-ai
+  - swifai
+  - swiftsku
+  - sygaldry
+  - sygaldry-technologies
+  - sygaldrytechnologies
+  - synapse-semiconductor
+  - synapsesemi
+  - synapsesemiconductor
+  - sync
+  - sync-2
+  - syncly
+  - synthetic-society
+  - syntheticfi
+  - syntheticsociety
+  - synthio-labs
+  - synthiolabs
+  - syntra
+  - tab
+  - tabula
+  - taiga
+  - taigabilling
+  - tailor
+  - taiv
+  - taktile
+  - tamarind
+  - tamarind-bio
+  - tamarindbio
+  - tandem
+  - tandem-2
+  - tandemspace
+  - tank-payments
+  - tankpayments
+  - taskade
+  - tasklet
+  - tasklet-2
+  - tavus
+  - taxgpt
+  - teamout
+  - tekton-dynamics
+  - tektondynamics
+  - telli
+  - telm
+  - telmai
+  - tempo
+  - tempo-2
+  - tennr
+  - terminal
+  - terra-api
+  - terraapi
+  - terrakotta
+  - terranox
+  - terranox-ai
+  - terranoxai
+  - tesora
+  - testrigor
+  - text-ai
+  - text-blaze
+  - textai
+  - textblaze
+  - the-forecasting-company
+  - the-hog
+  - the-juggernaut
+  - the-prompting-company
+  - the-subvocal-company
+  - thedailyscout
+  - theforecastingcompany
+  - thehog
+  - thehomli
+  - thejuggernaut
+  - themednet
+  - theorem
+  - theorem-2
+  - thepromptingcompany
+  - thera
+  - therentflow
+  - theseus
+  - thesubvocalcompany
+  - third-chair
+  - thirdchair
+  - thirdlayer
+  - throxy
+  - thunder-compute
+  - thundercompute
+  - tilt
+  - tilt-fka-delphia
+  - tiltfkadelphia
+  - tint
+  - titan
+  - tivara
+  - toothy
+  - toothy-ai
+  - toothyai
+  - topkey
+  - topline-pro
+  - toplinepro
+  - topship
+  - torus
+  - totalis
+  - traceroot
+  - traceroot-ai
+  - tracerootai
+  - transastra
+  - transastra-corporation
+  - transastracorporation
+  - trata
+  - trayd
+  - trbol
+  - treblo
+  - trebol
+  - trelium
+  - trellis-ai
+  - trellisai
+  - triomics
+  - trm-labs
+  - trmlabs
+  - truebiz
+  - trueclaim
+  - truewind
+  - truss
+  - trusspayments
+  - truthsystems
+  - tryardent
+  - tryasimov
+  - tryastraea
+  - trybree
+  - trycandle
+  - trycardinal
+  - trycardinal-ai
+  - trychannel3
+  - trycoast
+  - tryfinch
+  - tryglen
+  - tryglimpse
+  - tryhelium
+  - trykarat
+  - trymeasured
+  - trynarrative
+  - trynearby
+  - tryperdiem
+  - tryrobby
+  - trysalient
+  - tryscott
+  - trysmartcuts
+  - tryterra
+  - trytrata
+  - trytrueclaim
+  - trytruewind
+  - tryvela
+  - tsenta
+  - tuesday-labs
+  - tuesdaylabs
+  - turing-college
+  - turing-labs-inc
+  - turingcollege
+  - turinglabsinc
+  - turingsaas
+  - turion-space
+  - turionspace
+  - twenty
+  - two-dots
+  - type
+  - typewise
+  - ubicloud
+  - ultra
+  - unbound
+  - unison
+  - uno-wallet
+  - unowallet
+  - unsiloed
+  - unsiloed-ai
+  - unsiloedai
+  - unsloth
+  - unsloth-ai
+  - unslothai
+  - up
+  - upcodes
+  - upequity
+  - uplane
+  - upsolve
+  - upsolve-ai
+  - upsolveai
+  - useagave
+  - useandco
+  - useautumn
+  - usebluehill
+  - usebluelight
+  - usecaribou
+  - usecentralize
+  - usedill
+  - usedots
+  - useelevate
+  - useflai
+  - usehaven
+  - usehaystack
+  - usehelios
+  - uselayerup
+  - uselemma
+  - usemargin
+  - usemesh
+  - usemotion
+  - usenaive
+  - usenash
+  - useocular
+  - useoffstream
+  - usepanels
+  - useparagon
+  - usepeppr
+  - usepostal
+  - useprox
+  - usepylon
+  - usesalus
+  - usesimple
+  - usesoren
+  - usestable
+  - usethirdchair
+  - usetorus
+  - usevyra
+  - usul
+  - vahan
+  - vanta
+  - vapi
+  - variance
+  - variant
+  - varos
+  - vector
+  - vector-legal
+  - vectorlegal
+  - vectorshift
+  - vela
+  - velt
+  - vena-vitals
+  - venavitals
+  - vendah
+  - vendora
+  - vendra
+  - ventura
+  - venu-ai
+  - venu3d
+  - venuai
+  - vera-health
+  - verahealth
+  - verge-genomics
+  - vergegenomics
+  - veritus
+  - verne-robotics
+  - vernerobotics
+  - vernius
+  - vernius-systems-inc
+  - verniussystemsinc
+  - versable
+  - versableai
+  - versemedical
+  - verto
+  - vertofx
+  - veryfi
+  - veryfi-inc
+  - veryfiinc
+  - vesence
+  - vetcove
+  - videogen
+  - vinci-games
+  - vincigames
+  - vitable-health
+  - vitablehealth
+  - vitalize
+  - voiceops
+  - voiceos
+  - voize
+  - volantio
+  - volaren
+  - volaren-inc
+  - volareninc
+  - volta-labs-inc
+  - voltair
+  - voltairlabs
+  - voltalabsinc
+  - voltic
+  - volticshipping
+  - vooma
+  - vori
+  - vorticity
+  - vouch
+  - voygr
+  - vulcan
+  - vulcan-technologies
+  - vulcantechnologies
+  - vyra
+  - waddle-labs
+  - waddlelabs
+  - wardstone
+  - warpbuild
+  - wasmer
+  - wavelength
+  - wayco
+  - waydev
+  - wayline
+  - weave
+  - weave-3
+  - weave-robotics
+  - weaveos
+  - weaverobotics
+  - webflow
+  - wedge
+  - weekday
+  - weekend
+  - weekend-fmr-volley
+  - weekendfmrvolley
+  - weflywright
+  - wefunder
+  - whatnot
+  - wifi-dabba-inc
+  - wifidabbainc
+  - wild-card
+  - wildcard
+  - willow
+  - willowvoice
+  - windmill
+  - with-andy
+  - withaccend
+  - withbanner
+  - withchima
+  - withclad
+  - withdavid
+  - withflex
+  - withflint
+  - withgauge
+  - within
+  - withjoy
+  - withnixo
+  - withsurface
+  - withterminal
+  - women-who-code
+  - womenwhocode
+  - wordware
+  - workers
+  - workers-io
+  - workersio
+  - woz
+  - wozcode
+  - wright-electric
+  - wrightelectric
+  - writesonic
+  - x1
+  - xendit
+  - xpay
+  - xpaycheckout
+  - y-combinator
+  - yarn
+  - yarn-2
+  - yassir
+  - ycombinator
+  - yhangry
+  - yn
+  - yondu
+  - you-shift
+  - youshift
+  - yummy-future
+  - yummyfuture
+  - zalos
+  - zapier
+  - zarna
+  - zarnaai
+  - zaymo
+  - zeit-ai
+  - zeitai
+  - zen
+  - zensors
+  - zensors-inc
+  - zentail
+  - zenysis
+  - zep-ai
+  - zepai
+  - zettascale-computing
+  - zettascalecomputing
+  - ziffyhomes
+  - ziina
+  - zip
+  - ziphq
+  - zscc
+  - zuddl
+  - zudo
+  - zudowork
+  - zuma
+  - zymbly
 ashby:
   verified:
   - slug: atlan
@@ -5255,18 +9874,91 @@ ashby:
     name: True Link
     note: vc careers page · India 0, intern 0
     website: https://truelinkfinancial.com
+  - slug: amplitude
+    tier: 2
+    name: Amplitude
+    note: yc careers page · India 2, intern 0
+    website: https://amplitude.com
+  - slug: inovalon
+    tier: 2
+    name: Inovalon
+    note: vc careers page · India 21, intern 0
+    website: vc-board:inovalon
+  - slug: current-advisors
+    tier: 2
+    name: Current
+    note: vc careers page · India 1, intern 0
+    website: https://current.co
+  - slug: sofarocean
+    tier: 2
+    name: Sofar Ocean
+    note: vc careers page · India 1, intern 0
+    website: https://sofarocean.com
+  - slug: nexus-cognitive
+    tier: 2
+    name: Nexus Cognitive
+    note: vc careers page · India 1, intern 0
+    website: vc-board:nexus cognitive
+  - slug: thoughtworks
+    tier: 2
+    note: 60 jobs
+  - slug: event-horizon-labs
+    tier: 2
+    note: 1 jobs
+  - slug: quicknode
+    tier: 2
+    note: 4 jobs
+  - slug: rallyuxr
+    tier: 2
+    note: 1 jobs
+  - slug: rivia
+    tier: 2
+    note: 8 jobs
+  - slug: andromedasurgical
+    tier: 2
+    note: 3 jobs
+  - slug: brumby
+    tier: 2
+    note: 5 jobs
+  - slug: darwin
+    tier: 2
+    note: 1 jobs
+  - slug: fernstone
+    tier: 2
+    note: 4 jobs
+  - slug: infinite
+    tier: 2
+    note: 3 jobs
+  - slug: lingodotdev
+    tier: 2
+    note: 3 jobs
+  - slug: posh
+    tier: 2
+    note: 15 jobs
+  - slug: provision
+    tier: 2
+    note: 3 jobs
+  - slug: serifhealth
+    tier: 2
+    note: 2 jobs
+  - slug: slope
+    tier: 2
+    note: 1 jobs
+  - slug: verahealth
+    tier: 2
+    note: 11 jobs
+  - slug: within
+    tier: 2
+    note: 14 jobs
   candidates:
   - scaler
-  - thoughtworks
   - turing
   - anara
-  - apollo-io
   - atomicindustries
   - beacons
   - blink
   - cointracker
   - deel
-  - event-horizon-labs
   - fathom
   - hadrius
   - infracost
@@ -5277,10 +9969,7 @@ ashby:
   - pave-robotics
   - pesto
   - podium
-  - quicknode
-  - rallyuxr
   - recurrency
-  - rivia
   - runtrellis
   - scout
   - theorem
@@ -5288,6 +9977,1973 @@ ashby:
   - vela
   - weekend
   - withflex
+  - gigs
+  - kaizen
+  - relling
+  - revyl
+  rejected:
+  - 10x
+  - 10x-science
+  - 10xdental
+  - 10xscience
+  - 1stcollab
+  - '222'
+  - 83-sciences
+  - 83sciences
+  - 9-mothers-corporation
+  - 99minutos
+  - 9mothers
+  - a0
+  - a0-dev
+  - a0dev
+  - accend
+  - acely
+  - activeloop
+  - adam
+  - adaptional
+  - adaptyvbio
+  - adentris
+  - adialante
+  - adyn
+  - aemon
+  - afriex
+  - afriexapp
+  - agap
+  - agape
+  - agency
+  - agentphone
+  - agilemd
+  - aglide
+  - ai-coach
+  - aiosmedical
+  - aircaps
+  - airhart-aeronautics
+  - airhartaero
+  - airhartaeronautics
+  - airmyne
+  - airweave
+  - aivideo
+  - aivideo-com
+  - aivideocom
+  - aktoria
+  - aktoria-robotics
+  - aktoriarobotics
+  - akute-health
+  - akutehealth
+  - alaan
+  - albedo
+  - alder
+  - alemhealth
+  - alex
+  - alex-com
+  - alexcodes
+  - algolia
+  - algotest
+  - algouniversity
+  - alguna
+  - alinea
+  - alinea-invest
+  - alkali
+  - allia
+  - allia-health
+  - alliahealth
+  - allus
+  - allus-ai
+  - allusai
+  - almond
+  - almond-2
+  - alpaca
+  - alpha-vantage
+  - alphavantage
+  - ambient
+  - ambient-ai
+  - ambientai
+  - amboras
+  - andco
+  - andromeda-surgical
+  - andson-biotech
+  - andsonbiotech
+  - andy-ai
+  - andyai
+  - anglera
+  - animahealth
+  - ankr
+  - ankr-health
+  - ankrhealth
+  - antigen
+  - aon3d
+  - apero-health
+  - aperohealth
+  - apollo
+  - apollo-3
+  - apollo-io
+  - apollofirst
+  - apollographql
+  - apolloio
+  - apprentice-health
+  - apprenticehealth
+  - aptdeco
+  - apten
+  - aqua
+  - aquashield
+  - aquashieldai
+  - aragorn-ai
+  - aragornai
+  - aravolta
+  - archform
+  - archilabs
+  - archon
+  - ardent
+  - arlo-industries
+  - arlo1
+  - arloindustries
+  - arnata
+  - arpari
+  - arqfinance
+  - artifact
+  - artifact-2
+  - artos
+  - arva
+  - arva-ai
+  - arvaai
+  - arzana
+  - asendia
+  - asendia-ai
+  - asendiaai
+  - aseon-labs
+  - aseonlabs
+  - asha
+  - asha-health
+  - ashahealth
+  - ashbyhq
+  - aside
+  - asim
+  - askclara
+  - askkyber
+  - askonestop
+  - aspect
+  - aspect-inc
+  - aspire
+  - aspireapp
+  - assembly-com
+  - assembly-hoa
+  - assemblyai
+  - assemblyhoa
+  - astraea
+  - astranis
+  - astroforge
+  - astromecha
+  - astromechanica
+  - athelas
+  - athenahq
+  - atlas-3
+  - atlascard
+  - atlog
+  - atomic-industries
+  - atomicvest
+  - atopile
+  - attack
+  - attack-capital
+  - attackcapital
+  - attain
+  - attimet
+  - attune
+  - attunehq
+  - aurorin-cad
+  - aurorincad
+  - autonomous-technologies-group
+  - autonomoustechnologiesgroup
+  - autositu
+  - autostep
+  - autumn
+  - avallon-ai
+  - avallonai
+  - avent
+  - aventindustrial
+  - aviaryai
+  - aviator
+  - avora
+  - axel-travel
+  - axeltravel
+  - axle
+  - axlehealth
+  - axross
+  - axross-pte-ltd
+  - axrosspteltd
+  - azalea-robotics-corporation
+  - azalearobotics
+  - azalearoboticscorporation
+  - b12-labs
+  - b12labs
+  - balance
+  - banner
+  - baraka
+  - be-go
+  - beam
+  - becomeautonomous
+  - beglaubigt
+  - beglaubigtde
+  - bego
+  - belozfi
+  - bemlo
+  - berry
+  - berryai
+  - besimple
+  - besimple-ai
+  - besimpleai
+  - betterbasket
+  - betterhalf
+  - beyond-reach-labs
+  - bik
+  - bild
+  - bildai
+  - binks
+  - biodock
+  - biorender
+  - biostack-platforms
+  - biostackplatforms
+  - bitmovin
+  - bland-ai
+  - blandai
+  - blaze
+  - blaze-2
+  - blink-new
+  - bloom
+  - bloom-4
+  - bloom-institute-of-technology
+  - bloominstituteoftechnology
+  - bloomtech
+  - bloomy
+  - bloomylearning
+  - blue-onion
+  - bluecargo
+  - bluehill-payments
+  - bluehillpayments
+  - bluejay
+  - bluelight
+  - blueonion
+  - boldvoice
+  - bolna-ai
+  - bolnaai
+  - bolster
+  - bolsterbuilt
+  - bond
+  - bondapp
+  - book
+  - booko
+  - bookoapp
+  - borong
+  - bot-md
+  - botbuilt
+  - botmd
+  - boundary
+  - boundaryml
+  - bountiful
+  - brainbase-labs
+  - branch8
+  - bretton
+  - bretton-ai
+  - brickanta
+  - brickwise
+  - brickwiseai
+  - brighterway
+  - broccoli-ai
+  - broccoliai
+  - browser-use
+  - browseruse
+  - brumbyformerlygrazemate
+  - bucket
+  - bucket-robotics
+  - bucketrobotics
+  - buildbuddy
+  - buildtrayd
+  - buildwithstar
+  - bunkerhill-health
+  - bunting-labs
+  - buntinglabs
+  - buoyant
+  - buoyant-aero
+  - buoyantaero
+  - burnt
+  - businessonbot
+  - bymason
+  - cair-health
+  - cairhealth
+  - callab
+  - callab-ai
+  - callabai
+  - calltree
+  - camber-2
+  - cambio-2
+  - campfire-2
+  - canary-technologies
+  - canarytechnologies
+  - candid-health
+  - candle
+  - candor
+  - candor-security
+  - canix
+  - capi-money
+  - capitol
+  - capitol-ai
+  - capitolai
+  - capix
+  - captivateiq
+  - carbonchain
+  - cardinal
+  - cardinal-gray
+  - cardinalgray
+  - careforce
+  - cargo
+  - carma
+  - cartage
+  - cascade-space
+  - cascadespace
+  - cascading
+  - cashfree
+  - cashfree-payments
+  - cashfreepayments
+  - castle-2
+  - catchback-cards
+  - catchbackcards
+  - cedana
+  - cekura
+  - cekura-ai
+  - celltype
+  - cerrion
+  - cerulion
+  - channel3
+  - characterquilt
+  - chargerobotics
+  - chariot-2
+  - chasi
+  - checkr
+  - chestnutmortgage
+  - chima
+  - cinder-2
+  - circle-medical
+  - circlemedical
+  - ciro
+  - cityfurnish
+  - clad
+  - claimhealth
+  - clara
+  - clara-2
+  - clarionhealth
+  - clearest-health
+  - clearesthealth
+  - clearlyai
+  - clickpe
+  - clicks-health
+  - clickshealth
+  - clinikally
+  - clipboardworks
+  - closure
+  - closure-intel
+  - cloudcruise
+  - cloudglue
+  - cmux
+  - coach
+  - coast
+  - coba
+  - code-four
+  - codeant
+  - codeant-ai
+  - codeantai
+  - codefour
+  - coderhouse
+  - codeshealth
+  - codingal
+  - cofactr
+  - cogram
+  - coinrule
+  - collectly
+  - collectpure
+  - collectwise
+  - coloop
+  - community-phone-company
+  - communityphone
+  - communityphonecompany
+  - complydo
+  - compose
+  - compose-ai
+  - composeai
+  - conductor-quantum
+  - conductorquantum
+  - conduit-ai
+  - confident-ai
+  - confidentai
+  - confidotech
+  - consus
+  - conta-simples
+  - contasimples
+  - contrario
+  - conus
+  - conus-med
+  - converge
+  - conviction
+  - convictiontrade
+  - copperlane
+  - copycat-ai
+  - copycatai
+  - corgea
+  - corgi-insurance
+  - corgiinsurance
+  - coris
+  - cotera
+  - coulomb
+  - coulomb-ai
+  - coulombai
+  - coval
+  - covera
+  - covera-agents
+  - coverage-cat
+  - coveragecat
+  - cozmo-ai
+  - cozmoai
+  - cpgscout
+  - craftwork
+  - craniometrix
+  - creativemode
+  - credal-ai
+  - credalai
+  - crew
+  - crustdata
+  - cua
+  - cubic
+  - culdesac
+  - cumulus-labs
+  - cumuluslabs
+  - curacel
+  - cyble
+  - cytera-cellworks
+  - d-id
+  - dabba
+  - daft
+  - dalus
+  - darsel
+  - dart
+  - dartai
+  - darwinrobotics
+  - data-driven-bioscience
+  - datadrivenbioscience
+  - dataland
+  - datrics
+  - davidai
+  - decoda-health
+  - dedaluslabs
+  - deep24
+  - deepawareairoboticscenterofsiliconvalley
+  - deepgrove
+  - deepnight
+  - deepreach
+  - deepreach-inc
+  - deepreachinc
+  - deeptrace
+  - delfino
+  - delfino-ai
+  - delfinoai
+  - dench
+  - dench-com
+  - denchcom
+  - denta
+  - deployparagon
+  - did
+  - diffuse
+  - diffuse-bio
+  - diffusebio
+  - digi
+  - digibuild
+  - digipals
+  - digitech
+  - dili
+  - diligencesquared-inc
+  - diligent
+  - dill
+  - dime
+  - dime-2
+  - dimehealth
+  - dimely
+  - diode
+  - diode-computers-inc
+  - diodecomputersinc
+  - directshifts
+  - discovered-materials
+  - discoveredmaterials
+  - dittowords
+  - docura-health
+  - docurahealth
+  - dodo
+  - domu-technology-inc
+  - domutechnologyinc
+  - doola
+  - dots
+  - dots-2
+  - doublehq
+  - dover
+  - draft-the-record
+  - drafttherecord
+  - draftwise
+  - dreamcraft
+  - dreamcraft-entertainment-inc
+  - dreamcraftentertainmentinc
+  - drillbit
+  - drip-capital
+  - dripcapital
+  - drymerge
+  - duckie
+  - dynamo
+  - dynamo-ai
+  - dynamoai
+  - dyneti-technologies
+  - dynetitechnologies
+  - eden
+  - eden-2
+  - eden-robotics
+  - edenmed
+  - edenrobotics
+  - edexia
+  - edgerun
+  - educato
+  - effigov
+  - ego
+  - egoai
+  - ehl
+  - eight-sleep
+  - elayne
+  - electric-air-2
+  - elevate
+  - elevate-2
+  - elevateformerlybloom
+  - elevatepay
+  - ellipsis
+  - eloquent-ai
+  - elyos-ai
+  - elyosai
+  - elyra
+  - elyrasystems
+  - ember
+  - embercopilot
+  - emerge-career
+  - emergecareer
+  - emergent
+  - enerjazz
+  - enhanced-radar
+  - enhancedradar
+  - entangl
+  - epinoma
+  - epsilon3
+  - epsilon3-inc
+  - ergo
+  - etleap
+  - eval
+  - eventhorizonlabs
+  - every
+  - exonic
+  - explorex
+  - eze
+  - ezeit
+  - f2
+  - faire
+  - fampay
+  - farcast
+  - feather
+  - feather-2
+  - featherhq
+  - fenrock
+  - fenrock-ai
+  - fenrockai
+  - fifth-door
+  - fifthdoor
+  - finku
+  - finn
+  - finnihealth
+  - finny-ai
+  - finnyai
+  - finosu
+  - finta
+  - finto-de
+  - firebender
+  - first
+  - firstbase
+  - firstbase-io
+  - firstbaseio
+  - firstdelivery
+  - flagright
+  - flair-labs
+  - flairlabs
+  - flex
+  - flexdesk
+  - flexport
+  - flick
+  - flint-2
+  - flintk12
+  - flock-safety
+  - flockjay
+  - flocksafety
+  - floot
+  - flowscope
+  - fondo
+  - forage
+  - forage-2
+  - forge
+  - forge-automation
+  - forgeautomation
+  - forgehq
+  - fort
+  - fortunahealth
+  - foundation-industries
+  - foundationindustries
+  - fractional
+  - freebuff
+  - fresco
+  - fresco-ai
+  - freya
+  - freyavoice
+  - function-of-beauty
+  - functionofbeauty
+  - fuse-ai
+  - fuseai
+  - garage-2
+  - gather
+  - gather-2
+  - gauge
+  - gauss
+  - geckorobotics
+  - gemnote
+  - general-proximity
+  - generalastro
+  - generalastronautics
+  - generalproximity
+  - getagency
+  - getaleph
+  - getasap
+  - getauctor
+  - getavora
+  - getbalance
+  - getbaraka
+  - getbenepass
+  - getbinks
+  - getbiostack
+  - getbluejay
+  - getburnt
+  - getcargo
+  - getcoach
+  - getcrux
+  - getdailyagape
+  - getfinn
+  - gethomebase
+  - getjust
+  - getlago
+  - getmagic
+  - getmatter
+  - getnao
+  - getoxygen
+  - getpennant
+  - getpesto
+  - getprescience
+  - getprospa
+  - getprosper
+  - getrevamp
+  - getroe
+  - getsafepay
+  - getsocratix
+  - getsolum
+  - getsphere
+  - getstrada
+  - getstructured
+  - getthera
+  - getunbound
+  - getzep
+  - getzuma
+  - giga
+  - gimo
+  - givecampus
+  - givechariot
+  - giveffect
+  - glass
+  - glass-health
+  - glasshealth
+  - glen
+  - glimpse-2
+  - gloglo
+  - go
+  - go1
+  - goat-group
+  - goatgroup
+  - goclicks
+  - godela
+  - godiligent
+  - gofinto
+  - gogograndparent
+  - gojabu
+  - gojiberry
+  - gojiberry-ai
+  - gojiberryai
+  - goldbelly
+  - goodfin
+  - gooseworks
+  - goradar
+  - gosameday
+  - gosats
+  - gotlanded
+  - gotrebol
+  - governgpt
+  - great-question
+  - gridware
+  - gromo
+  - groundcontrol
+  - growthbook
+  - gru
+  - guac
+  - guardian-rf
+  - guardianrf
+  - gusto
+  - gym-class
+  - gymclass
+  - hackerrank
+  - hamming
+  - hamming-ai
+  - hammingai
+  - hammr
+  - handle
+  - handoff
+  - hapi
+  - haplotype-labs
+  - haplotypelabs
+  - happyrobot
+  - harper
+  - haven
+  - haven-2
+  - havenservicing
+  - haystack
+  - healia
+  - healiahealth
+  - health-harbor
+  - healthharbor
+  - healthtech1
+  - hedgespecialty
+  - helios
+  - helium
+  - helloaviary
+  - helloaxel
+  - helloconduit
+  - hellocozmo
+  - hellolunajoy
+  - hellometer
+  - helloverify
+  - hemut
+  - hera
+  - hera-video
+  - heron
+  - hestus
+  - hestus-inc
+  - hestusinc
+  - hey-telo
+  - heycharge
+  - heylua
+  - heymalama
+  - heypocket
+  - heytelo
+  - hioperator
+  - hirenimble
+  - hireroger
+  - hitpay
+  - hitpayapp
+  - hive
+  - hokali
+  - homli
+  - housewarming
+  - hub
+  - hubble
+  - human-archive
+  - human-interest
+  - humaninterest
+  - humanlayer
+  - humwork
+  - huscarl
+  - hylight
+  - hype
+  - hyperbrowser
+  - hypotenuse
+  - hypotenuse-ai
+  - hypotenuseai
+  - icarus
+  - icepanel
+  - ignition-benefits
+  - ignitionbenefits
+  - imagine-ai
+  - imagineai
+  - imperfect
+  - imprezia
+  - imt
+  - imt-care
+  - imtcare
+  - in-unison
+  - inaccord
+  - inbuild
+  - indemni
+  - inden
+  - inevent
+  - infer
+  - infinia
+  - infiniaweb
+  - infinity
+  - infinityapp
+  - inito
+  - inlet
+  - inlet-2
+  - inletai
+  - inscribe
+  - inspectify
+  - instawork
+  - instrumentl
+  - intelligence-factory
+  - intelligencefactory
+  - intelline
+  - interfaze
+  - intryc
+  - invertbio
+  - investwithaqua
+  - iomete
+  - ironclad
+  - ironcladapp
+  - ironledger
+  - ironledger-ai
+  - ironledgerai
+  - isono-health
+  - isonohealth
+  - item
+  - itsrever
+  - jabu
+  - jarmin
+  - jeevy-fabrication
+  - jetlenses
+  - jinba
+  - jitx
+  - joinattain
+  - joincandidhealth
+  - joincarma
+  - joinergo
+  - joinfleek
+  - joinforage
+  - joinmarble
+  - joinnewton
+  - joinreframeapp
+  - joinspine
+  - joy
+  - juno-chat
+  - junocompanion
+  - just-appraised
+  - justai
+  - justappraised
+  - juxta
+  - juzibot
+  - kabilah
+  - kaipod-learning
+  - kaipodlearning
+  - kaizenautomation
+  - kalam-labs
+  - kalamlabs
+  - kalinda
+  - kalpa-labs
+  - kalpalabs
+  - kapa
+  - kapa-ai
+  - kapaai
+  - karat-financial
+  - karatfinancial
+  - karumi
+  - kelai
+  - kelaitech
+  - keye
+  - kilvin
+  - kingdomsuperculture
+  - kino
+  - kino-ai
+  - kinoai
+  - kinro
+  - kinter
+  - kivohealth
+  - klaimee
+  - klavis
+  - klavis-ai
+  - klavisai
+  - kobalt-labs
+  - kobaltlabs
+  - kodexglobal
+  - kodo
+  - kontigo
+  - korrai
+  - koyal
+  - kugelaudio
+  - kuli
+  - kyber
+  - lab0
+  - lamar-health
+  - lamarhealth
+  - lambda-robotics
+  - lambdarobotics
+  - laminar
+  - laminar-com
+  - landed
+  - landed-2
+  - landeed
+  - lanesurf
+  - latenthealth
+  - lattice
+  - laurence
+  - layers
+  - layerup
+  - laylo
+  - leadbay
+  - leaping-ai
+  - leapingai
+  - ledger-investing
+  - ledgerinvesting
+  - leena
+  - leena-ai
+  - leenaai
+  - leeroo
+  - legalist
+  - legion-health
+  - lemma
+  - lemonlime
+  - letter
+  - letter-ai
+  - lfcarry
+  - lightberry
+  - lighthouz
+  - lighthouz-ai
+  - lighthouzai
+  - lightly
+  - lightsprint
+  - lim
+  - limrun
+  - lineleap
+  - lingo
+  - lingodev
+  - liquid-compute
+  - liquidcompute
+  - living-carbon
+  - livingcarbon
+  - lnkd
+  - lob
+  - locata
+  - locatahealth
+  - locke
+  - loopfour
+  - lootrush
+  - lua-global-inc
+  - luaglobalinc
+  - luca-iq
+  - lucaiq
+  - lucid
+  - lugg
+  - lumari
+  - luminal
+  - lumius
+  - lumius-imaging
+  - lunajoy-health
+  - lunajoyhealth
+  - luthor
+  - macadamia
+  - macadamialabs
+  - madethis
+  - mage-legal
+  - magelegal
+  - magic
+  - magic-patterns
+  - magnetic
+  - magnetictax
+  - mailtime
+  - maintouch
+  - malama-health
+  - malamahealth
+  - manicule
+  - manufact
+  - manufacturingintelligence
+  - margin
+  - maritime-fusion
+  - maritimefusion
+  - mashgin
+  - mason
+  - material-depot
+  - materialdepot
+  - matter
+  - maven-bio
+  - mavenbio
+  - may-mobility
+  - maymobility
+  - maywood
+  - maywoodai
+  - mbodi
+  - mbodi-ai
+  - mbodiai
+  - mdalgorithms
+  - mdalgorithms-inc
+  - mdalgorithmsinc
+  - mdhub
+  - measured
+  - medme-health
+  - medmehealth
+  - medplum
+  - meetalder
+  - mentra
+  - merlin-ai
+  - merlinai
+  - meru-health
+  - meruhealth
+  - mesh-2
+  - mesmer
+  - metalware
+  - method-financial
+  - methodfi
+  - methodfinancial
+  - meticulate
+  - metorial
+  - middleware
+  - mindfi
+  - mindfort
+  - mineflow
+  - minicor
+  - minimum
+  - mino-games
+  - minogames
+  - minomonsters
+  - miso
+  - miso-labs
+  - misprint
+  - mixrank
+  - mochacare
+  - moda
+  - moda-2
+  - model-ml
+  - modelml
+  - modern-health
+  - modern-treasury
+  - modernhealth
+  - modernloop
+  - monumint
+  - moonset-health
+  - moonsethealth
+  - moonvalley
+  - moritz
+  - moritzlegal
+  - morph
+  - morphle-labs
+  - morphlelabs
+  - morphllm
+  - morphoai
+  - mosaic-2
+  - motion
+  - mspilot
+  - multiplier
+  - multiply-labs
+  - multiplylabs
+  - mutinyhq
+  - muzz
+  - mytos
+  - myunowallet
+  - nabis
+  - naive
+  - nao-labs
+  - naolabs
+  - narrative
+  - nautilus
+  - nave
+  - navier
+  - navier-ai
+  - navierai
+  - nectar
+  - nectarclimate
+  - neodocs
+  - nessie
+  - nessielabs
+  - nest-genomics
+  - nestgenomics
+  - nestor
+  - nestorup
+  - netomi
+  - neuromorphic
+  - newscatcher
+  - newscatcherapi
+  - newstory
+  - newstoryhomes
+  - newton
+  - nextera-robotics-didgeai
+  - nexterarobotics
+  - nexteraroboticsdidgeai
+  - nimble
+  - nine-fives
+  - ninefives
+  - nira-energy
+  - niraenergy
+  - nitrode
+  - nixo
+  - no-logo
+  - nologo
+  - nomic-bio
+  - nomicbio
+  - noora-health
+  - noorahealth
+  - noso
+  - noso-labs
+  - nosolabs
+  - nourish
+  - nova-credit
+  - novacredit
+  - novaflow
+  - novoflow
+  - noxmetals
+  - nozomio
+  - nsave
+  - numen
+  - numero
+  - ocular-ai
+  - ocularai
+  - odeko
+  - odysaviation
+  - ohm
+  - ohm-2
+  - okteto
+  - olympian-motors
+  - olympianmotors
+  - omnistrate
+  - ondeck-ai
+  - ondeckai
+  - one-robot
+  - onefin
+  - onelocal
+  - onesignal
+  - onestop
+  - onlook
+  - ooak-data
+  - ooakdata
+  - opalite-health
+  - opalitehealth
+  - open
+  - openbenchmarks
+  - openmart
+  - openunit
+  - openwork
+  - openworklabs
+  - ophelia
+  - optifye
+  - optifye-ai
+  - optifyeai
+  - opusense
+  - opusense-ai
+  - opusenseai
+  - orange-slice
+  - orangeslice
+  - orangewood
+  - orangewood-labs
+  - orangewoodlabs
+  - orbio
+  - orbio-earth
+  - orbioearth
+  - orbital-operations
+  - orbitaloperations
+  - orbitalops
+  - orca-aerospace
+  - orcaaerospace
+  - orchid
+  - origin
+  - origin-bio
+  - os3
+  - os3robotics
+  - osium
+  - osium-ai
+  - osiumai
+  - osmosis
+  - outerport
+  - outputbio
+  - outputbiosciences
+  - overlap
+  - oxus
+  - oxus-ai
+  - oxygen
+  - paasa
+  - paces
+  - pair-ai
+  - pair-team
+  - pairai
+  - pairteam
+  - palettehq
+  - panels
+  - pangea
+  - pangea-app
+  - pangeaapp
+  - pango
+  - pangolin
+  - paradedb
+  - paragon-ai
+  - paragonai
+  - parallelbio
+  - parameter
+  - parametric
+  - parasma
+  - parsewise
+  - partcl
+  - pasito
+  - pave-2
+  - pax
+  - pax-markets
+  - paxai
+  - paxhistoria
+  - paxmarkets
+  - payflow
+  - payna
+  - peakflo
+  - pelago
+  - pelagohealth
+  - pennant
+  - people
+  - people-ai
+  - peopleai
+  - peppr-ai
+  - pepprai
+  - per-diem
+  - perdiem
+  - perfectbit
+  - perfectbit-inc
+  - perfectbitinc
+  - permitportal
+  - permitportalapp
+  - perseus-defense
+  - perseusdefense
+  - petrarch
+  - pgdog
+  - photonium
+  - photoniumoptics
+  - picnic
+  - picnicai
+  - pier
+  - pier-finance
+  - piinpoint
+  - pillar
+  - pillar-2
+  - pine-park-health
+  - pineparkhealth
+  - piramidal
+  - pirislabs
+  - pirouette-pharma
+  - pirouettepharma
+  - pivot-robotics
+  - players-lounge
+  - playerslounge
+  - plexe
+  - ploy
+  - pno
+  - pnoe
+  - pocket
+  - pocketsuite
+  - poh
+  - pointhound
+  - poka-labs
+  - pokalabs
+  - polotab
+  - poly
+  - polymath-robotics
+  - polymathlabs
+  - polymathrobotics
+  - pop-meals
+  - popmeals
+  - porter
+  - poshenergy
+  - postal
+  - postscript
+  - posturehealth-inc
+  - powder
+  - powderfi
+  - prembly
+  - premblyformerlyidentitypass
+  - prequel
+  - prescience-inc
+  - prescienceinc
+  - presti
+  - presti-ai
+  - prestiai
+  - primevault
+  - primitive
+  - probably-genetic
+  - proception
+  - proception-inc
+  - proceptioninc
+  - procindex
+  - prodigal
+  - prodigaltech
+  - prohost
+  - prohostai
+  - proliferate
+  - prolific
+  - promise-pay
+  - promptarmor
+  - promptingcompany
+  - promptless
+  - proof-of-human
+  - propelauth
+  - prosights
+  - prospa
+  - prosper
+  - protex
+  - protex-ai
+  - protexai
+  - proven-group
+  - provengroup
+  - provenmetal
+  - provenskincare
+  - prox
+  - proximitty
+  - pulley
+  - pulse-3
+  - pump
+  - pump-co
+  - pumpco
+  - pylon-2
+  - qfex
+  - quadrant
+  - quadrant-health
+  - quadranthealth
+  - qualgent
+  - quartzy
+  - questdb
+  - quickchat
+  - quickchat-ai
+  - quickchatai
+  - quill
+  - quill-bills
+  - quillbills
+  - qventus
+  - rally
+  - ralo
+  - ramain
+  - ramani
+  - rappi
+  - rational
+  - raven
+  - raycaster
+  - razorpay
+  - re2
+  - reacherapp
+  - reachpower
+  - readily
+  - reality-defender
+  - reason-machines
+  - reasonmachines
+  - rebill
+  - rebolt
+  - recall-ai
+  - recallai
+  - recidiviz
+  - redbird
+  - reditus
+  - reditus-space
+  - reditusspace
+  - refactor
+  - reflex
+  - reforged-labs
+  - reforgedlabs
+  - reform
+  - reformhq
+  - reframe
+  - regbase
+  - relari
+  - relativity-space
+  - relativityspace
+  - remi
+  - remihq
+  - rentflow
+  - renthop
+  - replicas
+  - reprompt
+  - repromptai
+  - rescript
+  - resident-boost
+  - respan
+  - resquared
+  - retailready
+  - retailreadyai
+  - retellai
+  - retool
+  - retrofix
+  - rev-genomics
+  - revamp
+  - rever
+  - revgenomics
+  - revion
+  - revise-robotics
+  - reviving-mind
+  - revivingmind
+  - revnu
+  - rex
+  - rex-inc
+  - rhem
+  - rhem-labs
+  - rhemlabs
+  - rhizome-ai
+  - rhizomeai
+  - ridecell
+  - rimward
+  - rinse
+  - riot
+  - rippling
+  - rivia-ai
+  - riviaai
+  - roame
+  - robby
+  - roboticscenter
+  - rocketsdr
+  - roe
+  - roforco
+  - roger
+  - roger-2
+  - rollstack-2
+  - rootly
+  - rose-rocket
+  - roserocket
+  - routable
+  - rove
+  - rovi
+  - rovi-health
+  - rovihealth
+  - rubbrband
+  - rudus
+  - ruffnauts
+  - rulebase
+  - rulebricks
+  - ruma-care
+  - rumacare
+  - runahr
+  - runanywhere
+  - runautomat
+  - runconverge
+  - runcopycat
+  - rungroundcontrol
+  - runparagon
+  - runpulse
+  - runtime
+  - runtm
+  - safebeat
+  - safebutler
+  - safepay
+  - safetywing
+  - salarybox
+  - salus
+  - sameday
+  - sammy-labs
+  - sammylabs
+  - sant
+  - sante
+  - santehq
+  - saphira
+  - saphira-ai
+  - saphiraai
+  - sapling
+  - sapling-ai
+  - saplingai
+  - saturnos
+  - sava
+  - savahq
+  - scalar-field
+  - scalarfield
+  - scale
+  - scale-ai
+  - scaleai
+  - scispot
+  - scispot-io
+  - scott-ai
+  - scottai
+  - scout-4
+  - scoutforschools
+  - screenpipe
+  - seal
+  - seal-2
+  - seam
+  - seeing-systems
+  - seeingsystems
+  - semble
+  - sembleai
+  - sendbird
+  - sendblue
+  - senso
+  - serif-health
+  - serve-ai
+  - serveai
+  - serveaiglobal
+  - servo7
+  - sftensor
+  - shape-shapescale
+  - shapeshapescale
+  - shasta
+  - shasta-health
+  - shastahealth
+  - shepherdinsurance
+  - shiboleth
+  - shimmer
+  - shipbob
+  - shopgarage
+  - short-story
+  - shortloop
+  - shortstorybox
+  - shuttle-central
+  - shuttlecentral
+  - sid
+  - sievedata
+  - sigmaos
+  - signadot
+  - silimate
+  - silkchart
+  - silurian
+  - simantic
+  - simbie
+  - simbie-ai
+  - simbieai
+  - simcare
+  - simpleai
+  - simplyinsured
+  - siphox-health
+  - siphoxhealth
+  - sira
+  - sirdab
+  - sitefire
+  - sixtyfour
+  - skypher
+  - skyvern
+  - skyways
+  - slash
+  - slopepay
+  - smartcuts
+  - smooth
+  - snappr
+  - socratix-ai
+  - socratixai
+  - soff
+  - sola-solutions
+  - solo
+  - solosuit
+  - solum-health
+  - solumhealth
+  - solvatechnology
+  - solve-intelligence
+  - sonatoria
+  - sonia
+  - soniahealth
+  - soraban
+  - sorce
+  - soren
+  - soria
+  - soriaanalytics
+  - sorting-robotics
+  - sortingrobotics
+  - soundboks
+  - sourcebot
+  - sourcify
+  - spaceium
+  - spaceium-inc
+  - spaceiuminc
+  - spark
+  - sparkhq
+  - sparkles
+  - speedy-labs
+  - speedylabs
+  - spenmo
+  - spine
+  - splash-inc
+  - splash9
+  - splashinc
+  - spot-health
+  - spotdx
+  - spothealth
+  - spott
+  - spurtest
+  - squid
+  - stacksync
+  - stackup
+  - stagewise
+  - standard
+  - standard-ai
+  - standardai
+  - standout
+  - star
+  - stardex
+  - stardrift
+  - startraven
+  - steinmetz
+  - steinmetzmotors
+  - stoke-space
+  - stokespace
+  - storyboarder
+  - storylane
+  - strac
+  - strada
+  - streak
+  - streamable
+  - streamline-systems
+  - streamlinesystems
+  - stripe
+  - strive-math
+  - strivemath
+  - strong-compute
+  - strongcompute
+  - structured-ai
+  - structuredai
+  - subimage
+  - subvocal
+  - suger
+  - sully
+  - summitglobal
+  - superkalam
+  - superset
+  - supertokens
+  - surface-labs
+  - surfacelabs
+  - swadesh
+  - swayable
+  - sweetspot
+  - swif
+  - swif-ai
+  - swifai
+  - swiftsku
+  - sygaldry
+  - sygaldrytechnologies
+  - synapse-semiconductor
+  - synapsesemi
+  - synapsesemiconductor
+  - sync
+  - sync-2
+  - syncly
+  - synthetic-society
+  - syntheticfi
+  - syntheticsociety
+  - synthio-labs
+  - synthiolabs
+  - syntra
+  - tab
+  - tabula
+  - taiga
+  - taigabilling
+  - taiv
+  - tamarind
+  - tamarind-bio
+  - tandem
+  - tandem-2
+  - tandemspace
+  - tankpayments
+  - taskade
+  - tasklet
+  - tasklet-2
+  - taxgpt
+  - teamout
+  - tektondynamics
+  - telm
+  - telmai
+  - tempo-2
+  - terra-api
+  - terraapi
+  - terrakotta
+  - terranox
+  - terranox-ai
+  - terranoxai
+  - tesora
+  - testrigor
+  - text
+  - text-ai
+  - text-blaze
+  - textai
+  - textblaze
+  - the-forecasting-company
+  - the-hog
+  - the-juggernaut
+  - the-prompting-company
+  - the-subvocal-company
+  - thedailyscout
+  - theforecastingcompany
+  - thehog
+  - thehomli
+  - thejuggernaut
+  - themednet
+  - theorem-2
+  - thepromptingcompany
+  - therentflow
+  - theseus
+  - thesubvocalcompany
+  - third-chair
+  - thirdchair
+  - thirdlayer
+  - throxy
+  - thunder-compute
+  - thunkable
+  - tilt-fka-delphia
+  - tiltfkadelphia
+  - tint
+  - tivara
+  - toothy
+  - toothy-ai
+  - toothyai
+  - topkey
+  - toplinepro
+  - topship
+  - torus
+  - totalis
+  - tovala
+  - traceroot
+  - traceroot-ai
+  - tracerootai
+  - tractian
+  - transastra
+  - transastra-corporation
+  - transastracorporation
+  - trata
+  - trayd
+  - trbol
+  - treblo
+  - trebol
+  - trelium
+  - trellis-ai
+  - trellisai
+  - trmlabs
+  - truebiz
+  - trueclaim
+  - truewind
+  - truss
+  - trusspayments
+  - truthsystems
+  - tryardent
+  - tryasimov
+  - tryastraea
+  - trybree
+  - trycandle
+  - trycardinal
+  - trycardinal-ai
+  - trychannel3
+  - trycoast
+  - tryfinch
+  - tryglen
+  - tryglimpse
+  - tryhelium
+  - trykarat
+  - trymeasured
+  - trynarrative
+  - trynearby
+  - tryperdiem
+  - tryriot
+  - tryrobby
+  - trysalient
+  - tryscott
+  - trysmartcuts
+  - tryterra
+  - trytrata
+  - trytrueclaim
+  - trytruewind
+  - tryvela
+  - tuesdaylabs
+  - turing-college
+  - turing-labs-inc
+  - turingcollege
+  - turinglabsinc
+  - turingsaas
+  - turionspace
+  - twodots
+  - type
+  - typewise
+  - ubicloud
+  - unbound
+  - unison
+  - uno-wallet
+  - unowallet
+  - unsiloed
+  - unsiloed-ai
+  - unsiloedai
+  - unsloth
+  - unsloth-ai
+  - unslothai
+  - unusual
+  - upequity
+  - upsolve
+  - upsolve-ai
+  - upsolveai
+  - useagave
+  - useandco
+  - useautumn
+  - usebluehill
+  - usebluelight
+  - usecaribou
+  - usecentralize
+  - usedill
+  - usedots
+  - useelevate
+  - useflai
+  - usehaven
+  - usehaystack
+  - usehelios
+  - uselayerup
+  - uselemma
+  - usemargin
+  - usemesh
+  - usemotion
+  - usenaive
+  - usenash
+  - useocular
+  - useoffstream
+  - usepanels
+  - useparagon
+  - usepeppr
+  - usepostal
+  - useprox
+  - usepylon
+  - usesalus
+  - usesimple
+  - usesoren
+  - usestable
+  - usethirdchair
+  - usetorus
+  - usevyra
+  - vahan
+  - variance
+  - variant
+  - varos
+  - vector-legal
+  - vectorlegal
+  - vectorshift
+  - velt
+  - vena-vitals
+  - venavitals
+  - vendah
+  - vendora
+  - vendra
+  - ventura
+  - venu-ai
+  - venu3d
+  - venuai
+  - vera-health
+  - vergegenomics
+  - vergesense
+  - verne-robotics
+  - vernerobotics
+  - vernius
+  - vernius-systems-inc
+  - verniussystemsinc
+  - versable
+  - versableai
+  - vertofx
+  - veryfi
+  - veryfi-inc
+  - veryfiinc
+  - vesence
+  - videogen
+  - vinci-games
+  - vincigames
+  - vitable-health
+  - vitablehealth
+  - voiceops
+  - voiceos
+  - volantio
+  - volaren
+  - volaren-inc
+  - volareninc
+  - volta-labs-inc
+  - voltair
+  - voltairlabs
+  - voltalabs
+  - voltalabsinc
+  - voltic
+  - volticshipping
+  - vouch
+  - voygr
+  - vulcan
+  - vulcan-technologies
+  - vulcantechnologies
+  - vyra
+  - waddle-labs
+  - waddlelabs
+  - wardstone
+  - warpbuild
+  - wasmer
+  - wavelength
+  - wayco
+  - waydev
+  - wayline
+  - weave-3
+  - weave-robotics
+  - weaveos
+  - weaverobotics
+  - webflow
+  - wedge
+  - weekday
+  - weekend-fmr-volley
+  - weekendfmrvolley
+  - weflywright
+  - wefunder
+  - whatnot
+  - wifi-dabba-inc
+  - wifidabbainc
+  - wild-card
+  - wildcard
+  - willow
+  - willowvoice
+  - windmill
+  - with-andy
+  - withaccend
+  - withbanner
+  - withchima
+  - withclad
+  - withdavid
+  - withflint
+  - withgauge
+  - withjoy
+  - withnixo
+  - withsurface
+  - withterminal
+  - women-who-code
+  - womenwhocode
+  - wordware
+  - workers
+  - workers-io
+  - workersio
+  - woz
+  - wozcode
+  - wright-electric
+  - wrightelectric
+  - writesonic
+  - x1
+  - xendit
+  - xpay
+  - xpaycheckout
+  - y-combinator
+  - yarn
+  - yarn-2
+  - yassir
+  - yhangry
+  - yn
+  - yondu
+  - you-shift
+  - youshift
+  - yummy-future
+  - yummyfuture
+  - zalos
+  - zarna
+  - zarnaai
+  - zaymo
+  - zeitai
+  - zen
+  - zensors-inc
+  - zentail
+  - zenysis
+  - zep-ai
+  - zepai
+  - zettascale-computing
+  - zettascalecomputing
+  - ziffyhomes
+  - ziphq
+  - zippi
+  - zscc
+  - zuddl
+  - zudo
+  - zudowork
+  - zuma
+  - zymbly
 smartrecruiters:
   verified:
   - slug: swiggy
@@ -5810,179 +12466,17 @@ smartrecruiters:
     name: Sense Talent Labs
     note: vc careers page · India 2, intern 0
     website: https://sensehq.com
-  candidates:
-  - zomato
-  - paytm
-  - phonepe
-  - flipkart
-  - myntra
-  - meesho
-  - oyorooms
-  - byjus
-  - upgrad
-  - physicswallah
-  - visa
-  - bosch
-  - siemens
-  - ubisoft
-  - mcdonalds
-  - avery-dennison
-  - acko
-  - airtel
-  - apnahq
-  - ather
-  - atlan
-  - atlanhq
-  - bhartiairtel
-  - bigbasket
-  - billdesk
-  - blinkit
-  - bounce
-  - browserstack
-  - capillary
-  - capillarytech
-  - cashfree
-  - chargebee
-  - chargebeeinc
-  - cleartax
-  - clevertap
-  - codingninjas
-  - cred
-  - credavenue
-  - crediblemind
-  - crio
-  - cultfit
-  - curefit
-  - darwinbox
-  - delhivery
-  - devrev
-  - devtron
-  - digit
-  - dream11
-  - dreamsports
-  - dunzo
-  - easebuzz
-  - eightfoldai
-  - exotel
-  - fampay
-  - fimoney
-  - fractal
-  - fractalanalytics
-  - freshdesk
-  - freshsales
-  - geeksforgeeks
-  - globallogic
-  - grow
-  - groww
-  - gupshup
-  - hackerearth
-  - haptik
-  - harness
-  - hasura
-  - hasurahq
-  - hcltech
-  - hippovideo
-  - icertis
-  - indmoney
-  - infosys
-  - innovaccer
-  - instamojo
-  - insurancedekho
-  - jarapp
-  - jio
-  - jupiter
-  - jupitermoney
-  - juspay
-  - kaleyra
-  - khatabook
-  - knowlarity
-  - leadsquared
-  - lenskart
-  - licious
-  - mahindra
-  - masaischool
-  - mathco
-  - meeshotech
-  - mindtickleinc
-  - moengage
-  - mohalla
-  - mphasis
-  - mswipe
-  - navihq
-  - netcore
-  - nykaa
-  - observeai
-  - ola
-  - olacabs
-  - olaelectric
-  - onsurity
-  - opensecret
-  - oyo
-  - paykun
-  - paytmmoney
-  - persistent
-  - pinelabs
-  - plumhq
-  - policybazaar
-  - porter
-  - postmanlabs
-  - practo
-  - pristyncare
-  - publicissapient
-  - quantiphi
-  - rafay
-  - rapido
-  - razorpay
-  - razorpaysoftware
-  - reliancejio
-  - rupeek
-  - sapient
-  - scaler
-  - scalerecademy
-  - setu
-  - shadowfax
-  - sharechat
-  - shiprocket
-  - signoz
-  - simpl
-  - slicepay
-  - smallcase
-  - spinny
-  - springverify
-  - springworks
-  - sprinto
-  - stablemoney
-  - swiggyin
-  - tanla
-  - tatadigital
-  - tataelectronics
-  - tcs
-  - techmahindra
-  - thoughtworks
-  - tickertape
-  - tigeranalytics
-  - turing
-  - turingcom
-  - tvsmotor
-  - unacademyin
-  - uni
-  - urbanclap
-  - urbancompany
-  - vedantu
-  - wellfound
-  - wingify
-  - wipro
-  - yellowai
-  - yellowmessenger
-  - yubi
-  - yulu
-  - zepto
-  - zeptonow
-  - zerodha
-  - zeta
-  - zetaindia
-  - zohocorp
-  - zohorecruit
+  - slug: rodeofx
+    tier: 2
+    name: Rodeofx
+    note: yc careers page · India 11, intern 0
+  - slug: carousellgroup
+    tier: 2
+    name: Carousell Group
+    note: vc careers page · India 1, intern 0
+    website: https://carousell.sg
+  candidates: []
+  rejected:
   - 10x
   - 10x-science
   - 10xdental
@@ -6002,6 +12496,7 @@ smartrecruiters:
   - accend
   - accord
   - acely
+  - acko
   - activeloop
   - adam
   - adaptional
@@ -6021,6 +12516,7 @@ smartrecruiters:
   - agentphone
   - agilemd
   - aglide
+  - ai-coach
   - aios
   - aiosmedical
   - aiprise
@@ -6030,6 +12526,7 @@ smartrecruiters:
   - airhartaero
   - airhartaeronautics
   - airmyne
+  - airtel
   - airweave
   - aivideo
   - aivideo-com
@@ -6041,6 +12538,7 @@ smartrecruiters:
   - akutehealth
   - alaan
   - albedo
+  - alder
   - aleph
   - alex
   - alex-com
@@ -6052,6 +12550,9 @@ smartrecruiters:
   - alinea
   - alinea-invest
   - alkali
+  - allia
+  - allia-health
+  - alliahealth
   - allus
   - allus-ai
   - allusai
@@ -6069,6 +12570,8 @@ smartrecruiters:
   - andco
   - andromeda-surgical
   - andromedasurgical
+  - andson-biotech
+  - andsonbiotech
   - andy-ai
   - andyai
   - anglera
@@ -6084,6 +12587,7 @@ smartrecruiters:
   - aon3d
   - apero-health
   - aperohealth
+  - apnahq
   - apolink
   - apollo
   - apollo-3
@@ -6160,6 +12664,9 @@ smartrecruiters:
   - astromechanica
   - athelas
   - athenahq
+  - ather
+  - atlan
+  - atlanhq
   - atlas
   - atlas-3
   - atlascard
@@ -6195,6 +12702,7 @@ smartrecruiters:
   - avallonai
   - avent
   - aventindustrial
+  - avery-dennison
   - averyiq
   - aviaryai
   - aviator
@@ -6237,10 +12745,13 @@ smartrecruiters:
   - betterhalf
   - beyond-reach-labs
   - beyondreachlabs
+  - bhartiairtel
+  - bigbasket
   - bik
   - bild
   - bild-ai
   - bildai
+  - billdesk
   - binks
   - biodock
   - biorender
@@ -6257,6 +12768,7 @@ smartrecruiters:
   - blee
   - blink
   - blink-new
+  - blinkit
   - blissway
   - bloom-4
   - bloom-institute-of-technology
@@ -6266,6 +12778,8 @@ smartrecruiters:
   - bloomylearning
   - blue-onion
   - bluecargo
+  - bluehill-payments
+  - bluehillpayments
   - bluejay
   - bluelight
   - blueonion
@@ -6282,9 +12796,11 @@ smartrecruiters:
   - bookoapp
   - bootloop
   - borong
+  - bosch
   - bot-md
   - botbuilt
   - botmd
+  - bounce
   - boundary
   - boundaryml
   - bountiful
@@ -6303,7 +12819,10 @@ smartrecruiters:
   - broccoli-ai
   - broccoliai
   - browser-use
+  - browserstack
   - browseruse
+  - brumby
+  - brumbyformerlygrazemate
   - bucket
   - bucket-robotics
   - bucketrobotics
@@ -6319,6 +12838,7 @@ smartrecruiters:
   - buoyantaero
   - burnt
   - businessonbot
+  - byjus
   - bymason
   - cair-health
   - cairhealth
@@ -6342,6 +12862,8 @@ smartrecruiters:
   - candor-security
   - canix
   - capi-money
+  - capillary
+  - capillarytech
   - capimoney
   - capitol
   - capitol-ai
@@ -6365,6 +12887,7 @@ smartrecruiters:
   - cascadespace
   - cascading
   - casco
+  - cashfree
   - cashfree-payments
   - cashfreepayments
   - castle
@@ -6381,6 +12904,8 @@ smartrecruiters:
   - channel3
   - characterquilt
   - charge-robotics
+  - chargebee
+  - chargebeeinc
   - chargerobotics
   - chariot
   - chariot-2
@@ -6411,6 +12936,8 @@ smartrecruiters:
   - clearesthealth
   - clearly-ai
   - clearlyai
+  - cleartax
+  - clevertap
   - clickpe
   - clicks-health
   - clickshealth
@@ -6422,6 +12949,7 @@ smartrecruiters:
   - cloudcruise
   - cloudglue
   - cmux
+  - coach
   - coast
   - coba
   - code-four
@@ -6429,9 +12957,11 @@ smartrecruiters:
   - codeant-ai
   - codeantai
   - codefour
+  - coderhouse
   - codes-health
   - codeshealth
   - codingal
+  - codingninjas
   - cofactr
   - cogram
   - coinrule
@@ -6447,6 +12977,7 @@ smartrecruiters:
   - communityphonecompany
   - complete
   - complir
+  - complydo
   - compose
   - compose-ai
   - composeai
@@ -6465,11 +12996,16 @@ smartrecruiters:
   - conta-simples
   - contasimples
   - contrario
+  - conus
+  - conus-med
   - conveo
   - converge
   - conviction
   - convictiontrade
   - coperniq
+  - copperlane
+  - copycat-ai
+  - copycatai
   - corgea
   - corgi
   - corgi-insurance
@@ -6488,22 +13024,30 @@ smartrecruiters:
   - cozmo-ai
   - cozmoai
   - cpgscout
+  - craftwork
   - craniometrix
   - cranston
   - cranston-ai
   - cranstonai
   - creativemode
+  - cred
   - credal
   - credal-ai
   - credalai
+  - credavenue
+  - crediblemind
   - crew
+  - crio
   - crustdata
   - ctgt
   - cua
   - cubic
+  - culdesac
+  - cultfit
   - cumulus-labs
   - cumuluslabs
   - curacel
+  - curefit
   - curri
   - cyble
   - cytera-cellworks
@@ -6514,6 +13058,9 @@ smartrecruiters:
   - darsel
   - dart
   - dartai
+  - darwin
+  - darwinbox
+  - darwinrobotics
   - data-driven-bioscience
   - datadrivenbioscience
   - datafold
@@ -6534,14 +13081,21 @@ smartrecruiters:
   - deepgrove
   - deepnight
   - deepnote
+  - deepreach
+  - deepreach-inc
+  - deepreachinc
   - deeptrace
   - delfino
   - delfino-ai
   - delfinoai
+  - delhivery
   - dench
   - dench-com
   - denchcom
+  - denta
   - deployparagon
+  - devrev
+  - devtron
   - did
   - diffuse
   - diffuse-bio
@@ -6549,6 +13103,7 @@ smartrecruiters:
   - digi
   - digibuild
   - digipals
+  - digit
   - digitech
   - dili
   - diligencesquared
@@ -6585,33 +13140,39 @@ smartrecruiters:
   - draftaid
   - drafttherecord
   - draftwise
+  - dream11
   - dreamcraft
   - dreamcraft-entertainment-inc
   - dreamcraftentertainmentinc
+  - dreamsports
   - drillbit
   - drip-capital
   - dripcapital
   - drymerge
   - duckie
   - duffel
+  - dunzo
   - dynamo
   - dynamo-ai
   - dynamoai
   - dyneti
   - dyneti-technologies
   - dynetitechnologies
+  - easebuzz
   - eden
   - eden-2
   - eden-robotics
   - edenmed
   - edenrobotics
   - edexia
+  - edgerun
   - educato
   - effigov
   - ego
   - egoai
   - ehl
   - eight-sleep
+  - eightfoldai
   - eightsleep
   - ekho
   - elayne
@@ -6650,16 +13211,19 @@ smartrecruiters:
   - ergo
   - escape
   - etleap
+  - eval
   - event-horizon-labs
   - eventhorizonlabs
   - eventual
   - every
   - exonic
+  - exotel
   - explorex
   - eze
   - ezeit
   - f2
   - faire
+  - fampay
   - farcast
   - fathom
   - feanix-biotechnologies
@@ -6671,9 +13235,11 @@ smartrecruiters:
   - fenrock
   - fenrock-ai
   - fenrockai
+  - fernstone
   - fieldguide
   - fifth-door
   - fifthdoor
+  - fimoney
   - finch
   - finn
   - finni-health
@@ -6687,9 +13253,11 @@ smartrecruiters:
   - finto-de
   - firebender
   - firecrawl
+  - first
   - firstbase
   - firstbase-io
   - firstbaseio
+  - firstdelivery
   - firstwork
   - flagright
   - flai
@@ -6705,27 +13273,36 @@ smartrecruiters:
   - flint
   - flint-2
   - flintk12
+  - flipkart
   - flock-safety
   - flockjay
   - flocksafety
   - floot
+  - flowscope
   - flowtel
   - flutterflow
   - fondo
   - forage
   - forage-2
+  - forge
   - forge-automation
   - forgeautomation
+  - forgehq
   - formance
   - fort
   - fortuna-health
   - fortunahealth
   - foundation-industries
   - foundationindustries
+  - fractal
+  - fractalanalytics
   - fractional
+  - freebuff
   - fresco
   - fresco-ai
+  - freshdesk
   - freshpaint
+  - freshsales
   - freya
   - freyavoice
   - function-of-beauty
@@ -6738,8 +13315,10 @@ smartrecruiters:
   - gather
   - gather-2
   - gauge
+  - gauss
   - gecko-robotics
   - geckorobotics
+  - geeksforgeeks
   - gem
   - gemnote
   - general-proximity
@@ -6759,6 +13338,7 @@ smartrecruiters:
   - getbluejay
   - getburnt
   - getcargo
+  - getcoach
   - getcrux
   - getdailyagape
   - getdayjob
@@ -6771,6 +13351,7 @@ smartrecruiters:
   - getnao
   - getnivara
   - getoxygen
+  - getpennant
   - getpesto
   - getprescience
   - getprospa
@@ -6800,6 +13381,8 @@ smartrecruiters:
   - glen
   - glimpse
   - glimpse-2
+  - globallogic
+  - gloglo
   - go
   - go1
   - goat-group
@@ -6831,14 +13414,19 @@ smartrecruiters:
   - greenboard
   - gridware
   - gromo
+  - groundcontrol
+  - grow
   - growthbook
+  - groww
   - gru
   - guac
   - guardian-rf
   - guardianrf
+  - gupshup
   - gusto
   - gym-class
   - gymclass
+  - hackerearth
   - hadrius
   - haladir
   - halluminate
@@ -6853,12 +13441,17 @@ smartrecruiters:
   - haplotypelabs
   - happl
   - happyrobot
+  - haptik
+  - harness
   - harper
   - harperinsure
+  - hasura
+  - hasurahq
   - haven
   - haven-2
   - havenservicing
   - haystack
+  - hcltech
   - healia
   - healiahealth
   - health-harbor
@@ -6871,6 +13464,7 @@ smartrecruiters:
   - helium
   - helloaviary
   - helloaxel
+  - helloconduit
   - hellocozmo
   - hellolunajoy
   - hellometer
@@ -6892,6 +13486,7 @@ smartrecruiters:
   - heytelo
   - hillclimb
   - hioperator
+  - hippovideo
   - hirenimble
   - hireroger
   - hitpay
@@ -6926,9 +13521,13 @@ smartrecruiters:
   - hypotenuseai
   - icarus
   - icepanel
+  - icertis
   - idler
+  - ignition-benefits
+  - ignitionbenefits
   - imagine-ai
   - imagineai
+  - imperfect
   - imprezia
   - imt
   - imt-care
@@ -6936,6 +13535,9 @@ smartrecruiters:
   - in-unison
   - inaccord
   - inbuild
+  - indemni
+  - inden
+  - indmoney
   - inevent
   - infer
   - infinia
@@ -6945,6 +13547,7 @@ smartrecruiters:
   - infinityapp
   - infisical
   - influxdata
+  - infosys
   - infracost
   - inito
   - inkeep
@@ -6952,10 +13555,13 @@ smartrecruiters:
   - inlet-2
   - inletai
   - innate
+  - innovaccer
   - inscribe
   - inspectify
+  - instamojo
   - instawork
   - instrumentl
+  - insurancedekho
   - intelligence-factory
   - intelligencefactory
   - intelline
@@ -6977,12 +13583,14 @@ smartrecruiters:
   - item
   - itsrever
   - jabu
+  - jarapp
   - jarmin
   - jeevy-fabrication
   - jeevyfabrication
   - jetlenses
   - jiga
   - jinba
+  - jio
   - jitx
   - joinattain
   - joincandidhealth
@@ -6990,14 +13598,19 @@ smartrecruiters:
   - joinergo
   - joinfleek
   - joinforage
+  - joinmarble
   - joinnewton
   - joinreframeapp
+  - joinspine
   - joy
   - julius
   - junction
   - juno
   - juno-chat
   - junocompanion
+  - jupiter
+  - jupitermoney
+  - juspay
   - just-appraised
   - justai
   - justappraised
@@ -7006,8 +13619,11 @@ smartrecruiters:
   - kabilah
   - kaipod-learning
   - kaipodlearning
+  - kaizen
+  - kaizenautomation
   - kalam-labs
   - kalamlabs
+  - kaleyra
   - kalinda
   - kalpa-labs
   - kalpalabs
@@ -7025,6 +13641,7 @@ smartrecruiters:
   - kelai
   - kelaitech
   - keye
+  - khatabook
   - kilvin
   - kingdom
   - kingdomsuperculture
@@ -7039,7 +13656,10 @@ smartrecruiters:
   - klavis
   - klavis-ai
   - klavisai
+  - knowlarity
   - knowtex
+  - kobalt-labs
+  - kobaltlabs
   - kodex
   - kodexglobal
   - kontigo
@@ -7070,6 +13690,7 @@ smartrecruiters:
   - layerup
   - laylo
   - leadbay
+  - leadsquared
   - leaping-ai
   - leapingai
   - ledger-investing
@@ -7086,11 +13707,13 @@ smartrecruiters:
   - legora
   - lemma
   - lemonlime
+  - lenskart
   - letter
   - letter-ai
   - letterai
   - letterdrop
   - lfcarry
+  - licious
   - lightberry
   - lightdash
   - lighthouz
@@ -7098,7 +13721,12 @@ smartrecruiters:
   - lighthouzai
   - lightly
   - lightsprint
+  - lim
+  - limrun
   - lineleap
+  - lingo
+  - lingodev
+  - lingodotdev
   - liquid-compute
   - liquidcompute
   - litellm
@@ -7139,6 +13767,7 @@ smartrecruiters:
   - magicpatterns
   - magnetic
   - magnetictax
+  - mahindra
   - mailtime
   - maintouch
   - maitai
@@ -7150,13 +13779,16 @@ smartrecruiters:
   - mantisbiotech
   - manufact
   - manufacturingintelligence
+  - marble
   - margin
   - maritime-fusion
   - maritimefusion
+  - masaischool
   - mashgin
   - mason
   - material-depot
   - materialdepot
+  - mathco
   - matter
   - maven-bio
   - mavenbio
@@ -7167,6 +13799,7 @@ smartrecruiters:
   - mbodi
   - mbodi-ai
   - mbodiai
+  - mcdonalds
   - mdalgorithms
   - mdalgorithms-inc
   - mdalgorithmsinc
@@ -7176,6 +13809,9 @@ smartrecruiters:
   - medmehealth
   - mednet
   - medplum
+  - meesho
+  - meeshotech
+  - meetalder
   - mem0
   - mentra
   - menza
@@ -7188,6 +13824,7 @@ smartrecruiters:
   - meruhealth
   - mesh
   - mesh-2
+  - mesmer
   - metal
   - metalware
   - method-financial
@@ -7202,6 +13839,7 @@ smartrecruiters:
   - mindbase
   - mindfi
   - mindfort
+  - mindtickleinc
   - mineflow
   - minicor
   - minimum
@@ -7215,12 +13853,16 @@ smartrecruiters:
   - misprint
   - mixrank
   - mochacare
+  - moda
+  - moda-2
   - model-ml
   - modelml
   - modern-health
   - modern-treasury
   - modernhealth
   - moderntreasury
+  - moengage
+  - mohalla
   - momentic
   - monumint
   - moonset-health
@@ -7238,8 +13880,11 @@ smartrecruiters:
   - mosaic-2
   - moss
   - motion
+  - mphasis
   - mspilot
+  - mswipe
   - multifactor
+  - multiplier
   - multiply-labs
   - multiplylabs
   - mutiny
@@ -7247,6 +13892,7 @@ smartrecruiters:
   - mux
   - muzz
   - mymindbase
+  - myntra
   - mytos
   - myunowallet
   - nabis
@@ -7262,6 +13908,7 @@ smartrecruiters:
   - navier
   - navier-ai
   - navierai
+  - navihq
   - nectar
   - nectarclimate
   - neodocs
@@ -7271,7 +13918,9 @@ smartrecruiters:
   - nestgenomics
   - nestor
   - nestorup
+  - netcore
   - netomi
+  - neuromorphic
   - new-story
   - newscatcher
   - newscatcherapi
@@ -7314,6 +13963,8 @@ smartrecruiters:
   - numen
   - numeral
   - numero
+  - nykaa
+  - observeai
   - ocular-ai
   - ocularai
   - odeko
@@ -7324,6 +13975,9 @@ smartrecruiters:
   - ohm
   - ohm-2
   - okteto
+  - ola
+  - olacabs
+  - olaelectric
   - olympian-motors
   - olympianmotors
   - omnistrate
@@ -7338,6 +13992,7 @@ smartrecruiters:
   - onesignal
   - onestop
   - onlook
+  - onsurity
   - ooak-data
   - ooakdata
   - opalite-health
@@ -7346,6 +14001,7 @@ smartrecruiters:
   - openbenchmarks
   - opencall
   - openmart
+  - opensecret
   - openunit
   - openwork
   - openworklabs
@@ -7353,6 +14009,9 @@ smartrecruiters:
   - optifye
   - optifye-ai
   - optifyeai
+  - opusense
+  - opusense-ai
+  - opusenseai
   - orange-slice
   - orangeslice
   - orangewood
@@ -7368,6 +14027,8 @@ smartrecruiters:
   - orchid
   - origami
   - origami-2
+  - origin
+  - origin-bio
   - os3
   - os3robotics
   - osium
@@ -7384,6 +14045,8 @@ smartrecruiters:
   - oxus
   - oxus-ai
   - oxygen
+  - oyo
+  - oyorooms
   - paasa
   - paces
   - padlet
@@ -7396,6 +14059,7 @@ smartrecruiters:
   - pangea
   - pangea-app
   - pangeaapp
+  - pango
   - pangolin
   - paradedb
   - paradigm
@@ -7423,10 +14087,14 @@ smartrecruiters:
   - paxhistoria
   - paxmarkets
   - payflow
+  - paykun
   - payna
+  - paytm
+  - paytmmoney
   - peakflo
   - pelago
   - pelagohealth
+  - pennant
   - people
   - people-ai
   - peopleai
@@ -7444,14 +14112,18 @@ smartrecruiters:
   - permitportalapp
   - perseus-defense
   - perseusdefense
+  - persistent
   - perspectives-health
   - perspectiveshealth
   - pesto
+  - petrarch
   - pgdog
   - phoenix
   - phonely
+  - phonepe
   - photonium
   - photoniumoptics
+  - physicswallah
   - picnicai
   - pier
   - pier-finance
@@ -7459,9 +14131,12 @@ smartrecruiters:
   - pillar
   - pillar-2
   - pine-park-health
+  - pinelabs
   - pineparkhealth
   - piramidal
   - pirislabs
+  - pirouette-pharma
+  - pirouettepharma
   - pirros
   - pivot-robotics
   - pivotrobotics
@@ -7469,6 +14144,7 @@ smartrecruiters:
   - playerslounge
   - plexe
   - ploy
+  - plumhq
   - pno
   - pnoe
   - pocket
@@ -7479,6 +14155,7 @@ smartrecruiters:
   - pointone
   - poka-labs
   - pokalabs
+  - policybazaar
   - polotab
   - poly
   - polymath
@@ -7488,12 +14165,17 @@ smartrecruiters:
   - pop-meals
   - popl
   - popmeals
+  - porter
+  - posh
+  - poshenergy
   - postal
   - posthog
+  - postmanlabs
   - postscript
   - posturehealth-inc
   - powder
   - powderfi
+  - practo
   - prelim
   - prembly
   - premblyformerlyidentitypass
@@ -7505,6 +14187,7 @@ smartrecruiters:
   - prestiai
   - primevault
   - primitive
+  - pristyncare
   - probably-genetic
   - probablygenetic
   - proception
@@ -7533,10 +14216,12 @@ smartrecruiters:
   - protexai
   - proven-group
   - provengroup
+  - provenmetal
   - provenskincare
   - provision
   - prox
   - proximitty
+  - publicissapient
   - pulley
   - pulse
   - pulse-3
@@ -7551,7 +14236,9 @@ smartrecruiters:
   - quadrant-health
   - quadranthealth
   - qualgent
+  - quantiphi
   - quartzy
+  - questdb
   - quickchat
   - quickchat-ai
   - quickchatai
@@ -7564,16 +14251,20 @@ smartrecruiters:
   - quinnbio
   - qventus
   - radar
+  - rafay
   - raindrop
   - rally
   - rallyuxr
   - ralo
   - ramain
   - ramani
+  - rapido
   - rappi
   - rational
   - raven
   - raycaster
+  - razorpay
+  - razorpaysoftware
   - re2
   - reach
   - reacher
@@ -7585,6 +14276,7 @@ smartrecruiters:
   - realitydefender
   - reason-machines
   - reasonmachines
+  - rebill
   - rebolt
   - recall
   - recall-ai
@@ -7608,6 +14300,7 @@ smartrecruiters:
   - relari
   - relativity-space
   - relativityspace
+  - reliancejio
   - relling
   - remi
   - remihq
@@ -7645,6 +14338,11 @@ smartrecruiters:
   - revivingmind
   - revnu
   - revyl
+  - rex
+  - rex-inc
+  - rhem
+  - rhem-labs
+  - rhemlabs
   - rhizome-ai
   - rhizomeai
   - ridecell
@@ -7687,12 +14385,15 @@ smartrecruiters:
   - runanywhere
   - runautomat
   - runconverge
+  - runcopycat
+  - rungroundcontrol
   - runparagon
   - runpulse
   - runtime
   - runtm
   - runtrellis
   - runway
+  - rupeek
   - rutter
   - ryvn
   - safebeat
@@ -7717,6 +14418,7 @@ smartrecruiters:
   - saphira
   - saphira-ai
   - saphiraai
+  - sapient
   - sapling
   - sapling-ai
   - saplingai
@@ -7729,6 +14431,8 @@ smartrecruiters:
   - scale
   - scale-ai
   - scaleai
+  - scaler
+  - scalerecademy
   - scispot
   - scispot-io
   - scott-ai
@@ -7754,13 +14458,19 @@ smartrecruiters:
   - sentientos
   - serif-health
   - serifhealth
+  - serve-ai
+  - serveai
+  - serveaiglobal
   - servo7
+  - setu
   - sf-tensor
   - sftensor
   - shadeform
+  - shadowfax
   - shape-shapescale
   - shapescale
   - shapeshapescale
+  - sharechat
   - shasta
   - shasta-health
   - shastahealth
@@ -7769,6 +14479,7 @@ smartrecruiters:
   - shiboleth
   - shimmer
   - shipbob
+  - shiprocket
   - shopgarage
   - short-story
   - shortloop
@@ -7777,11 +14488,13 @@ smartrecruiters:
   - shuttle-central
   - shuttlecentral
   - sid
+  - siemens
   - sieve
   - sievedata
   - sift
   - sigmaos
   - signadot
+  - signoz
   - silimate
   - silkchart
   - silurian
@@ -7790,6 +14503,8 @@ smartrecruiters:
   - simbie
   - simbie-ai
   - simbieai
+  - simcare
+  - simpl
   - simple-ai
   - simpleai
   - simplyinsured
@@ -7803,6 +14518,10 @@ smartrecruiters:
   - skyvern
   - skyways
   - slash
+  - slicepay
+  - slope
+  - slopepay
+  - smallcase
   - smartcuts
   - smooth
   - snapmagic
@@ -7849,6 +14568,8 @@ smartrecruiters:
   - spellbrush
   - spenmo
   - sphere
+  - spine
+  - spinny
   - splash-inc
   - splash9
   - splashinc
@@ -7856,11 +14577,15 @@ smartrecruiters:
   - spotdx
   - spothealth
   - spott
+  - springverify
+  - springworks
+  - sprinto
   - spruceid
   - spur
   - spurtest
   - squid
   - stable
+  - stablemoney
   - stacksync
   - stackup
   - staffbar
@@ -7888,6 +14613,8 @@ smartrecruiters:
   - streak
   - stream
   - streamable
+  - streamline-systems
+  - streamlinesystems
   - stripe
   - strive-math
   - strivemath
@@ -7921,6 +14648,7 @@ smartrecruiters:
   - swif-ai
   - swifai
   - swiftsku
+  - swiggyin
   - sygaldry
   - sygaldry-technologies
   - sygaldrytechnologies
@@ -7938,6 +14666,8 @@ smartrecruiters:
   - syntra
   - tab
   - tabula
+  - taiga
+  - taigabilling
   - tailor
   - taiv
   - taktile
@@ -7949,15 +14679,20 @@ smartrecruiters:
   - tandemspace
   - tank-payments
   - tankpayments
+  - tanla
   - tara
   - tara-ai
   - taraai
   - taskade
   - tasklet
   - tasklet-2
+  - tatadigital
+  - tataelectronics
   - tavus
   - taxgpt
+  - tcs
   - teamout
+  - techmahindra
   - tekton-dynamics
   - tektondynamics
   - telli
@@ -8003,10 +14738,13 @@ smartrecruiters:
   - third-chair
   - thirdchair
   - thirdlayer
+  - thoughtworks
   - throxy
   - thunder-compute
   - thundercompute
   - thunkable
+  - tickertape
+  - tigeranalytics
   - tilt
   - tilt-fka-delphia
   - tiltfkadelphia
@@ -8034,6 +14772,7 @@ smartrecruiters:
   - trata
   - trayd
   - trbol
+  - treblo
   - trebol
   - trelium
   - trellis-ai
@@ -8066,6 +14805,7 @@ smartrecruiters:
   - trymaitai
   - trymeasured
   - trynarrative
+  - trynearby
   - tryperdiem
   - tryriot
   - tryrobby
@@ -8075,25 +14815,32 @@ smartrecruiters:
   - tryterra
   - trytrata
   - trytrueclaim
+  - trytruewind
   - tryvela
   - tsenta
   - tuesday-labs
   - tuesdaylabs
+  - turing
   - turing-college
   - turing-labs-inc
   - turingcollege
+  - turingcom
   - turinglabsinc
   - turingsaas
   - turion-space
   - turionspace
+  - tvsmotor
   - twenty
   - two-dots
   - twodots
   - type
   - typewise
   - ubicloud
+  - ubisoft
   - ultra
+  - unacademyin
   - unbound
+  - uni
   - unison
   - uno-wallet
   - unowallet
@@ -8109,15 +14856,19 @@ smartrecruiters:
   - up
   - upcodes
   - upequity
+  - upgrad
   - uplane
   - uplift-ai
   - upliftai
   - upsolve
   - upsolve-ai
   - upsolveai
+  - urbanclap
+  - urbancompany
   - useagave
   - useandco
   - useautumn
+  - usebluehill
   - usebluelight
   - usecaribou
   - usecentralize
@@ -8162,6 +14913,7 @@ smartrecruiters:
   - vector-legal
   - vectorlegal
   - vectorshift
+  - vedantu
   - vela
   - velt
   - velvet
@@ -8175,12 +14927,17 @@ smartrecruiters:
   - venu-ai
   - venu3d
   - venuai
+  - vera-health
+  - verahealth
   - verge-genomics
   - vergegenomics
   - vergesense
   - veritus
   - verne-robotics
   - vernerobotics
+  - vernius
+  - vernius-systems-inc
+  - verniussystemsinc
   - versable
   - versableai
   - versemedical
@@ -8189,9 +14946,11 @@ smartrecruiters:
   - veryfi
   - veryfi-inc
   - veryfiinc
+  - vesence
   - vetcove
   - videogen
   - vinci-games
+  - visa
   - vitable-health
   - vitablehealth
   - vitalize
@@ -8199,6 +14958,9 @@ smartrecruiters:
   - voiceos
   - voize
   - volantio
+  - volaren
+  - volaren-inc
+  - volareninc
   - volta-labs-inc
   - voltair
   - voltairlabs
@@ -8214,6 +14976,8 @@ smartrecruiters:
   - vulcan-technologies
   - vulcantechnologies
   - vyra
+  - waddle-labs
+  - waddlelabs
   - wardstone
   - warpbuild
   - wasmer
@@ -8234,6 +14998,8 @@ smartrecruiters:
   - weekendfmrvolley
   - weflywright
   - wefunder
+  - wellfound
+  - whatnot
   - wifi-dabba-inc
   - wifidabbainc
   - wild-card
@@ -8241,6 +15007,8 @@ smartrecruiters:
   - willow
   - willowvoice
   - windmill
+  - wingify
+  - wipro
   - with-andy
   - withaccend
   - withbanner
@@ -8266,6 +15034,7 @@ smartrecruiters:
   - wright-electric
   - wrightelectric
   - writesonic
+  - x1
   - xendit
   - xpay
   - xpaycheckout
@@ -8273,11 +15042,15 @@ smartrecruiters:
   - yarn
   - yarn-2
   - ycombinator
+  - yellowai
+  - yellowmessenger
   - yhangry
   - yn
   - yondu
   - you-shift
   - youshift
+  - yubi
+  - yulu
   - yummy-future
   - yummyfuture
   - zalos
@@ -8294,24 +15067,28 @@ smartrecruiters:
   - zenysis
   - zep-ai
   - zepai
+  - zepto
+  - zeptonow
+  - zerodha
+  - zeta
+  - zetaindia
   - zettascale
+  - zettascale-computing
+  - zettascalecomputing
   - ziffyhomes
   - ziina
   - zip
   - ziphq
   - zippi
+  - zohocorp
+  - zohorecruit
+  - zomato
   - zscc
   - zuddl
   - zudo
   - zudowork
   - zuma
   - zymbly
-  - denta
-  - forge
-  - forgehq
-  - joinmarble
-  - marble
-  - provenmetal
 workday:
   verified:
   - slug: nvidia
@@ -12505,6 +19282,11 @@ recruitee:
     tier: 1
     name: Atlys
     note: Indian startup (added 2026-09-16)
+  - slug: qualifyzegmbh
+    tier: 2
+    name: Qualifyze
+    note: vc careers page · India 1, intern 0
+    website: vc-board:qualifyze
   candidates: []
 workable:
   verified:
@@ -12807,6 +19589,11 @@ workable:
     name: Lakeside Software
     note: vc careers page · India 1, intern 0
     website: vc-board:lakeside software
+  - slug: youtrip
+    tier: 2
+    name: YouTrip
+    note: vc careers page · India 10, intern 0
+    website: https://you.co
   candidates: []
 rippling:
   verified:
@@ -13013,6 +19800,11 @@ rippling:
     name: Ayr Energy
     note: vc careers page · India 11, intern 0
     website: vc-board:ayr energy
+  - slug: anaconda
+    tier: 2
+    name: Anaconda
+    note: vc careers page · India 1, intern 0
+    website: vc-board:anaconda
   candidates: []
 keka:
   verified:
@@ -14019,4 +20811,14 @@ zoho_recruit:
     name: InCore Semiconductors
     note: vc careers page · India 2, intern 0
     website: https://incoresemi.com
+  - slug: vedantu.zohorecruit.in
+    tier: 2
+    name: Vedantu
+    note: vc careers page · India 2, intern 0
+    website: vc-board:vedantu
+  - slug: spendflo.zohorecruit.com
+    tier: 2
+    name: Spendflo
+    note: vc careers page · India 1, intern 0
+    website: vc-board:spendflo
   candidates: []
