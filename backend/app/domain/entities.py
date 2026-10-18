@@ -151,6 +151,7 @@ class Job(BaseModel):
     salary_currency: str | None = None
 
     posted_at: datetime | None = None
+    apply_deadline: datetime | None = None
     first_seen_at: datetime = Field(default_factory=_utcnow)
     last_seen_at: datetime = Field(default_factory=_utcnow)
     is_active: bool = True

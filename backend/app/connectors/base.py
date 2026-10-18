@@ -155,6 +155,16 @@ class Connector(abc.ABC):
     async def post_json(self, url: str, json: dict, **kw) -> Any:
         return await self._request("POST", url, expect="json", json=json, **kw)
 
+    @retry(
+        stop=stop_after_attempt(3),
+        wait=wait_exponential(multiplier=1, min=2, max=20),
+        retry=retry_if_exception_type((httpx.HTTPError, FetchError)),
+        retry_error_callback=None,
+        reraise=True,
+    )
+    async def post_text(self, url: str, data: dict | None = None, **kw) -> str:
+        return await self._request("POST", url, expect="text", data=data, **kw)
+
     async def _request(self, method: str, url: str, *, expect: str, **kw) -> Any:
         settings = get_settings()
         headers = {"User-Agent": settings.user_agent, "Accept": "application/json, text/*"}
@@ -250,6 +260,15 @@ class Connector(abc.ABC):
         rec.known_scopes = sorted(known) if known else None
         rec.full_listing = self.full_listing
         return jobs, rec
+
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """A small, representative fetch, for health checks.
+
+        The doctor runs this for every connector, so it must cost a few
+        requests rather than a full sweep - but it must exercise the same
+        parser the real run uses, or it proves nothing.
+        """
+        return list(await self.fetch())
 
     def scoped(self, jobs: list[RawJob], scope: str) -> list[RawJob]:
         """Tag jobs with the scope (company/board) they were fetched under."""

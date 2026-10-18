@@ -52,6 +52,7 @@ class JobSummary(BaseModel):
     # stated stipend or salary, as written ("₹25,000/month", "₹12-15 LPA")
     pay: str | None = None
     posted_at: datetime | None
+    apply_deadline: datetime | None = None
     first_seen_at: datetime
     age_days: int | None = None
     link_status: str = ""
@@ -86,6 +87,7 @@ class JobSummary(BaseModel):
             team_size=(job.raw_payload or {}).get("team_size"),
             pay=(job.raw_payload or {}).get("pay") or None,
             posted_at=job.posted_at,
+            apply_deadline=job.apply_deadline,
             first_seen_at=job.first_seen_at,
             age_days=job.age_days,
             link_status=job.link_status,

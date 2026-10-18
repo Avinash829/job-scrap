@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import pytest
 
+from app.domain.enums import EmploymentType
 from app.services.normalization.rules import (
     classify_role,
     extract_grad_years,
@@ -180,3 +181,58 @@ def test_aggregator_companies_are_dropped(raw):
     # a real employer with a similar-looking name is unaffected
     keep, reason = passes_filters(normalize(raw(company="Staffbase")))
     assert keep, reason
+
+
+def test_expired_deadline_is_dropped(raw):
+    """A board that publishes a closing date is telling us plainly."""
+    from datetime import datetime, timedelta, timezone
+
+    job = normalize(raw())
+    job.apply_deadline = datetime.now(timezone.utc) - timedelta(days=1)
+    keep, reason = passes_filters(job)
+    assert not keep and "deadline" in reason
+
+    job.apply_deadline = datetime.now(timezone.utc) + timedelta(days=5)
+    keep, reason = passes_filters(job)
+    assert keep, reason
+
+
+def test_internships_go_stale_sooner_than_jobs(raw):
+    """A three-month-old internship is filled, even if its board still lists it."""
+    from datetime import datetime, timedelta, timezone
+
+    from app.domain.enums import EmploymentType
+
+    old = datetime.now(timezone.utc) - timedelta(days=90)
+    intern = normalize(raw(title="Software Engineer Intern", posted_at=old))
+    assert intern.employment_type is EmploymentType.INTERNSHIP
+    keep, reason = passes_filters(intern)
+    assert not keep and "90d ago" in reason
+
+    full_time = normalize(raw(title="Software Engineer", posted_at=old,
+                              employment_type_hint=EmploymentType.FULL_TIME,
+                              raw_payload={"min_yoe_hint": 0}))
+    assert passes_filters(full_time)[0]
+
+
+def test_internship_classification_and_plurals(raw):
+    # Plural and fellowship forms
+    j1 = normalize(raw(title="Software Engineering Interns"))
+    assert j1.employment_type is EmploymentType.INTERNSHIP
+    assert j1.role_category.value == "swe"
+
+    j2 = normalize(raw(title="AI Engineering Fellowship"))
+    assert j2.employment_type is EmploymentType.INTERNSHIP
+    assert j2.role_category.value == "ml"
+
+    # Inverted and tech intern titles
+    j3 = normalize(raw(title="Intern - Backend Engineering"))
+    assert j3.role_category.value == "backend"
+
+    j4 = normalize(raw(title="Technical Intern"))
+    assert j4.role_category.value == "swe"
+
+    # Generic intern title with tech description
+    j5 = normalize(raw(title="Summer Intern 2027", description="Experience with React and Python required."))
+    assert j5.role_category.value in ("fullstack", "swe", "frontend")
+    assert passes_filters(j5)[0]

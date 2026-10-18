@@ -36,6 +36,7 @@ FIELDS = (
     ("R", "hiring_regions"),
     ("k", "tech_stack"),
     ("p", "posted_at"),
+    ("d", "apply_deadline"),
     ("f", "first_seen_at"),
     ("a", "age_days"),
     ("$", "pay"),

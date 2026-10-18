@@ -68,9 +68,16 @@ class YCJobs(Connector):
     def __init__(self, tier: int | None = None) -> None:
         self._tier_filter = tier
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """A few YC companies: the hiring list plus a handful of job pages."""
+        self._smoke_limit = max(limit, 10)
+        return list(await self.fetch())
+
     async def fetch(self) -> Iterable[RawJob]:
         companies = await self.get_json(HIRING, headers={"User-Agent": BROWSER_UA})
         companies = [c for c in (companies or []) if c.get("slug") and c.get("status") in (None, "Active", "Public")]
+        if limit := getattr(self, "_smoke_limit", None):
+            companies = companies[:limit]
         sem = asyncio.Semaphore(self.concurrency)
         self.covered_scopes = set()
 

@@ -23,6 +23,7 @@ import asyncio
 import logging
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 
 from sqlalchemy.exc import OperationalError
 
@@ -36,6 +37,7 @@ from app.services.dedupe.matcher import dedupe
 from app.services.enrichment.extractor import LLMExtractor
 from app.services.enrichment.provider import GeminiProvider, LLMUnavailable
 from app.services.normalization.link_check import LinkChecker, LinkStatus
+from app.services.normalization.liveness import check_jobs
 from app.services.normalization.rules import normalize, passes_filters
 from app.services.scoring.scorer import MatchScorer
 
@@ -164,6 +166,13 @@ class IngestPipeline:
                     self._drop(result, reason)
             jobs = kept
 
+        # --- ask the board whether these jobs still accept applications.
+        # Workday is searched rather than listed, so a closed requisition can
+        # keep answering 200 for weeks; its API states `canApply` and often a
+        # real `endDate`, which becomes the job's deadline.
+        if self.check_links:
+            jobs = await self._verify_open(jobs, result)
+
         # --- dedupe ACROSS sources: the same role arrives from several places
         # (a VC board links to the employer's Greenhouse posting we also fetch);
         # the copy from the employer's own system wins.
@@ -199,11 +208,16 @@ class IngestPipeline:
 
         # --- apply-link verification: a dead link means the job is gone
         if self.check_links:
-            with session_scope() as s:
-                await self._verify_links(JobRepository(s), result)
+            try:
+                await self._verify_links(result)
+            except Exception as exc:
+                log.warning("apply-link verification failed (%s); continuing", exc)
 
-        with session_scope() as s:
-            JobRepository(s).prune_housekeeping()
+        try:
+            with session_scope() as s:
+                JobRepository(s).prune_housekeeping()
+        except Exception as exc:
+            log.warning("housekeeping prune failed (%s); continuing", exc)
         return result
 
     # ------------------------------------------------------------- enrichment
@@ -259,22 +273,63 @@ class IngestPipeline:
                 out.append(job)
         return out
 
+    async def _verify_open(self, jobs: list[Job], result: PipelineResult) -> list[Job]:
+        """Drop jobs the board says are closed; keep the deadlines it gives."""
+        statuses = await check_jobs(jobs)
+        if not statuses:
+            return jobs
+        kept: list[Job] = []
+        for job in jobs:
+            state = statuses.get((job.source, job.source_job_id))
+            if state is None:
+                kept.append(job)
+                continue
+            if state.open_ is False:
+                self._drop(result, "board says applications are closed")
+                continue
+            if state.deadline is not None:
+                job.apply_deadline = state.deadline
+                if state.deadline < datetime.now(timezone.utc):
+                    self._drop(result, "application deadline passed")
+                    continue
+            kept.append(job)
+        return kept
+
     # ------------------------------------------------------------ link checks
 
-    async def _verify_links(self, repo: JobRepository, result: PipelineResult) -> None:
-        """Check stored apply links, best matches first, and delete dead ones."""
-        pending = repo.needs_link_check(limit=200)
+    async def _verify_links(self, result: PipelineResult) -> None:
+        """Check stored apply links and delete the dead ones.
+
+        Every job, every run: the corpus is ~1,300 rows, and the old cap of 200
+        left 412 links never checked at all - which is how a posting that
+        redirects to a careers search page stayed on the site.
+
+        The database session is opened around the reads and the writes, never
+        around the network: holding a transaction open for the minutes this
+        takes made Neon close the connection ("terminating connection due to
+        idle-in-transaction timeout") and lose the whole pass.
+        """
+        with session_scope() as s:
+            pending = JobRepository(s).needs_link_check(limit=10_000, recheck_after_hours=20)
         if not pending:
             return
 
-        checker = LinkChecker()
-        urls = list({j.url for j in pending if j.url.startswith("http")})
-        if not urls:
+        by_url: dict[str, list[tuple[str, str]]] = {}
+        for job in pending:
+            if job.url.startswith("http"):
+                by_url.setdefault(job.url, []).append((job.source, job.source_job_id))
+        if not by_url:
             return
 
-        outcomes = await checker.check_many(urls)
-        statuses = {url: res.status.value for url, res in outcomes.items()}
-        checked, dead = repo.record_link_results(statuses)
+        outcomes = await LinkChecker().check_many(list(by_url))
+
+        statuses = {
+            key: res.status.value
+            for url, res in outcomes.items()
+            for key in by_url.get(url, [])
+        }
+        with session_scope() as s:
+            checked, dead = JobRepository(s).record_link_results(statuses)
 
         result.links_checked = checked
         result.links_dead = dead

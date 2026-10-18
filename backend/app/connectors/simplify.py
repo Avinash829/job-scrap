@@ -31,6 +31,10 @@ FEEDS = (
         EmploymentType.INTERNSHIP,
     ),
     (
+        "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json",
+        EmploymentType.INTERNSHIP,
+    ),
+    (
         "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json",
         EmploymentType.FULL_TIME,
     ),

@@ -25,6 +25,24 @@ function ageLabel(job) {
   return `${verb} over a year ago`;
 }
 
+/** "Apply by 21 Sep" - boards that publish a closing date (Workday's endDate). */
+function deadlineBadge(job) {
+  if (!job.apply_deadline) return null;
+  const days = Math.ceil((new Date(job.apply_deadline).getTime() - Date.now()) / 864e5);
+  if (days < 0) return null;
+  const label = `Apply by ${new Date(job.apply_deadline).toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "short",
+  })}`;
+  const urgent = days <= 7;
+  return [
+    days === 0 ? "Closes today" : label,
+    urgent
+      ? "bg-red-500/10 text-red-200 ring-red-500/30"
+      : "bg-zinc-800/80 text-zinc-300 ring-zinc-700",
+  ];
+}
+
 function Pill({ children, className = "" }) {
   return (
     <span className={`inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${className}`}>
@@ -110,6 +128,10 @@ export default function JobCard({ job, lastVisit, saved, applied, onSave, onAppl
         <Pill className={expStyle}>{expLabel}</Pill>
         {job.pay && <Pill className="bg-emerald-500/10 text-emerald-200 ring-emerald-500/30">{job.pay}</Pill>}
         {job.is_remote && <Pill className="bg-zinc-800/80 text-zinc-300 ring-zinc-700">Remote</Pill>}
+        {(() => {
+          const badge = deadlineBadge(job);
+          return badge ? <Pill className={badge[1]}>{badge[0]}</Pill> : null;
+        })()}
       </div>
 
       <div className="mt-3 flex items-center justify-between gap-2">

@@ -66,12 +66,23 @@ class SearchConnector(Connector):
         log.info("%s: %d unique postings across %d queries", self.name, len(unique), len(batches))
         return list(unique.values())
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """One query, one page - enough to prove the endpoint and the parser."""
+        self.terms = self.terms[:1]
+        self.locations = self.locations[:1]
+        self.max_pages = 1
+        self._smoke_limit = limit
+        return list(await self.fetch())
+
     async def fetch_per_company(self, companies: list, run_query, scope_of) -> list[RawJob]:
         """Shared loop for per-employer search sites (Workday, Oracle, Avature...).
 
         run_query(company, term, location) -> list[RawJob]. A company counts as
         covered only if every one of its queries succeeded.
         """
+        # a health check samples a few employers instead of every one
+        if limit := getattr(self, "_smoke_limit", None):
+            companies = companies[:limit]
         sem = asyncio.Semaphore(self.concurrency)
         failed_scopes: set[str] = set()
 

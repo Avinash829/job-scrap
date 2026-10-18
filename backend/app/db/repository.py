@@ -82,6 +82,7 @@ def row_to_job(row: JobRow) -> Job:
         # math would hit "can't subtract offset-naive and offset-aware".
         # Normalize at the boundary instead of at each call site.
         posted_at=_aware_opt(row.posted_at),
+        apply_deadline=_aware_opt(row.apply_deadline),
         first_seen_at=_aware(row.first_seen_at),
         last_seen_at=_aware(row.last_seen_at),
         is_active=row.is_active,
@@ -124,6 +125,7 @@ def job_to_values(job: Job) -> dict:
         "salary_max": job.salary_max,
         "salary_currency": job.salary_currency,
         "posted_at": job.posted_at,
+        "apply_deadline": job.apply_deadline,
         "first_seen_at": job.first_seen_at,
         "last_seen_at": job.last_seen_at,
         "is_active": job.is_active,
@@ -330,30 +332,61 @@ class JobRepository:
         ).all()
         return [row_to_job(r) for r in rows]
 
-    def record_link_results(self, results: dict[str, str]) -> tuple[int, int]:
+    def update_scored(self, scored: dict[tuple[str, str], tuple[float, list[str]]]) -> None:
+        """Write score + reasons. Grouped by identical (score, reasons) so a
+        corpus of thousands takes a few dozen statements, not one per row."""
+        if not scored:
+            return
+        buckets: dict[tuple[str, float, str], list[str]] = {}
+        for (source, job_id), (score, reasons) in scored.items():
+            key = (source, round(score, 2), json.dumps(reasons))
+            buckets.setdefault(key, []).append(job_id)
+
+        for (source, score, reasons_json), ids in buckets.items():
+            for start in range(0, len(ids), 500):
+                chunk = ids[start : start + 500]
+                self.s.execute(
+                    update(JobRow)
+                    .where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
+                    .values(match_score=score, match_reasons=reasons_json)
+                )
+
+    def record_link_results(self, results: dict[tuple[str, str], str]) -> tuple[int, int]:
         """Store link statuses; delete jobs whose apply link is dead.
 
-        UNKNOWN is recorded but never deactivates - a timeout or a 403 is not
-        proof the job is gone, and acting on it would delete good listings.
+        Keyed by (source, source_job_id), not by URL: two sources can carry the
+        same URL, and a 1,200-element `url IN (...)` was a query Neon refused to
+        love. Written in chunks for the same reason.
+
+        UNKNOWN is recorded but never deletes - a timeout or a 403 is not proof
+        a job is gone, and acting on it would throw away good listings.
         """
         if not results:
             return 0, 0
         now = datetime.now(timezone.utc)
-        rows = self.s.scalars(
-            select(JobRow).where(JobRow.url.in_(list(results)))
-        ).all()
         checked = dead = 0
-        for row in rows:
-            status = results.get(row.url)
-            if status is None:
-                continue
-            row.link_status = status
-            row.link_checked_at = now
-            checked += 1
-            if status == "dead":
-                self.s.delete(row)
-                dead += 1
-        self.s.flush()
+        by_source: dict[str, dict[str, str]] = {}
+        for (source, job_id), status in results.items():
+            by_source.setdefault(source, {})[job_id] = status
+
+        for source, statuses in by_source.items():
+            ids = list(statuses)
+            for start in range(0, len(ids), 300):
+                chunk = ids[start : start + 300]
+                rows = self.s.scalars(
+                    select(JobRow).where(JobRow.source == source, JobRow.source_job_id.in_(chunk))
+                ).all()
+                for row in rows:
+                    status = statuses.get(row.source_job_id)
+                    if status is None:
+                        continue
+                    row.link_status = status
+                    row.link_checked_at = now
+                    checked += 1
+                    if status == "dead":
+                        self.s.delete(row)
+                        dead += 1
+                self.s.flush()
         return checked, dead
 
     def update_scored(self, scored: dict[tuple[str, str], tuple[float, list[str]]]) -> None:
@@ -564,6 +597,22 @@ class JobRepository:
                 error=run.error,
             )
         )
+
+    def run_history(self, runs: int = 9) -> dict[str, list[int]]:
+        """jobs_found for each connector's recent runs - the baseline a health
+        check compares against. A source that used to return 400 and now
+        returns 12 is broken even though it "works"."""
+        rows = self.s.execute(
+            select(ConnectorRunRow.connector, ConnectorRunRow.jobs_found, ConnectorRunRow.started_at)
+            .order_by(ConnectorRunRow.started_at.desc())
+            .limit(runs * 60)
+        ).all()
+        out: dict[str, list[int]] = {}
+        for connector, found, _ in rows:
+            counts = out.setdefault(connector, [])
+            if len(counts) < runs:
+                counts.append(found or 0)
+        return out
 
     def connector_health(self) -> list[dict]:
         """Latest run per connector - the silent-zero dashboard."""

@@ -21,6 +21,8 @@ SOURCE_PRIORITY = {
     # the employer's own system: direct apply link, fullest data
     "greenhouse": 0, "lever": 0, "ashby": 0, "smartrecruiters": 0,
     "workday": 0, "google": 0, "amazon": 0, "avature": 0, "juspay": 0, "oracle": 0,
+    # link-only Amazon campus pages: same employer, the searchable copy wins
+    "amazon_campus": 1,
     "microsoft": 0, "apple": 0, "atlassian": 0, "goldman": 0, "ibm": 0, "eightfold": 0,
     "workable_boards": 0, "freshteam": 0, "recruitee": 0, "gem": 0, "rippling": 0, "successfactors": 0, "keka": 0, "zoho_recruit": 0,
     # cross-company searches: links go to the employer's posting on the platform

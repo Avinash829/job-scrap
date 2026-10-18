@@ -91,7 +91,8 @@ def test_pay_label_survives_storage(session, raw):
 def test_dead_apply_link_deletes_the_job(session, raw):
     job = make(raw, 1)
     sync(session, [job], {SCOPE})
-    checked, dead = JobRepository(session).record_link_results({job.url: "dead"})
+    key = (job.source, job.source_job_id)
+    checked, dead = JobRepository(session).record_link_results({key: "dead"})
     assert (checked, dead) == (1, 1)
     assert list(JobRepository(session).active_jobs_lean()) == []
 
@@ -130,3 +131,13 @@ def test_known_scopes_absent_changes_nothing(session, raw):
     sync(session, [make(raw, 1), make(raw, 2)], {"greenhouse:acme"})
     repo = JobRepository(session)
     assert repo.sync_source("greenhouse", [make(raw, 1), make(raw, 2)], {"greenhouse:acme"}, True, None) == (0, 0, 0)
+
+
+def test_deadline_round_trips(session, raw):
+    from datetime import datetime, timedelta, timezone
+
+    job = make(raw, 1)
+    job.apply_deadline = datetime.now(timezone.utc) + timedelta(days=3)
+    sync(session, [job], {SCOPE})
+    stored = list(JobRepository(session).active_jobs_lean())[0]
+    assert stored.apply_deadline is not None

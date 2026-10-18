@@ -64,6 +64,13 @@ class ATSConnector(Connector):
 
     # ------------------------------------------------------------- subclass API
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """Read a few boards rather than all of them."""
+        companies = companies_for(self.platform, 1) or companies_for(self.platform)
+        results = [await self.fetch_board(c) for c in companies[:limit]]
+        self.board_results = results
+        return [j for r in results for j in r.jobs]
+
     def known_scopes(self) -> set[str] | None:
         return {f"{self.name}:{c.slug}" for c in companies_for(self.platform)} or None
 

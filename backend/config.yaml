@@ -45,6 +45,11 @@ freshness:
   # internship posting is either filled or a ghost.
   ats_max_posting_age_days: 150
 
+  # Internships are seasonal: a posting from five months ago is filled or
+  # forgotten, even on a board that still lists it. Internships only;
+  # full-time roles keep the longer bound above.
+  intern_max_posting_age_days: 60
+
   # Some boards emit absurd dates (a SmartRecruiters row came back dated
   # 2998 days ago). Treat anything older than this as "no date given".
   max_plausible_age_days: 400
@@ -101,29 +106,45 @@ roles:
                  software development engineer, application engineer,
                  applications engineer, application engineering,
                  applications engineering, developer intern, engineering intern,
-                 technology intern, tech intern, it intern,
-                 software development intern, application development intern,
-                 software intern, web development intern, app development intern,
-                 research engineer intern,
+                 technology intern, tech intern, it intern, technical intern,
+                 software engineering intern, software development intern,
+                 application development intern, software intern, web development intern,
+                 app development intern, research engineer intern, technical internship,
+                 summer intern, summer internship, winter intern, winter internship,
+                 campus intern, student intern, student developer, graduate intern,
+                 graduate engineer trainee, graduate trainee, trainee engineer,
                  forward deployed engineer, software development, software trainee,
                  developer trainee, trainee developer, fresher developer,
                  technology analyst, software apprentice, founding engineer,
                  member of technical staff, engineering trainee, app developer,
                  mobile developer, react native, flutter developer, android developer,
-                 ios developer, sde intern, sde-1, sde 1, software engineer i]
+                 ios developer, sde intern, sde-1, sde 1, software engineer i,
+                 intern - software, intern - development, intern - engineering,
+                 intern - technical, intern - tech, intern - sde, intern - swe,
+                 intern - web, intern - mobile, qa intern, sdet intern]
     frontend:   [frontend, front-end, front end, ui engineer, react developer,
-                 react.js, next.js developer, web developer]
+                 react.js, next.js developer, web developer, frontend intern,
+                 frontend developer intern, frontend engineering intern, ui intern,
+                 intern - frontend, intern - ui]
     backend:    [backend, back-end, back end, api engineer, server engineer,
-                 node.js developer, python developer]
-    fullstack:  [full stack, fullstack, full-stack, mern, mean stack]
+                 node.js developer, python developer, backend intern,
+                 backend developer intern, backend engineer intern, python intern,
+                 java intern, intern - backend, intern - python, intern - java]
+    fullstack:  [full stack, fullstack, full-stack, mern, mean stack,
+                 fullstack intern, full stack intern, fullstack developer intern,
+                 intern - fullstack, intern - full stack]
     ml:         [ai engineer, machine learning, ml engineer, deep learning,
                  nlp engineer, llm engineer, genai, generative ai, ai developer,
                  ai/ml, ai ml, applied scientist, ai full stack, agent engineer,
                  ai intern, artificial intelligence, ml intern, computer vision,
-                 vision engineer, ai/ml engineer, ai research engineer]
+                 vision engineer, ai/ml engineer, ai research engineer,
+                 machine learning intern, deep learning intern, genai intern,
+                 intern - ai, intern - ml, intern - machine learning]
     data:       [data engineer, data scientist, analytics engineer, data analyst,
                  bi developer, business intelligence, data science,
-                 data analytics, analytics intern, data intern]
+                 data analytics, analytics intern, data intern,
+                 data science intern, data analyst intern, data engineering intern,
+                 intern - data, intern - analytics]
     # devops:   [devops, platform engineer, infrastructure engineer, cloud engineer]
     # sre:      [sre, site reliability, reliability engineer]
 
@@ -187,6 +208,15 @@ search:
   # Workday is queried per tenant, and there are ~1,400 India employers on
   # it, so it gets a tighter budget: 3 terms x 2 pages x 20 rows per tenant.
   workday_terms: [intern, trainee, graduate, software engineer]
+
+  # Amazon publishes some campus requisitions as link-only - open, public, and
+  # absent from its own search API. These queries find the indexed pages; each
+  # result is then read from amazon.jobs directly.
+  amazon_campus_queries:
+    - site:amazon.jobs intern India 2027
+    - site:amazon.jobs internship Bengaluru
+    - site:amazon.jobs intern Hyderabad 2027
+    - site:amazon.jobs university talent India intern
   workday_max_pages: 2
 
 # --- Your stack -----------------------------------------------------------

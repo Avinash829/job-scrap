@@ -54,10 +54,15 @@ class ConsiderBoards(Connector):
     def known_scopes(self) -> set[str] | None:
         return {f"vc_consider:{b.slug}" for b in companies_for("consider")} or None
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """Read a couple of boards, not the whole portfolio."""
+        self._smoke_limit = limit
+        return list(await self.fetch())
+
     async def fetch(self) -> Iterable[RawJob]:
         unique: dict[str, RawJob] = {}
         self.covered_scopes = set()
-        for board in companies_for("consider", self._tier_filter):
+        for board in companies_for("consider", self._tier_filter)[: getattr(self, "_smoke_limit", None) or None]:
             scope = f"{self.name}:{board.slug}"
             try:
                 for job in self.scoped(await self._board(board), scope):

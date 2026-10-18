@@ -32,9 +32,10 @@ WEIGHTS = {
 # requisition with a direct apply link; a marketplace listing can be anyone.
 EMPLOYER_SOURCES = frozenset({
     "greenhouse", "lever", "ashby", "smartrecruiters", "workday",
-    "google", "amazon", "avature", "juspay", "oracle",
+    "google", "amazon", "amazon_campus", "avature", "juspay", "oracle",
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
     "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka", "zoho_recruit",
+    "unstop",
 })
 
 # Team sizes where an intern gets real ownership and a human reads the CV.

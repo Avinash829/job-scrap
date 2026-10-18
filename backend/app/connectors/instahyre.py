@@ -37,11 +37,16 @@ class Instahyre(Connector):
     # paged queries capped at MAX_PAGES and cut short by rate limits
     full_listing = False
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """One page of the fresher query."""
+        self._smoke_limit = 1
+        return list(await self.fetch())
+
     async def fetch(self) -> Iterable[RawJob]:
         unique: dict[int, RawJob] = {}
         self.covered_scopes = None
         for params in ({"years": 0}, {"years": 1}, {"job_type": 2}):
-            for page in range(MAX_PAGES):
+            for page in range(getattr(self, "_smoke_limit", None) or MAX_PAGES):
                 try:
                     d = await self.get_json(
                         API,

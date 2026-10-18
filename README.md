@@ -101,7 +101,8 @@ locations come from `config.yaml → search`.
 |---|---|---|
 | Workday | `POST {tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` | Nvidia, Adobe, Salesforce, Intel and India-hiring tenants imported from a public dataset. `limit` caps at 20 — ask for more and you get an **empty** 200. Search is fuzzy: "India" also matches Indiana |
 | Google Careers | results page, `AF_initDataCallback` `ds:1` block | No JSON API; jobs are embedded JSON, parsed with a real decoder. Structured country codes and eligibility notes |
-| Amazon Jobs | `amazon.jobs/en/search.json` | `normalized_country_code[]=IND` works; `country[]` is silently ignored. Some campus roles are link-only (`isUnsearchable`) and can't be listed by anyone |
+| Amazon Jobs | `amazon.jobs/en/search.json` | `normalized_country_code[]=IND` is the accurate filter; `loc_query=India` is fuzzy and returns Brazil and Mexico. `country[]` is silently ignored |
+| Amazon campus (link-only) | web search for indexed `amazon.jobs/jobs/{id}` pages, then the page itself | Amazon hides some university requisitions from its own API: verified 2026-09-18, a live SDE Intern page returns nothing when searched by its own id. One query set per run; the page carries title, `IND, KA, Bengaluru` and description |
 | Avature (EA) | `{base}/SearchJobs/{term}` HTML | Structured spans for location, role id, worker type. The RSS feed ignores the search term |
 | Juspay | `juspay.io/careers` | Astro site; jobs are serialized island props |
 | Oracle HCM | `{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions` | JPMorgan Chase, Oracle, Texas Instruments. Public finder query with keyword + location |
@@ -211,6 +212,32 @@ is missing (for example in `npm run dev` before the first export).
 
 Saved jobs, applied jobs and "new since your last visit" live in the
 browser's localStorage: no login, no server, nothing to pay for.
+
+### Expired postings
+
+A job can stop accepting applications long before it disappears from its
+board, and each platform betrays that differently (verified 2026-09-18):
+
+| Platform | A removed posting... | How we catch it |
+|---|---|---|
+| Lever | returns 404 | status code |
+| Greenhouse | redirects to the company's careers search | the redirect no longer contains the job's id |
+| Instahyre | redirects to `/search-jobs/` | same |
+| Ashby, Keka | 200 with an app shell identical to a live page | absence from the board listing (the listing is the truth) |
+| Workday | 200 with a shell | its job API: `canApply`, `posted`, 404 when gone |
+
+So, in order of confidence:
+
+1. **The board's own answer.** Workday is searched rather than listed, so a
+   closed requisition can answer 200 for weeks; `/wday/cxs/...` states whether
+   it still accepts applications, and often an `endDate` - a real deadline.
+2. **Stated deadlines.** A job past its closing date is dropped, and one
+   approaching shows "Apply by 21 Sep" on the card (red inside a week).
+3. **Every apply link, every run.** The old cap of 200 per run left 412 links
+   never checked; dead links and listing-page redirects are deleted.
+4. **Age.** Employer boards keep evergreen postings up for months, so
+   internships older than 60 days are dropped (`intern_max_posting_age_days`)
+   while full-time roles keep the longer 150-day bound.
 
 ### Data lifecycle (built for the free tier)
 

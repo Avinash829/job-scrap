@@ -90,7 +90,12 @@ async def cmd_ingest(args: argparse.Namespace) -> int:
         check_links=not args.no_link_check,
     )
     console.print(f"[bold cyan]scraping[/] tier={args.tier or 'all'}")
-    result = await pipeline.run(args.tier)
+    try:
+        result = await pipeline.run(args.tier)
+    except Exception as exc:
+        logging.exception("pipeline run failed: %s", exc)
+        console.print(f"[bold red]pipeline run failed:[/] {exc}")
+        return 1
     if not result.runs:
         console.print(f"[yellow]no connectors registered for tier {args.tier}[/]")
         return 1
@@ -263,6 +268,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="recompute match scores and reasons for active jobs, no fetching",
     )
 
+    p = sub.add_parser(
+        "doctor",
+        help="diagnose connectors that returned nothing, and suggest the fix",
+    )
+    p.add_argument("--connector", help="check only this one")
+    p.add_argument("--diagnose-all", action="store_true",
+                   help="ask the LLM about healthy connectors too")
+    p.add_argument("--apply-patch", action="store_true",
+                   help="apply a suggested diff when it applies cleanly and tests pass")
+
     p = sub.add_parser("validate", help="test candidate ATS slugs, update companies.yaml")
     p.add_argument("--apply", action="store_true", help="write companies.yaml")
     p.add_argument("--all", action="store_true", help="re-check verified slugs too")
@@ -339,6 +354,35 @@ def main(argv: list[str] | None = None) -> int:
         with session_scope() as s:
             n = IngestPipeline()._rescore(JobRepository(s))
         console.print(f"rescored [bold]{n}[/] active jobs")
+        return 0
+    if args.command == "doctor":
+        from app.pipeline.doctor import apply_patch, run_doctor
+
+        checks, found = asyncio.run(run_doctor(args.connector, diagnose_all=args.diagnose_all))
+
+        table = Table(title="connector health (live check)", header_style="bold")
+        for col in ("connector", "state", "live check"):
+            table.add_column(col)
+        colour = {"ok": "green", "degraded": "yellow", "broken": "red"}
+        for h in checks:
+            table.add_row(h.connector, f"[{colour[h.severity]}]{h.severity}[/]", h.summary)
+        console.print(table)
+
+        broken = [h for h in checks if h.severity == "broken"]
+        degraded = [h for h in checks if h.severity == "degraded"]
+        console.print(
+            f"[bold]{len(checks) - len(broken) - len(degraded)}[/] ok · "
+            f"[yellow]{len(degraded)}[/] degraded · [red]{len(broken)}[/] broken"
+        )
+
+        for d in found:
+            console.print(f"\n[bold]{d.connector}[/]: {d.cause or d.error or 'no diagnosis'}")
+            if d.evidence:
+                console.print(f"  [dim]evidence:[/] {d.evidence[:160]}")
+            if args.apply_patch:
+                ok, note = apply_patch(d)
+                console.print(f"  [{'green' if ok else 'yellow'}]{note}[/]")
+        console.print("\nreports written to docs/doctor/")
         return 0
     if args.command == "validate":
         from app.pipeline.validate import validate

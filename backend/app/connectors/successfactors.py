@@ -41,6 +41,7 @@ def _date(text: str) -> datetime | None:
 class SuccessFactors(SearchConnector):
     name = "successfactors"
     tier = 1
+    impersonate = "chrome124"
     concurrency = 3
     rate_limit_delay = 0.3
 

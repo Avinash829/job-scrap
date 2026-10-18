@@ -60,7 +60,9 @@ _NEW_GRAD = re.compile(
     re.I,
 )
 _INTERN = re.compile(
-    r"\b(intern|internship|co-?op|summer\s+20\d\d|trainee|apprentice)\b", re.I
+    r"\b(interns?|internships?|co-?ops?|summer\s+20\d\d|winter\s+20\d\d|fall\s+20\d\d|spring\s+20\d\d|"
+    r"trainees?|apprentices?|fellows?|fellowships?|student\s+(?:interns?|developer|worker))\b",
+    re.I,
 )
 # Graduation-year phrasings, including the Indian "2027 batch" form. All
 # matches are collected: "2026/2027 batch" and "class of 2026 or 2027" mean
@@ -299,14 +301,19 @@ _ROLE_ORDER = [
 _TITLES_ONLY = bool(CONFIG["roles"].get("match_titles_only", True))
 
 
-def classify_role(title: str, tags: list[str] | None = None) -> RoleCategory:
-    """Classify from the TITLE by default.
+_TECH_INTERN_WORDS = re.compile(
+    r"\b(tech\w*|engineering|software|developer|dev|sde|swe|coding|programming|web|frontend|backend|"
+    r"full\s*stack|ai|ml|data|cloud|mobile|qa|sdet|systems?|it|analytics|algorithm)\b",
+    re.I,
+)
 
-    Tag-based fallback used to label "Product Tester for Books and Ebooks" as
-    `data` and "IT-Systemadministrator" as `sre`, because their tag soup
-    mentioned analytics and systems. A role you would actually apply to says
-    so in its title.
-    """
+
+def classify_role(
+    title: str,
+    tags: list[str] | None = None,
+    description: str | None = None,
+) -> RoleCategory:
+    """Classify from the TITLE by default, with smart context for internships."""
     t = title.lower()
     if any(bad in t for bad in _ROLE_EXCLUDE):
         return RoleCategory.OTHER
@@ -315,6 +322,38 @@ def classify_role(title: str, tags: list[str] | None = None) -> RoleCategory:
         for kw in _ROLE_KEYWORDS.get(cat, []):
             if kw in t:
                 return cat
+
+    # Dedicated internship handling: an internship in a tech role should not be dropped
+    if _INTERN.search(t):
+        if re.search(r"\b(frontend|ui|front[\s-]end)\b", t):
+            return RoleCategory.FRONTEND
+        if re.search(r"\b(backend|back[\s-]end|api)\b", t):
+            return RoleCategory.BACKEND
+        if re.search(r"\b(full[\s-]?stack|mern)\b", t):
+            return RoleCategory.FULLSTACK
+        if re.search(r"\b(ai|ml|machine\s+learning|deep\s+learning|computer\s+vision|nlp|genai)\b", t):
+            return RoleCategory.ML
+        if re.search(r"\b(data\s+science|data\s+analyst|data\s+engineering|analytics)\b", t):
+            return RoleCategory.DATA
+        if _TECH_INTERN_WORDS.search(t):
+            return RoleCategory.SWE
+
+        # For generic titles like "Intern" / "Summer Intern" / "Campus Intern",
+        # inspect tags and description for technical skills:
+        context = f"{' '.join(tags or [])} {(description or '')[:1500]}".lower()
+        skills_found = extract_tech_stack(context, tags)
+        if skills_found:
+            if any(s in skills_found for s in ("pytorch", "tensorflow", "scikit-learn", "llm", "nlp", "ai agents", "generative ai", "rag")):
+                return RoleCategory.ML
+            if any(s in skills_found for s in ("pandas", "numpy", "spark", "airflow", "snowflake", "databricks", "power bi")):
+                return RoleCategory.DATA
+            if any(s in skills_found for s in ("react", "next.js", "vue", "angular", "tailwind", "redux")):
+                if any(s in skills_found for s in ("node.js", "express", "django", "fastapi", "spring", "postgres", "mongodb")):
+                    return RoleCategory.FULLSTACK
+                return RoleCategory.FRONTEND
+            if any(s in skills_found for s in ("node.js", "express", "django", "fastapi", "flask", "spring", "golang", "go")):
+                return RoleCategory.BACKEND
+            return RoleCategory.SWE
 
     if _TITLES_ONLY:
         return RoleCategory.OTHER
@@ -611,7 +650,7 @@ def normalize(raw: RawJob) -> Job:
     """Rules-only pass. Flags needs_enrichment when the LLM could add something."""
     # Classify first: it only reads the title, and it decides whether any of
     # the expensive description scans below can possibly matter.
-    role = classify_role(raw.title, raw.tags)
+    role = classify_role(raw.title, raw.tags, raw.description)
     if role is RoleCategory.OTHER:
         return _normalize_out_of_scope(raw)
 
@@ -627,13 +666,18 @@ def normalize(raw: RawJob) -> Job:
         min_yoe, max_yoe = hint, None
         yoe_src = ExtractionSource.SOURCE_METADATA
 
-    # Employment type comes from the TITLE (or the source's own field), never
-    # from the description. Matching the body tagged Elastic's "Senior
-    # Software Engineer" as an internship because its description mentioned
-    # mentoring interns, and a Cloudflare audit role via "Internal".
+    # Employment type comes from the TITLE (or the source's own field).
+    # Title is the ground truth: if the title says intern/trainee, it is an internship.
     emp = raw.employment_type_hint
-    if emp is EmploymentType.UNKNOWN and _INTERN.search(raw.title):
+    if _INTERN.search(raw.title):
         emp = EmploymentType.INTERNSHIP
+    elif _STRONG_SENIORITY.search(raw.title):
+        emp = EmploymentType.FULL_TIME
+    elif emp is None or emp is EmploymentType.UNKNOWN:
+        emp = EmploymentType.UNKNOWN
+
+    if emp is EmploymentType.INTERNSHIP and yoe_src is not ExtractionSource.TITLE:
+        min_yoe = 0
 
     regions, region_src, region_conf = resolve_regions(raw)
     work_auth = detect_work_auth(raw.description)
@@ -722,11 +766,11 @@ _BLOCKING_REGIONS = frozenset(
 # about whether the role is still available.
 ATS_SOURCES = frozenset({
     "greenhouse", "lever", "ashby", "smartrecruiters",
-    "workday", "google", "amazon", "avature", "juspay", "oracle",
+    "workday", "google", "amazon", "amazon_campus", "avature", "juspay", "oracle",
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
     "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka", "zoho_recruit",
     # cross-company searches over live postings only
-    "workable", "vc_getro", "vc_consider", "instahyre", "yc_jobs",
+    "workable", "vc_getro", "vc_consider", "instahyre", "unstop", "yc_jobs",
     # Simplify maintains an `active` flag per listing, so its rows are
     # open-until-closed too; the connector itself drops anything >90 days old.
     "simplify",
@@ -756,6 +800,14 @@ def passes_filters(job: Job) -> tuple[bool, str]:
     # attention and hides something real further down the list.
     if job.company_normalized in _EXCLUDED_COMPANIES:
         return False, "aggregator / staffing agency"
+
+    # A board that publishes a closing date is telling us plainly.
+    if job.apply_deadline is not None:
+        deadline = job.apply_deadline
+        if deadline.tzinfo is None:
+            deadline = deadline.replace(tzinfo=timezone.utc)
+        if deadline < datetime.now(timezone.utc):
+            return False, "application deadline passed"
 
     payload = job.raw_payload or {}
     if exp.get("exclude_advanced_degree", True) and payload.get("advanced_degree"):
@@ -793,6 +845,10 @@ def passes_filters(job: Job) -> tuple[bool, str]:
             if job.source in ATS_SOURCES
             else fresh.get("max_posting_age_days")
         )
+        if job.employment_type is EmploymentType.INTERNSHIP:
+            intern_cap = fresh.get("intern_max_posting_age_days")
+            if intern_cap:
+                max_age = min(max_age, intern_cap) if max_age else intern_cap
         if max_age and age_days > max_age:
             return False, f"posted {age_days}d ago"
 

@@ -29,3 +29,6 @@ dist/
 # company-probe checkpoints (resumable, regenerable)
 .import_cache/
 backend/.import_cache/
+
+# --- testing ---
+testing/

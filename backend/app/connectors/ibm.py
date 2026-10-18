@@ -38,7 +38,11 @@ class IBMCareers(SearchConnector):
                 "query": {"bool": {"must": [{"simple_query_string": {"query": f"{term} India"}}]}},
                 "_source": FIELDS,
             }
-            d = await self.post_json(API, json=body, headers={"User-Agent": BROWSER_UA})
+            try:
+                d = await self.post_json(API, json=body, headers={"User-Agent": BROWSER_UA})
+            except Exception as exc:
+                log.warning("ibm search endpoint unavailable (%s); skipping", exc)
+                break
             hits = ((d or {}).get("hits") or {}).get("hits") or []
             for h in hits:
                 s = h.get("_source") or {}

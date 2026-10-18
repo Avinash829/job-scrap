@@ -33,10 +33,15 @@ class Eightfold(Connector):
     def known_scopes(self) -> set[str] | None:
         return {f"eightfold:{c.slug}" for c in companies_for("eightfold")} or None
 
+    async def smoke(self, limit: int = 3) -> list[RawJob]:
+        """Read a couple of boards, not the whole portfolio."""
+        self._smoke_limit = limit
+        return list(await self.fetch())
+
     async def fetch(self) -> Iterable[RawJob]:
         out: list[RawJob] = []
         self.covered_scopes = set()
-        for c in companies_for("eightfold", self._tier_filter):
+        for c in companies_for("eightfold", self._tier_filter)[: getattr(self, "_smoke_limit", None) or None]:
             scope = f"{self.name}:{c.slug}"
             try:
                 out.extend(self.scoped(await self._site(c), scope))

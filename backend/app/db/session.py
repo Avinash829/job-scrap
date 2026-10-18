@@ -79,6 +79,10 @@ def _migrate(engine: Engine) -> None:
             conn.execute(text("ALTER TABLE jobs ADD COLUMN missed_runs INTEGER NOT NULL DEFAULT 0"))
         if "fingerprint" not in cols:
             conn.execute(text("ALTER TABLE jobs ADD COLUMN fingerprint VARCHAR(40) NOT NULL DEFAULT ''"))
+        if "apply_deadline" not in cols:
+            conn.execute(text("ALTER TABLE jobs ADD COLUMN apply_deadline TIMESTAMPTZ"
+                              if engine.dialect.name == "postgresql"
+                              else "ALTER TABLE jobs ADD COLUMN apply_deadline TIMESTAMP"))
         conn.execute(text("CREATE INDEX IF NOT EXISTS ix_jobs_source_scope ON jobs (source, scope)"))
         if "description" in cols:
             # every stored job must satisfy the filters; inactive rows never did
