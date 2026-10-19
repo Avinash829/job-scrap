@@ -24,7 +24,6 @@ from app.connectors.vc_consider import ConsiderBoards
 from app.connectors.vc_getro import GetroBoards
 from app.connectors.workable_search import WorkableSearch
 from app.connectors.workday import Workday
-from app.connectors.unstop import Unstop
 from app.connectors.yc_jobs import YCJobs
 from app.connectors.himalayas import Himalayas
 from app.connectors.instahyre import Instahyre
@@ -74,8 +73,6 @@ ALL_CONNECTORS: list[type[Connector]] = [
     YCJobs,
     # Tier 1 - curated Indian tech hiring with screened employers.
     Instahyre,
-    # Tier 1 - leading campus and tech internship portal in India.
-    Unstop,
     # Tier 1 - curated internship / new-grad feed across hundreds of employers.
     SimplifyJobs,
     # Tier 1 - remote-native aggregators that state region honestly.

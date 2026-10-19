@@ -35,7 +35,6 @@ EMPLOYER_SOURCES = frozenset({
     "google", "amazon", "amazon_campus", "avature", "juspay", "oracle",
     "microsoft", "apple", "atlassian", "goldman", "ibm", "eightfold",
     "workable_boards", "freshteam", "recruitee", "gem", "rippling", "successfactors", "keka", "zoho_recruit",
-    "unstop",
 })
 
 # Team sizes where an intern gets real ownership and a human reads the CV.
