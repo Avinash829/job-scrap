@@ -35,7 +35,7 @@
   "yc_one_liner": "Performance-Optimized Influencer Marketing at Scale"
  },
  "222": {
-  "team_size": 23,
+  "team_size": 28,
   "yc_batch": "Winter 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "222",
@@ -235,7 +235,7 @@
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Agave",
-  "yc_one_liner": "AI Financial Operations for Construction"
+  "yc_one_liner": "Applied AI for Construction"
  },
  "agency": {
   "team_size": 50,
@@ -258,13 +258,6 @@
   "yc_name": "AgentPhone",
   "yc_one_liner": "Phone Numbers for AI Agents"
  },
- "agilemd": {
-  "team_size": 19,
-  "yc_batch": "Summer 2011",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "AgileMD",
-  "yc_one_liner": "Predictive analytics and clinical pathways for hospitals "
- },
  "aglide": {
   "team_size": 6,
   "yc_batch": "Summer 2023",
@@ -284,14 +277,14 @@
   "yc_batch": "Winter 2020",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "AIOS",
-  "yc_one_liner": "Building AI-native infrastructure for the next era of care."
+  "yc_one_liner": "The world\u2019s first full-stack AI doctor"
  },
  "aiosmedical": {
   "team_size": 100,
   "yc_batch": "Winter 2020",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "AIOS",
-  "yc_one_liner": "Building AI-native infrastructure for the next era of care."
+  "yc_one_liner": "The world\u2019s first full-stack AI doctor"
  },
  "aiprise": {
   "team_size": 65,
@@ -338,7 +331,7 @@
  "airmyne": {
   "team_size": 11,
   "yc_batch": "Winter 2022",
-  "yc_locations": "San Francisco, CA, USA; Berkeley, CA, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "AirMyne",
   "yc_one_liner": "Building systems to remove carbon dioxide from air at industrial scale"
  },
@@ -369,6 +362,13 @@
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "AIVideo.com",
   "yc_one_liner": "Superhuman video production as a service"
+ },
+ "akiflow": {
+  "team_size": 18,
+  "yc_batch": "Summer 2020",
+  "yc_locations": "CT, Spain; Remote",
+  "yc_name": "Akiflow",
+  "yc_one_liner": "All your tasks and calendars into an AI-powered productivity app"
  },
  "aktoria": {
   "team_size": 2,
@@ -557,14 +557,14 @@
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Almond",
-  "yc_one_liner": "A dual-arm robot built for physical AI."
+  "yc_one_liner": "America's robot factory"
  },
  "almond-2": {
   "team_size": 6,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Almond",
-  "yc_one_liner": "A dual-arm robot built for physical AI."
+  "yc_one_liner": "America's robot factory"
  },
  "alpaca": {
   "team_size": 150,
@@ -586,6 +586,13 @@
   "yc_locations": "Boston, MA, USA",
   "yc_name": "Alpha Vantage",
   "yc_one_liner": "Developer-friendly and enterprise-grade APIs for financial market\u2026"
+ },
+ "altur": {
+  "team_size": 9,
+  "yc_batch": "Summer 2025",
+  "yc_locations": "Mexico City, CDMX, Mexico",
+  "yc_name": "Altur",
+  "yc_one_liner": "Voice AI Agents for Debt Collection"
  },
  "ambient": {
   "team_size": 150,
@@ -622,13 +629,6 @@
   "yc_name": "Ambral",
   "yc_one_liner": "AI for account management and customer success"
  },
- "anara": {
-  "team_size": 5,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Anara",
-  "yc_one_liner": "AI for researchers"
- },
  "andco": {
   "team_size": 3,
   "yc_batch": "Spring 2026",
@@ -649,20 +649,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Andromeda Surgical",
   "yc_one_liner": "Autonomous surgical robots"
- },
- "andson-biotech": {
-  "team_size": 12,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "Atlanta, GA, USA",
-  "yc_name": "Andson Biotech",
-  "yc_one_liner": "Empowering Mass Spec for Biotech and Beyond"
- },
- "andsonbiotech": {
-  "team_size": 12,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "Atlanta, GA, USA",
-  "yc_name": "Andson Biotech",
-  "yc_one_liner": "Empowering Mass Spec for Biotech and Beyond"
  },
  "andy-ai": {
   "team_size": 5,
@@ -916,6 +902,13 @@
   "yc_name": "Ardent",
   "yc_one_liner": "Database sandboxes for Agents"
  },
+ "aren": {
+  "team_size": null,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "",
+  "yc_name": "Aren",
+  "yc_one_liner": "Powering Successful Nursing Shifts"
+ },
  "arini": {
   "team_size": 17,
   "yc_batch": "Winter 2024",
@@ -933,21 +926,21 @@
  "arlo-industries": {
   "team_size": 3,
   "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "New York City, NY, USA",
   "yc_name": "Arlo Industries",
   "yc_one_liner": "Track drones and missiles without radars - Accurate, Passive, Scalable"
  },
  "arlo1": {
   "team_size": 3,
   "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "New York City, NY, USA",
   "yc_name": "Arlo Industries",
   "yc_one_liner": "Track drones and missiles without radars - Accurate, Passive, Scalable"
  },
  "arloindustries": {
   "team_size": 3,
   "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "New York City, NY, USA",
   "yc_name": "Arlo Industries",
   "yc_one_liner": "Track drones and missiles without radars - Accurate, Passive, Scalable"
  },
@@ -979,8 +972,22 @@
   "yc_name": "ARQ",
   "yc_one_liner": "The global financial platform for affluent consumers in the Americas."
  },
+ "array-labs": {
+  "team_size": 30,
+  "yc_batch": "Summer 2022",
+  "yc_locations": "San Francisco, CA, USA; Sunnyvale, CA, USA",
+  "yc_name": "Array Labs",
+  "yc_one_liner": "We're building satellites to create a real-time 3D map of the world."
+ },
+ "arraylabs": {
+  "team_size": 30,
+  "yc_batch": "Summer 2022",
+  "yc_locations": "San Francisco, CA, USA; Sunnyvale, CA, USA",
+  "yc_name": "Array Labs",
+  "yc_one_liner": "We're building satellites to create a real-time 3D map of the world."
+ },
  "artie": {
-  "team_size": 16,
+  "team_size": 20,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Artie",
@@ -1042,29 +1049,22 @@
   "yc_name": "Arva AI",
   "yc_one_liner": "AI for critical banking operations"
  },
- "arzana": {
-  "team_size": 9,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Arzana",
-  "yc_one_liner": "The autonomous ERP for every manufacturer"
- },
  "asendia": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Asendia AI",
   "yc_one_liner": "AI recruiters for staffing agencies"
  },
  "asendia-ai": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Asendia AI",
   "yc_one_liner": "AI recruiters for staffing agencies"
  },
  "asendiaai": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Asendia AI",
@@ -1131,7 +1131,7 @@
   "yc_batch": "Summer 2021",
   "yc_locations": "Seattle, WA, USA",
   "yc_name": "aSim",
-  "yc_one_liner": "Build and share apps with friends"
+  "yc_one_liner": "create and share mini-apps with friends"
  },
  "asimov": {
   "team_size": 3,
@@ -1301,13 +1301,6 @@
   "yc_name": "Atlas",
   "yc_one_liner": "Modern spend management & concierge."
  },
- "atlog": {
-  "team_size": 2,
-  "yc_batch": "Spring 2025",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Atlog",
-  "yc_one_liner": "Outbound voice and text AI without a prompt"
- },
  "atob": {
   "team_size": 75,
   "yc_batch": "Summer 2020",
@@ -1349,6 +1342,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "atopile",
   "yc_one_liner": "We make tools to design electronics circuit boards with code"
+ },
+ "atrisa": {
+  "team_size": 3,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Atrisa",
+  "yc_one_liner": "AI Agents for Analog Circuit Design"
  },
  "attack": {
   "team_size": 5,
@@ -1406,6 +1406,27 @@
   "yc_name": "Auctor",
   "yc_one_liner": "The agentic operating system for modern system integrators."
  },
+ "audun": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "Oslo, Oslo, Norway",
+  "yc_name": "Audun",
+  "yc_one_liner": "AI-native debt collection company"
+ },
+ "augment-inc": {
+  "team_size": 2,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "Austin, TX, USA",
+  "yc_name": "Augment Inc.",
+  "yc_one_liner": "Everything. All at once."
+ },
+ "augmentinc": {
+  "team_size": 2,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "Austin, TX, USA",
+  "yc_name": "Augment Inc.",
+  "yc_one_liner": "Everything. All at once."
+ },
  "aurelian": {
   "team_size": 45,
   "yc_batch": "Summer 2022",
@@ -1426,6 +1447,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Aurorin CAD",
   "yc_one_liner": "Claude code for Mechanical Engineers"
+ },
+ "authologic": {
+  "team_size": 44,
+  "yc_batch": "Winter 2021",
+  "yc_locations": "Warsaw, Masovian Voivodeship, Poland; Remote",
+  "yc_name": "Authologic",
+  "yc_one_liner": "Stripe for online identity verification"
  },
  "authzed": {
   "team_size": 31,
@@ -1470,11 +1498,18 @@
   "yc_one_liner": "The P&L for knowledge work"
  },
  "autumn": {
-  "team_size": 5,
-  "yc_batch": "Summer 2025",
-  "yc_locations": "London, England, United Kingdom",
+  "team_size": 4,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Autumn",
-  "yc_one_liner": "Billing infrastructure for AI"
+  "yc_one_liner": "The people-intelligence company."
+ },
+ "autumn-ai": {
+  "team_size": 4,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Autumn",
+  "yc_one_liner": "The people-intelligence company."
  },
  "avallon": {
   "team_size": 7,
@@ -1644,13 +1679,6 @@
   "yc_name": "Balance",
   "yc_one_liner": "Full-Stack AI Accounting"
  },
- "banner": {
-  "team_size": 35,
-  "yc_batch": "Summer 2019",
-  "yc_locations": "New York City, NY, USA; San Francisco, CA, USA; Remote",
-  "yc_name": "Banner",
-  "yc_one_liner": "Banner makes software for CRE owners to manage capital spend"
- },
  "baraka": {
   "team_size": 34,
   "yc_batch": "Summer 2021",
@@ -1687,18 +1715,18 @@
   "yc_one_liner": "Superintelligent financial advisor"
  },
  "beglaubigt": {
-  "team_size": 15,
+  "team_size": 30,
   "yc_batch": "Fall 2024",
   "yc_locations": "BY, Germany",
   "yc_name": "Beglaubigt.de",
-  "yc_one_liner": "The legal back-office for European founders - the incorporation API\u2026"
+  "yc_one_liner": "The legal backoffice for every company. For founders and AI agents."
  },
  "beglaubigtde": {
-  "team_size": 15,
+  "team_size": 30,
   "yc_batch": "Fall 2024",
   "yc_locations": "BY, Germany",
   "yc_name": "Beglaubigt.de",
-  "yc_one_liner": "The legal back-office for European founders - the incorporation API\u2026"
+  "yc_one_liner": "The legal backoffice for every company. For founders and AI agents."
  },
  "bego": {
   "team_size": 65,
@@ -1729,42 +1757,42 @@
   "yc_one_liner": "AI-native scheduling and workforce management platform for healthcare"
  },
  "benepass": {
-  "team_size": 45,
+  "team_size": 130,
   "yc_batch": "Winter 2020",
   "yc_locations": "New York City, NY, USA; New York, NY, USA",
   "yc_name": "Benepass",
-  "yc_one_liner": "Fintech for corporate compensation"
+  "yc_one_liner": "Pre-tax and lifestyle benefits, managed in one place."
  },
  "berry": {
   "team_size": 8,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Berry",
-  "yc_one_liner": "Scale customer success and onboarding with AI "
+  "yc_one_liner": "AI Renewal Agent for Your Long Tail. "
  },
  "berryai": {
   "team_size": 8,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Berry",
-  "yc_one_liner": "Scale customer success and onboarding with AI "
+  "yc_one_liner": "AI Renewal Agent for Your Long Tail. "
  },
  "besimple": {
-  "team_size": 10,
+  "team_size": 8,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Besimple AI",
   "yc_one_liner": "Voice data for AI"
  },
  "besimple-ai": {
-  "team_size": 10,
+  "team_size": 8,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Besimple AI",
   "yc_one_liner": "Voice data for AI"
  },
  "besimpleai": {
-  "team_size": 10,
+  "team_size": 8,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Besimple AI",
@@ -1785,14 +1813,14 @@
   "yc_one_liner": "India\u2019s first and only marriage super app"
  },
  "beyond-reach-labs": {
-  "team_size": 8,
+  "team_size": 15,
   "yc_batch": "Winter 2026",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Beyond Reach Labs",
   "yc_one_liner": "Space solar arrays that grow to the size of a football field in orbit"
  },
  "beyondreachlabs": {
-  "team_size": 8,
+  "team_size": 15,
   "yc_batch": "Winter 2026",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Beyond Reach Labs",
@@ -1848,14 +1876,14 @@
   "yc_one_liner": "'Figma/Canva for scientists\u2019"
  },
  "biostack-platforms": {
-  "team_size": 10,
+  "team_size": 11,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "BioStack Platforms",
   "yc_one_liner": "Real world training envs for healthcare AI models"
  },
  "biostackplatforms": {
-  "team_size": 10,
+  "team_size": 11,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "BioStack Platforms",
@@ -2022,13 +2050,6 @@
   "yc_name": "Bluejay",
   "yc_one_liner": "Test, monitor, and improve your voice and chat AI agents"
  },
- "bluelight": {
-  "team_size": 3,
-  "yc_batch": "Winter 2021",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Bluelight",
-  "yc_one_liner": "Analytics, built for the trades."
- },
  "blueonion": {
   "team_size": 27,
   "yc_batch": "Summer 2020",
@@ -2078,6 +2099,13 @@
   "yc_name": "Bolster",
   "yc_one_liner": "The platform for buying, selling and managing residential construction"
  },
+ "bolto": {
+  "team_size": 20,
+  "yc_batch": "Summer 2023",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Bolto",
+  "yc_one_liner": "AI Powered All-In-One Payroll, HR + Recruiting "
+ },
  "bond": {
   "team_size": 3,
   "yc_batch": "Spring 2025",
@@ -2100,14 +2128,7 @@
   "yc_one_liner": "Helping travel companies to sell transportation online"
  },
  "booko": {
-  "team_size": 2,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Booko",
-  "yc_one_liner": "Dynamically pricing the whole economy. "
- },
- "bookoapp": {
-  "team_size": 2,
+  "team_size": 5,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Booko",
@@ -2226,14 +2247,14 @@
   "yc_one_liner": "Agentic AI for Society Builders"
  },
  "brickwise": {
-  "team_size": 2,
+  "team_size": 12,
   "yc_batch": "Fall 2025",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "Brickwise",
   "yc_one_liner": "AI property manager for landlords and estate agents"
  },
  "brickwiseai": {
-  "team_size": 2,
+  "team_size": 12,
   "yc_batch": "Fall 2025",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "Brickwise",
@@ -2244,7 +2265,7 @@
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Brighterway",
-  "yc_one_liner": "Streamlining the medical record review process in workers comp"
+  "yc_one_liner": "AI-native claims software and administration for casualty claims"
  },
  "broccoli": {
   "team_size": 85,
@@ -2268,14 +2289,14 @@
   "yc_one_liner": "AI-native operating system for home service businesses"
  },
  "browser-use": {
-  "team_size": 7,
+  "team_size": 5,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Browser Use",
   "yc_one_liner": "Agents that use the browser."
  },
  "browseruse": {
-  "team_size": 7,
+  "team_size": 5,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Browser Use",
@@ -2285,14 +2306,7 @@
   "team_size": 3,
   "yc_batch": "Winter 2026",
   "yc_locations": "Sydney, NSW, Australia",
-  "yc_name": "Brumby (Formerly GrazeMate)",
-  "yc_one_liner": "Robot Cowboys that Herd Cattle with AI Drones"
- },
- "brumbyformerlygrazemate": {
-  "team_size": 3,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "Sydney, NSW, Australia",
-  "yc_name": "Brumby (Formerly GrazeMate)",
+  "yc_name": "Brumby",
   "yc_one_liner": "Robot Cowboys that Herd Cattle with AI Drones"
  },
  "bucket": {
@@ -2342,14 +2356,14 @@
   "yc_batch": "Winter 2019",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Bunkerhill Health",
-  "yc_one_liner": "Bunkerhill is the agentic AI platform for health systems"
+  "yc_one_liner": "Bunkerhill is a long-horizon agent for health systems"
  },
  "bunkerhillhealth": {
   "team_size": 30,
   "yc_batch": "Winter 2019",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Bunkerhill Health",
-  "yc_one_liner": "Bunkerhill is the agentic AI platform for health systems"
+  "yc_one_liner": "Bunkerhill is a long-horizon agent for health systems"
  },
  "bunting-labs": {
   "team_size": 2,
@@ -2393,6 +2407,13 @@
   "yc_name": "burnt",
   "yc_one_liner": "Agentic Operating System for Food Supply Chain"
  },
+ "business": {
+  "team_size": 58,
+  "yc_batch": "Winter 2021",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Stayflexi",
+  "yc_one_liner": "Operating System for Hotels and Vacation Rentals"
+ },
  "businessonbot": {
   "team_size": 25,
   "yc_batch": "Winter 2021",
@@ -2420,27 +2441,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Cair Health",
   "yc_one_liner": "AI Agents for Healthcare RCM"
- },
- "callab": {
-  "team_size": 7,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Callab AI",
-  "yc_one_liner": "AI voice agents for on-prem telephony stack. "
- },
- "callab-ai": {
-  "team_size": 7,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Callab AI",
-  "yc_one_liner": "AI voice agents for on-prem telephony stack. "
- },
- "callabai": {
-  "team_size": 7,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Callab AI",
-  "yc_one_liner": "AI voice agents for on-prem telephony stack. "
  },
  "calltree": {
   "team_size": 14,
@@ -2547,13 +2547,6 @@
   "yc_name": "Candor",
   "yc_one_liner": "Protect your data and stop insider risk"
  },
- "canix": {
-  "team_size": 22,
-  "yc_batch": "Summer 2019",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Canix",
-  "yc_one_liner": "Canix makes it easy to get and stay compliant as a cannabis business."
- },
  "capi-money": {
   "team_size": 40,
   "yc_batch": "Summer 2023",
@@ -2632,18 +2625,18 @@
   "yc_one_liner": "Revenue Agents for GTM teams"
  },
  "cardinal-gray": {
-  "team_size": 6,
+  "team_size": 4,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Cardinal Gray",
-  "yc_one_liner": "Automating lenders' interactions with the DMV"
+  "yc_one_liner": "Streamlined DMV lien filing for auto lenders"
  },
  "cardinalgray": {
-  "team_size": 6,
+  "team_size": 4,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Cardinal Gray",
-  "yc_one_liner": "Automating lenders' interactions with the DMV"
+  "yc_one_liner": "Streamlined DMV lien filing for auto lenders"
  },
  "careforce": {
   "team_size": 9,
@@ -2674,11 +2667,11 @@
   "yc_one_liner": "The autonomous tax firm"
  },
  "carma": {
-  "team_size": 15,
+  "team_size": 5,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Carma",
-  "yc_one_liner": "The AI Operating System For Modern Fleets."
+  "yc_one_liner": "The agentic workspace that runs construction operations for profit"
  },
  "cartage": {
   "team_size": 12,
@@ -2799,12 +2792,26 @@
   "yc_name": "CellType",
   "yc_one_liner": "The agentic drug company. We simulate human biology."
  },
+ "centaur": {
+  "team_size": 45,
+  "yc_batch": "Winter 2019",
+  "yc_locations": "Boston, MA, USA",
+  "yc_name": "Centaur",
+  "yc_one_liner": "We Create Superior Data By Making Annotation Competitive"
+ },
  "centralize": {
   "team_size": 9,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Centralize",
   "yc_one_liner": "The relationship intelligence platform for enterprise revenue"
+ },
+ "cercli": {
+  "team_size": 28,
+  "yc_batch": "Summer 2023",
+  "yc_locations": "Dubai, Dubai, United Arab Emirates",
+  "yc_name": "Cercli",
+  "yc_one_liner": "AI powered HR and Recruitment for people teams"
  },
  "cerrion": {
   "team_size": 16,
@@ -2897,6 +2904,13 @@
   "yc_name": "Chima",
   "yc_one_liner": "Building infrastructure tools to help large companies customize their\u2026"
  },
+ "cifrato": {
+  "team_size": 17,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "Bogot\u00e1, Bogota, Colombia; Remote",
+  "yc_name": "Cifrato",
+  "yc_one_liner": "AI Accountant for Accounting Firms"
+ },
  "cinder": {
   "team_size": 30,
   "yc_batch": "Winter 2022",
@@ -2975,9 +2989,9 @@
   "yc_one_liner": "AI Revenue Platform for Post-Acute Care"
  },
  "claimsorted": {
-  "team_size": 20,
+  "team_size": 50,
   "yc_batch": "Summer 2024",
-  "yc_locations": "London, England, United Kingdom",
+  "yc_locations": "New York City, NY, USA",
   "yc_name": "ClaimSorted",
   "yc_one_liner": "Making it easy for insurance companies to process claims"
  },
@@ -3133,7 +3147,7 @@
   "yc_batch": "Summer 2021",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Coast",
-  "yc_one_liner": "Demo Platform for API-First Companies"
+  "yc_one_liner": "Demo operations for the AI era"
  },
  "coba": {
   "team_size": 9,
@@ -3185,18 +3199,18 @@
   "yc_one_liner": "Live online courses that turn learners into builders"
  },
  "codes-health": {
-  "team_size": 35,
+  "team_size": 45,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Codes Health",
-  "yc_one_liner": "Medical Record Retrieval with Zero Human Error"
+  "yc_one_liner": "AI-native medical record retrieval"
  },
  "codeshealth": {
-  "team_size": 35,
+  "team_size": 45,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Codes Health",
-  "yc_one_liner": "Medical Record Retrieval with Zero Human Error"
+  "yc_one_liner": "AI-native medical record retrieval"
  },
  "codingal": {
   "team_size": 100,
@@ -3210,7 +3224,7 @@
   "yc_batch": "Winter 2022",
   "yc_locations": "New York City, NY, USA; New York, NY, USA",
   "yc_name": "Cofactr",
-  "yc_one_liner": "Cloud pre-factory logistics and procurement for electronics"
+  "yc_one_liner": "AI-Powered Electronics Supply Chain Infrastructure"
  },
  "cogram": {
   "team_size": 15,
@@ -3248,7 +3262,7 @@
   "yc_one_liner": "Marketplace for Rare Coins & Precious Metals"
  },
  "collectwise": {
-  "team_size": 12,
+  "team_size": 22,
   "yc_batch": "Fall 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "CollectWise",
@@ -3267,6 +3281,13 @@
   "yc_locations": "BY, Germany",
   "yc_name": "Comena",
   "yc_one_liner": "AI agents for distributors and manufacturers to automate order entry."
+ },
+ "commodityai": {
+  "team_size": 6,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "CommodityAI",
+  "yc_one_liner": "The AI operating system for commodity operations"
  },
  "community-phone-company": {
   "team_size": 101,
@@ -3296,6 +3317,13 @@
   "yc_name": "Complete",
   "yc_one_liner": "The complete way to do compensation"
  },
+ "complif": {
+  "team_size": 100,
+  "yc_batch": "Winter 2022",
+  "yc_locations": "Buenos Aires, CABA, Argentina",
+  "yc_name": "Complif",
+  "yc_one_liner": "Compliance tools & AI agents for financial entities"
+ },
  "complir": {
   "team_size": 13,
   "yc_batch": "Spring 2026",
@@ -3304,7 +3332,7 @@
   "yc_one_liner": "Vanta for physical products"
  },
  "complydo": {
-  "team_size": 10,
+  "team_size": 17,
   "yc_batch": "Fall 2025",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "ComplyDo",
@@ -3378,14 +3406,14 @@
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Confident AI",
-  "yc_one_liner": "The LLM Eval and Observability Platform for AI Quality"
+  "yc_one_liner": "Production Monitoring & Evals for AI Agents"
  },
  "confidentai": {
   "team_size": 7,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Confident AI",
-  "yc_one_liner": "The LLM Eval and Observability Platform for AI Quality"
+  "yc_one_liner": "Production Monitoring & Evals for AI Agents"
  },
  "confido": {
   "team_size": 65,
@@ -3451,11 +3479,11 @@
   "yc_one_liner": "Growth through always\u2011on consumer understanding"
  },
  "converge": {
-  "team_size": 6,
+  "team_size": 13,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Converge",
-  "yc_one_liner": "All-in-one marketing measurement for B2C"
+  "yc_one_liner": "AI-native growth platform for DTC"
  },
  "conviction": {
   "team_size": 3,
@@ -3485,20 +3513,6 @@
   "yc_name": "Copperlane",
   "yc_one_liner": "Agentic Mortgage Origination"
  },
- "copycat-ai": {
-  "team_size": 2,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "Seattle, WA, USA",
-  "yc_name": "CopyCat AI",
-  "yc_one_liner": "AI for Commercial Insurance Agencies"
- },
- "copycatai": {
-  "team_size": 2,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "Seattle, WA, USA",
-  "yc_name": "CopyCat AI",
-  "yc_one_liner": "AI for Commercial Insurance Agencies"
- },
  "corgea": {
   "team_size": 6,
   "yc_batch": "Summer 2023",
@@ -3510,21 +3524,7 @@
   "team_size": 250,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Corgi Insurance",
-  "yc_one_liner": "Corgi is building an AI financial infrastructure company"
- },
- "corgi-insurance": {
-  "team_size": 250,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Corgi Insurance",
-  "yc_one_liner": "Corgi is building an AI financial infrastructure company"
- },
- "corgiinsurance": {
-  "team_size": 250,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Corgi Insurance",
+  "yc_name": "Corgi",
   "yc_one_liner": "Corgi is building an AI financial infrastructure company"
  },
  "coris": {
@@ -3533,6 +3533,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Coris",
   "yc_one_liner": "AI risk and ops platform for Payment Processors, Banks, SaaS\u2026"
+ },
+ "corvera": {
+  "team_size": 4,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Corvera",
+  "yc_one_liner": "The AI sales agent for CPG brands"
  },
  "cosine": {
   "team_size": 12,
@@ -3547,6 +3554,13 @@
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Cotera",
   "yc_one_liner": "The fastest way to build an AI agent"
+ },
+ "cotool": {
+  "team_size": 8,
+  "yc_batch": "Spring 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Cotool",
+  "yc_one_liner": "Security operations optimized for agents."
  },
  "coulomb": {
   "team_size": 10,
@@ -3640,7 +3654,7 @@
   "yc_one_liner": "Using AI to help dementia patients age at home"
  },
  "creativemode": {
-  "team_size": 2,
+  "team_size": 5,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "CreativeMode",
@@ -3677,7 +3691,7 @@
  "crustdata": {
   "team_size": 30,
   "yc_batch": "Fall 2024",
-  "yc_locations": "",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Crustdata",
   "yc_one_liner": "Real-time B2B data via simple APIs"
  },
@@ -3701,13 +3715,6 @@
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "cubic",
   "yc_one_liner": "AI-powered code review platform"
- },
- "culdesac": {
-  "team_size": 100,
-  "yc_batch": "Summer 2018",
-  "yc_locations": "San Francisco, CA, USA; Tempe, AZ, USA",
-  "yc_name": "Culdesac",
-  "yc_one_liner": "We build cities for people, not cars. "
  },
  "cumulus-labs": {
   "team_size": 2,
@@ -3805,14 +3812,14 @@
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Darwin",
-  "yc_one_liner": "Humanoid robots"
+  "yc_one_liner": "Robot technicians for AI infrastructure"
  },
  "darwinrobotics": {
   "team_size": 4,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Darwin",
-  "yc_one_liner": "Humanoid robots"
+  "yc_one_liner": "Robot technicians for AI infrastructure"
  },
  "data-driven-bioscience": {
   "team_size": 10,
@@ -3869,6 +3876,27 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "David AI",
   "yc_one_liner": "Data for audio AI"
+ },
+ "decisional": {
+  "team_size": 3,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Decisional AI",
+  "yc_one_liner": "AI Agents for the Trades"
+ },
+ "decisional-ai": {
+  "team_size": 3,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Decisional AI",
+  "yc_one_liner": "AI Agents for the Trades"
+ },
+ "decisionalai": {
+  "team_size": 3,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Decisional AI",
+  "yc_one_liner": "AI Agents for the Trades"
  },
  "decoda-health": {
   "team_size": 19,
@@ -4022,7 +4050,7 @@
   "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Denta",
-  "yc_one_liner": "Dental Insurance"
+  "yc_one_liner": "Fortune 500 Dental Benefits"
  },
  "deployparagon": {
   "team_size": 2,
@@ -4030,6 +4058,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Paragon",
   "yc_one_liner": "The AI Growth Engine for Industrials"
+ },
+ "dexter": {
+  "team_size": 3,
+  "yc_batch": "Fall 2024",
+  "yc_locations": "Berlin, Berlin, Germany",
+  "yc_name": "Dexter",
+  "yc_one_liner": "Spend Intelligence for Complex Enterprises"
  },
  "did": {
   "team_size": 27,
@@ -4095,14 +4130,14 @@
   "yc_one_liner": "Automating Compliance for Construction"
  },
  "diligencesquared": {
-  "team_size": 3,
+  "team_size": 5,
   "yc_batch": "Fall 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "DiligenceSquared",
   "yc_one_liner": "AI-powered market due diligence for investment decisions"
  },
  "diligencesquared-inc": {
-  "team_size": 3,
+  "team_size": 5,
   "yc_batch": "Fall 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "DiligenceSquared",
@@ -4262,13 +4297,6 @@
   "yc_name": "doola",
   "yc_one_liner": "Business-in-a-Box\u2122 for LLCs"
  },
- "doppler": {
-  "team_size": 25,
-  "yc_batch": "Winter 2019",
-  "yc_locations": "Austin, TX, USA; Remote",
-  "yc_name": "Doppler",
-  "yc_one_liner": "Secure secrets. Prevent breaches. Keep teams moving."
- },
  "dots": {
   "team_size": 10,
   "yc_batch": "Summer 2021",
@@ -4388,6 +4416,13 @@
   "yc_name": "Duffel",
   "yc_one_liner": "The complete toolkit to sell travel."
  },
+ "durate": {
+  "team_size": 3,
+  "yc_batch": "Fall 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Durate",
+  "yc_one_liner": "Self-running physician scheduling"
+ },
  "dynamo": {
   "team_size": 40,
   "yc_batch": "Winter 2022",
@@ -4486,6 +4521,20 @@
   "yc_name": "Educato",
   "yc_one_liner": "Worldwide exam-prep platform"
  },
+ "edviro": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Edviro",
+  "yc_one_liner": "AI That Operates Energy Infrastructure"
+ },
+ "edviroenergy": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Edviro",
+  "yc_one_liner": "AI That Operates Energy Infrastructure"
+ },
  "effigov": {
   "team_size": 3,
   "yc_batch": "Summer 2025",
@@ -4557,39 +4606,25 @@
   "yc_one_liner": "Tech-enabled heat pump contractor that cuts costs by 60%"
  },
  "elevate": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Elevate",
   "yc_one_liner": "Automated AI data integrations for roll-ups"
  },
  "elevate-2": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Elevate",
   "yc_one_liner": "Automated AI data integrations for roll-ups"
- },
- "elevateformerlybloom": {
-  "team_size": 7,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "Dubai, Dubai, United Arab Emirates",
-  "yc_name": "Elevate (formerly Bloom)",
-  "yc_one_liner": "US based USD accounts for non-US residents "
- },
- "elevatepay": {
-  "team_size": 7,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "Dubai, Dubai, United Arab Emirates",
-  "yc_name": "Elevate (formerly Bloom)",
-  "yc_one_liner": "US based USD accounts for non-US residents "
  },
  "ellipsis": {
   "team_size": 2,
   "yc_batch": "Winter 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Ellipsis",
-  "yc_one_liner": "Cloud platform for coding agents"
+  "yc_one_liner": "Managed Agent platform "
  },
  "ello": {
   "team_size": 45,
@@ -4692,23 +4727,9 @@
  "enerjazz": {
   "team_size": 9,
   "yc_batch": "Summer 2021",
-  "yc_locations": "Delhi, DL, India",
+  "yc_locations": "San Francisco, CA, USA; Delhi, DL, India",
   "yc_name": "Enerjazz",
   "yc_one_liner": "Making electric vehicle batteries affordable "
- },
- "enhanced-radar": {
-  "team_size": 2,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Enhanced Radar",
-  "yc_one_liner": "AI for air traffic control"
- },
- "enhancedradar": {
-  "team_size": 2,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Enhanced Radar",
-  "yc_one_liner": "AI for air traffic control"
  },
  "enode": {
   "team_size": 70,
@@ -4718,7 +4739,7 @@
   "yc_one_liner": "Energy Orchestration Platform"
  },
  "entangl": {
-  "team_size": 15,
+  "team_size": 22,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Entangl",
@@ -4746,11 +4767,11 @@
   "yc_one_liner": "AI-Powered ERP, MES, and Test Software for Complex Operations"
  },
  "ergo": {
-  "team_size": 0,
+  "team_size": 9,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Ergo",
-  "yc_one_liner": "AI agents and unified data layer for revenue teams"
+  "yc_one_liner": "Ergo is the context layer that helps revenue teams close more deals."
  },
  "escape": {
   "team_size": 29,
@@ -4800,6 +4821,13 @@
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Every",
   "yc_one_liner": "Banking + Payroll/Benefits + Bookkeeping + Tax in one place"
+ },
+ "evidence": {
+  "team_size": 6,
+  "yc_batch": "Summer 2021",
+  "yc_locations": "Toronto, ON, Canada; Remote",
+  "yc_name": "Evidence",
+  "yc_one_liner": "Business intelligence as code"
  },
  "exonic": {
   "team_size": 3,
@@ -4856,34 +4884,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Farcast",
   "yc_one_liner": "We build advanced satcom user terminals"
- },
- "fathom": {
-  "team_size": 95,
-  "yc_batch": "Winter 2021",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Fathom",
-  "yc_one_liner": "The most flexible AI meeting notetaker ever built."
- },
- "feather": {
-  "team_size": 8,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Seattle, WA, USA; Remote",
-  "yc_name": "Feather",
-  "yc_one_liner": "Voice AI"
- },
- "feather-2": {
-  "team_size": 8,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Seattle, WA, USA; Remote",
-  "yc_name": "Feather",
-  "yc_one_liner": "Voice AI"
- },
- "featherhq": {
-  "team_size": 8,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Seattle, WA, USA; Remote",
-  "yc_name": "Feather",
-  "yc_one_liner": "Voice AI"
  },
  "fenrock": {
   "team_size": 2,
@@ -5030,7 +5030,7 @@
   "yc_batch": "Summer 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Firecrawl",
-  "yc_one_liner": "Give your AI agents web data and beyond."
+  "yc_one_liner": "Building the library for superintelligence."
  },
  "first": {
   "team_size": 12,
@@ -5072,17 +5072,17 @@
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "FirstWork",
-  "yc_one_liner": "Rippling for seasonal workers"
+  "yc_one_liner": "Applied AI for workforce operations"
  },
  "flagright": {
-  "team_size": 31,
+  "team_size": 58,
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Flagright",
   "yc_one_liner": "AI-native AML compliance platform for fintechs & banks"
  },
  "flai": {
-  "team_size": 35,
+  "team_size": 40,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Flai",
@@ -5220,13 +5220,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "FlutterFlow",
   "yc_one_liner": "Application Development Platform (Native Mobile + Web Apps)"
- },
- "fondo": {
-  "team_size": 80,
-  "yc_batch": "Winter 2018",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Fondo",
-  "yc_one_liner": "Bookkeeping, tax, & tax credits on autopilot for 2,000+ startups"
  },
  "forage": {
   "team_size": 66,
@@ -5396,6 +5389,20 @@
   "yc_name": "Fuse AI",
   "yc_one_liner": "Agentic Sales Platform"
  },
+ "gale": {
+  "team_size": 3,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Gale",
+  "yc_one_liner": "Fast and Data-Driven Immigration Platform"
+ },
+ "galevisa": {
+  "team_size": 3,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Gale",
+  "yc_one_liner": "Fast and Data-Driven Immigration Platform"
+ },
  "garage": {
   "team_size": 35,
   "yc_batch": "Winter 2024",
@@ -5467,18 +5474,18 @@
   "yc_one_liner": "The next generation of induced-proximity medicines."
  },
  "generalastro": {
-  "team_size": 2,
+  "team_size": 4,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "General Astronautics",
-  "yc_one_liner": "Robotics for Space R&D"
+  "yc_one_liner": "Superintelligent space Robots"
  },
  "generalastronautics": {
-  "team_size": 2,
+  "team_size": 4,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "General Astronautics",
-  "yc_one_liner": "Robotics for Space R&D"
+  "yc_one_liner": "Superintelligent space Robots"
  },
  "generalproximity": {
   "team_size": 15,
@@ -5536,13 +5543,6 @@
   "yc_name": "Baraka",
   "yc_one_liner": "Grow Your Wealth With Baraka"
  },
- "getbenepass": {
-  "team_size": 45,
-  "yc_batch": "Winter 2020",
-  "yc_locations": "New York City, NY, USA; New York, NY, USA",
-  "yc_name": "Benepass",
-  "yc_one_liner": "Fintech for corporate compensation"
- },
  "getbinks": {
   "team_size": 70,
   "yc_batch": "Summer 2019",
@@ -5551,7 +5551,7 @@
   "yc_one_liner": "A zero inventory, zero returns factory-to-consumer apparel company"
  },
  "getbiostack": {
-  "team_size": 10,
+  "team_size": 11,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "BioStack Platforms",
@@ -5599,6 +5599,20 @@
   "yc_name": "Agap\u00e9",
   "yc_one_liner": "Feel close, even when apart. One meaningful conversation at a time."
  },
+ "getdexter": {
+  "team_size": 3,
+  "yc_batch": "Fall 2024",
+  "yc_locations": "Berlin, Berlin, Germany",
+  "yc_name": "Dexter",
+  "yc_one_liner": "Spend Intelligence for Complex Enterprises"
+ },
+ "getdot": {
+  "team_size": 6,
+  "yc_batch": "Summer 2021",
+  "yc_locations": "Berlin, Berlin, Germany; Remote",
+  "yc_name": "GetDot",
+  "yc_one_liner": "Your AI Data Analyst"
+ },
  "getfinn": {
   "team_size": 5,
   "yc_batch": "Winter 2023",
@@ -5606,10 +5620,17 @@
   "yc_name": "Finn",
   "yc_one_liner": "AI Wealth Manager"
  },
+ "gethealthkey": {
+  "team_size": 10,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "Austin, TX, USA",
+  "yc_name": "HealthKey",
+  "yc_one_liner": "AI-powered Patient Identification for Clinical Trials"
+ },
  "gethomebase": {
   "team_size": 20,
   "yc_batch": "Winter 2021",
-  "yc_locations": "Ho Chi Minh City, Ho Chi Minh City, Vietnam; Ho Chi Minh City, Vietnam",
+  "yc_locations": "Singapore, Singapore; Ho Chi Minh City, Vietnam",
   "yc_name": "Homebase",
   "yc_one_liner": "Personalized rent-to-own real estate financing using technology in SEA"
  },
@@ -5733,7 +5754,7 @@
   "yc_one_liner": "AI-powered sales tax, VAT and GST compliance"
  },
  "getstrada": {
-  "team_size": 21,
+  "team_size": 16,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Strada",
@@ -5767,12 +5788,12 @@
   "yc_name": "Zep AI",
   "yc_one_liner": "The unified context layer for enterprise data"
  },
- "getzuma": {
-  "team_size": 50,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "Los Angeles, CA, USA",
-  "yc_name": "Zuma",
-  "yc_one_liner": "We help businesses convert leads into sales in minutes using text"
+ "ghosteye": {
+  "team_size": 6,
+  "yc_batch": "Summer 2025",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "GhostEye",
+  "yc_one_liner": "Your always-on red team."
  },
  "giga": {
   "team_size": 30,
@@ -5982,7 +6003,7 @@
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Gooseworks",
-  "yc_one_liner": "Self-Improving Ad Creative Engines"
+  "yc_one_liner": "Self-Improving Marketing Harness"
  },
  "goradar": {
   "team_size": 120,
@@ -6061,6 +6082,13 @@
   "yc_name": "Greenboard",
   "yc_one_liner": "Modern OS for the financial back office. "
  },
+ "greptile": {
+  "team_size": 35,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Greptile",
+  "yc_one_liner": "AI code review agent with complete context of your codebase"
+ },
  "gridware": {
   "team_size": 125,
   "yc_batch": "Winter 2021",
@@ -6083,7 +6111,7 @@
   "yc_one_liner": "Vertical AI for highly-regulated manufacturing"
  },
  "growthbook": {
-  "team_size": 40,
+  "team_size": 46,
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "GrowthBook",
@@ -6116,6 +6144,20 @@
   "yc_locations": "Washington, DC, USA",
   "yc_name": "Guardian RF",
   "yc_one_liner": "Drone detection for US defense and national security  "
+ },
+ "guild": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "GUILD",
+  "yc_one_liner": "Making Defense Manufacturing Faster and Cheaper"
+ },
+ "guildai": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "GUILD",
+  "yc_one_liner": "Making Defense Manufacturing Faster and Cheaper"
  },
  "gusto": {
   "team_size": 2400,
@@ -6236,6 +6278,13 @@
   "yc_name": "HappyRobot",
   "yc_one_liner": "Intelligence that runs your operations. "
  },
+ "harbera": {
+  "team_size": null,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Harbera",
+  "yc_one_liner": "AI Healthcare Provider Credentialing Software"
+ },
  "harper": {
   "team_size": 25,
   "yc_batch": "Winter 2025",
@@ -6278,6 +6327,27 @@
   "yc_name": "Haystack",
   "yc_one_liner": "Delivery Analytics for Software Teams"
  },
+ "hazel": {
+  "team_size": 7,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Hazel",
+  "yc_one_liner": "AI-enabled procurement for government"
+ },
+ "hazel-2": {
+  "team_size": 7,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Hazel",
+  "yc_one_liner": "AI-enabled procurement for government"
+ },
+ "hazelai": {
+  "team_size": 7,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Hazel",
+  "yc_one_liner": "AI-enabled procurement for government"
+ },
  "healia": {
   "team_size": 15,
   "yc_batch": "Winter 2024",
@@ -6305,6 +6375,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Health Harbor",
   "yc_one_liner": "Using generative AI to call insurance for healthcare clinics"
+ },
+ "healthkey": {
+  "team_size": 10,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "Austin, TX, USA",
+  "yc_name": "HealthKey",
+  "yc_one_liner": "AI-powered Patient Identification for Clinical Trials"
  },
  "healthtech-1": {
   "team_size": 40,
@@ -6340,6 +6417,20 @@
   "yc_locations": "Mexico City, CDMX, Mexico",
   "yc_name": "Helios",
   "yc_one_liner": "Create your AI workforce"
+ },
+ "helios-intelligence": {
+  "team_size": 5,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Boston, MA, USA",
+  "yc_name": "Helios Intelligence",
+  "yc_one_liner": "At-home molecular body test: 1,000+ biomarkers from a drop of blood"
+ },
+ "heliosintelligence": {
+  "team_size": 5,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Boston, MA, USA",
+  "yc_name": "Helios Intelligence",
+  "yc_one_liner": "At-home molecular body test: 1,000+ biomarkers from a drop of blood"
  },
  "helium": {
   "team_size": 9,
@@ -6416,7 +6507,7 @@
   "yc_batch": "Summer 2025",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "Hera",
-  "yc_one_liner": "AI Motion Designer"
+  "yc_one_liner": "The AI-native creative canvas"
  },
  "heron": {
   "team_size": 60,
@@ -6467,22 +6558,15 @@
   "yc_name": "HeyCharge",
   "yc_one_liner": "Low-cost, high-scale EV charging platform for apartments (and more)."
  },
- "heylua": {
-  "team_size": 5,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Lua Global Inc",
-  "yc_one_liner": "The mid-market agent platform"
- },
  "heymalama": {
-  "team_size": 3,
+  "team_size": 35,
   "yc_batch": "Summer 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Malama Health",
-  "yc_one_liner": "Doula-led holistic support during and after pregnancy "
+  "yc_one_liner": "Making motherhood safe, not scary"
  },
  "heypocket": {
-  "team_size": 15,
+  "team_size": 35,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pocket",
@@ -6495,6 +6579,20 @@
   "yc_name": "Hey Telo",
   "yc_one_liner": "Voice AI for Home Services"
  },
+ "heytenor": {
+  "team_size": 3,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Tenor",
+  "yc_one_liner": "Infrastructure for building and scaling AI-native businesses."
+ },
+ "hillstar": {
+  "team_size": 2,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "HillStar",
+  "yc_one_liner": "Agents to help utilities make better buying decisions."
+ },
  "hioperator": {
   "team_size": 200,
   "yc_batch": "Summer 2016",
@@ -6502,19 +6600,19 @@
   "yc_name": "HiOperator",
   "yc_one_liner": "Customer support as a service. "
  },
+ "hirebolt": {
+  "team_size": 3,
+  "yc_batch": "Summer 2021",
+  "yc_locations": "London, England, United Kingdom",
+  "yc_name": "Hirebolt",
+  "yc_one_liner": "AI engineering capacity. Made simple. \u26a1\ufe0f"
+ },
  "hirenimble": {
   "team_size": 25,
   "yc_batch": "Summer 2017",
   "yc_locations": "Miami, FL, USA; Remote",
   "yc_name": "Nimble",
   "yc_one_liner": "Data-driven teacher hiring"
- },
- "hireroger": {
-  "team_size": 2,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "Austin, TX, USA",
-  "yc_name": "Roger",
-  "yc_one_liner": "Roger is an AI SDR that automates outbound sales and follows up 24/7."
  },
  "hitpay": {
   "team_size": 42,
@@ -6554,7 +6652,7 @@
  "homebase": {
   "team_size": 20,
   "yc_batch": "Winter 2021",
-  "yc_locations": "Ho Chi Minh City, Ho Chi Minh City, Vietnam; Ho Chi Minh City, Vietnam",
+  "yc_locations": "Singapore, Singapore; Ho Chi Minh City, Vietnam",
   "yc_name": "Homebase",
   "yc_one_liner": "Personalized rent-to-own real estate financing using technology in SEA"
  },
@@ -6580,25 +6678,32 @@
   "yc_one_liner": "Share casual moments with the people you care about"
  },
  "hub": {
-  "team_size": 10,
+  "team_size": 60,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Hub",
   "yc_one_liner": "Real-world training data for frontier AI labs and robotics."
  },
  "hubble": {
-  "team_size": 23,
-  "yc_batch": "Summer 2020",
-  "yc_locations": "London, England, United Kingdom; Remote",
-  "yc_name": "Lightdash",
-  "yc_one_liner": "The open source Looker alternative "
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "Seattle, WA, USA",
+  "yc_name": "Hubble",
+  "yc_one_liner": "AI-native retrieval engine for medical records"
+ },
+ "hubble-ai": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "Seattle, WA, USA",
+  "yc_name": "Hubble",
+  "yc_one_liner": "AI-native retrieval engine for medical records"
  },
  "hud": {
-  "team_size": 15,
+  "team_size": 24,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "HUD",
-  "yc_one_liner": "Platform for building RL environments and evals "
+  "yc_one_liner": "Platform and marketplace for RL environments and AI data"
  },
  "humaans": {
   "team_size": 48,
@@ -6650,11 +6755,11 @@
   "yc_one_liner": "Human experts as API for AI Agents"
  },
  "huscarl": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA; Remote",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Huscarl",
-  "yc_one_liner": "AI-native actuary enabling self-insurance for corporations"
+  "yc_one_liner": "Autonomous AI actuary for corporate insurance"
  },
  "hylight": {
   "team_size": 37,
@@ -6741,14 +6846,14 @@
   "yc_one_liner": "Hill-climb any benchmark, for any model, in any domain."
  },
  "ignition-benefits": {
-  "team_size": 8,
+  "team_size": 12,
   "yc_batch": "Fall 2026",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Ignition Benefits",
   "yc_one_liner": "The AI-Native Benefits Brokerage"
  },
  "ignitionbenefits": {
-  "team_size": 8,
+  "team_size": 12,
   "yc_batch": "Fall 2026",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Ignition Benefits",
@@ -6768,12 +6873,19 @@
   "yc_name": "Imagine AI",
   "yc_one_liner": "We reverse engineer B2B growth, starting with LinkedIn."
  },
- "imperfect": {
-  "team_size": 5,
-  "yc_batch": "Spring 2026",
+ "impact-drones": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Imperfect",
-  "yc_one_liner": "Adaptive training coach for runners, cyclists, and triathletes "
+  "yc_name": "IMPACT Drones",
+  "yc_one_liner": "Air Defense as a Service for Civilian Infrastructure."
+ },
+ "impactdrones": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "IMPACT Drones",
+  "yc_one_liner": "Air Defense as a Service for Civilian Infrastructure."
  },
  "imprezia": {
   "team_size": 4,
@@ -6852,20 +6964,6 @@
   "yc_name": "Infer",
   "yc_one_liner": "Operating system for insurance agencies"
  },
- "infinia": {
-  "team_size": 28,
-  "yc_batch": "Winter 2023",
-  "yc_locations": "Montevideo, Montevideo Department, Uruguay",
-  "yc_name": "Infinia",
-  "yc_one_liner": "Move money programmatically - built for developers"
- },
- "infiniaweb": {
-  "team_size": 28,
-  "yc_batch": "Winter 2023",
-  "yc_locations": "Montevideo, Montevideo Department, Uruguay",
-  "yc_name": "Infinia",
-  "yc_one_liner": "Move money programmatically - built for developers"
- },
  "infinite": {
   "team_size": 4,
   "yc_batch": "Winter 2025",
@@ -6888,11 +6986,32 @@
   "yc_one_liner": "Business banking for cross-border SMBs & Startups"
  },
  "infisical": {
-  "team_size": 50,
+  "team_size": 70,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Infisical",
-  "yc_one_liner": "Unified platform for secrets, certs, and privileged access management"
+  "yc_one_liner": "Security infrastructure for developers and agents"
+ },
+ "inflection-space": {
+  "team_size": null,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Los Angeles, CA, USA",
+  "yc_name": "Inflection Space Systems",
+  "yc_one_liner": "Hyperscaling space manufacturing"
+ },
+ "inflection-space-systems": {
+  "team_size": null,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Los Angeles, CA, USA",
+  "yc_name": "Inflection Space Systems",
+  "yc_one_liner": "Hyperscaling space manufacturing"
+ },
+ "inflectionspacesystems": {
+  "team_size": null,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Los Angeles, CA, USA",
+  "yc_name": "Inflection Space Systems",
+  "yc_one_liner": "Hyperscaling space manufacturing"
  },
  "influxdata": {
   "team_size": 210,
@@ -6942,6 +7061,20 @@
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Inlet",
   "yc_one_liner": "AI timekeeping for legal professionals."
+ },
+ "inloop-robotics": {
+  "team_size": 10,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "BY, Germany",
+  "yc_name": "InLoop Robotics",
+  "yc_one_liner": "Robotic arms that pick and pack your orders."
+ },
+ "inlooprobotics": {
+  "team_size": 10,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "BY, Germany",
+  "yc_name": "InLoop Robotics",
+  "yc_one_liner": "Robotic arms that pick and pack your orders."
  },
  "innate": {
   "team_size": 7,
@@ -7049,7 +7182,7 @@
   "yc_one_liner": "We help global software companies comply with local tax reporting "
  },
  "iomete": {
-  "team_size": 21,
+  "team_size": 25,
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "IOMETE",
@@ -7125,6 +7258,13 @@
   "yc_name": "JABU",
   "yc_one_liner": "B2B payments, transforming Africa's cash economy"
  },
+ "janeen": {
+  "team_size": 5,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Janeen",
+  "yc_one_liner": "Prior auths and benefits investigation for infusion clinics "
+ },
  "jarmin": {
   "team_size": 5,
   "yc_batch": "Fall 2025",
@@ -7147,7 +7287,7 @@
   "yc_one_liner": "AI Driven EPC - Weld Fabrication Contractor"
  },
  "jetlenses": {
-  "team_size": 200,
+  "team_size": 250,
   "yc_batch": "Summer 2018",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Verse Medical",
@@ -7189,18 +7329,18 @@
   "yc_one_liner": "The autonomous revenue cycle management platform."
  },
  "joincarma": {
-  "team_size": 15,
+  "team_size": 5,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Carma",
-  "yc_one_liner": "The AI Operating System For Modern Fleets."
+  "yc_one_liner": "The agentic workspace that runs construction operations for profit"
  },
  "joinergo": {
-  "team_size": 0,
+  "team_size": 9,
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Ergo",
-  "yc_one_liner": "AI agents and unified data layer for revenue teams"
+  "yc_one_liner": "Ergo is the context layer that helps revenue teams close more deals."
  },
  "joinfleek": {
   "team_size": 100,
@@ -7252,7 +7392,7 @@
   "yc_one_liner": "The platform for all your life events."
  },
  "juicebox": {
-  "team_size": 80,
+  "team_size": 100,
   "yc_batch": "Summer 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Juicebox",
@@ -7273,21 +7413,21 @@
   "yc_one_liner": "API for at-home health data"
  },
  "juno": {
-  "team_size": 2,
+  "team_size": 5,
   "yc_batch": "Spring 2026",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "Juno",
   "yc_one_liner": "AI Health Assistant for Chronic Illness"
  },
  "juno-chat": {
-  "team_size": 2,
+  "team_size": 5,
   "yc_batch": "Spring 2026",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "Juno",
   "yc_one_liner": "AI Health Assistant for Chronic Illness"
  },
  "junocompanion": {
-  "team_size": 2,
+  "team_size": 5,
   "yc_batch": "Spring 2026",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "Juno",
@@ -7327,13 +7467,6 @@
   "yc_locations": "Beijing, Beijing, China",
   "yc_name": "JuziBot",
   "yc_one_liner": "Intercom for WeChat, help companies to acquire,  engage, retain\u2026"
- },
- "kabilah": {
-  "team_size": null,
-  "yc_batch": "Winter 2024",
-  "yc_locations": "",
-  "yc_name": "Kabilah",
-  "yc_one_liner": "Agentic AI for Nursing Workflows"
  },
  "kaipod-learning": {
   "team_size": 27,
@@ -7385,14 +7518,14 @@
   "yc_one_liner": "Deep research for class action law firms"
  },
  "kalpa-labs": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Kalpa Labs",
   "yc_one_liner": "Scaling Generalist Speech models"
  },
  "kalpalabs": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Kalpa Labs",
@@ -7427,18 +7560,18 @@
   "yc_one_liner": "The fastest way to build AI assistants on technical content"
  },
  "karat-financial": {
-  "team_size": 40,
+  "team_size": 25,
   "yc_batch": "Winter 2020",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Karat Financial",
-  "yc_one_liner": "Better financial services for creators"
+  "yc_one_liner": "Business banking that helps you grow"
  },
  "karatfinancial": {
-  "team_size": 40,
+  "team_size": 25,
   "yc_batch": "Winter 2020",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Karat Financial",
-  "yc_one_liner": "Better financial services for creators"
+  "yc_one_liner": "Business banking that helps you grow"
  },
  "karumi": {
   "team_size": 6,
@@ -7524,13 +7657,6 @@
   "yc_name": "Kinro",
   "yc_one_liner": "Autonomous insurance brokerage for small businesses"
  },
- "kinter": {
-  "team_size": 30,
-  "yc_batch": "Winter 2020",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Kinter",
-  "yc_one_liner": "A new kind of power for finance teams"
- },
  "kivo-health": {
   "team_size": 40,
   "yc_batch": "Winter 2023",
@@ -7551,6 +7677,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Klaimee",
   "yc_one_liner": "Liability insurance for AI Agents. You deploy agents, we cover you."
+ },
+ "klarify": {
+  "team_size": 3,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "Toronto, ON, Canada",
+  "yc_name": "Klarify",
+  "yc_one_liner": "AI Agent for Therapists"
  },
  "klavis": {
   "team_size": 3,
@@ -7581,14 +7714,14 @@
   "yc_one_liner": "Making doctors 2x more efficient with AI note-taking & charge capture"
  },
  "kobalt-labs": {
-  "team_size": 12,
+  "team_size": 13,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Kobalt Labs",
   "yc_one_liner": "AI-powered risk and compliance for financial institutions"
  },
  "kobaltlabs": {
-  "team_size": 12,
+  "team_size": 13,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Kobalt Labs",
@@ -7629,13 +7762,6 @@
   "yc_name": "Kontigo",
   "yc_one_liner": "USDC-Smart Neobank for Latinos. "
  },
- "korrai": {
-  "team_size": 24,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "Toronto, ON, Canada",
-  "yc_name": "KorrAI",
-  "yc_one_liner": "Traceable AI for billion-dollar infrastructure."
- },
  "koyal": {
   "team_size": 5,
   "yc_batch": "Fall 2025",
@@ -7644,7 +7770,7 @@
   "yc_one_liner": "Agentic AI Filmmaking Platform"
  },
  "kugelaudio": {
-  "team_size": 4,
+  "team_size": 5,
   "yc_batch": "Spring 2026",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "KugelAudio",
@@ -7667,7 +7793,7 @@
  "lab0": {
   "team_size": 7,
   "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "Bengaluru, KA, India",
   "yc_name": "Lab0",
   "yc_one_liner": "AI FDEs to make your B2B SaaS Go Live in Days, not Months"
  },
@@ -7692,19 +7818,19 @@
   "yc_name": "Lamar Health",
   "yc_one_liner": "Take Care of Shitty Paperwork for Expensive Drugs"
  },
- "lambda-robotics": {
-  "team_size": 6,
-  "yc_batch": "Fall 2026",
+ "lamb-labs": {
+  "team_size": 0,
+  "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Lambda Robotics",
-  "yc_one_liner": "Robotics for AI Infrastructure"
+  "yc_name": "Lamb Labs",
+  "yc_one_liner": "Lightning fast chips with hardcoded AI models"
  },
- "lambdarobotics": {
-  "team_size": 6,
-  "yc_batch": "Fall 2026",
+ "lamblabs": {
+  "team_size": 0,
+  "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Lambda Robotics",
-  "yc_one_liner": "Robotics for AI Infrastructure"
+  "yc_name": "Lamb Labs",
+  "yc_one_liner": "Lightning fast chips with hardcoded AI models"
  },
  "laminar": {
   "team_size": 15,
@@ -7756,11 +7882,18 @@
   "yc_one_liner": "Book any load in 10 minutes"
  },
  "langdock": {
-  "team_size": 55,
+  "team_size": 65,
   "yc_batch": "Summer 2023",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "Langdock",
   "yc_one_liner": "The all-in-one AI platform for companies."
+ },
+ "lapel": {
+  "team_size": 14,
+  "yc_batch": "Spring 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Lapel",
+  "yc_one_liner": "Infrastructure to power every customer interaction."
  },
  "latent": {
   "team_size": 50,
@@ -7775,6 +7908,27 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Latent",
   "yc_one_liner": "Medical language models to automate healthcare operations"
+ },
+ "lato": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "LATO",
+  "yc_one_liner": "Predict how market participants behave"
+ },
+ "latolabs": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "LATO",
+  "yc_one_liner": "Predict how market participants behave"
+ },
+ "latted": {
+  "team_size": 2,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Latted",
+  "yc_one_liner": "Automated Content Engine"
  },
  "lattice": {
   "team_size": 540,
@@ -7810,13 +7964,6 @@
   "yc_locations": "Los Angeles, CA, USA; Remote",
   "yc_name": "Laylo",
   "yc_one_liner": "The CRM powering iconic musicians and events"
- },
- "leadbay": {
-  "team_size": 8,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Leadbay",
-  "yc_one_liner": "Qualified leads for agentic workflows."
  },
  "leaping-ai": {
   "team_size": 13,
@@ -7896,11 +8043,11 @@
   "yc_one_liner": "Autonomous medical care"
  },
  "legora": {
-  "team_size": 400,
+  "team_size": 900,
   "yc_batch": "Winter 2024",
   "yc_locations": "Stockholm, Stockholm County, Sweden",
   "yc_name": "Legora",
-  "yc_one_liner": "The AI workspace for lawyers"
+  "yc_one_liner": "The agentic operating system for legal work"
  },
  "lemma": {
   "team_size": 2,
@@ -7942,7 +8089,7 @@
   "yc_batch": "Winter 2020",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "LFcarry",
-  "yc_one_liner": "AI workspace for professional gamers"
+  "yc_one_liner": "Marketplace for game boosting, carries and coaching"
  },
  "lightberry": {
   "team_size": 3,
@@ -8013,27 +8160,6 @@
   "yc_locations": "New York City, NY, USA",
   "yc_name": "LineLeap",
   "yc_one_liner": "LineLeap gets customers to the fun, faster."
- },
- "lingo": {
-  "team_size": 7,
-  "yc_batch": "Fall 2024",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Lingo.dev",
-  "yc_one_liner": "The Localization Engineering Platform"
- },
- "lingodev": {
-  "team_size": 7,
-  "yc_batch": "Fall 2024",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Lingo.dev",
-  "yc_one_liner": "The Localization Engineering Platform"
- },
- "lingodotdev": {
-  "team_size": 7,
-  "yc_batch": "Fall 2024",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Lingo.dev",
-  "yc_one_liner": "The Localization Engineering Platform"
  },
  "liquid-compute": {
   "team_size": 5,
@@ -8106,11 +8232,25 @@
   "yc_one_liner": "AI Referral Automation for Primary Care Clinics"
  },
  "locke": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Locke",
-  "yc_one_liner": "Locke powers agentic government work."
+  "yc_one_liner": "The AI-native firm for public influence."
+ },
+ "logical": {
+  "team_size": 2,
+  "yc_batch": "Fall 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Logical",
+  "yc_one_liner": "Proactive AI that knows what's important"
+ },
+ "loombotic": {
+  "team_size": 25,
+  "yc_batch": "Fall 2024",
+  "yc_locations": "Toronto, ON, Canada",
+  "yc_name": "Loombotic",
+  "yc_one_liner": "Wire Harnesses in as little as 7 days"
  },
  "loopfour": {
   "team_size": 20,
@@ -8126,20 +8266,6 @@
   "yc_name": "LootRush",
   "yc_one_liner": "The global operating account you truly deserve."
  },
- "lua-global-inc": {
-  "team_size": 5,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Lua Global Inc",
-  "yc_one_liner": "The mid-market agent platform"
- },
- "luaglobalinc": {
-  "team_size": 5,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Lua Global Inc",
-  "yc_one_liner": "The mid-market agent platform"
- },
  "luca-iq": {
   "team_size": 5,
   "yc_batch": "Summer 2026",
@@ -8153,6 +8279,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Luca IQ",
   "yc_one_liner": "API-first tax engine for CPA firms and developers"
+ },
+ "lucebox": {
+  "team_size": 2,
+  "yc_batch": "Winter 2027",
+  "yc_locations": "Milan, Lombardy, Italy",
+  "yc_name": "Lucebox",
+  "yc_one_liner": "Self-improving inference workstation"
  },
  "lucid": {
   "team_size": 3,
@@ -8195,20 +8328,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Luminal",
   "yc_one_liner": "Making AI run fast on any hardware."
- },
- "lumius": {
-  "team_size": 4,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "Durham, NC, USA",
-  "yc_name": "Lumius",
-  "yc_one_liner": "Fast, smart, accessible 3D ultrasound that anyone can use"
- },
- "lumius-imaging": {
-  "team_size": 4,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "Durham, NC, USA",
-  "yc_name": "Lumius",
-  "yc_one_liner": "Fast, smart, accessible 3D ultrasound that anyone can use"
  },
  "lunajoy-health": {
   "team_size": 6,
@@ -8285,14 +8404,14 @@
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Magic Patterns",
-  "yc_one_liner": "Go from idea to production with AI."
+  "yc_one_liner": "The AI-native workspace to design your product."
  },
  "magicpatterns": {
   "team_size": 10,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Magic Patterns",
-  "yc_one_liner": "Go from idea to production with AI."
+  "yc_one_liner": "The AI-native workspace to design your product."
  },
  "magnetic": {
   "team_size": 10,
@@ -8323,18 +8442,18 @@
   "yc_one_liner": "Make more $$$ with SEO and AEO"
  },
  "malama-health": {
-  "team_size": 3,
+  "team_size": 35,
   "yc_batch": "Summer 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Malama Health",
-  "yc_one_liner": "Doula-led holistic support during and after pregnancy "
+  "yc_one_liner": "Making motherhood safe, not scary"
  },
  "malamahealth": {
-  "team_size": 3,
+  "team_size": 35,
   "yc_batch": "Summer 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Malama Health",
-  "yc_one_liner": "Doula-led holistic support during and after pregnancy "
+  "yc_one_liner": "Making motherhood safe, not scary"
  },
  "mangodesk": {
   "team_size": 2,
@@ -8344,7 +8463,7 @@
   "yc_one_liner": "Long-horizon RL environments"
  },
  "manicule": {
-  "team_size": 7,
+  "team_size": 8,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Manicule",
@@ -8353,7 +8472,7 @@
  "manufact": {
   "team_size": 5,
   "yc_batch": "Summer 2025",
-  "yc_locations": "ZH, Switzerland",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Manufact",
   "yc_one_liner": "Cloud infrastructure for MCP servers and Claude / ChatGPT plugins."
  },
@@ -8525,6 +8644,20 @@
   "yc_name": "Measured",
   "yc_one_liner": "Telemedicine platform for chronic conditions like obesity"
  },
+ "mederva": {
+  "team_size": 13,
+  "yc_batch": "Winter 2022",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Mederva",
+  "yc_one_liner": "Longevity for the 99%."
+ },
+ "medervahealth": {
+  "team_size": 13,
+  "yc_batch": "Winter 2022",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Mederva",
+  "yc_one_liner": "Longevity for the 99%."
+ },
  "medme-health": {
   "team_size": 60,
   "yc_batch": "Winter 2021",
@@ -8567,19 +8700,12 @@
   "yc_name": "Mem0",
   "yc_one_liner": "The Memory layer for AI Agents"
  },
- "mentra": {
-  "team_size": 12,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Mentra",
-  "yc_one_liner": "Building the open source smart glasses operating system."
- },
  "mercura": {
   "team_size": 20,
   "yc_batch": "Winter 2025",
   "yc_locations": "BY, Germany",
   "yc_name": "Mercura",
-  "yc_one_liner": "AI Quote and Order Automation for Distributors & Manufacturers"
+  "yc_one_liner": "AI quote & order processing for technical distributors & manufacturers"
  },
  "merlin-ai": {
   "team_size": 19,
@@ -8628,7 +8754,7 @@
   "yc_batch": "Spring 2025",
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "Mesmer",
-  "yc_one_liner": "The operating system for the 100x Engineering Team"
+  "yc_one_liner": "We build software factories for engineering teams"
  },
  "metal": {
   "team_size": 17,
@@ -8694,7 +8820,7 @@
   "yc_one_liner": "Healthcare data infrastructure for next generation care delivery."
  },
  "middesk": {
-  "team_size": 130,
+  "team_size": 140,
   "yc_batch": "Winter 2019",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Middesk",
@@ -8729,7 +8855,7 @@
   "yc_one_liner": "Mineflow predicts the shape and location of mineral deposits"
  },
  "minicor": {
-  "team_size": 8,
+  "team_size": 9,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Minicor",
@@ -8805,6 +8931,20 @@
   "yc_name": "MixRank",
   "yc_one_liner": "Data products for sales, marketing, finance, recruiting, and more."
  },
+ "miyagi-labs": {
+  "team_size": 2,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Miyagi Labs",
+  "yc_one_liner": "AI tutors for exam prep"
+ },
+ "miyagilabs": {
+  "team_size": 2,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Miyagi Labs",
+  "yc_one_liner": "AI tutors for exam prep"
+ },
  "mochacare": {
   "team_size": 2,
   "yc_batch": "Winter 2026",
@@ -8812,19 +8952,12 @@
   "yc_name": "MochaCare",
   "yc_one_liner": "Agentic Management Service for Care Organizations"
  },
- "moda": {
-  "team_size": 6,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Moda",
-  "yc_one_liner": "Fully editable slides, designs and video."
- },
- "moda-2": {
-  "team_size": 6,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Moda",
-  "yc_one_liner": "Fully editable slides, designs and video."
+ "mochi": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "Los Angeles, CA, USA",
+  "yc_name": "Mochi",
+  "yc_one_liner": "Watch and create anime"
  },
  "model-ml": {
   "team_size": 180,
@@ -8861,19 +8994,19 @@
   "yc_name": "Modern Health",
   "yc_one_liner": "A mental health benefits platform for employers."
  },
- "modernloop": {
-  "team_size": 15,
-  "yc_batch": "Winter 2021",
-  "yc_locations": "San Francisco, CA, USA; San Mateo, CA, USA",
-  "yc_name": "ModernLoop",
-  "yc_one_liner": "ModernLoop helps teams automate and streamline recruiting operations"
- },
  "moderntreasury": {
   "team_size": 160,
   "yc_batch": "Summer 2018",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Modern Treasury",
   "yc_one_liner": "Payment operations tools for money movement."
+ },
+ "molagri": {
+  "team_size": 4,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "Toronto, ON, Canada",
+  "yc_name": "Molagri",
+  "yc_one_liner": "Resistance free pesticides."
  },
  "momentic": {
   "team_size": 18,
@@ -8883,7 +9016,7 @@
   "yc_one_liner": "Mo, the AI QA engineer that bug-bashes your app before every release"
  },
  "monumint": {
-  "team_size": 5,
+  "team_size": 10,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Monumint",
@@ -8927,7 +9060,7 @@
  "morph": {
   "team_size": 3,
   "yc_batch": "Summer 2023",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "Columbus, OH, USA",
   "yc_name": "Morph",
   "yc_one_liner": "Fast Models Optimized for Coding Agents"
  },
@@ -8948,7 +9081,7 @@
  "morphllm": {
   "team_size": 3,
   "yc_batch": "Summer 2023",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "Columbus, OH, USA",
   "yc_name": "Morph",
   "yc_one_liner": "Fast Models Optimized for Coding Agents"
  },
@@ -8986,13 +9119,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Moss",
   "yc_one_liner": "Real-time semantic search for Conversational AI"
- },
- "motion": {
-  "team_size": 65,
-  "yc_batch": "Winter 2020",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Motion",
-  "yc_one_liner": "The only work management platform for both Human and AI Employees"
  },
  "mspilot": {
   "team_size": 3,
@@ -9043,6 +9169,13 @@
   "yc_name": "Muzz",
   "yc_one_liner": "Where Single Muslims meet"
  },
+ "myhelios": {
+  "team_size": 5,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Boston, MA, USA",
+  "yc_name": "Helios Intelligence",
+  "yc_one_liner": "At-home molecular body test: 1,000+ biomarkers from a drop of blood"
+ },
  "mytos": {
   "team_size": 26,
   "yc_batch": "Summer 2018",
@@ -9065,7 +9198,7 @@
   "yc_one_liner": "Nabis is the largest licensed cannabis wholesale platform."
  },
  "naive": {
-  "team_size": 8,
+  "team_size": 12,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Na\u00efve",
@@ -9121,7 +9254,7 @@
   "yc_one_liner": "AI platform to grow and to optimize car washes"
  },
  "nave": {
-  "team_size": 8,
+  "team_size": 12,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Na\u00efve",
@@ -9170,18 +9303,18 @@
   "yc_one_liner": "Instant lab tests on your smartphone"
  },
  "nessie": {
-  "team_size": 3,
+  "team_size": 2,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nessie",
-  "yc_one_liner": "The shared context layer for recursive companies - your work, your\u2026"
+  "yc_one_liner": "The shared context layer for recursive companies."
  },
  "nessielabs": {
-  "team_size": 3,
+  "team_size": 2,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nessie",
-  "yc_one_liner": "The shared context layer for recursive companies - your work, your\u2026"
+  "yc_one_liner": "The shared context layer for recursive companies."
  },
  "nest-genomics": {
   "team_size": 14,
@@ -9296,14 +9429,14 @@
   "yc_one_liner": "Data-driven teacher hiring"
  },
  "nine-fives": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nine Fives",
   "yc_one_liner": "RF test equipment for next-gen spacecraft, drones, and cellphones"
  },
  "ninefives": {
-  "team_size": 2,
+  "team_size": 3,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nine Fives",
@@ -9343,6 +9476,13 @@
   "yc_locations": "New York City, NY, USA",
   "yc_name": "No Logo",
   "yc_one_liner": "Turn ideas into physical products"
+ },
+ "noloco": {
+  "team_size": 15,
+  "yc_batch": "Summer 2021",
+  "yc_locations": "Dublin, County Dublin, Ireland",
+  "yc_name": "Noloco",
+  "yc_one_liner": "Flexible Business Apps for Modern Teams"
  },
  "nologo": {
   "team_size": 15,
@@ -9385,6 +9525,27 @@
   "yc_locations": "Traverse City, MI, USA",
   "yc_name": "Noora Health",
   "yc_one_liner": "Training patients and their families with health skills"
+ },
+ "nori": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Nori",
+  "yc_one_liner": "The most capable American-made humanoid robot for $1,688"
+ },
+ "noril1": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Nori",
+  "yc_one_liner": "The most capable American-made humanoid robot for $1,688"
+ },
+ "norirobotics": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Nori",
+  "yc_one_liner": "The most capable American-made humanoid robot for $1,688"
  },
  "noso": {
   "team_size": 6,
@@ -9457,32 +9618,32 @@
   "yc_one_liner": "Computer-using agents for healthcare operations"
  },
  "nowadays": {
-  "team_size": 6,
+  "team_size": 12,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nowadays",
   "yc_one_liner": "AI-native platform for corporate meetings and events"
  },
  "nox-metals": {
-  "team_size": 35,
+  "team_size": 52,
   "yc_batch": "Summer 2025",
   "yc_locations": "Detroit, MI, USA",
   "yc_name": "Nox Metals",
   "yc_one_liner": "Supplying America's Industrial Base"
  },
  "noxmetals": {
-  "team_size": 35,
+  "team_size": 52,
   "yc_batch": "Summer 2025",
   "yc_locations": "Detroit, MI, USA",
   "yc_name": "Nox Metals",
   "yc_one_liner": "Supplying America's Industrial Base"
  },
  "nozomio": {
-  "team_size": 3,
+  "team_size": 4,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Nozomio",
-  "yc_one_liner": "product lab. focused on personal ai and context."
+  "yc_one_liner": "creators of folk.com"
  },
  "nsave": {
   "team_size": 20,
@@ -9499,7 +9660,7 @@
   "yc_one_liner": "Engineering a future without cancer deaths."
  },
  "numeral": {
-  "team_size": 110,
+  "team_size": 130,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Numeral",
@@ -9511,6 +9672,13 @@
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Numero",
   "yc_one_liner": "Modern fundraising software for political campaigns and nonprofits."
+ },
+ "octapulse": {
+  "team_size": 2,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "Frisco, TX, USA",
+  "yc_name": "OctaPulse",
+  "yc_one_liner": "OctaPulse builds computer vision and robotics for fish farms and\u2026"
  },
  "ocular-ai": {
   "team_size": 8,
@@ -9548,7 +9716,7 @@
   "yc_one_liner": "Vertical takeoff and landing aircraft for major airlines"
  },
  "offdeal": {
-  "team_size": 15,
+  "team_size": 25,
   "yc_batch": "Winter 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "OffDeal",
@@ -9597,21 +9765,21 @@
   "yc_one_liner": "Next-generation, modular electric vehicles"
  },
  "omnistrate": {
-  "team_size": 15,
+  "team_size": 25,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Omnistrate",
   "yc_one_liner": "Build your control plane to deploy your product in your customer VPC\u2026"
  },
  "ondeck-ai": {
-  "team_size": 7,
+  "team_size": 6,
   "yc_batch": "Summer 2025",
   "yc_locations": "Vancouver, BC, Canada",
   "yc_name": "OnDeck AI",
   "yc_one_liner": "Analyze any footage, without training a model"
  },
  "ondeckai": {
-  "team_size": 7,
+  "team_size": 6,
   "yc_batch": "Summer 2025",
   "yc_locations": "Vancouver, BC, Canada",
   "yc_name": "OnDeck AI",
@@ -9685,7 +9853,7 @@
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Onlook",
-  "yc_one_liner": "Cursor for Designers"
+  "yc_one_liner": "The Developer tool for Designers"
  },
  "ooak-data": {
   "team_size": 5,
@@ -9764,6 +9932,20 @@
   "yc_name": "OpenWork",
   "yc_one_liner": "The open source alternative to Claude Cowork"
  },
+ "operon": {
+  "team_size": 0,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Operon",
+  "yc_one_liner": "Agentic data layer for manufacturing & process industries. "
+ },
+ "operonsolutions": {
+  "team_size": 0,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Operon",
+  "yc_one_liner": "Agentic data layer for manufacturing & process industries. "
+ },
  "ophelia": {
   "team_size": 250,
   "yc_batch": "Winter 2020",
@@ -9828,46 +10010,25 @@
   "yc_one_liner": "Agentic sales enrichment spreadsheet"
  },
  "orangewood": {
-  "team_size": 40,
+  "team_size": 8,
   "yc_batch": "Winter 2018",
-  "yc_locations": "San Francisco, CA, USA; Noida, UP, India",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Orangewood Labs",
-  "yc_one_liner": "Orangewood Labs makes worlds most affordable and easiest AI robot arms"
+  "yc_one_liner": "Orangewood builds amazing robots that people want. "
  },
  "orangewood-labs": {
-  "team_size": 40,
+  "team_size": 8,
   "yc_batch": "Winter 2018",
-  "yc_locations": "San Francisco, CA, USA; Noida, UP, India",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Orangewood Labs",
-  "yc_one_liner": "Orangewood Labs makes worlds most affordable and easiest AI robot arms"
+  "yc_one_liner": "Orangewood builds amazing robots that people want. "
  },
  "orangewoodlabs": {
-  "team_size": 40,
+  "team_size": 8,
   "yc_batch": "Winter 2018",
-  "yc_locations": "San Francisco, CA, USA; Noida, UP, India",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Orangewood Labs",
-  "yc_one_liner": "Orangewood Labs makes worlds most affordable and easiest AI robot arms"
- },
- "orbio": {
-  "team_size": 6,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "Remote",
-  "yc_name": "Orbio Earth",
-  "yc_one_liner": "Tracking methane emissions with satellites"
- },
- "orbio-earth": {
-  "team_size": 6,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "Remote",
-  "yc_name": "Orbio Earth",
-  "yc_one_liner": "Tracking methane emissions with satellites"
- },
- "orbioearth": {
-  "team_size": 6,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "Remote",
-  "yc_name": "Orbio Earth",
-  "yc_one_liner": "Tracking methane emissions with satellites"
+  "yc_one_liner": "Orangewood builds amazing robots that people want. "
  },
  "orbital-operations": {
   "team_size": 10,
@@ -9891,14 +10052,14 @@
   "yc_one_liner": "High Thrust Space Vehicles for Satellite Defense"
  },
  "orca-aerospace": {
-  "team_size": 3,
+  "team_size": 5,
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Orca Aerospace",
   "yc_one_liner": "AI spacecraft operators that lives onboard the vehicle"
  },
  "orcaaerospace": {
-  "team_size": 3,
+  "team_size": 5,
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Orca Aerospace",
@@ -9924,6 +10085,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Origin",
   "yc_one_liner": "AI and Data for Cancer Therapeutics"
+ },
+ "orthogonal": {
+  "team_size": 2,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Orthogonal",
+  "yc_one_liner": "Agentic Payments for APIs"
  },
  "os3": {
   "team_size": 2,
@@ -9972,31 +10140,24 @@
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Outerport",
-  "yc_one_liner": "EDA for Industrial Control Systems"
+  "yc_one_liner": "Design automation for industrial electrical controls"
  },
- "output": {
-  "team_size": 8,
+ "output-labs": {
+  "team_size": 10,
   "yc_batch": "Summer 2021",
   "yc_locations": "New York City, NY, USA",
-  "yc_name": "Output Biosciences",
-  "yc_one_liner": "The foundation for the next era of biology"
+  "yc_name": "Output Labs",
+  "yc_one_liner": "The foundation for the next era of science"
  },
- "outputbio": {
-  "team_size": 8,
+ "outputlabs": {
+  "team_size": 10,
   "yc_batch": "Summer 2021",
   "yc_locations": "New York City, NY, USA",
-  "yc_name": "Output Biosciences",
-  "yc_one_liner": "The foundation for the next era of biology"
- },
- "outputbiosciences": {
-  "team_size": 8,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Output Biosciences",
-  "yc_one_liner": "The foundation for the next era of biology"
+  "yc_name": "Output Labs",
+  "yc_one_liner": "The foundation for the next era of science"
  },
  "outset": {
-  "team_size": 30,
+  "team_size": 120,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Outset",
@@ -10015,6 +10176,20 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Overview",
   "yc_one_liner": "Reshaping industrial quality with AI, hardware, and software"
+ },
+ "oway": {
+  "team_size": 16,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Oway",
+  "yc_one_liner": "Building the open operating system for the automated physical economy."
+ },
+ "owny": {
+  "team_size": 15,
+  "yc_batch": "Summer 2018",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "OWNY",
+  "yc_one_liner": "AI driven payment rails for emerging market banks."
  },
  "oxus": {
   "team_size": 3,
@@ -10036,13 +10211,6 @@
   "yc_locations": "San Francisco, CA, USA; Los Angeles, CA, USA; Remote",
   "yc_name": "Oxygen",
   "yc_one_liner": "A leading digital bank in the US offering personal and business\u2026"
- },
- "paasa": {
-  "team_size": 9,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "Gurugram, HR, India",
-  "yc_name": "Paasa",
-  "yc_one_liner": "Invest in Global Equities from India"
  },
  "paces": {
   "team_size": 48,
@@ -10140,7 +10308,21 @@
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "ParadeDB",
-  "yc_one_liner": "Unify application data, vectors, and full-text search in one Postgres"
+  "yc_one_liner": "You should just use Postgres."
+ },
+ "paradev": {
+  "team_size": 4,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Paradev (formerly Superset)",
+  "yc_one_liner": "Building self-improving software"
+ },
+ "paradevformerlysuperset": {
+  "team_size": 4,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Paradev (formerly Superset)",
+  "yc_one_liner": "Building self-improving software"
  },
  "paradigm": {
   "team_size": 8,
@@ -10203,7 +10385,7 @@
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Parameter",
-  "yc_one_liner": "Security builds trust. Strengthen both, all on one platform."
+  "yc_one_liner": "AI pentesting, that works!"
  },
  "parametric": {
   "team_size": 7,
@@ -10280,7 +10462,7 @@
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pax",
-  "yc_one_liner": "AI Broker for Tariff Refunds"
+  "yc_one_liner": "AI Native Operating System for Global Trade"
  },
  "paxhistoria": {
   "team_size": 6,
@@ -10450,13 +10632,6 @@
   "yc_name": "Pesto",
   "yc_one_liner": ""
  },
- "petrarch": {
-  "team_size": 3,
-  "yc_batch": "Summer 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Petrarch",
-  "yc_one_liner": "Internal industrial company data for frontier labs"
- },
  "pgdog": {
   "team_size": 3,
   "yc_batch": "Spring 2025",
@@ -10520,13 +10695,6 @@
   "yc_name": "Pier",
   "yc_one_liner": "Stripe for Credit - Trusted Credit Compliance Partner"
  },
- "piinpoint": {
-  "team_size": 20,
-  "yc_batch": "Winter 2014",
-  "yc_locations": "Kitchener, ON, Canada",
-  "yc_name": "PiinPoint",
-  "yc_one_liner": "PiinPoint helps businesses find the best locations for growth"
- },
  "pillar": {
   "team_size": 5,
   "yc_batch": "Summer 2019",
@@ -10560,7 +10728,7 @@
   "yc_batch": "Winter 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Piramidal",
-  "yc_one_liner": "Foundation Model for the Brain"
+  "yc_one_liner": "Foundation Models for the Brain"
  },
  "pirislabs": {
   "team_size": 8,
@@ -10618,6 +10786,27 @@
   "yc_name": "Players' Lounge",
   "yc_one_liner": "Win money betting on yourself playing AAA video games"
  },
+ "plena": {
+  "team_size": null,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Plena Health",
+  "yc_one_liner": "Plena is the AI operating system for specialty medical practices"
+ },
+ "plena-health": {
+  "team_size": null,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Plena Health",
+  "yc_one_liner": "Plena is the AI operating system for specialty medical practices"
+ },
+ "plenahealth": {
+  "team_size": null,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Plena Health",
+  "yc_one_liner": "Plena is the AI operating system for specialty medical practices"
+ },
  "plexe": {
   "team_size": 2,
   "yc_batch": "Spring 2025",
@@ -10631,6 +10820,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Ploy",
   "yc_one_liner": "Ploy turns your website into your company's growth engine. "
+ },
+ "pluto": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Pluto",
+  "yc_one_liner": "LinkedIn for agents"
  },
  "pno": {
   "team_size": 70,
@@ -10647,7 +10843,7 @@
   "yc_one_liner": "Enabling health professionals to prescribe clinical-grade wellness\u2026"
  },
  "pocket": {
-  "team_size": 15,
+  "team_size": 35,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pocket",
@@ -10752,7 +10948,7 @@
   "yc_one_liner": "Pop Meals is a restaurant chain without chefs. All recipes are\u2026"
  },
  "popl": {
-  "team_size": 60,
+  "team_size": 70,
   "yc_batch": "Winter 2021",
   "yc_locations": "New York City, NY, USA; Remote",
   "yc_name": "Popl",
@@ -10777,21 +10973,21 @@
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Posh",
-  "yc_one_liner": "Rapidly deployable energy solutions for modern commercial and\u2026"
+  "yc_one_liner": "Turning power into AI compute at speed with modular data centers at\u2026"
  },
  "poshenergy": {
   "team_size": 10,
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Posh",
-  "yc_one_liner": "Rapidly deployable energy solutions for modern commercial and\u2026"
+  "yc_one_liner": "Turning power into AI compute at speed with modular data centers at\u2026"
  },
- "postal": {
-  "team_size": 4,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Postal",
-  "yc_one_liner": "An AI native virtual address & mailroom for businesses."
+ "postera": {
+  "team_size": 40,
+  "yc_batch": "Winter 2020",
+  "yc_locations": "Boston, MA, USA",
+  "yc_name": "PostEra",
+  "yc_one_liner": "Medicinal Chemistry powered by Machine Learning"
  },
  "posthog": {
   "team_size": 150,
@@ -10831,7 +11027,7 @@
  "prelim": {
   "team_size": 49,
   "yc_batch": "Summer 2017",
-  "yc_locations": "San Francisco, CA, USA; Remote",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Prelim",
   "yc_one_liner": "Build better banking"
  },
@@ -10904,6 +11100,13 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "primitive",
   "yc_one_liner": "communication for agents"
+ },
+ "princeps": {
+  "team_size": 2,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "London, England, United Kingdom",
+  "yc_name": "PRINCEPS",
+  "yc_one_liner": "AI-native insurance company for the compute economy"
  },
  "probably-genetic": {
   "team_size": 17,
@@ -11050,7 +11253,7 @@
   "yc_batch": "Winter 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "ProSights",
-  "yc_one_liner": "ProSights is a data / AI transformation partner to PE-backed portcos."
+  "yc_one_liner": "Data services for finance and operations at PE-backed companies."
  },
  "prospa": {
   "team_size": 70,
@@ -11123,11 +11326,11 @@
   "yc_one_liner": "Ironclad for construction"
  },
  "prox": {
-  "team_size": 7,
+  "team_size": 3,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Prox",
-  "yc_one_liner": "AI product specialists for equipment manufacturers"
+  "yc_one_liner": "..."
  },
  "proximitty": {
   "team_size": 2,
@@ -11188,14 +11391,14 @@
  "pylon": {
   "team_size": 120,
   "yc_batch": "Winter 2023",
-  "yc_locations": "Bridgeton, MO, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pylon",
   "yc_one_liner": "The Agentic Support Platform purpose-built for B2B."
  },
  "pylon-2": {
   "team_size": 120,
   "yc_batch": "Winter 2023",
-  "yc_locations": "Bridgeton, MO, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pylon",
   "yc_one_liner": "The Agentic Support Platform purpose-built for B2B."
  },
@@ -11242,11 +11445,11 @@
   "yc_one_liner": "Marketplace for life science supplies."
  },
  "questdb": {
-  "team_size": 30,
+  "team_size": null,
   "yc_batch": "Summer 2020",
   "yc_locations": "London, England, United Kingdom",
   "yc_name": "QuestDB",
-  "yc_one_liner": "High-performance time series database"
+  "yc_one_liner": "Data platform for mission-critical real-time workloads"
  },
  "quickchat": {
   "team_size": 7,
@@ -11274,7 +11477,7 @@
   "yc_batch": "Winter 2021",
   "yc_locations": "Miami, FL, USA",
   "yc_name": "Quicknode",
-  "yc_one_liner": "Tools & infra to build and scale high-quality blockchain applications."
+  "yc_one_liner": "Infrastructure and tools to build and scale blockchain applications."
  },
  "quill": {
   "team_size": 5,
@@ -11318,6 +11521,13 @@
   "yc_name": "RADAR",
   "yc_one_liner": "RADAR is building technology to completely transform the in-store\u2026"
  },
+ "rainbrand": {
+  "team_size": 3,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Rainbrand",
+  "yc_one_liner": "The brand layer for agents."
+ },
  "raindrop": {
   "team_size": 9,
   "yc_batch": "Winter 2024",
@@ -11333,7 +11543,7 @@
   "yc_one_liner": "Rally is Zoom for social events"
  },
  "rallyuxr": {
-  "team_size": 35,
+  "team_size": 33,
   "yc_batch": "Winter 2022",
   "yc_locations": "New York City, NY, USA; Remote",
   "yc_name": "Rally",
@@ -11347,11 +11557,11 @@
   "yc_one_liner": "AI-Native Mortgage Broker"
  },
  "ramain": {
-  "team_size": 4,
+  "team_size": 7,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "RamAIn",
-  "yc_one_liner": "Automate any UI task with natural language"
+  "yc_one_liner": "RamAIn - AI Employees with a computer to perform business tasks just\u2026"
  },
  "ramani": {
   "team_size": 70,
@@ -11373,13 +11583,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Rational",
   "yc_one_liner": "First Zero-human Accounting Firm"
- },
- "raven": {
-  "team_size": 4,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Bengaluru, KA, India",
-  "yc_name": "Raven",
-  "yc_one_liner": "AI Assistants for Manufacturing Operations"
  },
  "raycaster": {
   "team_size": 6,
@@ -11430,6 +11633,13 @@
   "yc_name": "Reach",
   "yc_one_liner": "Long range, wireless energy distribution that scales"
  },
+ "reactwise": {
+  "team_size": 10,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "Cambridge, England, United Kingdom",
+  "yc_name": "ReactWise",
+  "yc_one_liner": "AI Co-Pilot for Chemical Process Optimization"
+ },
  "readily": {
   "team_size": 20,
   "yc_batch": "Summer 2023",
@@ -11438,11 +11648,11 @@
   "yc_one_liner": "AI Compliance Platform for Healthcare Organizations"
  },
  "ready": {
-  "team_size": 60,
+  "team_size": 75,
   "yc_batch": "Summer 2020",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Ready",
-  "yc_one_liner": "Collaborative platform for optimizing regulated utilities such as\u2026"
+  "yc_one_liner": "Ensuring AI delivers what people need, when and where they need it,\u2026"
  },
  "reality-defender": {
   "team_size": 54,
@@ -11463,14 +11673,14 @@
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Reason Machines",
-  "yc_one_liner": "Reason Machines builds Reason Agent, the autonomous software engineer\u2026"
+  "yc_one_liner": "Reason is the AI teammate for work and code."
  },
  "reasonmachines": {
   "team_size": 2,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Reason Machines",
-  "yc_one_liner": "Reason Machines builds Reason Agent, the autonomous software engineer\u2026"
+  "yc_one_liner": "Reason is the AI teammate for work and code."
  },
  "rebill": {
   "team_size": 11,
@@ -11556,19 +11766,12 @@
   "yc_name": "Reducto",
   "yc_one_liner": "The complete agentic document platform"
  },
- "refactor": {
-  "team_size": 3,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Refactor",
-  "yc_one_liner": "Deploying secure and reliable AI agents across healthcare, retail,\u2026"
- },
  "reflex": {
-  "team_size": 10,
+  "team_size": 15,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Reflex",
-  "yc_one_liner": "The operating system for building mission-critical enterprise apps."
+  "yc_one_liner": "Build the software you wish existed."
  },
  "reforged-labs": {
   "team_size": 19,
@@ -11605,13 +11808,6 @@
   "yc_name": "Reframe",
   "yc_one_liner": "App to help people quit or cut back on alcohol use"
  },
- "regbase": {
-  "team_size": 3,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Regbase",
-  "yc_one_liner": "Automating Corporate Compliance, Worldwide"
- },
  "relace": {
   "team_size": 7,
   "yc_batch": "Winter 2023",
@@ -11620,7 +11816,7 @@
   "yc_one_liner": "Models and infra for coding agents"
  },
  "relari": {
-  "team_size": 2,
+  "team_size": 4,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Relari",
@@ -11661,13 +11857,6 @@
   "yc_name": "Remi",
   "yc_one_liner": "Simplifying roofing for homeowners, roofers and enterprises."
  },
- "rentflow": {
-  "team_size": 3,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "RentFlow",
-  "yc_one_liner": "The AI infrastructure for cash-flow-aligned business rent"
- },
  "renthop": {
   "team_size": 9,
   "yc_batch": "Summer 2009",
@@ -11696,20 +11885,6 @@
   "yc_name": "Replo",
   "yc_one_liner": "Sell anything"
  },
- "reprompt": {
-  "team_size": 3,
-  "yc_batch": "Winter 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Reprompt",
-  "yc_one_liner": "AI Agents for Location"
- },
- "repromptai": {
-  "team_size": 3,
-  "yc_batch": "Winter 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Reprompt",
-  "yc_one_liner": "AI Agents for Location"
- },
  "rescale": {
   "team_size": 250,
   "yc_batch": "Winter 2012",
@@ -11724,19 +11899,12 @@
   "yc_name": "Rescript",
   "yc_one_liner": "AI for Legal & Public Policy Teams"
  },
- "resident-boost": {
-  "team_size": 50,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "Los Angeles, CA, USA",
-  "yc_name": "Zuma",
-  "yc_one_liner": "We help businesses convert leads into sales in minutes using text"
- },
  "respan": {
-  "team_size": 23,
+  "team_size": 20,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Respan",
-  "yc_one_liner": "Self-driving observability, evals, and gateway for AI agents"
+  "yc_one_liner": "Open-source, extensible AI gateway with observability and evals"
  },
  "resquared": {
   "team_size": 40,
@@ -11746,14 +11914,14 @@
   "yc_one_liner": "Marketing automation platform for selling to local businesses."
  },
  "retailready": {
-  "team_size": 12,
+  "team_size": 16,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "RetailReady",
   "yc_one_liner": "An AI-powered supply chain compliance engine"
  },
  "retailreadyai": {
-  "team_size": 12,
+  "team_size": 16,
   "yc_batch": "Winter 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "RetailReady",
@@ -11876,14 +12044,14 @@
   "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Rex",
-  "yc_one_liner": "AI-native BPO for enterprise order-to-cash"
+  "yc_one_liner": "AI operations partner for enterprise order-to-cash "
  },
  "rex-inc": {
   "team_size": 2,
   "yc_batch": "Summer 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Rex",
-  "yc_one_liner": "AI-native BPO for enterprise order-to-cash"
+  "yc_one_liner": "AI operations partner for enterprise order-to-cash "
  },
  "rhem": {
   "team_size": 2,
@@ -11905,20 +12073,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Rhem Labs",
   "yc_one_liner": "Home care technology for aging parents and their families"
- },
- "rhizome-ai": {
-  "team_size": 1,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "New York City, NY, USA; Remote",
-  "yc_name": "Rhizome AI",
-  "yc_one_liner": "Agent Platform for Life Sciences"
- },
- "rhizomeai": {
-  "team_size": 1,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "New York City, NY, USA; Remote",
-  "yc_name": "Rhizome AI",
-  "yc_one_liner": "Agent Platform for Life Sciences"
  },
  "ridecell": {
   "team_size": 88,
@@ -11956,11 +12110,11 @@
   "yc_one_liner": "One place to run all your HR, IT, and Finance. Globally."
  },
  "rivet": {
-  "team_size": 5,
+  "team_size": 7,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Rivet",
-  "yc_one_liner": "Rivet Actors are the primitive for stateful workloads"
+  "yc_one_liner": "The orchestrator for agentic workloads."
  },
  "rivia": {
   "team_size": 5,
@@ -12032,20 +12186,6 @@
   "yc_name": "Roforco",
   "yc_one_liner": "Creating viral AI consumer apps and games"
  },
- "roger": {
-  "team_size": 2,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "Austin, TX, USA",
-  "yc_name": "Roger",
-  "yc_one_liner": "Roger is an AI SDR that automates outbound sales and follows up 24/7."
- },
- "roger-2": {
-  "team_size": 2,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "Austin, TX, USA",
-  "yc_name": "Roger",
-  "yc_one_liner": "Roger is an AI SDR that automates outbound sales and follows up 24/7."
- },
  "rollstack": {
   "team_size": 30,
   "yc_batch": "Winter 2023",
@@ -12081,19 +12221,12 @@
   "yc_name": "Rose Rocket",
   "yc_one_liner": "Rose Rocket is ERP software for trucking companies."
  },
- "routable": {
-  "team_size": 160,
-  "yc_batch": "Summer 2017",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Routable",
-  "yc_one_liner": "Simplifying payouts at scale"
- },
  "rove": {
-  "team_size": 4,
+  "team_size": 32,
   "yc_batch": "Winter 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Rove",
-  "yc_one_liner": "Travel the world for free."
+  "yc_one_liner": "Earn airline miles on hotels and everyday spend."
  },
  "rovi": {
   "team_size": 3,
@@ -12137,33 +12270,12 @@
   "yc_name": "Vinci Games",
   "yc_one_liner": "Creating genre-defining multiplayer VR games."
  },
- "rulebase": {
-  "team_size": 4,
-  "yc_batch": "Fall 2024",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Rulebase",
-  "yc_one_liner": "AI customer operations for regulated industries."
- },
  "rulebricks": {
   "team_size": 2,
   "yc_batch": "Winter 2021",
   "yc_locations": "San Francisco, CA, USA; Los Altos, CA, USA",
   "yc_name": "Rulebricks",
   "yc_one_liner": "Add powerful decision-making capabilities to any automated workflow."
- },
- "ruma-care": {
-  "team_size": 5,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Ruma Care",
-  "yc_one_liner": "The operations stack for biologic infusion clinics"
- },
- "rumacare": {
-  "team_size": 5,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Ruma Care",
-  "yc_one_liner": "The operations stack for biologic infusion clinics"
  },
  "runa": {
   "team_size": 100,
@@ -12194,18 +12306,11 @@
   "yc_one_liner": "Agentic automation that understands context, recovers, and improves."
  },
  "runconverge": {
-  "team_size": 6,
+  "team_size": 13,
   "yc_batch": "Summer 2023",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Converge",
-  "yc_one_liner": "All-in-one marketing measurement for B2C"
- },
- "runcopycat": {
-  "team_size": 2,
-  "yc_batch": "Winter 2025",
-  "yc_locations": "Seattle, WA, USA",
-  "yc_name": "CopyCat AI",
-  "yc_one_liner": "AI for Commercial Insurance Agencies"
+  "yc_one_liner": "AI-native growth platform for DTC"
  },
  "rungroundcontrol": {
   "team_size": 8,
@@ -12229,18 +12334,25 @@
   "yc_one_liner": "Production-grade unstructured document extraction"
  },
  "runtime": {
-  "team_size": 7,
-  "yc_batch": "Spring 2026",
+  "team_size": 5,
+  "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Runtime",
-  "yc_one_liner": "AI agents for financial operations"
+  "yc_name": "Runtime.si",
+  "yc_one_liner": "Evaluation Infrastructure for Robotics (YC F26)"
+ },
+ "runtimesi": {
+  "team_size": 5,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Runtime.si",
+  "yc_one_liner": "Evaluation Infrastructure for Robotics (YC F26)"
  },
  "runtm": {
   "team_size": 7,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Runtime",
-  "yc_one_liner": "AI agents for financial operations"
+  "yc_one_liner": "The AI agent harness for payment teams"
  },
  "runtrellis": {
   "team_size": 34,
@@ -12317,7 +12429,7 @@
   "yc_batch": "Winter 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "SalesPatriot",
-  "yc_one_liner": "AI powered operating system for distributors and OEMs"
+  "yc_one_liner": "Supply chain superintelligence for distribution and procurement"
  },
  "salient": {
   "team_size": 40,
@@ -12431,18 +12543,18 @@
   "yc_name": "Saturn",
   "yc_one_liner": "Compliance and back office workflows for Wealth Managers."
  },
- "sava": {
-  "team_size": 7,
+ "sava-trust-company": {
+  "team_size": 8,
   "yc_batch": "Fall 2025",
   "yc_locations": "New York City, NY, USA",
-  "yc_name": "Sava",
+  "yc_name": "Sava Trust Company",
   "yc_one_liner": "Building the future of trusts"
  },
- "savahq": {
-  "team_size": 7,
+ "savatrustcompany": {
+  "team_size": 8,
   "yc_batch": "Fall 2025",
   "yc_locations": "New York City, NY, USA",
-  "yc_name": "Sava",
+  "yc_name": "Sava Trust Company",
   "yc_one_liner": "Building the future of trusts"
  },
  "scalar-field": {
@@ -12576,14 +12688,14 @@
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Semble",
-  "yc_one_liner": "The all-in-one software for integrators."
+  "yc_one_liner": "Takeoffs, design, and field work. Powered by AI."
  },
  "sembleai": {
   "team_size": 14,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Semble",
-  "yc_one_liner": "The all-in-one software for integrators."
+  "yc_one_liner": "Takeoffs, design, and field work. Powered by AI."
  },
  "sendbird": {
   "team_size": 300,
@@ -12607,14 +12719,14 @@
   "yc_one_liner": "Control what AI says about you"
  },
  "serif-health": {
-  "team_size": 20,
+  "team_size": 25,
   "yc_batch": "Winter 2022",
   "yc_locations": "Los Angeles, CA, USA; Remote",
   "yc_name": "Serif Health",
   "yc_one_liner": "Healthcare Price Transparency APIs and Data Products"
  },
  "serifhealth": {
-  "team_size": 20,
+  "team_size": 25,
   "yc_batch": "Winter 2022",
   "yc_locations": "Los Angeles, CA, USA; Remote",
   "yc_name": "Serif Health",
@@ -12651,19 +12763,19 @@
  "sf-tensor": {
   "team_size": 6,
   "yc_batch": "Fall 2025",
-  "yc_locations": "",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "SF Tensor",
   "yc_one_liner": "Infrastructure for AI labs to focus on research."
  },
  "sftensor": {
   "team_size": 6,
   "yc_batch": "Fall 2025",
-  "yc_locations": "",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "SF Tensor",
   "yc_one_liner": "Infrastructure for AI labs to focus on research."
  },
  "shadeform": {
-  "team_size": 11,
+  "team_size": 22,
   "yc_batch": "Summer 2023",
   "yc_locations": "",
   "yc_name": "Shadeform",
@@ -12689,27 +12801,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Shape (ShapeScale)",
   "yc_one_liner": "ShapeScale is a personal 3D scanner and fitness tracker that\u2026"
- },
- "shasta": {
-  "team_size": 5,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Shasta Health",
-  "yc_one_liner": "The last healthcare admin hire"
- },
- "shasta-health": {
-  "team_size": 5,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Shasta Health",
-  "yc_one_liner": "The last healthcare admin hire"
- },
- "shastahealth": {
-  "team_size": 5,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Shasta Health",
-  "yc_one_liner": "The last healthcare admin hire"
  },
  "shepherd": {
   "team_size": 60,
@@ -12760,12 +12851,12 @@
   "yc_name": "Short Story",
   "yc_one_liner": "Modern ecommerce for petite women"
  },
- "shortloop": {
-  "team_size": 8,
-  "yc_batch": "Winter 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "ShortLoop",
-  "yc_one_liner": "Phone AI that Captures Every Dealership Revenue Opportunity"
+ "shortkit": {
+  "team_size": 2,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "",
+  "yc_name": "shortkit",
+  "yc_one_liner": "Media infra for consumer apps"
  },
  "shortstory": {
   "team_size": 120,
@@ -12800,7 +12891,7 @@
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "SID",
-  "yc_one_liner": "AI research lab for retrieval"
+  "yc_one_liner": "AI research center for retrieval"
  },
  "sieve": {
   "team_size": 34,
@@ -12830,12 +12921,26 @@
   "yc_name": "SigmaOS",
   "yc_one_liner": "The new home for your internet \ud83c\udfe1"
  },
- "signadot": {
-  "team_size": 8,
-  "yc_batch": "Winter 2020",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Signadot",
-  "yc_one_liner": "Scalable validation infrastructure for AI agents"
+ "signatur": {
+  "team_size": 5,
+  "yc_batch": "Summer 2022",
+  "yc_locations": "London, England, United Kingdom",
+  "yc_name": "Signatur Biosciences",
+  "yc_one_liner": "Simple tests for complex diseases."
+ },
+ "signatur-biosciences": {
+  "team_size": 5,
+  "yc_batch": "Summer 2022",
+  "yc_locations": "London, England, United Kingdom",
+  "yc_name": "Signatur Biosciences",
+  "yc_one_liner": "Simple tests for complex diseases."
+ },
+ "signaturbiosciences": {
+  "team_size": 5,
+  "yc_batch": "Summer 2022",
+  "yc_locations": "London, England, United Kingdom",
+  "yc_name": "Signatur Biosciences",
+  "yc_one_liner": "Simple tests for complex diseases."
  },
  "signoz": {
   "team_size": 38,
@@ -12978,7 +13083,7 @@
   "yc_one_liner": "AI agent for Compliance Questionnaires Automation"
  },
  "skyvern": {
-  "team_size": 10,
+  "team_size": 11,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Skyvern",
@@ -12994,7 +13099,7 @@
  "slash": {
   "team_size": 70,
   "yc_batch": "Summer 2021",
-  "yc_locations": "San Francisco, CA, USA",
+  "yc_locations": "Minneapolis, MN, USA",
   "yc_name": "Slash",
   "yc_one_liner": "Banking, corporate cards, stablecoin payments \u2013 available globally."
  },
@@ -13054,13 +13159,6 @@
   "yc_name": "Socratix AI",
   "yc_one_liner": "AI coworkers for fraud and compliance teams."
  },
- "soff": {
-  "team_size": 6,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Soff",
-  "yc_one_liner": "AI Agents for Distributors"
- },
  "sola": {
   "team_size": 5,
   "yc_batch": "Summer 2023",
@@ -13085,14 +13183,14 @@
  "solo": {
   "team_size": 25,
   "yc_batch": "Winter 2021",
-  "yc_locations": "Provo, UT, USA; Remote",
+  "yc_locations": "Salt Lake City, UT, USA; Remote",
   "yc_name": "Solo",
   "yc_one_liner": "We help people resolve debt."
  },
  "solosuit": {
   "team_size": 25,
   "yc_batch": "Winter 2021",
-  "yc_locations": "Provo, UT, USA; Remote",
+  "yc_locations": "Salt Lake City, UT, USA; Remote",
   "yc_name": "Solo",
   "yc_one_liner": "We help people resolve debt."
  },
@@ -13111,14 +13209,14 @@
   "yc_one_liner": "AI Automation for Therapy Practices"
  },
  "solva": {
-  "team_size": 15,
+  "team_size": 7,
   "yc_batch": "Summer 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Solva",
   "yc_one_liner": "Building the new superintelligence for insurance"
  },
  "solvatechnology": {
-  "team_size": 15,
+  "team_size": 7,
   "yc_batch": "Summer 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Solva",
@@ -13166,19 +13264,19 @@
   "yc_name": "Soraban",
   "yc_one_liner": "AI tax workflow platform for accounting firms "
  },
- "sorce": {
-  "team_size": 6,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Sorce",
-  "yc_one_liner": "Tinder for jobs"
- },
  "soren": {
   "team_size": null,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Soren",
-  "yc_one_liner": "The AI workforce for business operations."
+  "yc_one_liner": "The AI Transformation Company"
+ },
+ "soren-ai": {
+  "team_size": null,
+  "yc_batch": "Fall 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Soren",
+  "yc_one_liner": "The AI Transformation Company"
  },
  "soria": {
   "team_size": 3,
@@ -13271,13 +13369,6 @@
   "yc_name": "Spark",
   "yc_one_liner": "AI-powered workflows for energy infrastructure"
  },
- "sparkles": {
-  "team_size": 1,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Sparkles",
-  "yc_one_liner": "Make everyone on your team an engineer"
- },
  "speak": {
   "team_size": 40,
   "yc_batch": "Winter 2017",
@@ -13299,6 +13390,13 @@
   "yc_name": "Speedy Labs",
   "yc_one_liner": "Maximize profits with AI-powered rebate management."
  },
+ "speko": {
+  "team_size": 4,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Speko",
+  "yc_one_liner": "OpenRouter for Voice AI: one API, every call on the best speech model"
+ },
  "spellbrush": {
   "team_size": 30,
   "yc_batch": "Winter 2018",
@@ -13319,6 +13417,20 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Sphere",
   "yc_one_liner": "AI-powered sales tax, VAT and GST compliance"
+ },
+ "spice-data": {
+  "team_size": null,
+  "yc_batch": "Summer 2019",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Spice Data",
+  "yc_one_liner": "Restaurant Data for the Enterprise"
+ },
+ "spicedata": {
+  "team_size": null,
+  "yc_batch": "Summer 2019",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Spice Data",
+  "yc_one_liner": "Restaurant Data for the Enterprise"
  },
  "spine": {
   "team_size": 0,
@@ -13347,6 +13459,13 @@
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Splash Inc.",
   "yc_one_liner": "Autonomous patrol-boats for National Security "
+ },
+ "spm": {
+  "team_size": 4,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Pittsburgh, PA, USA",
+  "yc_name": "Super Powers Mobility (SPM)",
+  "yc_one_liner": "The highest performance modular battery packs for mobility/vehicles"
  },
  "spot-health": {
   "team_size": 9,
@@ -13384,28 +13503,21 @@
   "yc_one_liner": "SpruceID lets users control their data across the web."
  },
  "spur": {
-  "team_size": 8,
+  "team_size": 15,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Spur",
-  "yc_one_liner": "Spur is your AI QA Engineer. Test your websites with natural language."
+  "yc_one_liner": "Spur is the validation infrastructure enterprises use to ship at the\u2026"
  },
  "spurtest": {
-  "team_size": 8,
+  "team_size": 15,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Spur",
-  "yc_one_liner": "Spur is your AI QA Engineer. Test your websites with natural language."
- },
- "squid": {
-  "team_size": 3,
-  "yc_batch": "Winter 2026",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Squid",
-  "yc_one_liner": "AI agents for power grid planning  \ud83e\udd91 "
+  "yc_one_liner": "Spur is the validation infrastructure enterprises use to ship at the\u2026"
  },
  "stable": {
-  "team_size": 30,
+  "team_size": 60,
   "yc_batch": "Winter 2020",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Stable",
@@ -13424,13 +13536,6 @@
   "yc_locations": "Los Angeles, CA, USA; Remote",
   "yc_name": "Stackup",
   "yc_one_liner": "Stackup helps businesses manage their crypto assets."
- },
- "stagewise": {
-  "team_size": 2,
-  "yc_batch": "Summer 2025",
-  "yc_locations": "",
-  "yc_name": "stagewise",
-  "yc_one_liner": "The Open Source Agentic IDE"
  },
  "standard": {
   "team_size": 150,
@@ -13454,7 +13559,7 @@
   "yc_one_liner": "AI-powered checkout for retail."
  },
  "standout": {
-  "team_size": 5,
+  "team_size": 7,
   "yc_batch": "Spring 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Standout",
@@ -13467,8 +13572,15 @@
   "yc_name": "Star",
   "yc_one_liner": "Make games with AI - no coding required"
  },
+ "starcloud": {
+  "team_size": 12,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "Seattle, WA, USA",
+  "yc_name": "Starcloud",
+  "yc_one_liner": "Data centers in space"
+ },
  "stardex": {
-  "team_size": 7,
+  "team_size": 9,
   "yc_batch": "Summer 2021",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Stardex",
@@ -13481,12 +13593,12 @@
   "yc_name": "Stardrift",
   "yc_one_liner": "AI travel planner"
  },
- "startraven": {
-  "team_size": 4,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Bengaluru, KA, India",
-  "yc_name": "Raven",
-  "yc_one_liner": "AI Assistants for Manufacturing Operations"
+ "stayflexi": {
+  "team_size": 58,
+  "yc_batch": "Winter 2021",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Stayflexi",
+  "yc_one_liner": "Operating System for Hotels and Vacation Rentals"
  },
  "steinmetz": {
   "team_size": 5,
@@ -13515,6 +13627,20 @@
   "yc_locations": "Stockholm, Stockholm County, Sweden",
   "yc_name": "Stilta",
   "yc_one_liner": "Agentic AI for intellectual property"
+ },
+ "stoa": {
+  "team_size": 3,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Stoa",
+  "yc_one_liner": "The market behind AI hardware."
+ },
+ "stoaexchange": {
+  "team_size": 3,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Stoa",
+  "yc_one_liner": "The market behind AI hardware."
  },
  "stoke-space": {
   "team_size": 305,
@@ -13552,7 +13678,7 @@
   "yc_one_liner": "Data Discovery, DLP, DSPM for SaaS, Cloud, Gen AI & Endpoints"
  },
  "strada": {
-  "team_size": 21,
+  "team_size": 16,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Strada",
@@ -13579,20 +13705,6 @@
   "yc_name": "Streamable",
   "yc_one_liner": "Powering the biggest IRL streamers today."
  },
- "streamline-systems": {
-  "team_size": 2,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Streamline Systems",
-  "yc_one_liner": "Precision navigation for UAVs operating without GPS. "
- },
- "streamlinesystems": {
-  "team_size": 2,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Streamline Systems",
-  "yc_one_liner": "Precision navigation for UAVs operating without GPS. "
- },
  "stripe": {
   "team_size": 7000,
   "yc_batch": "Summer 2009",
@@ -13617,14 +13729,14 @@
  "strong-compute": {
   "team_size": 8,
   "yc_batch": "Winter 2022",
-  "yc_locations": "Sydney, NSW, Australia",
+  "yc_locations": "Merritt Island, FL, USA; Sydney, NSW, Australia",
   "yc_name": "Strong Compute",
   "yc_one_liner": "10x-1000x faster compute for Neural Network training"
  },
  "strongcompute": {
   "team_size": 8,
   "yc_batch": "Winter 2022",
-  "yc_locations": "Sydney, NSW, Australia",
+  "yc_locations": "Merritt Island, FL, USA; Sydney, NSW, Australia",
   "yc_name": "Strong Compute",
   "yc_one_liner": "10x-1000x faster compute for Neural Network training"
  },
@@ -13648,13 +13760,6 @@
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "SubImage",
   "yc_one_liner": "The Open-Core Security Graph"
- },
- "subsets": {
-  "team_size": 7,
-  "yc_batch": "Summer 2023",
-  "yc_locations": "Copenhagen, Denmark",
-  "yc_name": "Subsets",
-  "yc_one_liner": "AI-driven Retention Automation for subscription media businesses."
  },
  "substrate": {
   "team_size": 2,
@@ -13691,6 +13796,27 @@
   "yc_name": "Spenmo",
   "yc_one_liner": "A spend management software that provides businesses visibility,\u2026"
  },
+ "sunflower": {
+  "team_size": 15,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Sunflower",
+  "yc_one_liner": "We are building an AI-native telemedicine clinic for addiction. \ud83c\udf3b"
+ },
+ "sunflowerclinic": {
+  "team_size": 15,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Sunflower",
+  "yc_one_liner": "We are building an AI-native telemedicine clinic for addiction. \ud83c\udf3b"
+ },
+ "super-powers-mobility-spm": {
+  "team_size": 4,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Pittsburgh, PA, USA",
+  "yc_name": "Super Powers Mobility (SPM)",
+  "yc_one_liner": "The highest performance modular battery packs for mobility/vehicles"
+ },
  "superkalam": {
   "team_size": 20,
   "yc_batch": "Winter 2023",
@@ -13698,12 +13824,12 @@
   "yc_name": "SuperKalam",
   "yc_one_liner": "AI-Powered Super Mentor for Test Prep"
  },
- "superset": {
+ "superpowersmobilityspm": {
   "team_size": 4,
-  "yc_batch": "Spring 2026",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Superset",
-  "yc_one_liner": "Building self-improving software"
+  "yc_batch": "Fall 2026",
+  "yc_locations": "Pittsburgh, PA, USA",
+  "yc_name": "Super Powers Mobility (SPM)",
+  "yc_one_liner": "The highest performance modular battery packs for mobility/vehicles"
  },
  "supertokens": {
   "team_size": 10,
@@ -13831,33 +13957,12 @@
   "yc_name": "Synapse Semiconductor",
   "yc_one_liner": "New semiconductors that merge compute and vision"
  },
- "sync": {
-  "team_size": 13,
-  "yc_batch": "Winter 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "sync.",
-  "yc_one_liner": "AI lipsync tool for video content creators"
- },
- "sync-2": {
-  "team_size": 13,
-  "yc_batch": "Winter 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "sync.",
-  "yc_one_liner": "AI lipsync tool for video content creators"
- },
- "syncly": {
-  "team_size": 15,
-  "yc_batch": "Winter 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Syncly",
-  "yc_one_liner": "Social listening for the video era"
- },
  "synthetic-society": {
   "team_size": 2,
   "yc_batch": "Summer 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Synthetic Society",
-  "yc_one_liner": "Synthetic Videos to Simulate Real Users"
+  "yc_one_liner": "Synthetic Videos to Power Marketing"
  },
  "syntheticfi": {
   "team_size": 25,
@@ -13871,7 +13976,7 @@
   "yc_batch": "Summer 2025",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Synthetic Society",
-  "yc_one_liner": "Synthetic Videos to Simulate Real Users"
+  "yc_one_liner": "Synthetic Videos to Power Marketing"
  },
  "synthio-labs": {
   "team_size": 29,
@@ -13888,7 +13993,7 @@
   "yc_one_liner": "Agentic AI platform for Pharma GTM teams"
  },
  "syntra": {
-  "team_size": 10,
+  "team_size": 8,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Syntra",
@@ -13942,6 +14047,13 @@
   "yc_locations": "Berlin, Berlin, Germany",
   "yc_name": "Taktile",
   "yc_one_liner": "Transform your decision-making with reliable AI agents in weeks, not\u2026"
+ },
+ "talentpluto": {
+  "team_size": 5,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Pluto",
+  "yc_one_liner": "LinkedIn for agents"
  },
  "tamarind": {
   "team_size": 20,
@@ -14097,6 +14209,13 @@
   "yc_name": "Tennr",
   "yc_one_liner": "Fast, Transparent Patient Experiences"
  },
+ "tenor": {
+  "team_size": 3,
+  "yc_batch": "Summer 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Tenor",
+  "yc_one_liner": "Infrastructure for building and scaling AI-native businesses."
+ },
  "terminal": {
   "team_size": 17,
   "yc_batch": "Summer 2023",
@@ -14202,13 +14321,6 @@
   "yc_name": "The Forecasting Company",
   "yc_one_liner": "Foundation models for time series"
  },
- "the-hog": {
-  "team_size": 2,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "The Hog",
-  "yc_one_liner": "Real-time web intelligence API for AI agents and GTM teams"
- },
  "the-juggernaut": {
   "team_size": 5,
   "yc_batch": "Winter 2019",
@@ -14230,6 +14342,13 @@
   "yc_name": "The Subvocal Company",
   "yc_one_liner": "Talk to your computer without talking"
  },
+ "the-vibe-company": {
+  "team_size": 5,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "Paris, \u00cele-de-France, France",
+  "yc_name": "The Vibe Company",
+  "yc_one_liner": "AI-native agency that scales like software, run on our own AI agents."
+ },
  "thedailyscout": {
   "team_size": 3,
   "yc_batch": "Winter 2023",
@@ -14243,13 +14362,6 @@
   "yc_locations": "Paris, \u00cele-de-France, France",
   "yc_name": "The Forecasting Company",
   "yc_one_liner": "Foundation models for time series"
- },
- "thehog": {
-  "team_size": 2,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "The Hog",
-  "yc_one_liner": "Real-time web intelligence API for AI agents and GTM teams"
  },
  "thehomli": {
   "team_size": 20,
@@ -14300,13 +14412,6 @@
   "yc_name": "Thera",
   "yc_one_liner": "AI-Native Finance OS"
  },
- "therentflow": {
-  "team_size": 3,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "RentFlow",
-  "yc_one_liner": "The AI infrastructure for cash-flow-aligned business rent"
- },
  "theseus": {
   "team_size": 7,
   "yc_batch": "Summer 2024",
@@ -14321,19 +14426,12 @@
   "yc_name": "The Subvocal Company",
   "yc_one_liner": "Talk to your computer without talking"
  },
- "third-chair": {
-  "team_size": 8,
-  "yc_batch": "Spring 2025",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Third Chair",
-  "yc_one_liner": "AI-Native IP Enforcement Agent"
- },
- "thirdchair": {
-  "team_size": 8,
-  "yc_batch": "Spring 2025",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Third Chair",
-  "yc_one_liner": "AI-Native IP Enforcement Agent"
+ "thevibecompany": {
+  "team_size": 5,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "Paris, \u00cele-de-France, France",
+  "yc_name": "The Vibe Company",
+  "yc_one_liner": "AI-native agency that scales like software, run on our own AI agents."
  },
  "thirdlayer": {
   "team_size": 2,
@@ -14342,26 +14440,19 @@
   "yc_name": "Thirdlayer",
   "yc_one_liner": "Continual learning for enterprise AI"
  },
- "throxy": {
-  "team_size": 55,
-  "yc_batch": "Spring 2025",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "throxy",
-  "yc_one_liner": "Vertical AI agents running B2B outbound on autopilot, with human SDRs"
- },
  "thunder-compute": {
   "team_size": 10,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Thunder Compute",
-  "yc_one_liner": "GPUs for Agents"
+  "yc_one_liner": "The GPU sandbox company"
  },
  "thundercompute": {
   "team_size": 10,
   "yc_batch": "Summer 2024",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Thunder Compute",
-  "yc_one_liner": "GPUs for Agents"
+  "yc_one_liner": "The GPU sandbox company"
  },
  "thunkable": {
   "team_size": 40,
@@ -14404,13 +14495,6 @@
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Titan",
   "yc_one_liner": "Titan is an award-winning wealth manager with a mission to increase\u2026"
- },
- "tivara": {
-  "team_size": 2,
-  "yc_batch": "Summer 2024",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Tivara",
-  "yc_one_liner": "The AI workforce for medical groups"
  },
  "toothy": {
   "team_size": 15,
@@ -14482,26 +14566,33 @@
   "yc_name": "Tovala",
   "yc_one_liner": "A smart-oven-paired subscription meal service."
  },
+ "tracecat": {
+  "team_size": null,
+  "yc_batch": "Winter 2024",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Tracecat",
+  "yc_one_liner": "Open-source agentic security automation platform"
+ },
  "traceroot": {
   "team_size": 4,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "TraceRoot.AI",
-  "yc_one_liner": "Open source self-improving layer for AI agents"
+  "yc_one_liner": "Open Source AI Agent Improvement Platform"
  },
  "traceroot-ai": {
   "team_size": 4,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "TraceRoot.AI",
-  "yc_one_liner": "Open source self-improving layer for AI agents"
+  "yc_one_liner": "Open Source AI Agent Improvement Platform"
  },
  "tracerootai": {
   "team_size": 4,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "TraceRoot.AI",
-  "yc_one_liner": "Open source self-improving layer for AI agents"
+  "yc_one_liner": "Open Source AI Agent Improvement Platform"
  },
  "tractian": {
   "team_size": 530,
@@ -14509,6 +14600,13 @@
   "yc_locations": "Atlanta, GA, USA",
   "yc_name": "Tractian",
   "yc_one_liner": "Physical AI for asset-heavy industries"
+ },
+ "trainloop": {
+  "team_size": 6,
+  "yc_batch": "Winter 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "TrainLoop",
+  "yc_one_liner": "Reasoning Fine-Tuning"
  },
  "transastra": {
   "team_size": 8,
@@ -14566,13 +14664,6 @@
   "yc_name": "Tr\u00e9bol",
   "yc_one_liner": "Your back-office, on autopilot"
  },
- "trelium": {
-  "team_size": 6,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Trelium",
-  "yc_one_liner": "The Agent to Build Your Agents"
- },
  "trellis-ai": {
   "team_size": 34,
   "yc_batch": "Winter 2024",
@@ -14622,6 +14713,13 @@
   "yc_name": "TrueClaim",
   "yc_one_liner": "Transparent, AI-powered healthcare TPA."
  },
+ "truemetrics": {
+  "team_size": 5,
+  "yc_batch": "Summer 2023",
+  "yc_locations": "Berlin, Berlin, Germany",
+  "yc_name": "truemetrics",
+  "yc_one_liner": "We show couriers where to park and enter a building."
+ },
  "truewind": {
   "team_size": 30,
   "yc_batch": "Winter 2023",
@@ -14630,18 +14728,18 @@
   "yc_one_liner": "AI-Powered Accounting"
  },
  "truss": {
-  "team_size": 12,
+  "team_size": 15,
   "yc_batch": "Summer 2021",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Truss",
-  "yc_one_liner": "Banking for construction"
+  "yc_one_liner": "Truss is a banking and payments network for blue-collar trades."
  },
  "trusspayments": {
-  "team_size": 12,
+  "team_size": 15,
   "yc_batch": "Summer 2021",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Truss",
-  "yc_one_liner": "Banking for construction"
+  "yc_one_liner": "Truss is a banking and payments network for blue-collar trades."
  },
  "truthsystems": {
   "team_size": 6,
@@ -14711,7 +14809,7 @@
   "yc_batch": "Summer 2021",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Coast",
-  "yc_one_liner": "Demo Platform for API-First Companies"
+  "yc_one_liner": "Demo operations for the AI era"
  },
  "tryfinch": {
   "team_size": 73,
@@ -14742,11 +14840,11 @@
   "yc_one_liner": "Self Improving Software"
  },
  "trykarat": {
-  "team_size": 40,
+  "team_size": 25,
   "yc_batch": "Winter 2020",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Karat Financial",
-  "yc_one_liner": "Better financial services for creators"
+  "yc_one_liner": "Business banking that helps you grow"
  },
  "trymeasured": {
   "team_size": 12,
@@ -14768,6 +14866,13 @@
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "TryNearby",
   "yc_one_liner": "Local creators for local businesses"
+ },
+ "tryoctapulse": {
+  "team_size": 2,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "Frisco, TX, USA",
+  "yc_name": "OctaPulse",
+  "yc_one_liner": "OctaPulse builds computer vision and robotics for fish farms and\u2026"
  },
  "tryperdiem": {
   "team_size": 25,
@@ -14840,7 +14945,7 @@
   "yc_one_liner": "AI-Powered Accounting"
  },
  "tryvela": {
-  "team_size": 2,
+  "team_size": 15,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vela",
@@ -14944,13 +15049,6 @@
   "yc_name": "Type",
   "yc_one_liner": "AI-native storytelling studio."
  },
- "typewise": {
-  "team_size": 12,
-  "yc_batch": "Summer 2022",
-  "yc_locations": "Z\u00fcrich, ZH, Switzerland",
-  "yc_name": "Typewise",
-  "yc_one_liner": "Customer service AI that resolves requests end-to-end."
- },
  "ubicloud": {
   "team_size": 15,
   "yc_batch": "Winter 2024",
@@ -15035,6 +15133,20 @@
   "yc_name": "Unsloth AI",
   "yc_one_liner": "Open-Source Reinforcement Learning (RL) & Fine-tuning for LLMs."
  },
+ "untether-labs": {
+  "team_size": 6,
+  "yc_batch": "Winter 2023",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Untether Labs",
+  "yc_one_liner": "Scheduling software for digital health clinics to do more with less."
+ },
+ "untetherlabs": {
+  "team_size": 6,
+  "yc_batch": "Winter 2023",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Untether Labs",
+  "yc_one_liner": "Scheduling software for digital health clinics to do more with less."
+ },
  "unusual": {
   "team_size": 4,
   "yc_batch": "Fall 2024",
@@ -15056,19 +15168,26 @@
   "yc_name": "UpCodes",
   "yc_one_liner": "AI platform for unifying codes, assemblies, products, and specs"
  },
- "upequity": {
-  "team_size": 90,
-  "yc_batch": "Summer 2019",
-  "yc_locations": "Austin, TX, USA",
-  "yc_name": "UpEquity",
-  "yc_one_liner": "UpEquity gives homebuyers more certainty and power. "
- },
  "uplane": {
   "team_size": 26,
   "yc_batch": "Fall 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Uplane",
   "yc_one_liner": "Replace marketing agencies with AI"
+ },
+ "uplift-ai": {
+  "team_size": 3,
+  "yc_batch": "Summer 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Uplift AI",
+  "yc_one_liner": "Foundational Voice Models for regional languages"
+ },
+ "upliftai": {
+  "team_size": 3,
+  "yc_batch": "Summer 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Uplift AI",
+  "yc_one_liner": "Foundational Voice Models for regional languages"
  },
  "upsolve": {
   "team_size": 5,
@@ -15096,7 +15215,7 @@
   "yc_batch": "Winter 2022",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Agave",
-  "yc_one_liner": "AI Financial Operations for Construction"
+  "yc_one_liner": "Applied AI for Construction"
  },
  "useandco": {
   "team_size": 3,
@@ -15118,13 +15237,6 @@
   "yc_locations": "Chicago, IL, USA",
   "yc_name": "BlueHill Payments",
   "yc_one_liner": "Client management, communication, and projects in one platform."
- },
- "usebluelight": {
-  "team_size": 3,
-  "yc_batch": "Winter 2021",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Bluelight",
-  "yc_one_liner": "Analytics, built for the trades."
  },
  "usecaribou": {
   "team_size": 10,
@@ -15155,14 +15267,14 @@
   "yc_one_liner": "Developer friendly drop in payouts infrastructure"
  },
  "useelevate": {
-  "team_size": 3,
+  "team_size": 10,
   "yc_batch": "Summer 2024",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Elevate",
   "yc_one_liner": "Automated AI data integrations for roll-ups"
  },
  "useflai": {
-  "team_size": 35,
+  "team_size": 40,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Flai",
@@ -15188,6 +15300,13 @@
   "yc_locations": "Mexico City, CDMX, Mexico",
   "yc_name": "Helios",
   "yc_one_liner": "Create your AI workforce"
+ },
+ "useimagine": {
+  "team_size": 5,
+  "yc_batch": "Fall 2025",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Imagine AI",
+  "yc_one_liner": "We reverse engineer B2B growth, starting with LinkedIn."
  },
  "uselayerup": {
   "team_size": 11,
@@ -15217,15 +15336,8 @@
   "yc_name": "Mesh",
   "yc_one_liner": "Eliminating accrual spreadsheets for faster month-end"
  },
- "usemotion": {
-  "team_size": 65,
-  "yc_batch": "Winter 2020",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Motion",
-  "yc_one_liner": "The only work management platform for both Human and AI Employees"
- },
  "usenaive": {
-  "team_size": 8,
+  "team_size": 12,
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Na\u00efve",
@@ -15273,24 +15385,10 @@
   "yc_name": "Peppr AI",
   "yc_one_liner": "In-call AI teleprompter that helps reps close enterprise deals"
  },
- "usepostal": {
-  "team_size": 4,
-  "yc_batch": "Winter 2022",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Postal",
-  "yc_one_liner": "An AI native virtual address & mailroom for businesses."
- },
- "useprox": {
-  "team_size": 7,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Prox",
-  "yc_one_liner": "AI product specialists for equipment manufacturers"
- },
  "usepylon": {
   "team_size": 120,
   "yc_batch": "Winter 2023",
-  "yc_locations": "Bridgeton, MO, USA",
+  "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Pylon",
   "yc_one_liner": "The Agentic Support Platform purpose-built for B2B."
  },
@@ -15308,26 +15406,12 @@
   "yc_name": "Simple AI",
   "yc_one_liner": "AI voice that sells"
  },
- "usesoren": {
-  "team_size": null,
-  "yc_batch": "Fall 2025",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "Soren",
-  "yc_one_liner": "The AI workforce for business operations."
- },
  "usestable": {
-  "team_size": 30,
+  "team_size": 60,
   "yc_batch": "Winter 2020",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Stable",
   "yc_one_liner": "A virtual address + mailbox for business"
- },
- "usethirdchair": {
-  "team_size": 8,
-  "yc_batch": "Spring 2025",
-  "yc_locations": "San Francisco, CA, USA; Remote",
-  "yc_name": "Third Chair",
-  "yc_one_liner": "AI-Native IP Enforcement Agent"
  },
  "usetorus": {
   "team_size": 6,
@@ -15341,7 +15425,7 @@
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vyra",
-  "yc_one_liner": "Autonomous video editing for non-editors."
+  "yc_one_liner": "Personal video editing agent for shortform content"
  },
  "usul": {
   "team_size": 15,
@@ -15400,14 +15484,14 @@
   "yc_one_liner": "Advertising for the new internet"
  },
  "vector-legal": {
-  "team_size": 7,
+  "team_size": 9,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vector Legal",
   "yc_one_liner": "A premier AI-native law firm & legal operating system for Startups."
  },
  "vectorlegal": {
-  "team_size": 7,
+  "team_size": 9,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vector Legal",
@@ -15421,7 +15505,7 @@
   "yc_one_liner": "AI Operating System for Private Market Investors"
  },
  "vela": {
-  "team_size": 2,
+  "team_size": 15,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vela",
@@ -15540,14 +15624,14 @@
   "yc_one_liner": "AI agents for the consumer lending industry"
  },
  "verne-robotics": {
-  "team_size": 7,
+  "team_size": 8,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Verne Robotics",
   "yc_one_liner": "AI models that teach robots new skills in hours"
  },
  "vernerobotics": {
-  "team_size": 7,
+  "team_size": 8,
   "yc_batch": "Summer 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Verne Robotics",
@@ -15589,25 +15673,11 @@
   "yc_one_liner": "AI powered product description enhancement for the auto parts industry"
  },
  "versemedical": {
-  "team_size": 200,
+  "team_size": 250,
   "yc_batch": "Summer 2018",
   "yc_locations": "New York City, NY, USA",
   "yc_name": "Verse Medical",
   "yc_one_liner": "AI-enabled ordering for medical equipment & supplies"
- },
- "verto": {
-  "team_size": 170,
-  "yc_batch": "Winter 2019",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Verto",
-  "yc_one_liner": "Cross-Border Payments and FX Simplified"
- },
- "vertofx": {
-  "team_size": 170,
-  "yc_batch": "Winter 2019",
-  "yc_locations": "London, England, United Kingdom",
-  "yc_name": "Verto",
-  "yc_one_liner": "Cross-Border Payments and FX Simplified"
  },
  "veryfi": {
   "team_size": 70,
@@ -15635,7 +15705,7 @@
   "yc_batch": "Spring 2025",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vesence",
-  "yc_one_liner": "AI for High-Stakes Work"
+  "yc_one_liner": "The Agent-Native Computer"
  },
  "vetcove": {
   "team_size": 170,
@@ -15664,6 +15734,27 @@
   "yc_locations": "San Francisco, CA, USA; Remote",
   "yc_name": "Vinci Games",
   "yc_one_liner": "Creating genre-defining multiplayer VR games."
+ },
+ "visibl-semiconductors": {
+  "team_size": 3,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Visibl Semiconductors",
+  "yc_one_liner": "Custom silicon for power electronics"
+ },
+ "visiblsemi": {
+  "team_size": 3,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Visibl Semiconductors",
+  "yc_one_liner": "Custom silicon for power electronics"
+ },
+ "visiblsemiconductors": {
+  "team_size": 3,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Visibl Semiconductors",
+  "yc_one_liner": "Custom silicon for power electronics"
  },
  "vitable-health": {
   "team_size": 60,
@@ -15717,23 +15808,9 @@
  "volaren": {
   "team_size": 4,
   "yc_batch": "Fall 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Volaren Inc.",
-  "yc_one_liner": "Volaren collapses the hedge fund model and making it accessible to\u2026"
- },
- "volaren-inc": {
-  "team_size": 4,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Volaren Inc.",
-  "yc_one_liner": "Volaren collapses the hedge fund model and making it accessible to\u2026"
- },
- "volareninc": {
-  "team_size": 4,
-  "yc_batch": "Fall 2026",
-  "yc_locations": "New York City, NY, USA",
-  "yc_name": "Volaren Inc.",
-  "yc_one_liner": "Volaren collapses the hedge fund model and making it accessible to\u2026"
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Volaren",
+  "yc_one_liner": "The personal investing agent that comes to you"
  },
  "volta-labs-inc": {
   "team_size": 50,
@@ -15812,12 +15889,19 @@
   "yc_name": "Vouch",
   "yc_one_liner": "Insurance and risk management tools for startups and growth-stage\u2026"
  },
+ "voyager": {
+  "team_size": 6,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "New York City, NY, USA",
+  "yc_name": "Voyager",
+  "yc_one_liner": "Open harness for video and other creative work."
+ },
  "voygr": {
   "team_size": null,
   "yc_batch": "Winter 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "VOYGR",
-  "yc_one_liner": "Real-world place intelligence for AI apps and agents"
+  "yc_one_liner": "The real-world intelligence and action layer"
  },
  "vulcan": {
   "team_size": 17,
@@ -15845,7 +15929,7 @@
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Vyra",
-  "yc_one_liner": "Autonomous video editing for non-editors."
+  "yc_one_liner": "Personal video editing agent for shortform content"
  },
  "waddle-labs": {
   "team_size": 2,
@@ -16001,6 +16085,20 @@
   "yc_name": "Wefunder",
   "yc_one_liner": "We're Robinhood for pre-IPO startups. Everyone can invest $100."
  },
+ "westgate": {
+  "team_size": 6,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Westgate",
+  "yc_one_liner": "Westgate Supply is an ai-native industrial distributor."
+ },
+ "westgatesupply": {
+  "team_size": 6,
+  "yc_batch": "Summer 2024",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Westgate",
+  "yc_one_liner": "Westgate Supply is an ai-native industrial distributor."
+ },
  "whatnot": {
   "team_size": 1500,
   "yc_batch": "Winter 2020",
@@ -16057,6 +16155,20 @@
   "yc_name": "Windmill",
   "yc_one_liner": "Open-source platform to turn scripts into internal apps & workflows"
  },
+ "wingman-law": {
+  "team_size": 2,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Wingman Law",
+  "yc_one_liner": "AI-native personal injury law firm"
+ },
+ "wingmanlaw": {
+  "team_size": 2,
+  "yc_batch": "Fall 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Wingman Law",
+  "yc_one_liner": "AI-native personal injury law firm"
+ },
  "with-andy": {
   "team_size": 5,
   "yc_batch": "Winter 2024",
@@ -16070,13 +16182,6 @@
   "yc_locations": "",
   "yc_name": "Accend",
   "yc_one_liner": "AI agents for commercial underwriting at banks and fintechs"
- },
- "withbanner": {
-  "team_size": 35,
-  "yc_batch": "Summer 2019",
-  "yc_locations": "New York City, NY, USA; San Francisco, CA, USA; Remote",
-  "yc_name": "Banner",
-  "yc_one_liner": "Banner makes software for CRE owners to manage capital spend"
  },
  "withchima": {
   "team_size": 7,
@@ -16169,6 +16274,13 @@
   "yc_name": "Women Who Code",
   "yc_one_liner": "WWCode is a non profit that empowering diverse women to excel in tech."
  },
+ "wonderly": {
+  "team_size": 75,
+  "yc_batch": "Winter 2020",
+  "yc_locations": "San Francisco, CA, USA; Remote",
+  "yc_name": "Wonderly",
+  "yc_one_liner": "Closed-loop end-to-end AI System that recursively improves on\u2026"
+ },
  "wordware": {
   "team_size": 15,
   "yc_batch": "Summer 2024",
@@ -16181,21 +16293,21 @@
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Workers IO",
-  "yc_one_liner": "Simulation Environments for Verifying Mission Critical Software"
+  "yc_one_liner": "Simulation environments for verifying mission-critical software"
  },
  "workers-io": {
   "team_size": 2,
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Workers IO",
-  "yc_one_liner": "Simulation Environments for Verifying Mission Critical Software"
+  "yc_one_liner": "Simulation environments for verifying mission-critical software"
  },
  "workersio": {
   "team_size": 2,
   "yc_batch": "Fall 2026",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Workers IO",
-  "yc_one_liner": "Simulation Environments for Verifying Mission Critical Software"
+  "yc_one_liner": "Simulation environments for verifying mission-critical software"
  },
  "woz": {
   "team_size": 8,
@@ -16224,20 +16336,6 @@
   "yc_locations": "Albany, NY, USA",
   "yc_name": "Wright Electric",
   "yc_one_liner": "Boeing for electric planes"
- },
- "writesonic": {
-  "team_size": 35,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "New Delhi, DL, India; Remote",
-  "yc_name": "Writesonic",
-  "yc_one_liner": "Track & Boost Your Brand\u2019s Visibility in AI Search"
- },
- "x1": {
-  "team_size": 5,
-  "yc_batch": "Fall 2024",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "x1",
-  "yc_one_liner": "AI app builder for creating and launching iPhone apps"
  },
  "xendit": {
   "team_size": 700,
@@ -16303,14 +16401,14 @@
   "yc_one_liner": "Marketplace for private chefs"
  },
  "yn": {
-  "team_size": 5,
+  "team_size": 4,
   "yc_batch": "Summer 2023",
   "yc_locations": "San Francisco, CA, USA",
   "yc_name": "Y/n",
   "yc_one_liner": "Play your story"
  },
  "yondu": {
-  "team_size": 12,
+  "team_size": 7,
   "yc_batch": "Winter 2024",
   "yc_locations": "Los Angeles, CA, USA",
   "yc_name": "Yondu",
@@ -16372,12 +16470,19 @@
   "yc_name": "Zarna",
   "yc_one_liner": "AI Associates for Middle-Market Private Equity "
  },
+ "zatanna": {
+  "team_size": 2,
+  "yc_batch": "Winter 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Zatanna",
+  "yc_one_liner": "Building the infrastructure for AI to interact with software"
+ },
  "zaymo": {
-  "team_size": 13,
+  "team_size": 19,
   "yc_batch": "Winter 2024",
   "yc_locations": "Lehi, UT, USA",
   "yc_name": "Zaymo",
-  "yc_one_liner": "Interactive email builder for ecommerce brands"
+  "yc_one_liner": "Tools for AI agents to run marketing for the world's biggest\u2026"
  },
  "zeit-ai": {
   "team_size": 12,
@@ -16491,6 +16596,13 @@
   "yc_name": "Zippi",
   "yc_one_liner": "Payment Platform for LatAm Micro and Small Businesses"
  },
+ "zolvo": {
+  "team_size": 4,
+  "yc_batch": "Spring 2026",
+  "yc_locations": "San Francisco, CA, USA",
+  "yc_name": "Zolvo",
+  "yc_one_liner": "AI for Commercial Lending"
+ },
  "zscc": {
   "team_size": 2,
   "yc_batch": "Summer 2024",
@@ -16506,25 +16618,11 @@
   "yc_one_liner": "Zuddl is a modular platform for events and webinars that helps event\u2026"
  },
  "zudo": {
-  "team_size": 3,
+  "team_size": 4,
   "yc_batch": "Winter 2023",
   "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "zudo.work",
-  "yc_one_liner": "AI Workers for Warranty"
- },
- "zudowork": {
-  "team_size": 3,
-  "yc_batch": "Winter 2023",
-  "yc_locations": "San Francisco, CA, USA",
-  "yc_name": "zudo.work",
-  "yc_one_liner": "AI Workers for Warranty"
- },
- "zuma": {
-  "team_size": 50,
-  "yc_batch": "Summer 2021",
-  "yc_locations": "Los Angeles, CA, USA",
-  "yc_name": "Zuma",
-  "yc_one_liner": "We help businesses convert leads into sales in minutes using text"
+  "yc_name": "Zudo",
+  "yc_one_liner": "AI Workers for Extended Service Contracts"
  },
  "zymbly": {
   "team_size": 0,

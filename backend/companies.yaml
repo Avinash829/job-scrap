@@ -2336,11 +2336,50 @@ greenhouse:
   - slug: limrun
     tier: 2
     note: 4 jobs
+  - slug: sitimecorporation
+    tier: 2
+    name: Sitimecorporation
+    note: yc careers page · India 7, intern 0
+  - slug: hsogroupbv
+    tier: 2
+    name: Hsogroupbv
+    note: yc careers page · India 4, intern 0
+  - slug: ionq
+    tier: 2
+    name: Capella Space
+    note: vc careers page · India 3, intern 0
+    website: vc-board:capella space
+  - slug: safebreach
+    tier: 2
+    name: SafeBreach
+    note: vc careers page · India 1, intern 0
+    website: https://safebreach.com
+  - slug: springboardmentors
+    tier: 2
+    name: Springboard
+    note: vc careers page · India 1, intern 0
+    website: https://springboard.com
+  - slug: listengagellc
+    tier: 2
+    name: Ragana
+    note: vc careers page · India 1, intern 0
+    website: vc-board:ragana
+  - slug: fairviewsmilesdentistry
+    tier: 2
+    note: 1 jobs
+  - slug: picnicai
+    tier: 2
+    note: 1 jobs
+  - slug: guild
+    tier: 2
+    note: 4 jobs
+  - slug: hazel
+    tier: 2
+    note: 19 jobs
   candidates:
   - 67streetdental
   - adjacentservices
   - ethicinvesting
-  - fairviewsmilesdentistry
   - figment
   - socialpoint
   - solarcycle
@@ -2352,7 +2391,6 @@ greenhouse:
   - helium
   - latent
   - magic
-  - picnicai
   - pulley
   - shepherd
   - spade
@@ -2409,6 +2447,7 @@ greenhouse:
   - aivideo
   - aivideo-com
   - aivideocom
+  - akiflow
   - aktoria
   - aktoria-robotics
   - aktoriarobotics
@@ -2437,6 +2476,7 @@ greenhouse:
   - almond-2
   - alpha-vantage
   - alphavantage
+  - altur
   - ambient
   - ambient-ai
   - ambientai
@@ -2481,6 +2521,7 @@ greenhouse:
   - archilabs
   - archon
   - ardent
+  - aren
   - arini
   - arketa
   - arlo-industries
@@ -2490,6 +2531,8 @@ greenhouse:
   - arpari
   - arq
   - arqfinance
+  - array-labs
+  - arraylabs
   - artie
   - artifact
   - artifact-2
@@ -2541,6 +2584,7 @@ greenhouse:
   - atomicindustries
   - atomicvest
   - atopile
+  - atrisa
   - attack
   - attack-capital
   - attackcapital
@@ -2548,9 +2592,13 @@ greenhouse:
   - attune
   - attunehq
   - auctor
+  - audun
+  - augment-inc
+  - augmentinc
   - aurelian
   - aurorin-cad
   - aurorincad
+  - authologic
   - authzed
   - automat
   - autonomous-technologies-group
@@ -2558,6 +2606,7 @@ greenhouse:
   - autositu
   - autostep
   - autumn
+  - autumn-ai
   - avallon
   - avallon-ai
   - avallonai
@@ -2639,6 +2688,7 @@ greenhouse:
   - bolnaai
   - bolster
   - bolsterbuilt
+  - bolto
   - bond
   - bondapp
   - book
@@ -2683,6 +2733,7 @@ greenhouse:
   - buoyant
   - buoyant-aero
   - buoyantaero
+  - business
   - businessonbot
   - bymason
   - cair-health
@@ -2739,7 +2790,9 @@ greenhouse:
   - cekura
   - cekura-ai
   - celltype
+  - centaur
   - centralize
+  - cercli
   - cerrion
   - cerulion
   - channel3
@@ -2752,6 +2805,7 @@ greenhouse:
   - chestnut
   - chestnutmortgage
   - chima
+  - cifrato
   - cinder
   - cinder-2
   - circle-medical
@@ -2803,10 +2857,12 @@ greenhouse:
   - collectwise
   - coloop
   - comena
+  - commodityai
   - community-phone-company
   - communityphone
   - communityphonecompany
   - complete
+  - complif
   - complir
   - complydo
   - compose
@@ -2841,8 +2897,10 @@ greenhouse:
   - corgi-insurance
   - corgiinsurance
   - coris
+  - corvera
   - cosine
   - cotera
+  - cotool
   - coulomb
   - coulomb-ai
   - coulombai
@@ -2889,6 +2947,9 @@ greenhouse:
   - datrics
   - david-ai
   - davidai
+  - decisional
+  - decisional-ai
+  - decisionalai
   - decoda-health
   - decodahealth
   - dedalus-labs
@@ -2912,6 +2973,7 @@ greenhouse:
   - denchcom
   - denta
   - deployparagon
+  - dexter
   - did
   - diffuse
   - diffuse-bio
@@ -2960,6 +3022,7 @@ greenhouse:
   - drymerge
   - duckie
   - duffel
+  - durate
   - dynamo
   - dynamo-ai
   - dynamoai
@@ -2974,6 +3037,8 @@ greenhouse:
   - edexia
   - edgerun
   - educato
+  - edviro
+  - edviroenergy
   - effigov
   - ego
   - egoai
@@ -3019,6 +3084,7 @@ greenhouse:
   - eventhorizonlabs
   - eventual
   - every
+  - evidence
   - exonic
   - explorex
   - eze
@@ -3101,6 +3167,8 @@ greenhouse:
   - furtherai
   - fuse-ai
   - fuseai
+  - gale
+  - galevisa
   - garage
   - garage-2
   - gather-2
@@ -3128,7 +3196,10 @@ greenhouse:
   - getcoach
   - getcrux
   - getdailyagape
+  - getdexter
+  - getdot
   - getfinn
+  - gethealthkey
   - gethomebase
   - getjust
   - getlago
@@ -3153,6 +3224,7 @@ greenhouse:
   - getunbound
   - getzep
   - getzuma
+  - ghosteye
   - giga
   - gimo
   - givechariot
@@ -3191,6 +3263,7 @@ greenhouse:
   - great-question
   - greatquestion
   - greenboard
+  - greptile
   - gridware
   - gromo
   - groundcontrol
@@ -3199,6 +3272,7 @@ greenhouse:
   - guac
   - guardian-rf
   - guardianrf
+  - guildai
   - gym-class
   - gymclass
   - hadrius
@@ -3214,20 +3288,26 @@ greenhouse:
   - haplotypelabs
   - happl
   - happyrobot
+  - harbera
   - harper
   - harperinsure
   - haven-2
   - havenservicing
   - haystack
+  - hazel-2
+  - hazelai
   - healia
   - healiahealth
   - health-harbor
   - healthharbor
+  - healthkey
   - healthtech-1
   - healthtech1
   - hedge
   - hedgespecialty
   - helios
+  - helios-intelligence
+  - heliosintelligence
   - helloaviary
   - helloaxel
   - helloconduit
@@ -3249,7 +3329,10 @@ greenhouse:
   - heymalama
   - heypocket
   - heytelo
+  - heytenor
+  - hillstar
   - hioperator
+  - hirebolt
   - hirenimble
   - hireroger
   - hitpay
@@ -3262,6 +3345,7 @@ greenhouse:
   - housewarming
   - hub
   - hubble
+  - hubble-ai
   - hud
   - humaans
   - human-archive
@@ -3285,6 +3369,8 @@ greenhouse:
   - ignitionbenefits
   - imagine-ai
   - imagineai
+  - impact-drones
+  - impactdrones
   - imperfect
   - imprezia
   - imt-care
@@ -3302,6 +3388,9 @@ greenhouse:
   - infinity
   - infinityapp
   - infisical
+  - inflection-space
+  - inflection-space-systems
+  - inflectionspacesystems
   - influxdata
   - infracost
   - inito
@@ -3309,6 +3398,8 @@ greenhouse:
   - inlet
   - inlet-2
   - inletai
+  - inloop-robotics
+  - inlooprobotics
   - innate
   - inscribe
   - inspectify
@@ -3334,6 +3425,7 @@ greenhouse:
   - item
   - itsrever
   - jabu
+  - janeen
   - jarmin
   - jeevy-fabrication
   - jeevyfabrication
@@ -3393,6 +3485,7 @@ greenhouse:
   - kivo-health
   - kivohealth
   - klaimee
+  - klarify
   - klavis
   - klavis-ai
   - klavisai
@@ -3413,8 +3506,10 @@ greenhouse:
   - lago
   - lamar-health
   - lamarhealth
+  - lamb-labs
   - lambda-robotics
   - lambdarobotics
+  - lamblabs
   - laminar
   - laminar-com
   - lance
@@ -3423,7 +3518,11 @@ greenhouse:
   - landeed
   - lanesurf
   - langdock
+  - lapel
   - latenthealth
+  - lato
+  - latolabs
+  - latted
   - laurence
   - layers
   - layerup
@@ -3468,12 +3567,15 @@ greenhouse:
   - locata
   - locatahealth
   - locke
+  - logical
+  - loombotic
   - loopfour
   - lootrush
   - lua-global-inc
   - luaglobalinc
   - luca-iq
   - lucaiq
+  - lucebox
   - lucid
   - lucis
   - lugg
@@ -3525,6 +3627,8 @@ greenhouse:
   - mdalgorithmsinc
   - mdhub
   - measured
+  - mederva
+  - medervahealth
   - medme-health
   - medmehealth
   - mednet
@@ -3563,7 +3667,10 @@ greenhouse:
   - misolabs
   - misprint
   - mixrank
+  - miyagi-labs
+  - miyagilabs
   - mochacare
+  - mochi
   - moda
   - moda-2
   - model-ml
@@ -3572,6 +3679,7 @@ greenhouse:
   - modern-treasury
   - modernloop
   - moderntreasury
+  - molagri
   - monumint
   - moonset-health
   - moonsethealth
@@ -3595,6 +3703,7 @@ greenhouse:
   - mutiny
   - mutinyhq
   - muzz
+  - myhelios
   - mytos
   - myunowallet
   - naive
@@ -3634,12 +3743,16 @@ greenhouse:
   - nitrode
   - nixo
   - no-logo
+  - noloco
   - nologo
   - nomic
   - nomic-bio
   - nomicbio
   - noora-health
   - noorahealth
+  - nori
+  - noril1
+  - norirobotics
   - noso
   - noso-labs
   - nosolabs
@@ -3657,6 +3770,7 @@ greenhouse:
   - numen
   - numeral
   - numero
+  - octapulse
   - ocular-ai
   - ocularai
   - odys-aviation
@@ -3691,6 +3805,8 @@ greenhouse:
   - openmart
   - openunit
   - openworklabs
+  - operon
+  - operonsolutions
   - optifye
   - optifye-ai
   - optifyeai
@@ -3712,6 +3828,7 @@ greenhouse:
   - orchid
   - origin
   - origin-bio
+  - orthogonal
   - os3
   - os3robotics
   - osium
@@ -3719,11 +3836,15 @@ greenhouse:
   - osiumai
   - outerport
   - output
+  - output-labs
   - outputbio
   - outputbiosciences
+  - outputlabs
   - outset
   - overlap
   - overview
+  - oway
+  - owny
   - oxus
   - oxus-ai
   - oxygen
@@ -3741,6 +3862,8 @@ greenhouse:
   - pango
   - pangolin
   - paradedb
+  - paradev
+  - paradevformerlysuperset
   - paradigmai
   - paragon
   - paragon-ai
@@ -3805,8 +3928,12 @@ greenhouse:
   - pivotrobotics
   - players-lounge
   - playerslounge
+  - plena
+  - plena-health
+  - plenahealth
   - plexe
   - ploy
+  - pluto
   - pno
   - pnoe
   - pocket
@@ -3829,6 +3956,7 @@ greenhouse:
   - posh
   - poshenergy
   - postal
+  - postera
   - posthog
   - posturehealth-inc
   - powder
@@ -3844,6 +3972,7 @@ greenhouse:
   - prestiai
   - primevault
   - primitive
+  - princeps
   - probably-genetic
   - probablygenetic
   - proception
@@ -3896,6 +4025,7 @@ greenhouse:
   - quill-bills
   - quillbills
   - quindar
+  - rainbrand
   - raindrop
   - rally
   - rallyuxr
@@ -3911,6 +4041,7 @@ greenhouse:
   - reacher
   - reacherapp
   - reachpower
+  - reactwise
   - readily
   - ready
   - reality-defender
@@ -4022,6 +4153,7 @@ greenhouse:
   - runparagon
   - runpulse
   - runtime
+  - runtimesi
   - runtm
   - runtrellis
   - runway
@@ -4051,7 +4183,9 @@ greenhouse:
   - saturn
   - saturnos
   - sava
+  - sava-trust-company
   - savahq
+  - savatrustcompany
   - scalar-field
   - scalarfield
   - scale
@@ -4094,6 +4228,7 @@ greenhouse:
   - shipbob
   - shopgarage
   - short-story
+  - shortkit
   - shortloop
   - shortstory
   - shortstorybox
@@ -4105,6 +4240,9 @@ greenhouse:
   - sift
   - sigmaos
   - signadot
+  - signatur
+  - signatur-biosciences
+  - signaturbiosciences
   - signoz
   - silimate
   - silkchart
@@ -4154,6 +4292,7 @@ greenhouse:
   - soraban
   - sorce
   - soren
+  - soren-ai
   - soria
   - soriaanalytics
   - sorting-robotics
@@ -4169,13 +4308,17 @@ greenhouse:
   - speak
   - speedy-labs
   - speedylabs
+  - speko
   - spellbrush
   - spenmo
   - sphere
+  - spice-data
+  - spicedata
   - spine
   - splash-inc
   - splash9
   - splashinc
+  - spm
   - spot-health
   - spotdx
   - spothealth
@@ -4193,13 +4336,17 @@ greenhouse:
   - standardai
   - standout
   - star
+  - starcloud
   - stardex
   - stardrift
   - startraven
+  - stayflexi
   - steinmetz
   - steinmetzmotors
   - stepful
   - stilta
+  - stoa
+  - stoaexchange
   - stoke-space
   - stokespace
   - storyboarder
@@ -4224,7 +4371,11 @@ greenhouse:
   - suger
   - sully
   - summitglobal
+  - sunflower
+  - sunflowerclinic
+  - super-powers-mobility-spm
   - superkalam
+  - superpowersmobilityspm
   - supertokens
   - surface-labs
   - surfacelabs
@@ -4258,6 +4409,7 @@ greenhouse:
   - tailor
   - taiv
   - taktile
+  - talentpluto
   - tamarind
   - tamarind-bio
   - tamarindbio
@@ -4279,6 +4431,7 @@ greenhouse:
   - telmai
   - tempo-2
   - tennr
+  - tenor
   - terminal
   - terra-api
   - terraapi
@@ -4298,6 +4451,7 @@ greenhouse:
   - the-juggernaut
   - the-prompting-company
   - the-subvocal-company
+  - the-vibe-company
   - thedailyscout
   - theforecastingcompany
   - thehog
@@ -4311,6 +4465,7 @@ greenhouse:
   - therentflow
   - theseus
   - thesubvocalcompany
+  - thevibecompany
   - third-chair
   - thirdchair
   - thirdlayer
@@ -4334,10 +4489,12 @@ greenhouse:
   - torus
   - totalis
   - tovala
+  - tracecat
   - traceroot
   - traceroot-ai
   - tracerootai
   - tractian
+  - trainloop
   - transastra
   - transastra-corporation
   - transastracorporation
@@ -4354,6 +4511,7 @@ greenhouse:
   - trmlabs
   - truebiz
   - trueclaim
+  - truemetrics
   - truewind
   - truss
   - trusspayments
@@ -4375,6 +4533,7 @@ greenhouse:
   - trymeasured
   - trynarrative
   - trynearby
+  - tryoctapulse
   - tryperdiem
   - tryriot
   - tryrobby
@@ -4413,11 +4572,15 @@ greenhouse:
   - unsloth
   - unsloth-ai
   - unslothai
+  - untether-labs
+  - untetherlabs
   - unusual
   - up
   - upcodes
   - upequity
   - uplane
+  - uplift-ai
+  - upliftai
   - upsolve
   - upsolve-ai
   - upsolveai
@@ -4435,6 +4598,7 @@ greenhouse:
   - usehaven
   - usehaystack
   - usehelios
+  - useimagine
   - uselayerup
   - uselemma
   - usemargin
@@ -4503,6 +4667,9 @@ greenhouse:
   - videogen
   - vinci-games
   - vincigames
+  - visibl-semiconductors
+  - visiblsemi
+  - visiblsemiconductors
   - vitable-health
   - vitablehealth
   - vitalize
@@ -4524,6 +4691,7 @@ greenhouse:
   - vori
   - vorticity
   - vouch
+  - voyager
   - voygr
   - vulcan
   - vulcan-technologies
@@ -4549,6 +4717,8 @@ greenhouse:
   - weekendfmrvolley
   - weflywright
   - wefunder
+  - westgate
+  - westgatesupply
   - whatnot
   - wifi-dabba-inc
   - wifidabbainc
@@ -4557,6 +4727,8 @@ greenhouse:
   - willow
   - willowvoice
   - windmill
+  - wingman-law
+  - wingmanlaw
   - with-andy
   - withaccend
   - withbanner
@@ -4573,6 +4745,7 @@ greenhouse:
   - withterminal
   - women-who-code
   - womenwhocode
+  - wonderly
   - wordware
   - workers
   - workers-io
@@ -4601,6 +4774,7 @@ greenhouse:
   - zapier
   - zarna
   - zarnaai
+  - zatanna
   - zaymo
   - zeit-ai
   - zeitai
@@ -4618,6 +4792,7 @@ greenhouse:
   - zip
   - ziphq
   - zippi
+  - zolvo
   - zscc
   - zuddl
   - zudo
@@ -5667,15 +5842,29 @@ lever:
   - slug: culdesac
     tier: 2
     note: 2 jobs
+  - slug: mendix
+    tier: 2
+    name: Mendix
+    note: yc careers page · India 1, intern 0
+  - slug: 15five
+    tier: 2
+    note: 2 jobs
+  - slug: algorex
+    tier: 2
+    note: 1 jobs
+  - slug: vergesense
+    tier: 2
+    note: 1 jobs
+  - slug: postera
+    tier: 2
+    note: 2 jobs
   candidates:
-  - 15five
   - 3pillarglobal
   - accurate
   - aicamp
   - aigen
   - aisafety
   - aiwyn
-  - algorex
   - alliance
   - alveotechnologies
   - sensefinance
@@ -5688,7 +5877,6 @@ lever:
   - solvhealth
   - speakeasyapi
   - sta
-  - startuptap
   - superpedestrian
   - surfshark
   - asendia
@@ -5705,7 +5893,6 @@ lever:
   - semble
   - strongcompute
   - tractian
-  - vergesense
   rejected:
   - 10x
   - 10x-science
@@ -5761,6 +5948,7 @@ lever:
   - aivideo
   - aivideo-com
   - aivideocom
+  - akiflow
   - aktoria
   - aktoria-robotics
   - aktoriarobotics
@@ -5791,6 +5979,7 @@ lever:
   - alpaca
   - alpha-vantage
   - alphavantage
+  - altur
   - ambient
   - ambient-ai
   - ambientai
@@ -5838,6 +6027,7 @@ lever:
   - archilabs
   - archon
   - ardent
+  - aren
   - arini
   - arketa
   - arlo-industries
@@ -5847,6 +6037,8 @@ lever:
   - arpari
   - arq
   - arqfinance
+  - array-labs
+  - arraylabs
   - artie
   - artifact
   - artifact-2
@@ -5899,6 +6091,7 @@ lever:
   - atomicindustries
   - atomicvest
   - atopile
+  - atrisa
   - attack
   - attack-capital
   - attackcapital
@@ -5907,9 +6100,13 @@ lever:
   - attune
   - attunehq
   - auctor
+  - audun
+  - augment-inc
+  - augmentinc
   - aurelian
   - aurorin-cad
   - aurorincad
+  - authologic
   - authzed
   - automat
   - autonomous-technologies-group
@@ -5917,6 +6114,7 @@ lever:
   - autositu
   - autostep
   - autumn
+  - autumn-ai
   - avallon
   - avallon-ai
   - avallonai
@@ -5999,6 +6197,7 @@ lever:
   - bolna-ai
   - bolnaai
   - bolsterbuilt
+  - bolto
   - bond
   - bondapp
   - book
@@ -6044,6 +6243,7 @@ lever:
   - buoyant-aero
   - buoyantaero
   - burnt
+  - business
   - businessonbot
   - bymason
   - cair-health
@@ -6100,7 +6300,9 @@ lever:
   - cekura
   - cekura-ai
   - celltype
+  - centaur
   - centralize
+  - cercli
   - cerrion
   - cerulion
   - channel3
@@ -6114,6 +6316,7 @@ lever:
   - chestnut
   - chestnutmortgage
   - chima
+  - cifrato
   - cinder
   - cinder-2
   - circle-medical
@@ -6167,10 +6370,12 @@ lever:
   - collectwise
   - coloop
   - comena
+  - commodityai
   - community-phone-company
   - communityphone
   - communityphonecompany
   - complete
+  - complif
   - complir
   - complydo
   - compose
@@ -6204,8 +6409,10 @@ lever:
   - corgi-insurance
   - corgiinsurance
   - coris
+  - corvera
   - cosine
   - cotera
+  - cotool
   - coulomb
   - coulomb-ai
   - coulombai
@@ -6250,6 +6457,9 @@ lever:
   - datrics
   - david-ai
   - davidai
+  - decisional
+  - decisional-ai
+  - decisionalai
   - decoda-health
   - decodahealth
   - dedalus-labs
@@ -6273,6 +6483,7 @@ lever:
   - denchcom
   - denta
   - deployparagon
+  - dexter
   - did
   - diffuse
   - diffuse-bio
@@ -6322,6 +6533,7 @@ lever:
   - dripcapital
   - drymerge
   - duckie
+  - durate
   - dynamo
   - dynamo-ai
   - dynamoai
@@ -6336,6 +6548,8 @@ lever:
   - edexia
   - edgerun
   - educato
+  - edviro
+  - edviroenergy
   - effigov
   - ego
   - egoai
@@ -6380,6 +6594,7 @@ lever:
   - eventhorizonlabs
   - eventual
   - every
+  - evidence
   - exonic
   - explorex
   - eze
@@ -6462,6 +6677,8 @@ lever:
   - furtherai
   - fuse-ai
   - fuseai
+  - gale
+  - galevisa
   - garage
   - garage-2
   - gather
@@ -6491,7 +6708,10 @@ lever:
   - getcoach
   - getcrux
   - getdailyagape
+  - getdexter
+  - getdot
   - getfinn
+  - gethealthkey
   - gethomebase
   - getjust
   - getlago
@@ -6515,6 +6735,7 @@ lever:
   - getthera
   - getunbound
   - getzep
+  - ghosteye
   - giga
   - gigs
   - gimo
@@ -6556,6 +6777,7 @@ lever:
   - great-question
   - greatquestion
   - greenboard
+  - greptile
   - gromo
   - groundcontrol
   - growthbook
@@ -6563,6 +6785,8 @@ lever:
   - guac
   - guardian-rf
   - guardianrf
+  - guild
+  - guildai
   - gusto
   - gym-class
   - gymclass
@@ -6579,21 +6803,28 @@ lever:
   - haplotypelabs
   - happl
   - happyrobot
+  - harbera
   - harper
   - harperinsure
   - haven
   - haven-2
   - havenservicing
   - haystack
+  - hazel
+  - hazel-2
+  - hazelai
   - healia
   - healiahealth
   - health-harbor
   - healthharbor
+  - healthkey
   - healthtech-1
   - healthtech1
   - hedge
   - hedgespecialty
   - helios
+  - helios-intelligence
+  - heliosintelligence
   - helium
   - helloaviary
   - helloaxel
@@ -6616,7 +6847,10 @@ lever:
   - heymalama
   - heypocket
   - heytelo
+  - heytenor
+  - hillstar
   - hioperator
+  - hirebolt
   - hirenimble
   - hireroger
   - hitpay
@@ -6629,6 +6863,7 @@ lever:
   - housewarming
   - hub
   - hubble
+  - hubble-ai
   - hud
   - human-archive
   - human-interest
@@ -6653,6 +6888,8 @@ lever:
   - ignitionbenefits
   - imagine-ai
   - imagineai
+  - impact-drones
+  - impactdrones
   - imperfect
   - imprezia
   - imt
@@ -6671,6 +6908,9 @@ lever:
   - infinity
   - infinityapp
   - infisical
+  - inflection-space
+  - inflection-space-systems
+  - inflectionspacesystems
   - influxdata
   - infracost
   - inito
@@ -6678,6 +6918,8 @@ lever:
   - inlet
   - inlet-2
   - inletai
+  - inloop-robotics
+  - inlooprobotics
   - innate
   - inscribe
   - inspectify
@@ -6704,6 +6946,7 @@ lever:
   - item
   - itsrever
   - jabu
+  - janeen
   - jarmin
   - jeevy-fabrication
   - jeevyfabrication
@@ -6764,6 +7007,7 @@ lever:
   - kivo-health
   - kivohealth
   - klaimee
+  - klarify
   - klavis
   - klavis-ai
   - klavisai
@@ -6784,8 +7028,10 @@ lever:
   - lago
   - lamar-health
   - lamarhealth
+  - lamb-labs
   - lambda-robotics
   - lambdarobotics
+  - lamblabs
   - laminar
   - laminar-com
   - lance
@@ -6794,8 +7040,12 @@ lever:
   - landeed
   - lanesurf
   - langdock
+  - lapel
   - latent
   - latenthealth
+  - lato
+  - latolabs
+  - latted
   - lattice
   - laurence
   - layers
@@ -6843,12 +7093,15 @@ lever:
   - locata
   - locatahealth
   - locke
+  - logical
+  - loombotic
   - loopfour
   - lootrush
   - lua-global-inc
   - luaglobalinc
   - luca-iq
   - lucaiq
+  - lucebox
   - lucid
   - lucis
   - lugg
@@ -6901,6 +7154,8 @@ lever:
   - mdalgorithmsinc
   - mdhub
   - measured
+  - mederva
+  - medervahealth
   - medme-health
   - medmehealth
   - mednet
@@ -6941,7 +7196,10 @@ lever:
   - misolabs
   - misprint
   - mixrank
+  - miyagi-labs
+  - miyagilabs
   - mochacare
+  - mochi
   - moda
   - moda-2
   - model-ml
@@ -6951,6 +7209,7 @@ lever:
   - modernhealth
   - modernloop
   - moderntreasury
+  - molagri
   - momentic
   - monumint
   - moonset-health
@@ -6973,6 +7232,7 @@ lever:
   - mutiny
   - mutinyhq
   - muzz
+  - myhelios
   - myunowallet
   - nabis
   - naive
@@ -7012,12 +7272,16 @@ lever:
   - nitrode
   - nixo
   - no-logo
+  - noloco
   - nologo
   - nomic
   - nomic-bio
   - nomicbio
   - noora-health
   - noorahealth
+  - nori
+  - noril1
+  - norirobotics
   - noso
   - noso-labs
   - nosolabs
@@ -7036,6 +7300,7 @@ lever:
   - numen
   - numeral
   - numero
+  - octapulse
   - ocular-ai
   - ocularai
   - odeko
@@ -7072,6 +7337,8 @@ lever:
   - openunit
   - openwork
   - openworklabs
+  - operon
+  - operonsolutions
   - ophelia
   - optifye
   - optifye-ai
@@ -7095,6 +7362,7 @@ lever:
   - orchid
   - origin
   - origin-bio
+  - orthogonal
   - os3
   - os3robotics
   - osium
@@ -7103,11 +7371,15 @@ lever:
   - osmosis
   - outerport
   - output
+  - output-labs
   - outputbio
   - outputbiosciences
+  - outputlabs
   - outset
   - overlap
   - overview
+  - oway
+  - owny
   - oxus
   - oxus-ai
   - oxygen
@@ -7126,6 +7398,8 @@ lever:
   - pango
   - pangolin
   - paradedb
+  - paradev
+  - paradevformerlysuperset
   - paradigm
   - paradigmai
   - paragon
@@ -7192,8 +7466,12 @@ lever:
   - pivotrobotics
   - players-lounge
   - playerslounge
+  - plena
+  - plena-health
+  - plenahealth
   - plexe
   - ploy
+  - pluto
   - pno
   - pnoe
   - pocket
@@ -7231,6 +7509,7 @@ lever:
   - prestiai
   - primevault
   - primitive
+  - princeps
   - probably-genetic
   - probablygenetic
   - proception
@@ -7288,6 +7567,7 @@ lever:
   - quindar
   - qventus
   - radar
+  - rainbrand
   - raindrop
   - rally
   - rallyuxr
@@ -7303,6 +7583,7 @@ lever:
   - reach
   - reacher
   - reacherapp
+  - reactwise
   - readily
   - ready
   - reality-defender
@@ -7417,6 +7698,7 @@ lever:
   - runparagon
   - runpulse
   - runtime
+  - runtimesi
   - runtm
   - runtrellis
   - runway
@@ -7445,7 +7727,9 @@ lever:
   - saturn
   - saturnos
   - sava
+  - sava-trust-company
   - savahq
+  - savatrustcompany
   - scalar-field
   - scalarfield
   - scale
@@ -7490,6 +7774,7 @@ lever:
   - shipbob
   - shopgarage
   - short-story
+  - shortkit
   - shortloop
   - shortstory
   - shortstorybox
@@ -7501,6 +7786,9 @@ lever:
   - sift
   - sigmaos
   - signadot
+  - signatur
+  - signatur-biosciences
+  - signaturbiosciences
   - signoz
   - silimate
   - silkchart
@@ -7547,6 +7835,7 @@ lever:
   - soraban
   - sorce
   - soren
+  - soren-ai
   - soria
   - soriaanalytics
   - sorting-robotics
@@ -7564,13 +7853,17 @@ lever:
   - speak
   - speedy-labs
   - speedylabs
+  - speko
   - spellbrush
   - spenmo
   - sphere
+  - spice-data
+  - spicedata
   - spine
   - splash-inc
   - splash9
   - splashinc
+  - spm
   - spot-health
   - spotdx
   - spothealth
@@ -7588,13 +7881,18 @@ lever:
   - standardai
   - standout
   - star
+  - starcloud
   - stardex
   - stardrift
   - startraven
+  - startuptap
+  - stayflexi
   - steinmetz
   - steinmetzmotors
   - stepful
   - stilta
+  - stoa
+  - stoaexchange
   - stoke-space
   - stokespace
   - storyboarder
@@ -7618,7 +7916,11 @@ lever:
   - subvocal
   - sully
   - summitglobal
+  - sunflower
+  - sunflowerclinic
+  - super-powers-mobility-spm
   - superkalam
+  - superpowersmobilityspm
   - superset
   - supertokens
   - surface-labs
@@ -7654,6 +7956,7 @@ lever:
   - tailor
   - taiv
   - taktile
+  - talentpluto
   - tamarind
   - tamarind-bio
   - tamarindbio
@@ -7676,6 +7979,7 @@ lever:
   - tempo
   - tempo-2
   - tennr
+  - tenor
   - terminal
   - terra-api
   - terraapi
@@ -7694,6 +7998,7 @@ lever:
   - the-juggernaut
   - the-prompting-company
   - the-subvocal-company
+  - the-vibe-company
   - thedailyscout
   - theforecastingcompany
   - thehog
@@ -7707,6 +8012,7 @@ lever:
   - therentflow
   - theseus
   - thesubvocalcompany
+  - thevibecompany
   - third-chair
   - thirdchair
   - thirdlayer
@@ -7728,9 +8034,11 @@ lever:
   - topship
   - torus
   - totalis
+  - tracecat
   - traceroot
   - traceroot-ai
   - tracerootai
+  - trainloop
   - transastra
   - transastra-corporation
   - transastracorporation
@@ -7747,6 +8055,7 @@ lever:
   - trmlabs
   - truebiz
   - trueclaim
+  - truemetrics
   - truewind
   - truss
   - trusspayments
@@ -7768,6 +8077,7 @@ lever:
   - trymeasured
   - trynarrative
   - trynearby
+  - tryoctapulse
   - tryperdiem
   - tryrobby
   - trysalient
@@ -7804,10 +8114,14 @@ lever:
   - unsloth
   - unsloth-ai
   - unslothai
+  - untether-labs
+  - untetherlabs
   - up
   - upcodes
   - upequity
   - uplane
+  - uplift-ai
+  - upliftai
   - upsolve
   - upsolve-ai
   - upsolveai
@@ -7825,6 +8139,7 @@ lever:
   - usehaven
   - usehaystack
   - usehelios
+  - useimagine
   - uselayerup
   - uselemma
   - usemargin
@@ -7892,6 +8207,9 @@ lever:
   - videogen
   - vinci-games
   - vincigames
+  - visibl-semiconductors
+  - visiblsemi
+  - visiblsemiconductors
   - vitable-health
   - vitablehealth
   - vitalize
@@ -7912,6 +8230,7 @@ lever:
   - vori
   - vorticity
   - vouch
+  - voyager
   - voygr
   - vulcan
   - vulcan-technologies
@@ -7939,6 +8258,8 @@ lever:
   - weekendfmrvolley
   - weflywright
   - wefunder
+  - westgate
+  - westgatesupply
   - whatnot
   - wifi-dabba-inc
   - wifidabbainc
@@ -7947,6 +8268,8 @@ lever:
   - willow
   - willowvoice
   - windmill
+  - wingman-law
+  - wingmanlaw
   - with-andy
   - withaccend
   - withbanner
@@ -7963,6 +8286,7 @@ lever:
   - withterminal
   - women-who-code
   - womenwhocode
+  - wonderly
   - wordware
   - workers
   - workers-io
@@ -7992,6 +8316,7 @@ lever:
   - zapier
   - zarna
   - zarnaai
+  - zatanna
   - zaymo
   - zeit-ai
   - zeitai
@@ -8008,6 +8333,7 @@ lever:
   - ziina
   - zip
   - ziphq
+  - zolvo
   - zscc
   - zuddl
   - zudo
@@ -9950,16 +10276,95 @@ ashby:
   - slug: within
     tier: 2
     note: 14 jobs
+  - slug: plotlineso
+    tier: 2
+    name: Plotlineso
+    note: yc careers page · India 16, intern 0
+  - slug: refoldai
+    tier: 2
+    name: Refoldai
+    note: yc careers page · India 7, intern 0
+  - slug: within.ai
+    tier: 2
+    name: Within
+    note: yc careers page · India 5, intern 0
+    website: http://within.ai
+  - slug: sardine
+    tier: 2
+    name: Sardine
+    note: yc careers page · India 1, intern 0
+  - slug: gigaml
+    tier: 2
+    name: Giga
+    note: yc careers page · India 1, intern 0
+    website: https://giga.ai/
+  - slug: kiddom
+    tier: 2
+    name: Kiddom
+    note: yc careers page · India 0, intern 0
+  - slug: pramaana-labs
+    tier: 1
+    name: Pramaana Labs
+    note: vc careers page · India 8, intern 1
+    website: vc-board:pramaana labs
+  - slug: exa
+    tier: 2
+    name: Exa
+    note: vc careers page · India 1, intern 0
+    website: https://exa.ai
+  - slug: goodstack
+    tier: 2
+    name: Goodstack
+    note: vc careers page · India 1, intern 0
+    website: vc-board:goodstack
+  - slug: hippocratic%20ai
+    tier: 2
+    name: Hippocractic AI
+    note: vc careers page · India 1, intern 0
+    website: vc-board:hippocractic ai
+  - slug: mecka.ai
+    tier: 2
+    name: Mecka AI
+    note: vc careers page · India 0, intern 0
+    website: https://mecka.ai
+  - slug: fathom
+    tier: 2
+    note: 2 jobs
+  - slug: runtrellis
+    tier: 2
+    note: 15 jobs
+  - slug: gigs
+    tier: 2
+    note: 48 jobs
+  - slug: relling
+    tier: 2
+    note: 12 jobs
+  - slug: greptile
+    tier: 2
+    note: 19 jobs
+  - slug: guild
+    tier: 2
+    note: 2 jobs
+  - slug: klarify
+    tier: 2
+    note: 2 jobs
+  - slug: lapel
+    tier: 2
+    note: 9 jobs
+  - slug: tenor
+    tier: 2
+    note: 1 jobs
+  - slug: wonderly
+    tier: 2
+    note: 6 jobs
   candidates:
   - scaler
   - turing
   - anara
   - atomicindustries
   - beacons
-  - blink
   - cointracker
   - deel
-  - fathom
   - hadrius
   - infracost
   - juno
@@ -9970,17 +10375,17 @@ ashby:
   - pesto
   - podium
   - recurrency
-  - runtrellis
   - scout
   - theorem
   - thesis
   - vela
   - weekend
   - withflex
-  - gigs
   - kaizen
-  - relling
   - revyl
+  - centaur
+  - corvera
+  - hazel
   rejected:
   - 10x
   - 10x-science
@@ -10025,6 +10430,7 @@ ashby:
   - aivideo
   - aivideo-com
   - aivideocom
+  - akiflow
   - aktoria
   - aktoria-robotics
   - aktoriarobotics
@@ -10055,6 +10461,7 @@ ashby:
   - alpaca
   - alpha-vantage
   - alphavantage
+  - altur
   - ambient
   - ambient-ai
   - ambientai
@@ -10094,12 +10501,15 @@ ashby:
   - archilabs
   - archon
   - ardent
+  - aren
   - arlo-industries
   - arlo1
   - arloindustries
   - arnata
   - arpari
   - arqfinance
+  - array-labs
+  - arraylabs
   - artifact
   - artifact-2
   - artos
@@ -10142,6 +10552,7 @@ ashby:
   - atomic-industries
   - atomicvest
   - atopile
+  - atrisa
   - attack
   - attack-capital
   - attackcapital
@@ -10149,13 +10560,18 @@ ashby:
   - attimet
   - attune
   - attunehq
+  - audun
+  - augment-inc
+  - augmentinc
   - aurorin-cad
   - aurorincad
+  - authologic
   - autonomous-technologies-group
   - autonomoustechnologiesgroup
   - autositu
   - autostep
   - autumn
+  - autumn-ai
   - avallon-ai
   - avallonai
   - avent
@@ -10207,6 +10623,7 @@ ashby:
   - blandai
   - blaze
   - blaze-2
+  - blink
   - blink-new
   - bloom
   - bloom-4
@@ -10227,6 +10644,7 @@ ashby:
   - bolnaai
   - bolster
   - bolsterbuilt
+  - bolto
   - bond
   - bondapp
   - book
@@ -10265,6 +10683,7 @@ ashby:
   - buoyant-aero
   - buoyantaero
   - burnt
+  - business
   - businessonbot
   - bymason
   - cair-health
@@ -10310,6 +10729,7 @@ ashby:
   - cekura
   - cekura-ai
   - celltype
+  - cercli
   - cerrion
   - cerulion
   - channel3
@@ -10320,6 +10740,7 @@ ashby:
   - checkr
   - chestnutmortgage
   - chima
+  - cifrato
   - cinder-2
   - circle-medical
   - circlemedical
@@ -10364,6 +10785,7 @@ ashby:
   - community-phone-company
   - communityphone
   - communityphonecompany
+  - complif
   - complydo
   - compose
   - compose-ai
@@ -10391,6 +10813,7 @@ ashby:
   - corgiinsurance
   - coris
   - cotera
+  - cotool
   - coulomb
   - coulomb-ai
   - coulombai
@@ -10430,6 +10853,9 @@ ashby:
   - dataland
   - datrics
   - davidai
+  - decisional
+  - decisional-ai
+  - decisionalai
   - decoda-health
   - dedaluslabs
   - deep24
@@ -10448,6 +10874,7 @@ ashby:
   - denchcom
   - denta
   - deployparagon
+  - dexter
   - did
   - diffuse
   - diffuse-bio
@@ -10492,6 +10919,7 @@ ashby:
   - dripcapital
   - drymerge
   - duckie
+  - durate
   - dynamo
   - dynamo-ai
   - dynamoai
@@ -10505,6 +10933,8 @@ ashby:
   - edexia
   - edgerun
   - educato
+  - edviro
+  - edviroenergy
   - effigov
   - ego
   - egoai
@@ -10539,6 +10969,7 @@ ashby:
   - eval
   - eventhorizonlabs
   - every
+  - evidence
   - exonic
   - explorex
   - eze
@@ -10604,6 +11035,8 @@ ashby:
   - functionofbeauty
   - fuse-ai
   - fuseai
+  - gale
+  - galevisa
   - garage-2
   - gather
   - gather-2
@@ -10631,7 +11064,10 @@ ashby:
   - getcoach
   - getcrux
   - getdailyagape
+  - getdexter
+  - getdot
   - getfinn
+  - gethealthkey
   - gethomebase
   - getjust
   - getlago
@@ -10656,6 +11092,7 @@ ashby:
   - getunbound
   - getzep
   - getzuma
+  - ghosteye
   - giga
   - gimo
   - givecampus
@@ -10698,6 +11135,7 @@ ashby:
   - guac
   - guardian-rf
   - guardianrf
+  - guildai
   - gusto
   - gym-class
   - gymclass
@@ -10712,18 +11150,24 @@ ashby:
   - haplotype-labs
   - haplotypelabs
   - happyrobot
+  - harbera
   - harper
   - haven
   - haven-2
   - havenservicing
   - haystack
+  - hazel-2
+  - hazelai
   - healia
   - healiahealth
   - health-harbor
   - healthharbor
+  - healthkey
   - healthtech1
   - hedgespecialty
   - helios
+  - helios-intelligence
+  - heliosintelligence
   - helium
   - helloaviary
   - helloaxel
@@ -10745,7 +11189,10 @@ ashby:
   - heymalama
   - heypocket
   - heytelo
+  - heytenor
+  - hillstar
   - hioperator
+  - hirebolt
   - hirenimble
   - hireroger
   - hitpay
@@ -10756,6 +11203,7 @@ ashby:
   - housewarming
   - hub
   - hubble
+  - hubble-ai
   - human-archive
   - human-interest
   - humaninterest
@@ -10774,6 +11222,8 @@ ashby:
   - ignitionbenefits
   - imagine-ai
   - imagineai
+  - impact-drones
+  - impactdrones
   - imperfect
   - imprezia
   - imt
@@ -10790,10 +11240,15 @@ ashby:
   - infiniaweb
   - infinity
   - infinityapp
+  - inflection-space
+  - inflection-space-systems
+  - inflectionspacesystems
   - inito
   - inlet
   - inlet-2
   - inletai
+  - inloop-robotics
+  - inlooprobotics
   - inscribe
   - inspectify
   - instawork
@@ -10816,6 +11271,7 @@ ashby:
   - item
   - itsrever
   - jabu
+  - janeen
   - jarmin
   - jeevy-fabrication
   - jetlenses
@@ -10882,8 +11338,10 @@ ashby:
   - lab0
   - lamar-health
   - lamarhealth
+  - lamb-labs
   - lambda-robotics
   - lambdarobotics
+  - lamblabs
   - laminar
   - laminar-com
   - landed
@@ -10891,6 +11349,9 @@ ashby:
   - landeed
   - lanesurf
   - latenthealth
+  - lato
+  - latolabs
+  - latted
   - lattice
   - laurence
   - layers
@@ -10932,12 +11393,15 @@ ashby:
   - locata
   - locatahealth
   - locke
+  - logical
+  - loombotic
   - loopfour
   - lootrush
   - lua-global-inc
   - luaglobalinc
   - luca-iq
   - lucaiq
+  - lucebox
   - lucid
   - lugg
   - lumari
@@ -10985,6 +11449,8 @@ ashby:
   - mdalgorithmsinc
   - mdhub
   - measured
+  - mederva
+  - medervahealth
   - medme-health
   - medmehealth
   - medplum
@@ -11015,7 +11481,10 @@ ashby:
   - miso-labs
   - misprint
   - mixrank
+  - miyagi-labs
+  - miyagilabs
   - mochacare
+  - mochi
   - moda
   - moda-2
   - model-ml
@@ -11024,6 +11493,7 @@ ashby:
   - modern-treasury
   - modernhealth
   - modernloop
+  - molagri
   - monumint
   - moonset-health
   - moonsethealth
@@ -11043,6 +11513,7 @@ ashby:
   - multiplylabs
   - mutinyhq
   - muzz
+  - myhelios
   - mytos
   - myunowallet
   - nabis
@@ -11082,11 +11553,15 @@ ashby:
   - nitrode
   - nixo
   - no-logo
+  - noloco
   - nologo
   - nomic-bio
   - nomicbio
   - noora-health
   - noorahealth
+  - nori
+  - noril1
+  - norirobotics
   - noso
   - noso-labs
   - nosolabs
@@ -11100,6 +11575,7 @@ ashby:
   - nsave
   - numen
   - numero
+  - octapulse
   - ocular-ai
   - ocularai
   - odeko
@@ -11128,6 +11604,8 @@ ashby:
   - openunit
   - openwork
   - openworklabs
+  - operon
+  - operonsolutions
   - ophelia
   - optifye
   - optifye-ai
@@ -11151,6 +11629,7 @@ ashby:
   - orchid
   - origin
   - origin-bio
+  - orthogonal
   - os3
   - os3robotics
   - osium
@@ -11158,9 +11637,13 @@ ashby:
   - osiumai
   - osmosis
   - outerport
+  - output-labs
   - outputbio
   - outputbiosciences
+  - outputlabs
   - overlap
+  - oway
+  - owny
   - oxus
   - oxus-ai
   - oxygen
@@ -11178,6 +11661,8 @@ ashby:
   - pango
   - pangolin
   - paradedb
+  - paradev
+  - paradevformerlysuperset
   - paragon-ai
   - paragonai
   - parallelbio
@@ -11233,8 +11718,12 @@ ashby:
   - pivot-robotics
   - players-lounge
   - playerslounge
+  - plena
+  - plena-health
+  - plenahealth
   - plexe
   - ploy
+  - pluto
   - pno
   - pnoe
   - pocket
@@ -11253,6 +11742,7 @@ ashby:
   - porter
   - poshenergy
   - postal
+  - postera
   - postscript
   - posturehealth-inc
   - powder
@@ -11267,6 +11757,7 @@ ashby:
   - prestiai
   - primevault
   - primitive
+  - princeps
   - probably-genetic
   - proception
   - proception-inc
@@ -11316,6 +11807,7 @@ ashby:
   - quill-bills
   - quillbills
   - qventus
+  - rainbrand
   - rally
   - ralo
   - ramain
@@ -11328,6 +11820,7 @@ ashby:
   - re2
   - reacherapp
   - reachpower
+  - reactwise
   - readily
   - reality-defender
   - reason-machines
@@ -11424,6 +11917,7 @@ ashby:
   - runparagon
   - runpulse
   - runtime
+  - runtimesi
   - runtm
   - safebeat
   - safebutler
@@ -11445,7 +11939,9 @@ ashby:
   - saplingai
   - saturnos
   - sava
+  - sava-trust-company
   - savahq
+  - savatrustcompany
   - scalar-field
   - scalarfield
   - scale
@@ -11485,6 +11981,7 @@ ashby:
   - shipbob
   - shopgarage
   - short-story
+  - shortkit
   - shortloop
   - shortstorybox
   - shuttle-central
@@ -11493,6 +11990,9 @@ ashby:
   - sievedata
   - sigmaos
   - signadot
+  - signatur
+  - signatur-biosciences
+  - signaturbiosciences
   - silimate
   - silkchart
   - silurian
@@ -11533,6 +12033,7 @@ ashby:
   - soraban
   - sorce
   - soren
+  - soren-ai
   - soria
   - soriaanalytics
   - sorting-robotics
@@ -11548,11 +12049,15 @@ ashby:
   - sparkles
   - speedy-labs
   - speedylabs
+  - speko
   - spenmo
+  - spice-data
+  - spicedata
   - spine
   - splash-inc
   - splash9
   - splashinc
+  - spm
   - spot-health
   - spotdx
   - spothealth
@@ -11567,11 +12072,15 @@ ashby:
   - standardai
   - standout
   - star
+  - starcloud
   - stardex
   - stardrift
   - startraven
+  - stayflexi
   - steinmetz
   - steinmetzmotors
+  - stoa
+  - stoaexchange
   - stoke-space
   - stokespace
   - storyboarder
@@ -11594,7 +12103,11 @@ ashby:
   - suger
   - sully
   - summitglobal
+  - sunflower
+  - sunflowerclinic
+  - super-powers-mobility-spm
   - superkalam
+  - superpowersmobilityspm
   - superset
   - supertokens
   - surface-labs
@@ -11625,6 +12138,7 @@ ashby:
   - taiga
   - taigabilling
   - taiv
+  - talentpluto
   - tamarind
   - tamarind-bio
   - tandem
@@ -11658,6 +12172,7 @@ ashby:
   - the-juggernaut
   - the-prompting-company
   - the-subvocal-company
+  - the-vibe-company
   - thedailyscout
   - theforecastingcompany
   - thehog
@@ -11669,6 +12184,7 @@ ashby:
   - therentflow
   - theseus
   - thesubvocalcompany
+  - thevibecompany
   - third-chair
   - thirdchair
   - thirdlayer
@@ -11688,10 +12204,12 @@ ashby:
   - torus
   - totalis
   - tovala
+  - tracecat
   - traceroot
   - traceroot-ai
   - tracerootai
   - tractian
+  - trainloop
   - transastra
   - transastra-corporation
   - transastracorporation
@@ -11706,6 +12224,7 @@ ashby:
   - trmlabs
   - truebiz
   - trueclaim
+  - truemetrics
   - truewind
   - truss
   - trusspayments
@@ -11727,6 +12246,7 @@ ashby:
   - trymeasured
   - trynarrative
   - trynearby
+  - tryoctapulse
   - tryperdiem
   - tryriot
   - tryrobby
@@ -11759,8 +12279,12 @@ ashby:
   - unsloth
   - unsloth-ai
   - unslothai
+  - untether-labs
+  - untetherlabs
   - unusual
   - upequity
+  - uplift-ai
+  - upliftai
   - upsolve
   - upsolve-ai
   - upsolveai
@@ -11778,6 +12302,7 @@ ashby:
   - usehaven
   - usehaystack
   - usehelios
+  - useimagine
   - uselayerup
   - uselemma
   - usemargin
@@ -11835,6 +12360,9 @@ ashby:
   - videogen
   - vinci-games
   - vincigames
+  - visibl-semiconductors
+  - visiblsemi
+  - visiblsemiconductors
   - vitable-health
   - vitablehealth
   - voiceops
@@ -11851,6 +12379,7 @@ ashby:
   - voltic
   - volticshipping
   - vouch
+  - voyager
   - voygr
   - vulcan
   - vulcan-technologies
@@ -11876,6 +12405,8 @@ ashby:
   - weekendfmrvolley
   - weflywright
   - wefunder
+  - westgate
+  - westgatesupply
   - whatnot
   - wifi-dabba-inc
   - wifidabbainc
@@ -11884,6 +12415,8 @@ ashby:
   - willow
   - willowvoice
   - windmill
+  - wingman-law
+  - wingmanlaw
   - with-andy
   - withaccend
   - withbanner
@@ -11925,6 +12458,7 @@ ashby:
   - zalos
   - zarna
   - zarnaai
+  - zatanna
   - zaymo
   - zeitai
   - zen
@@ -11938,6 +12472,7 @@ ashby:
   - ziffyhomes
   - ziphq
   - zippi
+  - zolvo
   - zscc
   - zuddl
   - zudo
@@ -12531,6 +13066,7 @@ smartrecruiters:
   - aivideo
   - aivideo-com
   - aivideocom
+  - akiflow
   - aktoria
   - aktoria-robotics
   - aktoriarobotics
@@ -12561,6 +13097,7 @@ smartrecruiters:
   - alpaca
   - alpha-vantage
   - alphavantage
+  - altur
   - ambient
   - ambient-ai
   - ambientai
@@ -12610,6 +13147,7 @@ smartrecruiters:
   - archilabs
   - archon
   - ardent
+  - aren
   - arini
   - arketa
   - arlo-industries
@@ -12619,6 +13157,8 @@ smartrecruiters:
   - arpari
   - arq
   - arqfinance
+  - array-labs
+  - arraylabs
   - artie
   - artifact
   - artifact-2
@@ -12678,6 +13218,7 @@ smartrecruiters:
   - atomicindustries
   - atomicvest
   - atopile
+  - atrisa
   - attack
   - attack-capital
   - attackcapital
@@ -12686,6 +13227,9 @@ smartrecruiters:
   - attune
   - attunehq
   - auctor
+  - audun
+  - augment-inc
+  - augmentinc
   - aurelian
   - aurorin-cad
   - aurorincad
@@ -12697,6 +13241,7 @@ smartrecruiters:
   - autositu
   - autostep
   - autumn
+  - autumn-ai
   - avallon
   - avallon-ai
   - avallonai
@@ -12789,6 +13334,7 @@ smartrecruiters:
   - bolnaai
   - bolster
   - bolsterbuilt
+  - bolto
   - bond
   - bondapp
   - book
@@ -12837,6 +13383,7 @@ smartrecruiters:
   - buoyant-aero
   - buoyantaero
   - burnt
+  - business
   - businessonbot
   - byjus
   - bymason
@@ -12898,7 +13445,9 @@ smartrecruiters:
   - cekura
   - cekura-ai
   - celltype
+  - centaur
   - centralize
+  - cercli
   - cerrion
   - cerulion
   - channel3
@@ -12976,6 +13525,7 @@ smartrecruiters:
   - communityphone
   - communityphonecompany
   - complete
+  - complif
   - complir
   - complydo
   - compose
@@ -13011,8 +13561,10 @@ smartrecruiters:
   - corgi-insurance
   - corgiinsurance
   - coris
+  - corvera
   - cosine
   - cotera
+  - cotool
   - coulomb
   - coulomb-ai
   - coulombai
@@ -13070,6 +13622,9 @@ smartrecruiters:
   - david-ai
   - davidai
   - dayjob
+  - decisional
+  - decisional-ai
+  - decisionalai
   - decoda-health
   - decodahealth
   - dedalus-labs
@@ -13096,6 +13651,7 @@ smartrecruiters:
   - deployparagon
   - devrev
   - devtron
+  - dexter
   - did
   - diffuse
   - diffuse-bio
@@ -13152,6 +13708,7 @@ smartrecruiters:
   - duckie
   - duffel
   - dunzo
+  - durate
   - dynamo
   - dynamo-ai
   - dynamoai
@@ -13167,6 +13724,8 @@ smartrecruiters:
   - edexia
   - edgerun
   - educato
+  - edviro
+  - edviroenergy
   - effigov
   - ego
   - egoai
@@ -13216,6 +13775,7 @@ smartrecruiters:
   - eventhorizonlabs
   - eventual
   - every
+  - evidence
   - exonic
   - exotel
   - explorex
@@ -13310,6 +13870,8 @@ smartrecruiters:
   - furtherai
   - fuse-ai
   - fuseai
+  - gale
+  - galevisa
   - garage
   - garage-2
   - gather
@@ -13342,7 +13904,10 @@ smartrecruiters:
   - getcrux
   - getdailyagape
   - getdayjob
+  - getdexter
+  - getdot
   - getfinn
+  - gethealthkey
   - gethomebase
   - getjust
   - getlago
@@ -13412,6 +13977,7 @@ smartrecruiters:
   - great-question
   - greatquestion
   - greenboard
+  - greptile
   - gridware
   - gromo
   - groundcontrol
@@ -13422,6 +13988,8 @@ smartrecruiters:
   - guac
   - guardian-rf
   - guardianrf
+  - guild
+  - guildai
   - gupshup
   - gusto
   - gym-class
@@ -13442,6 +14010,7 @@ smartrecruiters:
   - happl
   - happyrobot
   - haptik
+  - harbera
   - harness
   - harper
   - harperinsure
@@ -13451,16 +14020,22 @@ smartrecruiters:
   - haven-2
   - havenservicing
   - haystack
+  - hazel
+  - hazel-2
+  - hazelai
   - hcltech
   - healia
   - healiahealth
   - health-harbor
   - healthharbor
+  - healthkey
   - healthtech-1
   - healthtech1
   - hedge
   - hedgespecialty
   - helios
+  - helios-intelligence
+  - heliosintelligence
   - helium
   - helloaviary
   - helloaxel
@@ -13484,9 +14059,12 @@ smartrecruiters:
   - heymalama
   - heypocket
   - heytelo
+  - heytenor
   - hillclimb
+  - hillstar
   - hioperator
   - hippovideo
+  - hirebolt
   - hirenimble
   - hireroger
   - hitpay
@@ -13501,6 +14079,7 @@ smartrecruiters:
   - housewarming
   - hub
   - hubble
+  - hubble-ai
   - hud
   - humaans
   - human-archive
@@ -13527,6 +14106,8 @@ smartrecruiters:
   - ignitionbenefits
   - imagine-ai
   - imagineai
+  - impact-drones
+  - impactdrones
   - imperfect
   - imprezia
   - imt
@@ -13546,6 +14127,9 @@ smartrecruiters:
   - infinity
   - infinityapp
   - infisical
+  - inflection-space
+  - inflection-space-systems
+  - inflectionspacesystems
   - influxdata
   - infosys
   - infracost
@@ -13554,6 +14138,8 @@ smartrecruiters:
   - inlet
   - inlet-2
   - inletai
+  - inloop-robotics
+  - inlooprobotics
   - innate
   - innovaccer
   - inscribe
@@ -13583,6 +14169,7 @@ smartrecruiters:
   - item
   - itsrever
   - jabu
+  - janeen
   - jarapp
   - jarmin
   - jeevy-fabrication
@@ -13653,6 +14240,7 @@ smartrecruiters:
   - kivo-health
   - kivohealth
   - klaimee
+  - klarify
   - klavis
   - klavis-ai
   - klavisai
@@ -13672,8 +14260,10 @@ smartrecruiters:
   - lago
   - lamar-health
   - lamarhealth
+  - lamb-labs
   - lambda-robotics
   - lambdarobotics
+  - lamblabs
   - laminar
   - laminar-com
   - lance
@@ -13682,8 +14272,12 @@ smartrecruiters:
   - landeed
   - lanesurf
   - langdock
+  - lapel
   - latent
   - latenthealth
+  - lato
+  - latolabs
+  - latted
   - lattice
   - laurence
   - layers
@@ -13738,6 +14332,7 @@ smartrecruiters:
   - locata
   - locatahealth
   - locke
+  - logical
   - loombotic
   - loopfour
   - lootrush
@@ -13745,6 +14340,7 @@ smartrecruiters:
   - luaglobalinc
   - luca-iq
   - lucaiq
+  - lucebox
   - lucid
   - lucis
   - lugg
@@ -13805,6 +14401,8 @@ smartrecruiters:
   - mdalgorithmsinc
   - mdhub
   - measured
+  - mederva
+  - medervahealth
   - medme-health
   - medmehealth
   - mednet
@@ -13852,7 +14450,10 @@ smartrecruiters:
   - misolabs
   - misprint
   - mixrank
+  - miyagi-labs
+  - miyagilabs
   - mochacare
+  - mochi
   - moda
   - moda-2
   - model-ml
@@ -13863,6 +14464,7 @@ smartrecruiters:
   - moderntreasury
   - moengage
   - mohalla
+  - molagri
   - momentic
   - monumint
   - moonset-health
@@ -13891,6 +14493,7 @@ smartrecruiters:
   - mutinyhq
   - mux
   - muzz
+  - myhelios
   - mymindbase
   - myntra
   - mytos
@@ -13939,12 +14542,16 @@ smartrecruiters:
   - nivara
   - nixo
   - no-logo
+  - noloco
   - nologo
   - nomic
   - nomic-bio
   - nomicbio
   - noora-health
   - noorahealth
+  - nori
+  - noril1
+  - norirobotics
   - noso
   - noso-labs
   - nosolabs
@@ -13965,6 +14572,7 @@ smartrecruiters:
   - numero
   - nykaa
   - observeai
+  - octapulse
   - ocular-ai
   - ocularai
   - odeko
@@ -14005,6 +14613,8 @@ smartrecruiters:
   - openunit
   - openwork
   - openworklabs
+  - operon
+  - operonsolutions
   - ophelia
   - optifye
   - optifye-ai
@@ -14029,6 +14639,7 @@ smartrecruiters:
   - origami-2
   - origin
   - origin-bio
+  - orthogonal
   - os3
   - os3robotics
   - osium
@@ -14037,11 +14648,15 @@ smartrecruiters:
   - osmosis
   - outerport
   - output
+  - output-labs
   - outputbio
   - outputbiosciences
+  - outputlabs
   - outset
   - overlap
   - overview
+  - oway
+  - owny
   - oxus
   - oxus-ai
   - oxygen
@@ -14062,6 +14677,8 @@ smartrecruiters:
   - pango
   - pangolin
   - paradedb
+  - paradev
+  - paradevformerlysuperset
   - paradigm
   - paradigmai
   - paragon
@@ -14142,9 +14759,13 @@ smartrecruiters:
   - pivotrobotics
   - players-lounge
   - playerslounge
+  - plena
+  - plena-health
+  - plenahealth
   - plexe
   - ploy
   - plumhq
+  - pluto
   - pno
   - pnoe
   - pocket
@@ -14169,6 +14790,7 @@ smartrecruiters:
   - posh
   - poshenergy
   - postal
+  - postera
   - posthog
   - postmanlabs
   - postscript
@@ -14187,6 +14809,7 @@ smartrecruiters:
   - prestiai
   - primevault
   - primitive
+  - princeps
   - pristyncare
   - probably-genetic
   - probablygenetic
@@ -14252,6 +14875,7 @@ smartrecruiters:
   - qventus
   - radar
   - rafay
+  - rainbrand
   - raindrop
   - rally
   - rallyuxr
@@ -14270,6 +14894,7 @@ smartrecruiters:
   - reacher
   - reacherapp
   - reachpower
+  - reactwise
   - readily
   - ready
   - reality-defender
@@ -14390,6 +15015,7 @@ smartrecruiters:
   - runparagon
   - runpulse
   - runtime
+  - runtimesi
   - runtm
   - runtrellis
   - runway
@@ -14425,7 +15051,9 @@ smartrecruiters:
   - saturn
   - saturnos
   - sava
+  - sava-trust-company
   - savahq
+  - savatrustcompany
   - scalar-field
   - scalarfield
   - scale
@@ -14482,6 +15110,7 @@ smartrecruiters:
   - shiprocket
   - shopgarage
   - short-story
+  - shortkit
   - shortloop
   - shortstory
   - shortstorybox
@@ -14494,6 +15123,9 @@ smartrecruiters:
   - sift
   - sigmaos
   - signadot
+  - signatur
+  - signatur-biosciences
+  - signaturbiosciences
   - signoz
   - silimate
   - silkchart
@@ -14548,6 +15180,7 @@ smartrecruiters:
   - soraban
   - sorce
   - soren
+  - soren-ai
   - soria
   - soriaanalytics
   - sorting-robotics
@@ -14565,14 +15198,18 @@ smartrecruiters:
   - speak
   - speedy-labs
   - speedylabs
+  - speko
   - spellbrush
   - spenmo
   - sphere
+  - spice-data
+  - spicedata
   - spine
   - spinny
   - splash-inc
   - splash9
   - splashinc
+  - spm
   - spot-health
   - spotdx
   - spothealth
@@ -14595,15 +15232,19 @@ smartrecruiters:
   - standardai
   - standout
   - star
+  - starcloud
   - stardex
   - stardrift
   - starling
   - starlingmedical
   - startraven
+  - stayflexi
   - steinmetz
   - steinmetzmotors
   - stepful
   - stilta
+  - stoa
+  - stoaexchange
   - stoke-space
   - stokespace
   - storyboarder
@@ -14633,7 +15274,9 @@ smartrecruiters:
   - summitglobal
   - sunflower
   - sunflowerclinic
+  - super-powers-mobility-spm
   - superkalam
+  - superpowersmobilityspm
   - supertokens
   - superwall
   - surebright
@@ -14671,6 +15314,7 @@ smartrecruiters:
   - tailor
   - taiv
   - taktile
+  - talentpluto
   - tamarind
   - tamarind-bio
   - tamarindbio
@@ -14701,6 +15345,7 @@ smartrecruiters:
   - tempo
   - tempo-2
   - tennr
+  - tenor
   - terminal
   - terra-api
   - terraapi
@@ -14720,6 +15365,7 @@ smartrecruiters:
   - the-juggernaut
   - the-prompting-company
   - the-subvocal-company
+  - the-vibe-company
   - thedailyscout
   - theforecastingcompany
   - thehog
@@ -14735,6 +15381,7 @@ smartrecruiters:
   - thesis
   - thesislabs
   - thesubvocalcompany
+  - thevibecompany
   - third-chair
   - thirdchair
   - thirdlayer
@@ -14761,11 +15408,13 @@ smartrecruiters:
   - torus
   - totalis
   - tovala
+  - tracecat
   - traceroot
   - traceroot-ai
   - tracerootai
   - tractian
   - tradex
+  - trainloop
   - transastra
   - transastra-corporation
   - transastracorporation
@@ -14806,6 +15455,7 @@ smartrecruiters:
   - trymeasured
   - trynarrative
   - trynearby
+  - tryoctapulse
   - tryperdiem
   - tryriot
   - tryrobby
@@ -14880,6 +15530,7 @@ smartrecruiters:
   - usehaven
   - usehaystack
   - usehelios
+  - useimagine
   - uselayerup
   - uselemma
   - usemargin
@@ -14951,6 +15602,9 @@ smartrecruiters:
   - videogen
   - vinci-games
   - visa
+  - visibl-semiconductors
+  - visiblsemi
+  - visiblsemiconductors
   - vitable-health
   - vitablehealth
   - vitalize
@@ -14971,6 +15625,7 @@ smartrecruiters:
   - vooma
   - vori
   - vorticity
+  - voyager
   - voygr
   - vulcan
   - vulcan-technologies
@@ -14999,6 +15654,8 @@ smartrecruiters:
   - weflywright
   - wefunder
   - wellfound
+  - westgate
+  - westgatesupply
   - whatnot
   - wifi-dabba-inc
   - wifidabbainc
@@ -15008,6 +15665,8 @@ smartrecruiters:
   - willowvoice
   - windmill
   - wingify
+  - wingman-law
+  - wingmanlaw
   - wipro
   - with-andy
   - withaccend
@@ -15025,6 +15684,7 @@ smartrecruiters:
   - withterminal
   - women-who-code
   - womenwhocode
+  - wonderly
   - wordware
   - workers
   - workers-io
@@ -15057,6 +15717,7 @@ smartrecruiters:
   - zapier
   - zarna
   - zarnaai
+  - zatanna
   - zaymo
   - zeit-ai
   - zeitai
@@ -15082,6 +15743,7 @@ smartrecruiters:
   - zippi
   - zohocorp
   - zohorecruit
+  - zolvo
   - zomato
   - zscc
   - zuddl
@@ -19805,6 +20467,11 @@ rippling:
     name: Anaconda
     note: vc careers page · India 1, intern 0
     website: vc-board:anaconda
+  - slug: sanas
+    tier: 2
+    name: Sanas
+    note: vc careers page · India 4, intern 0
+    website: https://sanas.ai
   candidates: []
 keka:
   verified:
@@ -20821,4 +21488,14 @@ zoho_recruit:
     name: Spendflo
     note: vc careers page · India 1, intern 0
     website: vc-board:spendflo
+  - slug: finkraft.zohorecruit.com
+    tier: 2
+    name: FinKraft
+    note: vc careers page · India 3, intern 0
+    website: vc-board:finkraft
+  - slug: axitrust.zohorecruit.in
+    tier: 2
+    name: axiTrust
+    note: vc careers page · India 2, intern 0
+    website: vc-board:axitrust
   candidates: []
