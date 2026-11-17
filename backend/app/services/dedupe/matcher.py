@@ -12,7 +12,7 @@ beat aggregators, because an aggregator link is often a redirect wrapper.
 from __future__ import annotations
 
 import re
-from urllib.parse import urlparse, urlunparse
+from urllib.parse import parse_qs, urlparse, urlunparse
 
 from app.domain.entities import Job
 
@@ -30,32 +30,45 @@ SOURCE_PRIORITY = {
     # curated feed that links back to the employer
     "simplify": 2,
     # aggregators
-    "himalayas": 3, "hn_hiring": 3, "remoteok": 3, "remotive": 3, "arbeitnow": 3,
+    "himalayas": 3, "jobicy": 3, "weworkremotely": 3, "hn_hiring": 3, "remoteok": 3, "remotive": 3, "arbeitnow": 3,
 }
 _DEFAULT_PRIORITY = 5
 
-_TRACKING = re.compile(r"^(utm_|ref|source|gh_src|lever-|fbclid|gclid)", re.I)
+_TRACKING_PARAM = re.compile(
+    r"^(utm_\w+|ref|referrer|source|src|gh_src|lever-source|lever-origin|fbclid|gclid|"
+    r"mc_cid|mc_eid|_hsenc|_hsmi|trk|trackingId|mode|session)$",
+    re.I,
+)
 
 
 def canonical_url(url: str) -> str:
-    """Strip tracking params and trailing slashes so reposts collide."""
+    """Strip tracking params, trailing slashes, and redundant www so reposts collide."""
+    if not url:
+        return ""
     try:
         p = urlparse(url)
     except ValueError:
         return url
-    kept = [
-        kv
-        for kv in p.query.split("&")
-        if kv and not _TRACKING.match(kv.split("=", 1)[0])
-    ]
-    return urlunparse(
-        (p.scheme.lower(), p.netloc.lower(), p.path.rstrip("/"), "", "&".join(kept), "")
-    )
+
+    host = (p.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    netloc = f"{host}:{p.port}" if p.port else host
+
+    kept: list[str] = []
+    for key, values in parse_qs(p.query, keep_blank_values=False).items():
+        if _TRACKING_PARAM.match(key):
+            continue
+        kept.extend(f"{key}={v}" for v in values)
+
+    path = p.path.rstrip("/")
+    query = "&".join(sorted(kept))
+    return urlunparse((p.scheme.lower(), netloc, path, "", query, ""))
 
 
-def composite_key(job: Job) -> tuple[str, str, str]:
-    region = job.hiring_regions[0].value if job.hiring_regions else "unknown"
-    return (job.company_normalized, job.title_normalized, region)
+def composite_key(job: Job) -> tuple[str, str]:
+    """Identify a role at a company regardless of slight region phrasing differences."""
+    return (job.company_normalized, job.title_normalized)
 
 
 def _priority(job: Job) -> int:
@@ -63,7 +76,7 @@ def _priority(job: Job) -> int:
 
 
 def _borrow_detail(keep: Job, dupe: Job) -> None:
-    """The employer copy keeps its apply link but may carry no text.
+    """The employer copy keeps its apply link but may carry less text.
 
     EA's career site lists titles and locations only; the same role on another board
     has the full description, skills and a posting date. Fill the gaps
@@ -75,30 +88,47 @@ def _borrow_detail(keep: Job, dupe: Job) -> None:
         keep.tech_stack = list(dupe.tech_stack)
     if keep.posted_at is None and dupe.posted_at is not None:
         keep.posted_at = dupe.posted_at
+    if keep.apply_deadline is None and dupe.apply_deadline is not None:
+        keep.apply_deadline = dupe.apply_deadline
+    if not keep.grad_year and dupe.grad_year:
+        keep.grad_year = dupe.grad_year
+    if not keep.is_new_grad and dupe.is_new_grad:
+        keep.is_new_grad = True
+    if keep.raw_payload is not None and dupe.raw_payload:
+        for k in ("pay", "team_size", "yc_batch", "vc", "funding_stage"):
+            if k not in keep.raw_payload and k in dupe.raw_payload:
+                keep.raw_payload[k] = dupe.raw_payload[k]
 
 
 def dedupe(jobs: list[Job]) -> tuple[list[Job], int]:
-    """Collapse duplicates within a batch. Returns (kept, dropped_count)."""
+    """Collapse duplicates within a batch or full corpus. Returns (kept, dropped_count)."""
     by_url: dict[str, Job] = {}
-    by_key: dict[tuple[str, str, str], Job] = {}
+    by_key: dict[tuple[str, str], Job] = {}
     dropped = 0
 
-    # richer descriptions first, so the survivor carries the most text
+    # Best priority, highest match score, richest description first
     ordered = sorted(
-        jobs, key=lambda j: (_priority(j), -len(j.description or "")), reverse=False
+        jobs,
+        key=lambda j: (_priority(j), -j.match_score, -len(j.description or "")),
+        reverse=False,
     )
 
     for job in ordered:
         curl = canonical_url(job.url)
         ckey = composite_key(job)
 
-        incumbent = by_url.get(curl) or by_key.get(ckey)
+        incumbent = by_url.get(curl) or (by_key.get(ckey) if ckey[0] and ckey[1] else None)
         if incumbent is not None:
             _borrow_detail(incumbent, job)
             dropped += 1
             continue
 
-        by_url[curl] = job
-        by_key[ckey] = job
+        if curl:
+            by_url[curl] = job
+        if ckey[0] and ckey[1]:
+            by_key[ckey] = job
 
-    return list(by_url.values()), dropped
+    # Return in descending order of match_score
+    result = list(by_url.values())
+    result.sort(key=lambda j: -j.match_score)
+    return result, dropped

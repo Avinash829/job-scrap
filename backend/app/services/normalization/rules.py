@@ -67,13 +67,32 @@ _INTERN = re.compile(
 # Graduation-year phrasings, including the Indian "2027 batch" form. All
 # matches are collected: "2026/2027 batch" and "class of 2026 or 2027" mean
 # both years are eligible.
-_GRAD_YEARS = re.compile(
-    r"(?:\b(?:class\s+of|graduat(?:ing|e|ion)(?:\s+(?:in|by|year))?|passing\s+out(?:\s+in)?|"
-    r"batch\s+of)\s*[:\s]*((?:20\d\d)(?:\s*(?:,|/|-|–|or|and|to)\s*20\d\d)*)"
-    r"|\b((?:20\d\d)(?:\s*(?:,|/|-|–|or|and|to)\s*20\d\d)*)\s*(?:batch|passouts?|pass\s*outs?|graduates?)\b)",
-    re.I,
-)
-_YEAR = re.compile(r"20\d\d")
+_MONTH_SEASON = r"(?:spring|summer|fall|winter|dec(?:ember)?|jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?)\s+"
+
+_GRAD_PATTERNS = [
+    # Class of 2027, Batch of 2027, passing out in 2026 or 2027, graduation date between Dec 2026 and June 2027
+    re.compile(
+        rf"\b(?:class\s+of|batch\s+of|batch|passing\s+out(?:\s+in)?|graduat(?:ing|e|ion|es)?|expected\s+grad(?:uation)?|target\s+grad(?:uation)?|degree\s+completion|graduation\s+date)\b[^\n.]{{0,100}}?((?:202[4-9])(?:\s*(?:,|/|-|–|or|and|to|&)\s*(?:{_MONTH_SEASON})?202[4-9])*)",
+        re.I,
+    ),
+    # 2026-2027 batch / graduates / passouts
+    re.compile(
+        r"\b((?:202[4-9])(?:\s*(?:,|/|-|–|or|and|to|&)\s*202[4-9])*)\s*(?:batch|passouts?|pass\s*outs?|graduates?|grads?)\b",
+        re.I,
+    ),
+    # Summer 2027 / Winter 2027 / Spring 2027
+    re.compile(r"\b(?:summer|winter|fall|spring)\s+(202[4-9])\b", re.I),
+    # Title or role like '2027 Intern', '2027 SWE Intern', 'Intern - 2027'
+    re.compile(
+        r"\b(?:interns?|internships?|trainees?|graduates?|new\s*grads?|fresher)\s*[-–/:]?\s*(?:[a-z/]+\s+){0,2}(202[4-9])\b",
+        re.I,
+    ),
+    re.compile(
+        r"\b(202[4-9])\s*[-–/:]?\s*(?:[a-z/]+\s+){0,2}(?:interns?|internships?|trainees?|graduates?|new\s*grads?|fresher)\b",
+        re.I,
+    ),
+]
+_YEAR = re.compile(r"202[4-9]")
 
 # A PhD or Master's stated as the requirement, with no bachelor's alternative,
 # is not applicable to a B.Tech student. Google lists "Software Engineering
@@ -205,12 +224,13 @@ def extract_grad_years(text: str) -> list[int]:
     """
     now = datetime.now(timezone.utc).year
     years: list[int] = []
-    for m in _GRAD_YEARS.finditer(text or ""):
-        for raw in _YEAR.findall(m.group(1) or m.group(2) or ""):
-            year = int(raw)
-            if now - 1 <= year <= now + 6 and year not in years:
-                years.append(year)
-    return years
+    for pat in _GRAD_PATTERNS:
+        for m in pat.finditer(text or ""):
+            for raw in _YEAR.findall(m.group(0)):
+                year = int(raw)
+                if now - 1 <= year <= now + 6 and year not in years:
+                    years.append(year)
+    return sorted(years)
 
 
 def needs_advanced_degree(title: str, description: str | None) -> bool:
@@ -433,8 +453,12 @@ _RELOCATION = re.compile(
     r"relocation\s+(package|assistance|support|benefits?)", re.I
 )
 _WORLDWIDE = re.compile(
-    r"\b(hire\s+(from\s+)?anywhere|work\s+from\s+anywhere|"
-    r"fully\s+remote\s+worldwide|remote\s*[,(]?\s*(worldwide|global|anywhere))\b",
+    r"\b(worldwide|anywhere|global|work\s+from\s+anywhere|hire\s+(?:from\s+)?anywhere|"
+    r"anywhere\s+in\s+the\s+world|fully\s+remote\s+worldwide|"
+    r"remote\s*[-–—/:,(]?\s*(?:worldwide|global|anywhere|international|all\s+locations)|"
+    r"(?:worldwide|global|anywhere)\s*[-–—/:,(]?\s*remote|"
+    r"100%\s+remote\s*(?:worldwide|global|anywhere)?|"
+    r"remote\s*[-–—/]\s*(?:us|usa|europe|emea|apac|latam|india|\w+)?\s*(?:and|or|/|,)\s*(?:worldwide|global|international|anywhere))\b",
     re.I,
 )
 _US_REMOTE = re.compile(r"\bremote\s*\(?\s*(us|usa|united\s+states)\b", re.I)
@@ -515,7 +539,7 @@ def regions_from_location(
     if description and _GERMAN_TEXT.search(description):
         return HiringRegion.EUROPE
     return None
-_REMOTE = re.compile(r"\b(remote|anywhere|distributed|work\s+from\s+home|wfh)\b", re.I)
+_REMOTE = re.compile(r"\b(remote|anywhere|worldwide|global|distributed|work\s+from\s+home|wfh)\b", re.I)
 _ONSITE = re.compile(r"\b(on-?site|in-?office|hybrid)\b", re.I)
 
 
@@ -564,17 +588,24 @@ def resolve_regions(
     Admitting unknown is the point - a confident wrong region is worse than
     none, because the UI would present it as fact.
     """
+    desc = raw.description or ""
+    loc = raw.location_raw or ""
+
+    # Explicit Worldwide / Any location in text or location field
+    if _WORLDWIDE.search(loc) or _WORLDWIDE.search(desc):
+        # If the job also specifically mentioned India, keep both
+        if HiringRegion.INDIA in raw.hiring_regions_hint:
+            return [HiringRegion.INDIA, HiringRegion.WORLDWIDE], ExtractionSource.REGEX, Confidence.HIGH
+        return [HiringRegion.WORLDWIDE], ExtractionSource.REGEX, Confidence.HIGH
+
     hint = [r for r in raw.hiring_regions_hint if r is not HiringRegion.UNKNOWN]
     if hint:
         return hint, ExtractionSource.SOURCE_METADATA, Confidence.HIGH
 
-    desc = raw.description or ""
-    if _WORLDWIDE.search(desc) or _WORLDWIDE.search(raw.location_raw or ""):
-        return [HiringRegion.WORLDWIDE], ExtractionSource.REGEX, Confidence.MEDIUM
-    if _US_REMOTE.search(desc) or _US_REMOTE.search(raw.location_raw or ""):
+    if _US_REMOTE.search(desc) or _US_REMOTE.search(loc):
         return [HiringRegion.US_ONLY], ExtractionSource.REGEX, Confidence.MEDIUM
 
-    if geo := regions_from_location(raw.location_raw, desc):
+    if geo := regions_from_location(loc, desc):
         return [geo], ExtractionSource.REGEX, Confidence.MEDIUM
 
     return [HiringRegion.UNKNOWN], ExtractionSource.NONE, Confidence.LOW
@@ -729,8 +760,9 @@ def normalize(raw: RawJob) -> Job:
             _NEW_GRAD.search(raw.title)
             or _INTERN.search(raw.title)
             or _NEW_GRAD.search(raw.description or "")
+            or (raw.raw_payload or {}).get("is_new_grad")
         ),
-        grad_year=(grad_years[0] if grad_years else None),
+        grad_year=(grad_years[0] if grad_years else (raw.raw_payload or {}).get("grad_year")),
         yoe_source=yoe_src,
         is_remote=detect_remote(raw.title, raw.location_raw, raw.tags),
         hiring_regions=regions,

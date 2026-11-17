@@ -47,10 +47,14 @@ class LinkStatus(str, Enum):
 _SOFT_404 = re.compile(
     r"(page\s+not\s+found|404\s*[-–—:|]?\s*(page|not\s+found|error)|"
     r"job\s+(is\s+)?(no\s+longer|not)\s+(available|active|found|listed)|"
-    r"this\s+(job|position|posting|role)\s+(has\s+been|is)\s+(closed|filled|removed|expired)|"
+    r"this\s+(job|position|posting|role|requisition|opportunity)\s+(has\s+been|is)\s+(closed|filled|removed|expired|archived)|"
     r"position\s+(has\s+been\s+)?filled|"
-    r"no\s+longer\s+accepting\s+applications|"
+    r"no\s+longer\s+accepting\s+(applications|applicants|submissions)|"
     r"posting\s+(has\s+)?expired|"
+    r"this\s+listing\s+has\s+expired|"
+    r"the\s+(job|position|role)\s+you\s+are\s+looking\s+for\s+is\s+no\s+longer\s+available|"
+    r"we\s+are\s+no\s+longer\s+accepting\s+applications|"
+    r"applications\s+(are\s+)?closed|"
     r"check\s+if\s+the\s+url\s+is\s+correct)",
     re.I,
 )
@@ -107,9 +111,8 @@ def _looks_dead(body: str) -> str | None:
         title = m.group(1)
         if _SOFT_404.search(title) or re.fullmatch(r"\s*404\s*", title):
             return f"title: {title.strip()[:60]}"
-    # only inspect the head of the document - page chrome lives there, and
-    # this avoids matching a phrase buried in a long job description
-    if m := _SOFT_404.search(body[:6000]):
+    # Inspect body chrome for dead job signals
+    if m := _SOFT_404.search(body[:BODY_SNIFF_BYTES]):
         return f"body: {m.group(0)[:60]}"
     return None
 
@@ -129,6 +132,30 @@ class LinkChecker:
         async with self.sem:
             return await self._check_one(url)
 
+    async def _check_workday_cxs(self, client: httpx.AsyncClient, url: str) -> LinkResult | None:
+        p = urlparse(url)
+        host = p.netloc.lower()
+        path = p.path
+        if "/job/" not in path:
+            return None
+        tenant = host.split(".")[0]
+        idx = path.index("/job/")
+        prefix = path[:idx].strip("/")
+        segments = prefix.split("/")
+        site = segments[-1] if segments else ""
+        cxs_url = f"https://{host}/wday/cxs/{tenant}/{site}{path[idx:]}"
+        try:
+            r = await client.get(cxs_url, headers={"User-Agent": self.ua, "Accept": "application/json"})
+            if r.status_code in DEAD_CODES:
+                return LinkResult(url, LinkStatus.DEAD, r.status_code, "workday requisition gone")
+            if r.status_code == 200:
+                data = (r.json() or {}).get("jobPostingInfo") or {}
+                if data.get("canApply") is False or data.get("posted") is False:
+                    return LinkResult(url, LinkStatus.DEAD, 200, "workday not accepting applications")
+        except Exception:
+            return None
+        return None
+
     async def _check_one(self, url: str) -> LinkResult:
         headers = {"User-Agent": self.ua, "Accept": "text/html,*/*"}
         try:
@@ -141,6 +168,12 @@ class LinkChecker:
             return LinkResult(url, LinkStatus.UNKNOWN, None, type(exc).__name__)
 
     async def _inspect(self, client: httpx.AsyncClient, url: str, headers: dict) -> LinkResult:
+        # Workday SPA check first: Workday returns 200 HTML shells for dead jobs
+        if "myworkdayjobs.com" in url:
+            cxs_res = await self._check_workday_cxs(client, url)
+            if cxs_res is not None:
+                return cxs_res
+
         # GET, not HEAD: many boards don't implement HEAD, and a soft 404 can
         # only be seen in the body anyway.
         r = await client.get(url, headers=headers)

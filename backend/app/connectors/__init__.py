@@ -30,6 +30,8 @@ from app.connectors.instahyre import Instahyre
 from app.connectors.hn_hiring import HNWhoIsHiring
 from app.connectors.remoteok import RemoteOK
 from app.connectors.remotive import Remotive
+from app.connectors.jobicy import Jobicy
+from app.connectors.weworkremotely import WeWorkRemotely
 
 ALL_CONNECTORS: list[type[Connector]] = [
     # Tier 1 - employer boards. Structured locations, real posting dates,
@@ -78,6 +80,8 @@ ALL_CONNECTORS: list[type[Connector]] = [
     # Tier 1 - remote-native aggregators that state region honestly.
     Himalayas,
     RemoteOK,
+    Jobicy,
+    WeWorkRemotely,
     # Tier 3 - low signal-to-noise, kept for coverage only.
     # Arbeitnow is all-professions and Germany-heavy; HN's thread is monthly,
     # so its posts are already days old by the time we see them.

@@ -29,14 +29,17 @@ FEEDS = (
     (
         "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json",
         EmploymentType.INTERNSHIP,
+        2027,
     ),
     (
         "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json",
         EmploymentType.INTERNSHIP,
+        2026,
     ),
     (
         "https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json",
         EmploymentType.FULL_TIME,
+        None,
     ),
 )
 
@@ -53,7 +56,7 @@ class SimplifyJobs(Connector):
         cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
         jobs: list[RawJob] = []
 
-        for url, emp in FEEDS:
+        for url, emp, feed_grad_year in FEEDS:
             rows = await self.get_json(url)
             if not isinstance(rows, list):
                 continue
@@ -99,6 +102,8 @@ class SimplifyJobs(Connector):
                             "degrees": x.get("degrees"),
                             # an internship/new-grad feed: treat as entry level
                             "min_yoe_hint": 0,
+                            "is_new_grad": True,
+                            "grad_year": feed_grad_year,
                         },
                     )
                 )

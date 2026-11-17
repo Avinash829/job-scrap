@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import pytest
 
-from app.domain.enums import EmploymentType
+from app.domain.enums import EmploymentType, HiringRegion
 from app.services.normalization.rules import (
     classify_role,
     extract_grad_years,
@@ -71,6 +71,12 @@ def test_experience_extraction(title, description, min_yoe):
         ("Class of 2027", [2027]),
         ("graduating in 2028", [2028]),
         ("passing out in 2026 or 2027", [2026, 2027]),
+        ("Graduation date between Dec 2026 and June 2027", [2026, 2027]),
+        ("Summer 2027 Intern", [2027]),
+        ("2027 SWE Intern", [2027]),
+        ("Software Engineer Intern - 2027", [2027]),
+        ("Graduating by Summer 2027", [2027]),
+        ("Students graduating in May 2027", [2027]),
         ("Founded in 2012, we now serve millions", []),       # not an eligibility year
         ("no year here", []),
     ],
@@ -201,7 +207,7 @@ def test_internships_go_stale_sooner_than_jobs(raw):
     """A three-month-old internship is filled, even if its board still lists it."""
     from datetime import datetime, timedelta, timezone
 
-    from app.domain.enums import EmploymentType
+    from app.domain.enums import EmploymentType, HiringRegion
 
     old = datetime.now(timezone.utc) - timedelta(days=90)
     intern = normalize(raw(title="Software Engineer Intern", posted_at=old))
@@ -236,3 +242,13 @@ def test_internship_classification_and_plurals(raw):
     j5 = normalize(raw(title="Summer Intern 2027", description="Experience with React and Python required."))
     assert j5.role_category.value in ("fullstack", "swe", "frontend")
     assert passes_filters(j5)[0]
+
+
+def test_worldwide_remote_resolution(raw):
+    for loc in ("Remote - Worldwide", "Remote - Global", "Remote / Anywhere", "Worldwide", "Remote, Global", "100% Remote"):
+        j = normalize(raw(title="Software Engineer Intern", location_raw=loc))
+        assert HiringRegion.WORLDWIDE in j.hiring_regions
+        assert j.is_remote
+        assert j.reachable_from_india
+        keep, reason = passes_filters(j)
+        assert keep, reason

@@ -18,6 +18,8 @@ from pathlib import Path
 from app.db.repository import JobRepository
 from app.db.session import session_scope
 from app.domain.entities import Job
+from app.services.dedupe.matcher import dedupe
+from app.services.normalization.rules import passes_filters
 
 # Keys are short: repeated 1,300 times, names are a real share of the payload.
 FIELDS = (
@@ -66,11 +68,28 @@ def _row(job: Job) -> dict:
 
 def export_snapshot(out_path: str) -> dict:
     """Write {generated_at, total, fields, jobs} to out_path. Returns a summary."""
+    now = datetime.now(timezone.utc)
     with session_scope() as s:
-        jobs = sorted(JobRepository(s).active_jobs_lean(), key=lambda j: -j.match_score)
+        raw_jobs = list(JobRepository(s).active_jobs_lean())
+
+    # Pre-filter: only live, verified, non-expired postings
+    valid: list[Job] = []
+    for j in raw_jobs:
+        if not j.is_active or j.link_status == "dead":
+            continue
+        if j.apply_deadline is not None:
+            deadline = j.apply_deadline if j.apply_deadline.tzinfo else j.apply_deadline.replace(tzinfo=timezone.utc)
+            if deadline < now:
+                continue
+        ok, _ = passes_filters(j)
+        if ok:
+            valid.append(j)
+
+    # Cross-source deduplication: keep the best, highest-scoring unique opening
+    jobs, _ = dedupe(valid)
 
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "generated_at": now.isoformat(timespec="seconds"),
         "total": len(jobs),
         # short key -> field name, so the client needs no hardcoded mapping
         "fields": {k: v for k, v in FIELDS},

@@ -29,9 +29,10 @@ location:
 # already 3-30 days old. At 2 days you see almost nothing from HN - the
 # daily boards (RemoteOK, Himalayas, Arbeitnow) supply the fresh ones.
 freshness:
-  # Aggregators (Himalayas, RemoteOK, HN, Arbeitnow) keep dead listings
-  # around, so age is the only defence against applying to a closed role.
-  max_posting_age_days: 2
+  # Aggregators (Himalayas, Jobicy, WeWorkRemotely, RemoteOK, HN, Arbeitnow)
+  # keep dead listings around, but 2 days was dropping active remote openings.
+  # 14 days gives full coverage while LinkChecker eliminates dead links.
+  max_posting_age_days: 14
 
   # Employer ATS boards are different in kind: Greenhouse/Lever/Ashby/
   # SmartRecruiters return ONLY currently-open requisitions. A 30-day-old
@@ -199,7 +200,7 @@ roles:
 # term multiplies requests, and the role/YoE filters above do the narrowing.
 search:
   terms: [intern, internship, trainee, apprentice, graduate, new grad, campus, fresher,
-          software engineer, developer, data engineer, machine learning]
+          2027, 2026, software engineer, developer, data engineer, machine learning]
   # Where to look. Remote roles are picked up by the aggregators and by
   # boards whose postings say "Remote"; these are the onsite markets.
   locations: [India]
@@ -207,7 +208,7 @@ search:
 
   # Workday is queried per tenant, and there are ~1,400 India employers on
   # it, so it gets a tighter budget: 3 terms x 2 pages x 20 rows per tenant.
-  workday_terms: [intern, trainee, graduate, software engineer]
+  workday_terms: [intern, trainee, graduate, 2027, software engineer]
 
   # Amazon publishes some campus requisitions as link-only - open, public, and
   # absent from its own search API. These queries find the indexed pages; each
@@ -217,6 +218,8 @@ search:
     - site:amazon.jobs internship Bengaluru
     - site:amazon.jobs intern Hyderabad 2027
     - site:amazon.jobs university talent India intern
+    - site:amazon.jobs "software development engineer intern" 2027
+    - site:amazon.jobs "2027" India intern
   workday_max_pages: 2
 
 # --- Your stack -----------------------------------------------------------
@@ -513,3 +516,22 @@ notable_companies:
   - BharatPe
   - upGrad
   - Sigmoid
+  # top global remote-native tech employers
+  - Canonical
+  - Automattic
+  - GitLab
+  - Supabase
+  - PostHog
+  - Buffer
+  - Zapier
+  - Basecamp
+  - 37signals
+  - DuckDuckGo
+  - Mozilla
+  - Ghost
+  - Sourcegraph
+  - Grafana Labs
+  - Vercel
+  - Netlify
+  - Docker
+  - HashiCorp

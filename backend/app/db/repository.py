@@ -308,9 +308,12 @@ class JobRepository:
         ).rowcount
         return {"jobs_deleted": jobs, "cache_pruned": cache or 0, "runs_pruned": runs or 0}
 
-    def active_jobs_lean(self, batch_size: int = 2000):
-        """Every stored job, streamed in batches (used by rescore)."""
-        stmt = select(JobRow).order_by(JobRow.id).execution_options(yield_per=batch_size)
+    def active_jobs_lean(self, batch_size: int = 2000, active_only: bool = True):
+        """Every stored active job, streamed in batches (used by rescore and export)."""
+        stmt = select(JobRow)
+        if active_only:
+            stmt = stmt.where(JobRow.is_active.is_(True), JobRow.link_status != "dead")
+        stmt = stmt.order_by(JobRow.id).execution_options(yield_per=batch_size)
         for row in self.s.scalars(stmt):
             yield row_to_job(row)
 
